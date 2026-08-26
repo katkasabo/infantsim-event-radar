@@ -9,6 +9,21 @@
     {
       "date": "2026-08-26",
       "items": [
+        "Five events added: the joint five-consortium Pediatric Device Pitch Competition, SAGES 2027, LSI USA '27, SESAM 2027 and the CTIP Catalyzing Pediatric Innovation grant.",
+        "The SWPDC and AAP SOATT prize is no longer a standalone prize. It is now one joint round run with APDI, CTIP, MPDC and the UCSF-Stanford PDC, it closed on 14 August 2026, and eligibility requires a device meeting the FDA definition plus a pediatric indication for use. The record is marked closed.",
+        "SAGES 2027 Emerging Technology is the notable new opening: it accepts industry engineers and inventors presenting their own work, with no formal experimental data required. The window runs 15 Sep to 4 Nov 2026.",
+        "Two startup competitions were being missed. The MedTech Conference hosts the MedTech Innovator Finals, USD 350,000 non-dilutive, and IMSH hosts the SimVentors Showcase, which is restricted to technology that is not yet commercially available.",
+        "Every event now says explicitly whether a startup competition exists. Where none was found, the cell says so and links to what was checked, rather than showing a blank.",
+        "The MEDICA pitch cost was understating it. The stage slot is not sold separately, so the real cost to pitch is EUR 3,500: the EUR 2,950 booth plus the EUR 550 stage upgrade.",
+        "Every route now carries its own link to more information, and the table cells are clickable.",
+        "The SIM Expo hotel block is logistics, not a way to take part, so it no longer appears in the closing-deadline rail.",
+        "The card view is gone. The table is the only event view.",
+        "Adding an event is now a single link field."
+      ]
+    },
+    {
+      "date": "2026-08-26",
+      "items": [
         "Ways to take part are now five named routes rather than four generic ones: present, pitch, attend, exhibit and teach. Abstract became present. The hands-on pre-congress courses at IPEG and EUPSA were sitting under exhibit and are now their own teach route.",
         "Every route now carries a cost with a source link, and a basis flag saying whether the figure is published for this edition, carried over from the previous edition, approximate, free or simply not published.",
         "HealthTech Innovation Days 2026 is confirmed for 1 October 2026 in Paris. It was previously logged as an estimate of early to mid October.",
@@ -45,7 +60,7 @@
       "id": "swpdc-soatt",
       "name": "SWPDC + AAP SOATT Pediatric Device Prize",
       "org": "Southwest-Midwest PDC (Texas Children's / Baylor) with AAP SOATT",
-      "dateLabel": "Application cycle, est. early Sep 2026",
+      "dateLabel": "Fall 2026 round closed; next round unannounced",
       "start": "2026-09-05",
       "confirmed": false,
       "where": "Virtual application; consortium in Houston, TX",
@@ -62,16 +77,17 @@
         {
           "mode": "pitch",
           "label": "Apply for the prize",
-          "deadline": null,
-          "deadlineLabel": "2026 round not yet announced",
-          "status": "unannounced",
-          "note": "The consortium states eligibility is limited to devices that will go through the US FDA regulatory pathway, and that projects developing devices which do not require FDA regulation are not eligible. Application is a short questionnaire, itemised budget and an optional 1 to 2 minute video pitch.",
+          "deadline": "2026-08-14",
+          "deadlineLabel": "Closed 14 Aug 2026",
+          "status": "closed",
+          "note": "Now run as one joint round with four other FDA-funded consortia, not as a standalone SWPDC prize. Eligibility is strict: the device must meet the FDA definition of a medical device, the applicant must intend to pursue a pediatric indication for use, and the company must be US-based and able to present in person in Boston. Katka's own record has 21 Aug for the SWPDC and AAP SOATT track; the published joint deadline is 14 Aug 2026.",
           "cost": {
             "amount": "Free to apply",
-            "detail": "Prize is up to ~USD 25,000. No entry fee stated. Eligibility limited to devices taking a US FDA regulatory pathway.",
+            "detail": "No entry fee. Up to USD 300,000 across the round, up to USD 50,000 per project. Closed for the Fall 2026 round.",
             "basis": "free",
-            "source": "https://swpdc.org/aapsoitt/"
-          }
+            "source": "https://pedsinnovation.org/2026/07/23/fall-2026-pediatric-device-pitch-competition-applications-now-open/"
+          },
+          "url": "https://pedsinnovation.org/2026/07/23/fall-2026-pediatric-device-pitch-competition-applications-now-open/"
         }
       ],
       "links": [
@@ -84,7 +100,13 @@
           "url": "https://airtable.com/app5MJN9vmJ3UDdco/shrCXfPOaNgKSkrr5"
         }
       ],
-      "verified": "2026-08-14"
+      "verified": "2026-08-26",
+      "absent": {
+        "present": "n/a",
+        "attend": "n/a",
+        "exhibit": "n/a",
+        "teach": "n/a"
+      }
     },
     {
       "id": "elevate-cix",
@@ -116,7 +138,8 @@
             "detail": "General Admission band quoted on the ticket page. Startup, Investor and Trailblazer tiers priced separately. Super early bird closed 31 May 2026, advance closed 6 Aug 2026.",
             "basis": "approx",
             "source": "https://elevatefestival.ca/tickets/"
-          }
+          },
+          "url": "https://elevatefestival.ca/tickets/"
         },
         {
           "mode": "pitch",
@@ -176,7 +199,8 @@
             "detail": "Non-member early rate, to 24 Jun 2026. Member EUR 510. Regular 750 / 600 to 18 Aug, onsite 850 / 680. Nurse or early career investigator 320 / 260 early. Online-only 320.",
             "basis": "published",
             "source": "https://eaps.kenes.com/register/"
-          }
+          },
+          "url": "https://eaps.kenes.com/register/"
         },
         {
           "mode": "pitch",
@@ -190,7 +214,8 @@
             "detail": "Competition terms for 2026 not posted. No separate entry fee published.",
             "basis": "unknown",
             "source": "https://eaps.kenes.com"
-          }
+          },
+          "url": "https://eaps.kenes.com"
         }
       ],
       "links": [
@@ -231,7 +256,8 @@
             "detail": "Non-member physician, early rate to 21 Aug 2026, rising to 1,315 from 22 Aug. AAP member 735 then 920. One-day 530. Virtual-only 735 to 18 Sep.",
             "basis": "published",
             "source": "https://aapexperience.org/registration/"
-          }
+          },
+          "url": "https://aapexperience.org/registration/"
         },
         {
           "mode": "present",
@@ -245,7 +271,8 @@
             "detail": "No separate abstract fee. Presenters pay the standard registration above. Submission for 2026 has closed.",
             "basis": "published",
             "source": "https://aapexperience.org/registration/"
-          }
+          },
+          "url": "https://aapexperience.org/registration/"
         },
         {
           "mode": "exhibit",
@@ -259,7 +286,8 @@
             "detail": "Booth rates are in the exhibitor prospectus, not on the public site.",
             "basis": "unknown",
             "source": "https://aapexperience.org"
-          }
+          },
+          "url": "https://aapexperience.org"
         }
       ],
       "links": [
@@ -268,7 +296,13 @@
           "url": "https://aapexperience.org"
         }
       ],
-      "verified": "2026-08-26"
+      "verified": "2026-08-26",
+      "absent": {
+        "pitch": "none"
+      },
+      "absentSrc": {
+        "pitch": "https://aapexperience.org"
+      }
     },
     {
       "id": "htid-2026",
@@ -300,7 +334,8 @@
             "detail": "Pitch application terms and any fee for 2026 not posted.",
             "basis": "unknown",
             "source": "https://htfc-eu.com/htid/"
-          }
+          },
+          "url": "https://htfc-eu.com/htid/"
         },
         {
           "mode": "attend",
@@ -314,7 +349,8 @@
             "detail": "Delegate fee not posted. Event confirmed for 1 Oct 2026, Paris.",
             "basis": "unknown",
             "source": "https://htfc-eu.com/htid/"
-          }
+          },
+          "url": "https://htfc-eu.com/htid/"
         }
       ],
       "links": [
@@ -378,7 +414,13 @@
           "url": "https://www.mcascientificevents.eu/europaediatrics"
         }
       ],
-      "verified": "2026-08-26"
+      "verified": "2026-08-26",
+      "absent": {
+        "pitch": "none"
+      },
+      "absentSrc": {
+        "pitch": "https://www.mcascientificevents.eu/europaediatrics/welcome/"
+      }
     },
     {
       "id": "medtech-conference-2026",
@@ -411,7 +453,8 @@
             "detail": "Non-member start-up or emerging medtech under USD 100M revenue, to 17 Oct 2026, then 2,200. AdvaMed member Accel start-up pre-revenue to USD 1M pays 1,100. Investors and hospital executives complimentary.",
             "basis": "published",
             "source": "https://themedtechconference.com/register/"
-          }
+          },
+          "url": "https://themedtechconference.com/register/"
         },
         {
           "mode": "present",
@@ -425,7 +468,23 @@
             "detail": "No separate submission fee. Session leads pay standard registration above.",
             "basis": "published",
             "source": "https://themedtechconference.com/register/"
-          }
+          },
+          "url": "https://www.advamed.org/events/the-medtech-conference-call-for-sessions/"
+        },
+        {
+          "mode": "pitch",
+          "label": "MedTech Innovator Showcase and Finals",
+          "deadline": null,
+          "deadlineLabel": "Via the MedTech Innovator accelerator round",
+          "status": "unannounced",
+          "note": "Not a direct entry. Companies reach the stage by being selected into the MedTech Innovator accelerator cohort, which drew over 1,800 applicants for 65 places in 2026. Five finalists pitch on the keynote stage.",
+          "cost": {
+            "amount": "Free, no equity",
+            "detail": "No entry fee and no equity for the accelerator or the showcase. Finals prize is USD 350,000 in non-dilutive funding. Conference registration is separate.",
+            "basis": "free",
+            "source": "https://themedtechconference.com/medtech-innovator/"
+          },
+          "url": "https://themedtechconference.com/medtech-innovator/"
         }
       ],
       "links": [
@@ -466,7 +525,8 @@
             "detail": "APDI and two other FDA-funded pediatric device consortia award USD 25,000 innovation prizes at the event. The 2026 edition ran 7 Jul 2026, so the next cycle is 2027.",
             "basis": "free",
             "source": "https://pediatrics.research.gatech.edu/events/pediatric-innovation-day-and-showcase"
-          }
+          },
+          "url": "https://pediatrics.research.gatech.edu/events/pediatric-innovation-day-and-showcase"
         }
       ],
       "links": [
@@ -475,7 +535,13 @@
           "url": "https://pediatrics.research.gatech.edu"
         }
       ],
-      "verified": "2026-08-26"
+      "verified": "2026-08-26",
+      "absent": {
+        "present": "n/a",
+        "attend": "n/a",
+        "exhibit": "n/a",
+        "teach": "n/a"
+      }
     },
     {
       "id": "cepas-2026",
@@ -507,7 +573,8 @@
             "detail": "No separate abstract fee. Presenters pay the registration below. Submission for 2026 has closed.",
             "basis": "published",
             "source": "https://www.cepas.org/registration"
-          }
+          },
+          "url": "https://www.cepas.org/registration"
         },
         {
           "mode": "attend",
@@ -521,7 +588,8 @@
             "detail": "Non-member early, to 31 Jul 2026. EAP or ESPR member 450. Regular 720 / 550 from 1 Aug, late 900 / 685 from 1 Oct. Nurse, allied health or early career 320 / 260 early. Industry representative 950 flat. Includes 10% French VAT.",
             "basis": "published",
             "source": "https://www.cepas.org/registration"
-          }
+          },
+          "url": "https://www.cepas.org/registration"
         }
       ],
       "links": [
@@ -530,7 +598,13 @@
           "url": "https://cepas.org"
         }
       ],
-      "verified": "2026-08-26"
+      "verified": "2026-08-26",
+      "absent": {
+        "pitch": "none"
+      },
+      "absentSrc": {
+        "pitch": "https://www.cepas.org/"
+      }
     },
     {
       "id": "sim-expo-2026",
@@ -562,7 +636,8 @@
             "detail": "No submission fee. Accepted presenters get 10% off registration, so the full 2-day non-member rate of 800 becomes 720. Submission has closed.",
             "basis": "published",
             "source": "https://simulationcanada.ca/conferences-events/sim-expo/"
-          }
+          },
+          "url": "https://simulationcanada.ca/conferences-events/sim-expo/"
         },
         {
           "mode": "attend",
@@ -576,7 +651,8 @@
             "detail": "Full 2-day non-member. Individual member 640, organisational member 600. One-day 480. Resident 425, student 300. Sales tax added on top.",
             "basis": "published",
             "source": "https://simulationcanada.ca/conferences-events/sim-expo/"
-          }
+          },
+          "url": "https://simulationcanada.ca/conferences-events/sim-expo/"
         },
         {
           "mode": "attend",
@@ -584,13 +660,15 @@
           "deadline": "2026-10-08",
           "deadlineLabel": "8 Oct 2026",
           "status": "open",
-          "note": "",
+          "note": "Logistics, not a way to take part. Kept for planning, kept out of the closing-deadline rail.",
           "cost": {
             "amount": "Not published",
             "detail": "Room rate for the Halifax Marriott Harbourfront block is released with the booking link, not on the event page.",
             "basis": "unknown",
             "source": "https://simulationcanada.ca/conferences-events/sim-expo/"
-          }
+          },
+          "rail": false,
+          "url": "https://simulationcanada.ca/conferences-events/sim-expo/"
         },
         {
           "mode": "exhibit",
@@ -604,7 +682,8 @@
             "detail": "Booth and sponsor tiers are in the Exhibitor and Sponsor Prospectus, not on the public page.",
             "basis": "unknown",
             "source": "https://simulationcanada.ca/conferences-events/sim-expo/"
-          }
+          },
+          "url": "https://simulationcanada.ca/conferences-events/sim-expo/"
         }
       ],
       "links": [
@@ -617,7 +696,13 @@
           "url": "https://simulationcanada.ca/resources/sim-company-directory/"
         }
       ],
-      "verified": "2026-08-26"
+      "verified": "2026-08-26",
+      "absent": {
+        "pitch": "none"
+      },
+      "absentSrc": {
+        "pitch": "https://simulationcanada.ca/conferences-events/sim-expo/"
+      }
     },
     {
       "id": "hlth-usa-2026",
@@ -650,7 +735,8 @@
             "detail": "No entry fee published. Applications for the 2026 pitch have closed.",
             "basis": "unknown",
             "source": "https://hlth.com/events/usa/agenda/startup-pitch/"
-          }
+          },
+          "url": "https://hlth.com/events/usa/agenda/startup-pitch/"
         },
         {
           "mode": "attend",
@@ -664,7 +750,8 @@
             "detail": "Early rate for clinicians, start-ups and government or non-profit. Provider, payer and employer executives and investors 2,295 early. Solution providers and vendors 2,795 early. Standard rates rise to 3,395, or 3,995 for vendors. Market Connect and media passes can be free with approval.",
             "basis": "published",
             "source": "https://hlth.com/events/usa/register/"
-          }
+          },
+          "url": "https://hlth.com/events/usa/register/"
         }
       ],
       "links": [
@@ -702,8 +789,8 @@
           "status": "open",
           "note": "Free to enter. MEDICA states conformity with the Medical Device Directive or FDA approval is not required. Categories include AI in healthcare, robotics, lab diagnostics and others. Top 12 of each competition pitch at MEDICA, 16 and 17 Nov, with 3,500 EUR in cash prizes.",
           "cost": {
-            "amount": "EUR 550",
-            "detail": "No standalone entry fee published for the competition. The pitch slot itself is the START-UP PARK stage upgrade at EUR 550 plus VAT on top of the booth.",
+            "amount": "EUR 3,500",
+            "detail": "Full cost to pitch, plus VAT. The stage slot is not sold on its own: it is the EUR 2,950 START-UP PARK booth plus the EUR 550 stage upgrade. Entering the Innovation World Cup itself carries no separate fee.",
             "basis": "published",
             "source": "https://www.medica-tradefair.com/en/Program/Specials/MEDICA_START-UP_PARK"
           }
@@ -720,7 +807,8 @@
             "detail": "Plus VAT, for the Hall 17 START-UP PARK package: counter with 2 stools, display stand, exhibitor graphic, electricity, Wi-Fi, daily cleaning, database listing and media fee. Stage upgrade with a live pitch slot is a further EUR 550, total 3,500.",
             "basis": "published",
             "source": "https://www.medica-tradefair.com/en/Program/Specials/MEDICA_START-UP_PARK"
-          }
+          },
+          "url": "https://www.medica-tradefair.com/en/Program/Specials/MEDICA_START-UP_PARK"
         },
         {
           "mode": "attend",
@@ -734,7 +822,8 @@
             "detail": "Visitor ticket prices sit behind the MEDICA ticket shop rather than on the public programme pages.",
             "basis": "unknown",
             "source": "https://www.medica-tradefair.com"
-          }
+          },
+          "url": "https://www.medica-tradefair.com"
         }
       ],
       "links": [
@@ -779,7 +868,8 @@
             "detail": "MedTech Innovator takes no fee and no equity. Companies that have raised up to Series C are eligible. 2026 applications are closed and the 2027 window has not opened; there is a waitlist.",
             "basis": "free",
             "source": "https://medtechinnovator.org/apply/"
-          }
+          },
+          "url": "https://medtechinnovator.org/apply/"
         }
       ],
       "links": [
@@ -788,7 +878,13 @@
           "url": "https://medtechinnovator.org/apply"
         }
       ],
-      "verified": "2026-08-26"
+      "verified": "2026-08-26",
+      "absent": {
+        "present": "n/a",
+        "attend": "n/a",
+        "exhibit": "n/a",
+        "teach": "n/a"
+      }
     },
     {
       "id": "imsh-2027",
@@ -820,7 +916,8 @@
             "detail": "IMSH 2026 rate, 2027 not yet published. Non-member early bird; SSH member 850. Regular 1,220 / 1,005, late and onsite 1,320 / 1,105. One-day pass 475. Registration opens autumn 2026.",
             "basis": "prior-year",
             "source": "https://imsh2026.org/registration"
-          }
+          },
+          "url": "https://imsh2027.org"
         },
         {
           "mode": "present",
@@ -848,7 +945,8 @@
             "detail": "Booth rates are in the exhibitor prospectus, not on the public site.",
             "basis": "unknown",
             "source": "https://imsh2027.org"
-          }
+          },
+          "url": "https://imsh2027.org"
         },
         {
           "mode": "teach",
@@ -863,6 +961,21 @@
             "basis": "prior-year",
             "source": "https://imsh2026.org/registration"
           }
+        },
+        {
+          "mode": "pitch",
+          "label": "SimVentors Showcase",
+          "deadline": null,
+          "deadlineLabel": "Via the Call for Content, closed 27 May 2026",
+          "status": "closed",
+          "note": "Showcase of simulation technology built inside member programmes and by emerging companies. Commercially available products may not be submitted, so this fits a pre-launch build, not a finished product. Held on Technology Monday, 25 Jan 2027, 11:30 to 13:30. SSH is raising funds to attach monetary awards.",
+          "cost": {
+            "amount": "USD 1,065",
+            "detail": "No submission fee. Presenters pay standard IMSH registration, shown at the 2026 non-member early rate; SSH member 850. 2027 rates not published.",
+            "basis": "prior-year",
+            "source": "https://imsh2026.org/registration"
+          },
+          "url": "https://www.ssih.org/ssh-fund/impact/simventors-awards"
         }
       ],
       "links": [
@@ -904,7 +1017,8 @@
             "detail": "Entry terms and any fee not published. Organiser contact is support.whxtechdubai@informa.com.",
             "basis": "unknown",
             "source": "https://www.worldhealthexpo.com/events/healthcare/tech/"
-          }
+          },
+          "url": "https://www.worldhealthexpo.com/events/healthcare/tech/"
         },
         {
           "mode": "exhibit",
@@ -918,7 +1032,8 @@
             "detail": "Approximate. Not published by Informa directly. Export Virginia quotes USD 3,500 per company for pavilion participation at WHX Dubai 2027; UK pod stands are quoted around GBP 3,800 to 5,000.",
             "basis": "approx",
             "source": "https://exportvirginia.org/event/whx-dubai-2027"
-          }
+          },
+          "url": "https://www.worldhealthexpo.com/events/healthcare/tech/"
         }
       ],
       "links": [
@@ -959,7 +1074,8 @@
             "detail": "Platinum award is USD 100,000. The consortium does not publish an application fee. Runs twice yearly, spring and autumn.",
             "basis": "unknown",
             "source": "https://pediatricdeviceconsortium.org/"
-          }
+          },
+          "url": "https://pediatricdeviceconsortium.org/"
         }
       ],
       "links": [
@@ -968,7 +1084,13 @@
           "url": "https://pediatricdeviceconsortium.org"
         }
       ],
-      "verified": "2026-08-26"
+      "verified": "2026-08-26",
+      "absent": {
+        "present": "n/a",
+        "attend": "n/a",
+        "exhibit": "n/a",
+        "teach": "n/a"
+      }
     },
     {
       "id": "nccpdi-2027",
@@ -1000,7 +1122,8 @@
             "detail": "APDI awards USD 25,000 innovation prizes. No application fee published. The 2027 round is not yet announced.",
             "basis": "free",
             "source": "https://innovate4kids.org/"
-          }
+          },
+          "url": "https://innovate4kids.org/"
         }
       ],
       "links": [
@@ -1009,7 +1132,13 @@
           "url": "https://innovate4kids.org"
         }
       ],
-      "verified": "2026-08-26"
+      "verified": "2026-08-26",
+      "absent": {
+        "present": "n/a",
+        "attend": "n/a",
+        "exhibit": "n/a",
+        "teach": "n/a"
+      }
     },
     {
       "id": "neoped-2027",
@@ -1041,7 +1170,8 @@
             "detail": "2027 edition, venue and pricing all unannounced. 2026 was Berlin.",
             "basis": "unknown",
             "source": "https://neoped.eu"
-          }
+          },
+          "url": "https://neoped.eu"
         }
       ],
       "links": [
@@ -1110,7 +1240,8 @@
             "detail": "Registration site opens November 2026. Early registration closes 16 Mar 2027.",
             "basis": "unknown",
             "source": "https://www.pas-meeting.org/2027-key-dates/"
-          }
+          },
+          "url": "https://www.pas-meeting.org/2027-key-dates/"
         },
         {
           "mode": "exhibit",
@@ -1124,7 +1255,8 @@
             "detail": "Booth and sponsor pricing is in the PAS prospectus. Contacts are listed on the sponsor page.",
             "basis": "unknown",
             "source": "https://www.pas-meeting.org/sponsor-exhibit/"
-          }
+          },
+          "url": "https://www.pas-meeting.org/sponsor-exhibit/"
         }
       ],
       "links": [
@@ -1133,7 +1265,13 @@
           "url": "https://www.pas-meeting.org/2027-key-dates"
         }
       ],
-      "verified": "2026-08-26"
+      "verified": "2026-08-26",
+      "absent": {
+        "pitch": "none"
+      },
+      "absentSrc": {
+        "pitch": "https://www.pas-meeting.org/2027-key-dates/"
+      }
     },
     {
       "id": "ipeg-2027",
@@ -1181,7 +1319,8 @@
             "detail": "2026 Joint Congress rate for the IPEG Mastery Laparoscopy course, member; non-member 930. The Joint Laparoscopy Course was 240 / 300 and the ESPES robotics and urology masterclasses 120 / 150. 2027 programme not yet published.",
             "basis": "prior-year",
             "source": "https://www.jointcongress.org/registration/"
-          }
+          },
+          "url": "https://www.jointcongress.org/registration/"
         },
         {
           "mode": "attend",
@@ -1208,7 +1347,13 @@
           "url": "https://jointcongress.org"
         }
       ],
-      "verified": "2026-08-26"
+      "verified": "2026-08-26",
+      "absent": {
+        "pitch": "none"
+      },
+      "absentSrc": {
+        "pitch": "https://www.ipeg.org/"
+      }
     },
     {
       "id": "medtech-forum-2027",
@@ -1239,7 +1384,8 @@
             "detail": "Confirmed for 10 to 11 May 2027 in Rome. Delegate fees not yet posted.",
             "basis": "unknown",
             "source": "https://www.themedtechforum.eu/"
-          }
+          },
+          "url": "https://www.themedtechforum.eu/"
         }
       ],
       "links": [
@@ -1249,7 +1395,13 @@
         }
       ],
       "verified": "2026-08-26",
-      "end": "2027-05-11"
+      "end": "2027-05-11",
+      "absent": {
+        "pitch": "none"
+      },
+      "absentSrc": {
+        "pitch": "https://www.themedtechforum.eu/"
+      }
     },
     {
       "id": "apsa-2027",
@@ -1334,7 +1486,13 @@
           "url": "https://apsapedsurg.org/continuing-education/events/annual-meeting"
         }
       ],
-      "verified": "2026-08-26"
+      "verified": "2026-08-26",
+      "absent": {
+        "pitch": "none"
+      },
+      "absentSrc": {
+        "pitch": "https://apsapedsurg.org/continuing-education/events/annual-meeting/"
+      }
     },
     {
       "id": "eupsa-2027",
@@ -1380,7 +1538,8 @@
             "detail": "2026 Joint Congress range: EUPSA neonatal, oncology and colorectal masterclasses 120 member / 150 non-member; Joint Laparoscopy Course 240 / 300. 2027 programme not yet published.",
             "basis": "prior-year",
             "source": "https://www.jointcongress.org/registration/"
-          }
+          },
+          "url": "https://www.jointcongress.org/registration/"
         },
         {
           "mode": "attend",
@@ -1403,7 +1562,13 @@
           "url": "https://eupsa.info"
         }
       ],
-      "verified": "2026-08-26"
+      "verified": "2026-08-26",
+      "absent": {
+        "pitch": "none"
+      },
+      "absentSrc": {
+        "pitch": "https://eupsa.info"
+      }
     },
     {
       "id": "espnic-2027",
@@ -1449,7 +1614,8 @@
             "detail": "Registration info reads Coming soon. Enquiries go to registration@espniccongress.eu.",
             "basis": "unknown",
             "source": "https://www.mcascientificevents.eu/espnic/registration/"
-          }
+          },
+          "url": "https://www.mcascientificevents.eu/espnic/registration/"
         }
       ],
       "links": [
@@ -1458,7 +1624,13 @@
           "url": "https://www.mcascientificevents.eu/espnic"
         }
       ],
-      "verified": "2026-08-26"
+      "verified": "2026-08-26",
+      "absent": {
+        "pitch": "none"
+      },
+      "absentSrc": {
+        "pitch": "https://www.mcascientificevents.eu/espnic/"
+      }
     },
     {
       "id": "baps-2027",
@@ -1499,7 +1671,13 @@
           "url": "https://congress.baps.org.uk"
         }
       ],
-      "verified": "2026-08-26"
+      "verified": "2026-08-26",
+      "absent": {
+        "pitch": "none"
+      },
+      "absentSrc": {
+        "pitch": "https://congress.baps.org.uk/"
+      }
     },
     {
       "id": "hlth-europe-2027",
@@ -1610,7 +1788,13 @@
           "url": "https://www.academicpeds.org"
         }
       ],
-      "verified": "2026-08-26"
+      "verified": "2026-08-26",
+      "absent": {
+        "pitch": "none"
+      },
+      "absentSrc": {
+        "pitch": "https://www.academicpeds.org/events/phmmeeting/"
+      }
     },
     {
       "id": "robotic-surgery-2027",
@@ -1643,7 +1827,8 @@
             "detail": "4th annual course rate, 19 to 21 Aug 2026; 2027 not yet posted. Day 1 in person 750; Day 1 plus one lab 1,250; Day 1 plus two labs 1,750; livestream 500. Trainee 150, or 650 for both days. Rates rise USD 100 after the 1 Jul early deadline.",
             "basis": "prior-year",
             "source": "https://nationwidechildrens.cloud-cme.com/course/courseoverview?P=5&EID=49874&IsExhibitor=false"
-          }
+          },
+          "url": "https://nationwidechildrens.cloud-cme.com/course/courseoverview?P=5&EID=49874&IsExhibitor=false"
         },
         {
           "mode": "exhibit",
@@ -1666,7 +1851,13 @@
           "url": "https://nationwidechildrens.cloud-cme.com/course/courseoverview?P=5&EID=49874&IsExhibitor=false"
         }
       ],
-      "verified": "2026-08-26"
+      "verified": "2026-08-26",
+      "absent": {
+        "pitch": "none"
+      },
+      "absentSrc": {
+        "pitch": "https://nationwidechildrens.cloud-cme.com/course/courseoverview?P=5&EID=49874&IsExhibitor=false"
+      }
     },
     {
       "id": "jens-2027",
@@ -1698,7 +1889,8 @@
             "detail": "No submission fee. Presenters pay registration, shown here including VAT (EUR 700 excluding). Submission opened 21 Jul 2026 and closes 31 Mar 2027.",
             "basis": "published",
             "source": "https://www.mcascientificevents.eu/jens/registration/"
-          }
+          },
+          "url": "https://www.mcascientificevents.eu/jens/abstract-submission/"
         },
         {
           "mode": "attend",
@@ -1712,7 +1904,8 @@
             "detail": "Full registration including VAT; EUR 700 excluding. Nurse, allied health, student or early career investigator 303 incl. Corporate or industry 1,210 incl. No early bird tier published; a 5% newsletter discount is offered.",
             "basis": "published",
             "source": "https://www.mcascientificevents.eu/jens/registration/"
-          }
+          },
+          "url": "https://www.mcascientificevents.eu/jens/registration/"
         },
         {
           "mode": "teach",
@@ -1735,6 +1928,309 @@
           "url": "https://www.mcascientificevents.eu/jens/abstract-submission/"
         }
       ],
+      "verified": "2026-08-26",
+      "absent": {
+        "pitch": "none"
+      },
+      "absentSrc": {
+        "pitch": "https://www.mcascientificevents.eu/jens/"
+      }
+    },
+    {
+      "id": "pdc-joint-pitch",
+      "name": "Pediatric Device Pitch Competition, five-consortium round",
+      "org": "MPDC with APDI, CTIP, SWPDC and the UCSF-Stanford PDC",
+      "dateLabel": "Pitch day 18 Oct 2026",
+      "start": "2026-10-18",
+      "confirmed": true,
+      "where": "13th Pediatric MedTech Conference, Boston, MA",
+      "country": "USA",
+      "region": "North America",
+      "tags": [
+        "pediatric",
+        "startup"
+      ],
+      "priority": true,
+      "summary": "The five FDA-funded pediatric device consortia now run one joint pitch round instead of five separate prizes. Up to USD 300,000 in seed funding across the round, up to USD 50,000 per project, plus mentorship, prototyping help and commercialisation coaching.",
+      "audience": "US-based innovators building a device that meets the FDA definition of a medical device and that will carry a pediatric indication for use.",
+      "participate": [
+        {
+          "mode": "pitch",
+          "label": "Apply to the joint pitch round",
+          "deadline": "2026-08-14",
+          "deadlineLabel": "Closed 14 Aug 2026",
+          "status": "closed",
+          "note": "Applicants must be US-based and available to present in person in Boston on 18 Oct 2026. The next round is not yet announced; the consortia have run these roughly twice a year.",
+          "cost": {
+            "amount": "Free to apply",
+            "detail": "No entry fee. Up to USD 50,000 per project, up to USD 300,000 across the round.",
+            "basis": "free",
+            "source": "https://pedsinnovation.org/2026/07/23/fall-2026-pediatric-device-pitch-competition-applications-now-open/"
+          },
+          "url": "https://pedsinnovation.org/2026/07/23/fall-2026-pediatric-device-pitch-competition-applications-now-open/"
+        }
+      ],
+      "absent": {
+        "present": "n/a",
+        "attend": "n/a",
+        "exhibit": "n/a",
+        "teach": "n/a"
+      },
+      "links": [
+        {
+          "label": "pedsinnovation.org",
+          "url": "https://pedsinnovation.org/"
+        },
+        {
+          "label": "Fall 2026 round announcement",
+          "url": "https://pedsinnovation.org/2026/07/23/fall-2026-pediatric-device-pitch-competition-applications-now-open/"
+        }
+      ],
+      "tracker": "",
+      "verified": "2026-08-26"
+    },
+    {
+      "id": "sages-2027",
+      "name": "SAGES 2027 annual meeting",
+      "org": "Society of American Gastrointestinal and Endoscopic Surgeons",
+      "dateLabel": "6 to 9 Apr 2027",
+      "start": "2027-04-06",
+      "end": "2027-04-09",
+      "confirmed": true,
+      "where": "Las Vegas, NV",
+      "country": "USA",
+      "region": "North America",
+      "tags": [
+        "surgery",
+        "simulation",
+        "industry"
+      ],
+      "priority": true,
+      "summary": "The largest US meeting for minimally invasive and endoscopic surgery. Its Emerging Technology session is explicitly open to industry engineers and inventors presenting their own work, including technology with no formal experimental data yet, which is unusual for a surgical society.",
+      "audience": "MIS and endoscopic surgeons, plus device engineers and inventors via the Emerging Technology track.",
+      "participate": [
+        {
+          "mode": "present",
+          "label": "Emerging Technology abstract",
+          "deadline": "2026-11-04",
+          "deadlineLabel": "15 Sep to 4 Nov 2026",
+          "status": "open",
+          "note": "Open to physicians, industry engineers, scientists and researchers, for cutting-edge technology where formal experimental data may not exist yet. Developers and inventors are encouraged to present their own work. Video abstracts need English narration and a 100-word description. The window opens 15 Sep 2026.",
+          "cost": {
+            "amount": "Not published",
+            "detail": "2027 registration rates are not posted. Presenters pay standard meeting registration.",
+            "basis": "unknown",
+            "source": "https://www.sages2027.org/"
+          },
+          "url": "https://www.sages.org/meetings/etabstracts/"
+        },
+        {
+          "mode": "teach",
+          "label": "Hands-on postgraduate courses",
+          "deadline": null,
+          "deadlineLabel": "2027 course line-up not announced",
+          "status": "unannounced",
+          "note": "SAGES runs ticketed hands-on and postgraduate courses around the main meeting. The 2027 programme is not posted.",
+          "cost": {
+            "amount": "Not published",
+            "detail": "2027 course fees not posted.",
+            "basis": "unknown",
+            "source": "https://www.sages2027.org/"
+          },
+          "url": "https://www.sages2027.org/"
+        }
+      ],
+      "absent": {
+        "pitch": "none",
+        "attend": "unchecked",
+        "exhibit": "unchecked"
+      },
+      "links": [
+        {
+          "label": "sages2027.org",
+          "url": "https://www.sages2027.org/"
+        },
+        {
+          "label": "Emerging Technology abstracts",
+          "url": "https://www.sages.org/meetings/etabstracts/"
+        }
+      ],
+      "tracker": "",
+      "verified": "2026-08-26"
+    },
+    {
+      "id": "lsi-usa-2027",
+      "name": "LSI USA '27 Emerging Medtech Summit",
+      "org": "Life Science Intelligence",
+      "dateLabel": "15 to 19 Mar 2027",
+      "start": "2027-03-15",
+      "end": "2027-03-19",
+      "confirmed": true,
+      "where": "Waldorf Astoria Monarch Beach, Dana Point, CA",
+      "country": "USA",
+      "region": "North America",
+      "tags": [
+        "startup",
+        "industry"
+      ],
+      "priority": false,
+      "summary": "An investor-dense medtech summit built around startup presentations from the main stage, 1:1 partnering meetings and a Funding Fast Track. Smaller and more transactional than the big trade shows.",
+      "audience": "Emerging medtech companies raising capital, plus strategics and investors.",
+      "participate": [
+        {
+          "mode": "pitch",
+          "label": "Apply to present on stage",
+          "deadline": null,
+          "deadlineLabel": "Applications open, no deadline posted",
+          "status": "rolling",
+          "note": "LSI runs on-stage company presentations plus exhibition space for private demos. Registration and applications for LSI USA '27 are open. No deadline is published on the summit page.",
+          "cost": {
+            "amount": "Not published",
+            "detail": "Neither the delegate pass nor the presenting package is priced on the public site. LSI quotes on request: 714-847-3540.",
+            "basis": "unknown",
+            "source": "https://www.lsiusasummit.com/"
+          },
+          "url": "https://www.lsiusasummit.com/"
+        },
+        {
+          "mode": "attend",
+          "label": "Attend",
+          "deadline": null,
+          "deadlineLabel": "Registration open, no tier dates posted",
+          "status": "rolling",
+          "note": "",
+          "cost": {
+            "amount": "Not published",
+            "detail": "Delegate pass pricing sits behind the registration portal.",
+            "basis": "unknown",
+            "source": "https://www.lsiusasummit.com/"
+          },
+          "url": "https://www.lsiusasummit.com/"
+        }
+      ],
+      "absent": {
+        "present": "none",
+        "exhibit": "unchecked",
+        "teach": "none"
+      },
+      "links": [
+        {
+          "label": "lsiusasummit.com",
+          "url": "https://www.lsiusasummit.com/"
+        }
+      ],
+      "tracker": "",
+      "verified": "2026-08-26"
+    },
+    {
+      "id": "sesam-2027",
+      "name": "SESAM 2027 annual meeting",
+      "org": "Society in Europe for Simulation Applied to Medicine",
+      "dateLabel": "Est. Jun 2027",
+      "start": "2027-06-15",
+      "confirmed": false,
+      "where": "Not yet announced. 2026 was Lyon, 17 to 19 Jun 2026.",
+      "country": "Europe",
+      "region": "Europe",
+      "tags": [
+        "simulation"
+      ],
+      "priority": false,
+      "summary": "The main European gathering for healthcare simulation, and the natural European counterpart to IMSH. The 2027 host city and dates have not been announced.",
+      "audience": "Simulation centre directors, educators and simulation technology developers across Europe.",
+      "participate": [
+        {
+          "mode": "present",
+          "label": "Submit an abstract",
+          "deadline": null,
+          "deadlineLabel": "2027 call not announced",
+          "status": "unannounced",
+          "note": "SESAM runs a standard abstract call. Nothing posted for 2027 as of 26 Aug 2026.",
+          "cost": {
+            "amount": "Not published",
+            "detail": "2027 fees not posted.",
+            "basis": "unknown",
+            "source": "https://sesamsociety.org/events/"
+          },
+          "url": "https://sesamsociety.org/events/"
+        },
+        {
+          "mode": "attend",
+          "label": "Attend",
+          "deadline": null,
+          "deadlineLabel": "2027 registration not open",
+          "status": "unannounced",
+          "note": "",
+          "cost": {
+            "amount": "Not published",
+            "detail": "2027 fees not posted.",
+            "basis": "unknown",
+            "source": "https://sesamsociety.org/events/"
+          },
+          "url": "https://sesamsociety.org/events/"
+        }
+      ],
+      "absent": {
+        "pitch": "none",
+        "exhibit": "unchecked",
+        "teach": "unchecked"
+      },
+      "links": [
+        {
+          "label": "sesamsociety.org",
+          "url": "https://sesamsociety.org/events/"
+        }
+      ],
+      "tracker": "",
+      "verified": "2026-08-26"
+    },
+    {
+      "id": "ctip-cpi-2027",
+      "name": "CTIP Catalyzing Pediatric Innovation grant",
+      "org": "Consortium for Technology & Innovation in Pediatrics, CHLA and Lurie Children's",
+      "dateLabel": "Applications est. open Mar 2027",
+      "start": "2027-03-23",
+      "confirmed": false,
+      "where": "Virtual application; consortium in Los Angeles and Chicago",
+      "country": "USA",
+      "region": "North America",
+      "tags": [
+        "pediatric",
+        "startup"
+      ],
+      "priority": false,
+      "summary": "An annual non-dilutive grant competition for pediatric medical device projects at any stage. USD 25,000 to 50,000 per award. Open to startups, industry and academia.",
+      "audience": "Pediatric medical device projects at any stage of development.",
+      "participate": [
+        {
+          "mode": "pitch",
+          "label": "Apply to the CPI grant competition",
+          "deadline": null,
+          "deadlineLabel": "2027 round not announced",
+          "status": "unannounced",
+          "note": "The 2026 round opened on 23 March 2026, so the 2027 window is likely to open around the same point. CTIP also runs a separate MedTech Innovation Challenge restricted to CTIP and KidsX member hospitals.",
+          "cost": {
+            "amount": "Free to apply",
+            "detail": "No entry fee. Awards run USD 25,000 to 50,000 in non-dilutive funding.",
+            "basis": "free",
+            "source": "https://www.ctipmedtech.org/"
+          },
+          "url": "https://www.ctipmedtech.org/"
+        }
+      ],
+      "absent": {
+        "present": "n/a",
+        "attend": "n/a",
+        "exhibit": "n/a",
+        "teach": "n/a"
+      },
+      "links": [
+        {
+          "label": "ctipmedtech.org",
+          "url": "https://www.ctipmedtech.org/"
+        }
+      ],
+      "tracker": "",
       "verified": "2026-08-26"
     }
   ]

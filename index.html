@@ -100,16 +100,8 @@ select,input[type=search]{
 }
 .reset{background:none;border:0;font-family:var(--mono);font-size:11.5px;color:var(--teal);cursor:pointer;text-decoration:underline}
 
-/* ---------- event cards ---------- */
+/* ---------- shared bits ---------- */
 main{padding:26px 0 70px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(390px,1fr));gap:16px}
-.card{
-  background:var(--surface);border:1px solid var(--line-soft);border-radius:4px;
-  box-shadow:var(--shadow);padding:18px 20px 16px;display:flex;flex-direction:column;
-}
-.card.prio{border-top:3px solid var(--teal)}
-.card-head{display:flex;gap:10px;align-items:flex-start;justify-content:space-between}
-.card h3{font-family:var(--display);font-weight:600;font-size:17.5px;line-height:1.25;margin:0;letter-spacing:-.01em}
 .prio-mark{
   font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;color:var(--teal);border:1px solid var(--teal);
   padding:2px 6px;border-radius:2px;white-space:nowrap;margin-top:2px;
@@ -123,13 +115,6 @@ main{padding:26px 0 70px}
 .tagrow{display:flex;flex-wrap:wrap;gap:5px;margin:12px 0 0}
 .tag{font-family:var(--mono);font-size:10px;letter-spacing:.07em;text-transform:uppercase;padding:3px 7px;border-radius:2px;background:#E4EDEC;color:#2C5257}
 
-.ways{margin:14px 0 0;border-top:1px solid var(--line-soft);padding-top:11px}
-.ways-h{font-family:var(--mono);font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
-.way{display:grid;grid-template-columns:74px 1fr;gap:10px;padding:7px 0;border-bottom:1px dotted var(--line-soft)}
-.way:last-child{border-bottom:0}
-.way-mode{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:2px}
-.way-label{font-size:13px;font-weight:600;line-height:1.3}
-.way-dl{font-family:var(--mono);font-size:11.5px;margin-top:2px;display:flex;align-items:center;gap:7px;flex-wrap:wrap}
 .pill{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;padding:2px 6px;border-radius:2px;white-space:nowrap}
 .pill.open{background:var(--teal);color:#fff}
 .pill.urgent{background:var(--alert);color:#fff}
@@ -137,14 +122,8 @@ main{padding:26px 0 70px}
 .pill.unannounced{background:#fff;color:var(--amber);border:1px solid #D9C79B}
 .pill.rolling{background:#E4EDEC;color:#2C5257}
 .dl-text{color:var(--muted)}
-.way-note{font-size:12px;color:var(--muted);margin-top:3px;line-height:1.4}
 .flagged{color:var(--alert)}
 
-.tracker{
-  margin:14px 0 0;background:#F1F5F3;border-left:3px solid var(--line);padding:9px 12px;border-radius:0 3px 3px 0;
-}
-.tracker-h{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
-.tracker p{margin:0;font-size:12.5px;color:#2C3E41;line-height:1.45}
 .links{margin:12px 0 0;display:flex;flex-wrap:wrap;gap:12px;font-size:12px}
 .verified{font-family:var(--mono);font-size:10.5px;color:var(--muted);margin-top:10px}
 
@@ -184,6 +163,12 @@ table.sheet{border-collapse:separate;border-spacing:0;table-layout:fixed;width:1
 .t-where{font-size:11.5px;color:var(--muted);line-height:1.4}
 .t-where b{display:block;color:var(--ink);font-weight:600}
 
+a.cellway{
+  display:block;text-decoration:none;border-bottom:0;color:inherit;
+  margin:-3px -5px;padding:3px 5px;border-radius:3px;
+}
+a.cellway:hover{background:#E4EEEC;box-shadow:inset 0 0 0 1px var(--line-soft)}
+a.cellway:hover .cost{color:var(--teal)}
 .cellway{padding:1px 0}
 .cellway + .cellway{margin-top:9px;padding-top:8px;border-top:1px dotted var(--line-soft)}
 .cost{font-family:var(--mono);font-size:12px;font-weight:600;line-height:1.3;letter-spacing:-.02em;word-break:break-word}
@@ -195,7 +180,13 @@ table.sheet{border-collapse:separate;border-spacing:0;table-layout:fixed;width:1
 }
 .basis.prev{color:var(--amber)}
 .cellway .pill{margin-top:4px;display:inline-block}
-.nodash{color:#C3CFCF;font-family:var(--mono);font-size:13px}
+.absent{font-size:11px;line-height:1.35;color:#8A9A9B}
+.absent b{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;
+  color:#9AA9AA;font-weight:500;margin-bottom:2px}
+a.absent:hover{color:var(--teal)}
+a.absent{text-decoration:none;border-bottom:0}
+.absent.na{color:#BFCACB}
+.flag{font-size:13px;line-height:1;margin-right:5px;vertical-align:-1px}
 
 tr.detail>td{background:#F7FAF9;border-bottom:2px solid var(--line);padding:0}
 tr.detail.hidden{display:none}
@@ -301,14 +292,13 @@ tr.detail.hidden{display:none}
 @media (max-width:720px){
   .brand h1{font-size:23px}
   .stamp{text-align:left}
-  .grid{grid-template-columns:1fr}
   .month{grid-template-columns:64px 1fr}
   .month-label{font-size:11px;padding-right:10px}
   .legend{padding-left:0}
   .count{margin-left:0;padding-top:4px}
 }
 @media (prefers-reduced-motion:no-preference){
-  .card,.row{animation:fade .22s ease both}
+  .srow,.row{animation:fade .22s ease both}
   @keyframes fade{from{opacity:0;transform:translateY(3px)}to{opacity:1;transform:none}}
 }
 </style>
@@ -338,7 +328,6 @@ tr.detail.hidden{display:none}
 <nav class="tabs" role="tablist" aria-label="Views">
   <div class="wrap">
     <button class="tab" role="tab" id="tab-table" aria-selected="true" data-view="table">Table</button>
-    <button class="tab" role="tab" id="tab-events" aria-selected="false" data-view="events">Cards</button>
     <button class="tab" role="tab" id="tab-timeline" aria-selected="false" data-view="timeline">Timeline</button>
     <button class="tab" role="tab" id="tab-changed" aria-selected="false" data-view="changed">What changed</button>
     <button class="tab" role="tab" id="tab-add" aria-selected="false" data-view="add">Add an event</button>
@@ -406,8 +395,14 @@ tr.detail.hidden{display:none}
       <span class="free"><b>Free</b> no fee to enter</span>
       <span><b>Not published</b> nothing on the record</span>
     </div>
+    <div class="legend">
+      <span>Empty cells:</span>
+      <span><b>No competition found</b> checked, this event does not run one</span>
+      <span><b>Not applicable</b> an application or prize, there is nothing to attend</span>
+      <span><b>Not checked</b> not researched yet, queued for a Sunday check</span>
+      <span>Every cell links out to the source.</span>
+    </div>
   </div>
-  <div id="view-events" class="hidden"><div class="grid" id="cards"></div></div>
   <div id="view-timeline" class="hidden">
     <div class="legend">
       <span><i style="background:var(--teal)"></i>Deadline</span>
@@ -422,44 +417,24 @@ tr.detail.hidden{display:none}
       <p class="entry-date" style="margin-bottom:16px">Mirrors the Sunday digest. Newest first.</p>
       <div id="changelog"></div>
       <div class="note">
-        Deadlines marked as waiting on an announcement are the ones to re-check each week: 
-        MedTech Innovator, the UCSF-Stanford and NCC-PDI pitches, IMSH Call for Content, APSA and IPEG abstracts.
+        Deadlines marked as waiting on an announcement are the ones to re-check each week:
+        MedTech Innovator, the UCSF-Stanford, NCC-PDI and CTIP pitches, the next joint pediatric consortium round,
+        and the APSA, IPEG and EUPSA abstract calls.
       </div>
     </div>
   </div>
   <div id="view-add" class="hidden">
     <div class="intake">
       <h2>Found an event worth tracking?</h2>
-      <p class="intake-lede">Drop the link here. It joins the queue and gets researched in the Sunday check:
-        organiser, dates, venue, and every deadline attached to it. It appears on this page at the next rebuild.</p>
+      <p class="intake-lede">Paste the link. That is all that is needed. It joins the queue and gets researched in the
+        Sunday check: organiser, dates, venue, cost, and every way to take part. It appears here at the next rebuild.</p>
       <div class="form">
         <div class="field">
           <label for="inUrl">Event link</label>
           <input type="url" id="inUrl" placeholder="https://" autocomplete="off">
-          <div class="hint">The event page, a call for abstracts, or a LinkedIn post. Anything with a name in it.</div>
+          <div class="hint">An event page, a call for abstracts, or a LinkedIn post. Anything with a name in it.</div>
         </div>
-        <div class="field">
-          <label for="inName">What is it, if the link is not obvious</label>
-          <input type="text" id="inName" placeholder="Optional" autocomplete="off">
-        </div>
-        <div class="field">
-          <label>Focus</label>
-          <div class="chips" id="inTags"></div>
-          <div class="hint">Optional. A guess is fine, it gets checked either way.</div>
-        </div>
-        <div class="field">
-          <label for="inNote">Why it is worth tracking</label>
-          <textarea id="inNote" placeholder="Optional. Who mentioned it, what the angle is, anything already known about deadlines."></textarea>
-        </div>
-        <button class="send" id="sendBtn" disabled>Send it to the queue</button>
-        <div class="fallback">
-          <label class="ctrl-label" for="outText" style="display:block;margin-bottom:7px">Or copy this and email it to katka@sabotageworks.com</label>
-          <textarea id="outText" readonly></textarea>
-          <div class="fallback-row">
-            <button class="copy" id="copyBtn">Copy</button>
-            <span class="said" id="copySaid"></span>
-          </div>
-        </div>
+        <button class="send" id="sendBtn" disabled>Add to the queue</button>
       </div>
     </div>
   </div>
@@ -489,6 +464,16 @@ const MODE_LABEL = {
   present:"Present", pitch:"Pitch", attend:"Attend", exhibit:"Exhibit", teach:"Teach"
 };
 const BASIS_LABEL = {published:"", "prior-year":"prev edition", approx:"approx", free:"", unknown:""};
+const FLAG = {
+  USA:"\u{1F1FA}\u{1F1F8}", Canada:"\u{1F1E8}\u{1F1E6}", Greece:"\u{1F1EC}\u{1F1F7}",
+  France:"\u{1F1EB}\u{1F1F7}", Italy:"\u{1F1EE}\u{1F1F9}", Germany:"\u{1F1E9}\u{1F1EA}",
+  UAE:"\u{1F1E6}\u{1F1EA}", Netherlands:"\u{1F1F3}\u{1F1F1}", Spain:"\u{1F1EA}\u{1F1F8}",
+  Hungary:"\u{1F1ED}\u{1F1FA}", UK:"\u{1F1EC}\u{1F1E7}", Europe:"\u{1F1EA}\u{1F1FA}"
+};
+const NONE_LABEL = {
+  present:"No open call found", pitch:"No competition found", attend:"Not open to attendees",
+  exhibit:"No exhibition found", teach:"No course found"
+};
 
 const state = {view:"table", tags:new Set(), modes:new Set(), region:"all", status:"all", q:""};
 
@@ -539,41 +524,6 @@ function matches(e){
   return true;
 }
 
-/* ---------- render: cards ---------- */
-function cardHTML(e){
-  const ways = e.participate.map(p => {
-    const st = liveStatus(p);
-    return `<div class="way">
-      <div class="way-mode">${MODE_LABEL[p.mode]}</div>
-      <div>
-        <div class="way-label">${esc(p.label)}</div>
-        <div class="way-dl">
-          <span class="pill ${st}">${pillText(p, st)}</span>
-          <span class="dl-text${p.flag ? " flagged" : ""}">${esc(p.deadlineLabel)}</span>
-        </div>
-        ${p.note ? `<div class="way-note">${esc(p.note)}</div>` : ""}
-      </div>
-    </div>`;
-  }).join("");
-
-  return `<article class="card${e.priority ? " prio" : ""}">
-    <div class="card-head">
-      <h3>${esc(e.name)}</h3>
-      ${e.priority ? '<span class="prio-mark">PRIORITY</span>' : ''}
-    </div>
-    <p class="when">${esc(e.dateLabel)}${e.confirmed ? "" : ' <span class="est">/ not confirmed</span>'}</p>
-    <p class="where">${esc(e.where)}</p>
-    <p class="org">${esc(e.org)}</p>
-    <p class="summary">${esc(e.summary)}</p>
-    <p class="audience">Who it is for: ${esc(e.audience)}</p>
-    <div class="tagrow">${e.tags.map(t => `<span class="tag">${TAGS.find(x=>x[0]===t)[1]}</span>`).join("")}</div>
-    <div class="ways"><div class="ways-h">Ways to take part</div>${ways}</div>
-    ${e.tracker ? `<div class="tracker"><div class="tracker-h">From the tracker</div><p>${esc(e.tracker)}</p></div>` : ""}
-    <div class="links">${e.links.map(l => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a>`).join("")}</div>
-    ${e.verified ? `<div class="verified">Checked ${fmt(e.verified, true)}</div>` : ""}
-  </article>`;
-}
-
 /* ---------- render: sheet ---------- */
 function costHTML(p){
   const c = p.cost || {amount:"Not published", detail:"", basis:"unknown", source:""};
@@ -583,12 +533,28 @@ function costHTML(p){
   return `<div class="cost${cls}">${pre}${esc(c.amount)}</div>` +
          (b ? `<div class="basis${c.basis === "prior-year" ? " prev" : ""}">${b}</div>` : "");
 }
+function routeURL(e, p){
+  return p.url || (p.cost && p.cost.source) || (e.links[0] && e.links[0].url) || "";
+}
+function absentHTML(e, mode){
+  const kind = (e.absent || {})[mode];
+  if(kind === "n/a") return `<span class="absent na"><b>Not applicable</b></span>`;
+  if(kind === "none"){
+    const src = (e.absentSrc || {})[mode] || (e.links[0] && e.links[0].url) || "";
+    const body = `<b>${NONE_LABEL[mode]}</b>checked ${fmt(e.verified, true)}`;
+    return src ? `<a class="absent" href="${esc(src)}" target="_blank" rel="noopener">${body}</a>`
+               : `<span class="absent">${body}</span>`;
+  }
+  return `<span class="absent"><b>Not checked</b></span>`;
+}
 function sheetCell(e, mode){
   const ways = e.participate.filter(p => p.mode === mode);
-  if(!ways.length) return `<td class="mc"><span class="nodash">&mdash;</span></td>`;
+  if(!ways.length) return `<td class="mc">${absentHTML(e, mode)}</td>`;
   return `<td class="mc">` + ways.map(p => {
-    const st = liveStatus(p);
-    return `<div class="cellway">${costHTML(p)}<span class="pill ${st}">${pillText(p, st)}</span></div>`;
+    const st = liveStatus(p), u = routeURL(e, p);
+    const inner = `${costHTML(p)}<span class="pill ${st}">${pillText(p, st)}</span>`;
+    return u ? `<a class="cellway" href="${esc(u)}" target="_blank" rel="noopener" title="${esc(p.label)}">${inner}</a>`
+             : `<div class="cellway">${inner}</div>`;
   }).join("") + `</td>`;
 }
 function detailHTML(e){
@@ -601,7 +567,7 @@ function detailHTML(e){
       <div class="dt-dl"><span class="dl-text${p.flag ? " flagged" : ""}">${esc(p.deadlineLabel)}</span></div>
       <div class="dt-cost"><b>${esc(c.amount || "Not published")}</b>
         ${c.detail ? `<p>${esc(c.detail)}</p>` : ""}
-        ${c.source ? `<a href="${esc(c.source)}" target="_blank" rel="noopener">source</a>` : ""}
+        <a href="${esc(routeURL(e, p))}" target="_blank" rel="noopener">more information</a>
       </div>
       ${p.note ? `<div class="dt-note">${esc(p.note)}</div>` : ""}
     </div>`;
@@ -630,7 +596,8 @@ function sheetRowHTML(e){
       </div>
     </td>
     <td class="c-when"><div class="t-when">${esc(e.dateLabel)}${e.confirmed ? "" : '<span class="est">not confirmed</span>'}</div></td>
-    <td class="c-where"><div class="t-where"><b>${esc(city)}</b>${esc(e.country)}</div></td>
+    <td class="c-where"><div class="t-where"><b>${esc(city)}</b>${
+      FLAG[e.country] ? `<span class="flag">${FLAG[e.country]}</span>` : ""}${esc(e.country)}</div></td>
     ${MODE_ORDER.map(m => sheetCell(e, m)).join("")}
   </tr>` + detailHTML(e);
 }
@@ -693,6 +660,7 @@ function timelineHTML(list){
 function renderClosing(){
   const items = [];
   DATA.events.forEach(e => e.participate.forEach(p => {
+    if(p.rail === false) return;          // logistics, not a way to take part
     const d = days(p.deadline);
     if(d !== null && d >= 0) items.push({d, p, e});
   }));
@@ -706,21 +674,25 @@ function renderClosing(){
       <div class="cl-ev">${esc(i.e.name)}</div>
     </button>`).join("");
   rail.querySelectorAll("[data-jump]").forEach(b => b.addEventListener("click", () => {
-    setView("events");
+    setView("table");
     resetFilters(false);
     document.getElementById("search").value = "";
     render();
-    const el = document.querySelector(`[data-card="${b.dataset.jump}"]`);
-    if(el){ el.scrollIntoView({behavior:"smooth", block:"center"}); el.style.outline = "2px solid var(--teal-2)"; setTimeout(()=>el.style.outline="",1800); }
+    const id = b.dataset.jump;
+    const btn = document.querySelector(`[data-toggle="${CSS.escape(id)}"]`);
+    if(btn && btn.getAttribute("aria-expanded") !== "true") btn.click();
+    const el = document.querySelector(`[data-row="${CSS.escape(id)}"]`);
+    if(el){
+      el.scrollIntoView({behavior:"smooth", block:"center"});
+      el.style.outline = "2px solid var(--teal-2)";
+      setTimeout(() => el.style.outline = "", 1800);
+    }
   }));
 }
 
 /* ---------- main render ---------- */
 function render(){
   const list = DATA.events.filter(matches).slice().sort((a,b) => (a.start||"").localeCompare(b.start||""));
-  document.getElementById("cards").innerHTML = list.length
-    ? list.map(e => cardHTML(e).replace("<article", `<article data-card="${e.id}"`)).join("")
-    : `<div class="empty-state"><strong>Nothing matches those filters</strong>Clear one of them to widen the view.</div>`;
   document.getElementById("sheetBody").innerHTML = list.length
     ? list.map(sheetRowHTML).join("")
     : `<tr><td colspan="8"><div class="empty-state"><strong>Nothing matches those filters</strong>Clear one of them to widen the view.</div></td></tr>`;
@@ -733,61 +705,26 @@ function render(){
 function setView(v){
   state.view = v;
   document.querySelectorAll(".tab").forEach(t => t.setAttribute("aria-selected", String(t.dataset.view === v)));
-  ["table","events","timeline","changed","add"].forEach(x => document.getElementById("view-"+x).classList.toggle("hidden", x !== v));
+  ["table","timeline","changed","add"].forEach(x => document.getElementById("view-"+x).classList.toggle("hidden", x !== v));
   document.getElementById("controls").classList.toggle("hidden", v === "changed" || v === "add");
 }
 
 /* ---------- intake ---------- */
 const INTAKE_TO = "katka@sabotageworks.com";
-function intakeTags(){
-  return [...document.querySelectorAll("#inTags .chip")]
-    .filter(c => c.getAttribute("aria-pressed") === "true")
-    .map(c => TAGS.find(t => t[0] === c.dataset.intag)[1]);
-}
 function intakeText(){
   const url = document.getElementById("inUrl").value.trim();
-  const name = document.getElementById("inName").value.trim();
-  const note = document.getElementById("inNote").value.trim();
-  const tags = intakeTags();
-  const lines = ["New event for the InfantSim radar.", "", "Link: " + (url || "(none given)")];
-  if(name) lines.push("What it is: " + name);
-  if(tags.length) lines.push("Focus: " + tags.join(", "));
-  if(note) lines.push("", "Why it is worth tracking:", note);
-  lines.push("", "Sent from the radar on " + new Date().toISOString().slice(0,10) + ".");
-  return lines.join("\n");
+  return ["New event for the InfantSim radar.", "", "Link: " + url, "",
+          "Sent from the radar on " + new Date().toISOString().slice(0,10) + "."].join("\n");
 }
 function refreshIntake(){
-  const url = document.getElementById("inUrl").value.trim();
-  document.getElementById("outText").value = intakeText();
-  document.getElementById("sendBtn").disabled = !url;
+  document.getElementById("sendBtn").disabled = !document.getElementById("inUrl").value.trim();
 }
 function initIntake(){
-  document.getElementById("inTags").innerHTML = TAGS.map(([k,l]) =>
-    `<button class="chip" aria-pressed="false" data-intag="${k}">${l}</button>`).join("");
-  document.querySelectorAll("[data-intag]").forEach(c => c.addEventListener("click", () => {
-    c.setAttribute("aria-pressed", String(c.getAttribute("aria-pressed") !== "true"));
-    refreshIntake();
-  }));
-  ["inUrl","inName","inNote"].forEach(id =>
-    document.getElementById(id).addEventListener("input", refreshIntake));
-
+  document.getElementById("inUrl").addEventListener("input", refreshIntake);
   document.getElementById("sendBtn").addEventListener("click", () => {
-    const name = document.getElementById("inName").value.trim();
-    const subject = "RADAR: new event" + (name ? " / " + name : "");
     window.location.href = "mailto:" + INTAKE_TO +
-      "?subject=" + encodeURIComponent(subject) +
+      "?subject=" + encodeURIComponent("RADAR: new event") +
       "&body=" + encodeURIComponent(intakeText());
-  });
-  document.getElementById("copyBtn").addEventListener("click", async () => {
-    const said = document.getElementById("copySaid");
-    try{
-      await navigator.clipboard.writeText(intakeText());
-      said.textContent = "Copied";
-    }catch(err){
-      document.getElementById("outText").select();
-      said.textContent = "Select the text above and copy it";
-    }
-    setTimeout(() => said.textContent = "", 2600);
   });
   refreshIntake();
 }

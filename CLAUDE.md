@@ -61,21 +61,46 @@ and that marker must stay exactly as it is or `build-internal.py` will fail.
 ```
 
 Valid `tags`: `pediatric`, `surgery`, `simulation`, `startup`, `industry`. Adding
-a tag outside this list will throw when a card renders, because the label lookup
+a tag outside this list will throw when a row renders, because the label lookup
 in `index.html` has no fallback.
+
+`absent` and `absentSrc` say, per mode, why there is no route. `absent[mode]` is
+`"none"` (checked, this event does not offer it, and `absentSrc[mode]` links to
+what was checked) or `"n/a"` (an application or prize, so the mode cannot apply).
+A mode missing from `absent` renders as "Not checked", which is the backlog.
 
 ### Participation route shape
 
 ```jsonc
 {
-  "mode": "abstract",               // attend | abstract | pitch | exhibit
+  "mode": "present",                // present | pitch | attend | exhibit | teach
   "label": "Submit an abstract",
   "deadline": "2026-11-02",         // ISO or null
   "deadlineLabel": "12 Aug to 2 Nov 2026",  // the human string
   "status": "open",                 // open | closed | unannounced | rolling
-  "note": ""
+  "note": "",
+  "url": "https://...",             // where to read more. Falls back to cost.source
+  "rail": false,                    // optional. false keeps it out of "Closing next"
+  "cost": {
+    "amount": "EUR 847",            // what it actually costs, in full
+    "detail": "Full registration incl VAT; EUR 700 excl. Nurse or student 303.",
+    "basis": "published",           // published | prior-year | approx | free | unknown
+    "source": "https://..."         // the link behind the figure
+  }
 }
 ```
+
+The five modes: **present** is actively presenting, an abstract, talk or poster.
+**pitch** is a startup-specific competition. **attend** is going as a regular
+attendee. **exhibit** is a paid on-site presence, a booth or sponsorship.
+**teach** is running a hands-on course or workshop.
+
+`cost.amount` is the *total* cost of taking that route, not one component of it.
+MEDICA is the worked example: the pitch slot is not sold on its own, so the
+pitch route costs EUR 3,500, the booth plus the stage upgrade, not EUR 550.
+
+Set `rail: false` on anything that is logistics rather than a way to take part,
+such as a hotel block. It stays on the page and stays out of "Closing next".
 
 Status is recomputed in the browser against today's date. A route with a
 `deadline` in the past renders as closed regardless of the stored `status`, and
@@ -92,6 +117,8 @@ routine, in order:
 1. Search Gmail for subject `RADAR: new event` in the last 7 days. Those come
    from the intake form on the site's "Add an event" tab. Research each and add it.
 2. Re-check every route with `"status": "unannounced"` against its source link.
+   Then clear down some "Not checked" cells: pick a few and either add a route
+   with a sourced cost, or set `absent[mode]` to `"none"` with an `absentSrc`.
 3. Check the confirmed events for changed dates or venues.
 4. Update `events.json`, and add a dated entry to the `changelog` array at the
    top of that file. The site's "What changed" tab renders it.
