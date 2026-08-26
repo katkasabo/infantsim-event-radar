@@ -142,13 +142,28 @@ table.sheet{border-collapse:separate;border-spacing:0;table-layout:fixed;width:1
 .sheet thead th.c-ev{width:296px}
 .sheet thead th.c-when{width:116px}
 .sheet thead th.c-where{width:138px}
-.sheet thead th.mh{border-left:1px solid var(--line-soft);width:116px}
+.sheet thead th.mh{border-left:1px solid var(--line-soft);width:145px}
 .sheet thead th.mh b{display:block;color:var(--teal);font-weight:600;letter-spacing:.06em}
 .sheet tbody td{padding:10px 11px;border-bottom:1px solid var(--line-soft);vertical-align:top}
 .sheet tbody tr.srow:hover>td{background:#F2F7F6}
 .sheet tbody tr.srow.open>td{background:#EDF4F3}
 .sheet td.mc{border-left:1px solid var(--line-soft)}
 
+.ev-top{display:flex;gap:7px;align-items:flex-start}
+.star{
+  all:unset;cursor:pointer;color:#BCC9C9;font-size:14px;line-height:1.25;flex:0 0 auto;
+}
+.star:hover{color:var(--amber)}
+.star.on{color:var(--amber)}
+.srow.prio>td:first-child{box-shadow:inset 3px 0 0 var(--teal)}
+.ty{
+  font-family:var(--mono);font-size:9px;letter-spacing:.09em;text-transform:uppercase;
+  padding:2px 6px;border-radius:2px;border:1px solid var(--line);color:var(--muted);background:#fff;
+}
+.ty-accelerator{color:#7A4E12;border-color:#DBC08A;background:#FBF4E7}
+.ty-competition{color:#1F5F52;border-color:#A8CFC4;background:#EDF6F3}
+.prio-chip{border-color:var(--line);color:var(--muted)}
+.prio-chip[aria-pressed="true"]{background:var(--amber);border-color:var(--amber);color:#fff}
 .ev-btn{
   all:unset;cursor:pointer;display:block;width:100%;
   font-family:var(--display);font-weight:600;font-size:14px;line-height:1.3;letter-spacing:-.005em;color:var(--ink);
@@ -349,6 +364,10 @@ tr.detail.hidden{display:none}
       <div class="chips" id="modeChips"></div>
     </div>
     <div class="ctrl">
+      <span class="ctrl-label">Kind</span>
+      <div class="chips" id="typeChips"></div>
+    </div>
+    <div class="ctrl">
       <span class="ctrl-label">Where</span>
       <select id="regionSel"></select>
     </div>
@@ -367,6 +386,7 @@ tr.detail.hidden{display:none}
     </div>
     <div class="count">
       <span id="resultCount"></span>
+      <button class="chip prio-chip" id="prioBtn" aria-pressed="false">&#9733; Starred only</button>
       <button class="reset" id="resetBtn">Clear filters</button>
     </div>
   </div>
@@ -381,11 +401,10 @@ tr.detail.hidden{display:none}
             <th class="c-ev">Event</th>
             <th class="c-when">When</th>
             <th class="c-where">Where</th>
-            <th class="mh"><b>Present</b>actively present</th>
+            <th class="mh"><b>Present</b>present, teach or run a workshop</th>
             <th class="mh"><b>Pitch</b>startup competition</th>
             <th class="mh"><b>Attend</b>regular attendee</th>
             <th class="mh"><b>Exhibit</b>paid on-site booth</th>
-            <th class="mh"><b>Teach</b>hands-on course</th>
           </tr>
         </thead>
         <tbody id="sheetBody"></tbody>
@@ -457,16 +476,14 @@ const TAGS = [
   ["industry","Medtech industry"]
 ];
 const MODES = [
-  ["present","Actively present"],
+  ["present","Present, teach or run a workshop"],
   ["pitch","Pitch in a competition"],
   ["attend","Attend as an attendee"],
-  ["exhibit","Exhibit or sponsor"],
-  ["teach","Run a hands-on course"]
+  ["exhibit","Exhibit or sponsor"]
 ];
-const MODE_ORDER = ["present","pitch","attend","exhibit","teach"];
-const MODE_LABEL = {
-  present:"Present", pitch:"Pitch", attend:"Attend", exhibit:"Exhibit", teach:"Teach"
-};
+const MODE_ORDER = ["present","pitch","attend","exhibit"];
+const MODE_LABEL = {present:"Present", pitch:"Pitch", attend:"Attend", exhibit:"Exhibit"};
+const TYPES = [["conference","Conference"],["competition","Competition"],["accelerator","Accelerator"]];
 const BASIS_LABEL = {published:"", "prior-year":"prev edition", approx:"approx", free:"", unknown:""};
 const FLAG = {
   USA:"\u{1F1FA}\u{1F1F8}", Canada:"\u{1F1E8}\u{1F1E6}", Greece:"\u{1F1EC}\u{1F1F7}",
@@ -476,10 +493,27 @@ const FLAG = {
 };
 const NONE_LABEL = {
   present:"No open call found", pitch:"No competition found", attend:"Not open to attendees",
-  exhibit:"No exhibition found", teach:"No course found"
+  exhibit:"No exhibition found"
 };
 
-const state = {view:"table", tags:new Set(), modes:new Set(), region:"all", status:"all", q:""};
+const state = {view:"table", tags:new Set(), modes:new Set(), types:new Set(),
+               region:"all", status:"all", q:"", prioOnly:false};
+
+/* Starred rows live in the browser. The page is static, so there is nowhere else
+   to put them; they follow the device, not the person. `priority` in events.json
+   is the shipped baseline and starring layers on top. */
+const STAR_KEY = "radar.starred.v1";
+function starred(){
+  try { return new Set(JSON.parse(localStorage.getItem(STAR_KEY) || "[]")); }
+  catch(err){ return new Set(); }
+}
+function toggleStar(id){
+  const s = starred();
+  s.has(id) ? s.delete(id) : s.add(id);
+  try { localStorage.setItem(STAR_KEY, JSON.stringify([...s])); } catch(err){}
+  return s.has(id);
+}
+function isPriority(e){ return !!e.priority || starred().has(e.id); }
 
 /* ---------- helpers ---------- */
 function days(iso){
@@ -510,6 +544,8 @@ function esc(s){ return (s||"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;"
 
 /* ---------- filtering ---------- */
 function matches(e){
+  if(state.prioOnly && !isPriority(e)) return false;
+  if(state.types.size && !state.types.has(e.type)) return false;
   if(state.tags.size && ![...state.tags].some(t => e.tags.includes(t))) return false;
   if(state.modes.size && !e.participate.some(p => state.modes.has(p.mode))) return false;
   if(state.region !== "all" && e.region !== state.region) return false;
@@ -578,7 +614,7 @@ function detailHTML(e){
       ${p.note ? `<div class="dt-note">${esc(p.note)}</div>` : ""}
     </div>`;
   }).join("");
-  return `<tr class="detail hidden" data-detail="${e.id}"><td colspan="8"><div class="dt">
+  return `<tr class="detail hidden" data-detail="${e.id}"><td colspan="7"><div class="dt">
     <p class="dt-sum">${esc(e.summary)}</p>
     <p class="dt-aud">Who it is for: ${esc(e.audience)}</p>
     <div class="dt-ways">${ways}</div>
@@ -590,13 +626,19 @@ function detailHTML(e){
 }
 function sheetRowHTML(e){
   const city = (e.where || "").split(",")[0].trim();
-  return `<tr class="srow" data-row="${e.id}">
+  const star = starred().has(e.id);
+  return `<tr class="srow${isPriority(e) ? " prio" : ""}" data-row="${e.id}">
     <td class="c-ev">
-      <button class="ev-btn" data-toggle="${e.id}" aria-expanded="false">
-        <span class="caret">&#9656;</span>${esc(e.name)}
-      </button>
+      <div class="ev-top">
+        <button class="star${star ? " on" : ""}" data-star="${e.id}"
+          title="${star ? "Starred" : "Star as priority"}" aria-pressed="${star}">${star ? "\u2605" : "\u2606"}</button>
+        <button class="ev-btn" data-toggle="${e.id}" aria-expanded="false">
+          <span class="caret">&#9656;</span>${esc(e.name)}
+        </button>
+      </div>
       <div class="ev-org">${esc(e.org)}</div>
       <div class="ev-flags">
+        <span class="ty ty-${e.type}">${e.type}</span>
         ${e.priority ? '<span class="prio-mark">PRIORITY</span>' : ''}
         ${e.tags.map(t => `<span class="tag">${TAGS.find(x=>x[0]===t)[1]}</span>`).join("")}
       </div>
@@ -608,6 +650,16 @@ function sheetRowHTML(e){
   </tr>` + detailHTML(e);
 }
 function bindSheet(){
+  document.querySelectorAll("[data-star]").forEach(b => b.addEventListener("click", ev => {
+    ev.stopPropagation();
+    const on = toggleStar(b.dataset.star);
+    b.classList.toggle("on", on);
+    b.textContent = on ? "\u2605" : "\u2606";
+    b.setAttribute("aria-pressed", String(on));
+    b.title = on ? "Starred" : "Star as priority";
+    b.closest("tr").classList.toggle("prio", on || DATA.events.find(x => x.id === b.dataset.star).priority);
+    if(state.prioOnly) render();
+  }));
   document.querySelectorAll("[data-toggle]").forEach(b => b.addEventListener("click", () => {
     const id = b.dataset.toggle;
     const det = document.querySelector(`[data-detail="${CSS.escape(id)}"]`);
@@ -701,7 +753,7 @@ function render(){
   const list = DATA.events.filter(matches).slice().sort((a,b) => (a.start||"").localeCompare(b.start||""));
   document.getElementById("sheetBody").innerHTML = list.length
     ? list.map(sheetRowHTML).join("")
-    : `<tr><td colspan="8"><div class="empty-state"><strong>Nothing matches those filters</strong>Clear one of them to widen the view.</div></td></tr>`;
+    : `<tr><td colspan="7"><div class="empty-state"><strong>Nothing matches those filters</strong>Clear one of them to widen the view.</div></td></tr>`;
   bindSheet();
   document.getElementById("timeline").innerHTML = timelineHTML(list);
   const openCount = list.reduce((n,e) => n + e.participate.filter(p => ["open","urgent"].includes(liveStatus(p))).length, 0);
@@ -736,6 +788,11 @@ function initIntake(){
 }
 
 function resetFilters(doRender){
+  state.types = new Set();
+  state.prioOnly = false;
+  document.querySelectorAll("[data-type]").forEach(c => c.setAttribute("aria-pressed","false"));
+  const pb = document.getElementById("prioBtn");
+  if(pb) pb.setAttribute("aria-pressed","false");
   state.tags.clear(); state.modes.clear(); state.region = "all"; state.status = "all"; state.q = "";
   document.querySelectorAll("#tagChips .chip, #modeChips .chip").forEach(c => c.setAttribute("aria-pressed","false"));
   document.getElementById("regionSel").value = "all";
@@ -755,6 +812,8 @@ function init(){
     `<button class="chip" aria-pressed="false" data-tag="${k}">${l}</button>`).join("");
   document.getElementById("modeChips").innerHTML = MODES.map(([k,l]) =>
     `<button class="chip" aria-pressed="false" data-mode="${k}">${l}</button>`).join("");
+  document.getElementById("typeChips").innerHTML = TYPES.map(([k,l]) =>
+    `<button class="chip" aria-pressed="false" data-type="${k}">${l}</button>`).join("");
 
   const regions = [...new Set(DATA.events.map(e => e.region))].sort();
   document.getElementById("regionSel").innerHTML =
@@ -772,6 +831,17 @@ function init(){
     on ? state.modes.delete(c.dataset.mode) : state.modes.add(c.dataset.mode);
     render();
   }));
+  document.querySelectorAll("[data-type]").forEach(c => c.addEventListener("click", () => {
+    const on = c.getAttribute("aria-pressed") === "true";
+    c.setAttribute("aria-pressed", String(!on));
+    on ? state.types.delete(c.dataset.type) : state.types.add(c.dataset.type);
+    render();
+  }));
+  document.getElementById("prioBtn").addEventListener("click", () => {
+    state.prioOnly = !state.prioOnly;
+    document.getElementById("prioBtn").setAttribute("aria-pressed", String(state.prioOnly));
+    render();
+  });
   document.getElementById("regionSel").addEventListener("change", e => { state.region = e.target.value; render(); });
   document.getElementById("statusSel").addEventListener("change", e => { state.status = e.target.value; render(); });
   document.getElementById("search").addEventListener("input", e => { state.q = e.target.value.trim(); render(); });

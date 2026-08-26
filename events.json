@@ -9,6 +9,17 @@
     {
       "date": "2026-08-26",
       "items": [
+        "Teach is no longer its own column. Running a hands-on course is a way of actively participating, so it folds into Present. Route labels already say which kind it is, for example the PAS Call for Workshops.",
+        "Events are now typed as conference, competition or accelerator, and the type can be filtered. Accelerators are not conferences but they are the same kind of visibility lever and they run on the same deadlines.",
+        "Impact4Kids 2026/27 added and marked priority. Applications close 27 September 2026. No cost, no equity, no funding: fortnightly training, one-to-one mentorship and immersion in both the EU and US ecosystems. Eligibility is TRL 3 to 6, Europe or US, under USD 5M dilutive raised, which InfantSim fits.",
+        "CRAASH Barcelona added. Biocat's three-month accelerator, and i4KIDS joined the 8th edition as paediatric partner with at least one place reserved for a paediatric project. Dates for that edition are not posted.",
+        "i4KIDS Pediatric Innovation Day, Helsinki, 18 September 2026 added. The showcase slots are already filled, but sponsorship is open, which is the cheaper way into the network that runs Impact4Kids.",
+        "Rows can now be starred as priority in the browser, and starred rows can be filtered on their own."
+      ]
+    },
+    {
+      "date": "2026-08-26",
+      "items": [
         "A validator now runs before every commit. On its first run it found the Europaediatrics link was dead, two organiser sites unreachable, and a schema slip of my own making.",
         "Europaediatrics 2026 is fine, but its link was not. The old MCA page returns HTTP 410 Gone; the congress moved to an EventsAir portal and is still on for 8 to 10 October 2026 in Venice. Link replaced.",
         "Two organiser sites would not answer at all on 26 Aug 2026: htfc-eu.com for HealthTech Innovation Days, and neoped.eu, which does not resolve in DNS. Both records now say so rather than implying they were verified at source. NeoPed should be treated as unconfirmed."
@@ -144,9 +155,9 @@
       "absent": {
         "present": "n/a",
         "attend": "n/a",
-        "exhibit": "n/a",
-        "teach": "n/a"
-      }
+        "exhibit": "n/a"
+      },
+      "type": "competition"
     },
     {
       "id": "elevate-cix",
@@ -221,7 +232,8 @@
           "url": "https://cixsummit.com"
         }
       ],
-      "verified": "2026-08-26"
+      "verified": "2026-08-26",
+      "type": "conference"
     },
     {
       "id": "eaps-2026",
@@ -279,7 +291,8 @@
           "url": "https://eaps.kenes.com"
         }
       ],
-      "verified": "2026-08-26"
+      "verified": "2026-08-26",
+      "type": "conference"
     },
     {
       "id": "aap-nce-2026",
@@ -357,7 +370,8 @@
       },
       "absentSrc": {
         "pitch": "https://aapexperience.org"
-      }
+      },
+      "type": "conference"
     },
     {
       "id": "htid-2026",
@@ -416,7 +430,8 @@
           "url": "https://htfc-eu.com/htid"
         }
       ],
-      "verified": "2026-08-26"
+      "verified": "2026-08-26",
+      "type": "conference"
     },
     {
       "id": "europaediatrics-2026",
@@ -485,7 +500,8 @@
       },
       "absentSrc": {
         "pitch": "https://mcaevents.eventsair.com/QuickEventWebsitePortal/12th-epa-unepsa-congress/12th-europaediatrics-2026/"
-      }
+      },
+      "type": "conference"
     },
     {
       "id": "medtech-conference-2026",
@@ -576,7 +592,8 @@
           "url": "https://themedtechconference.com/register"
         }
       ],
-      "verified": "2026-08-26"
+      "verified": "2026-08-26",
+      "type": "conference"
     },
     {
       "id": "gatech-pid-2026",
@@ -622,9 +639,9 @@
       "absent": {
         "present": "n/a",
         "attend": "n/a",
-        "exhibit": "n/a",
-        "teach": "n/a"
-      }
+        "exhibit": "n/a"
+      },
+      "type": "competition"
     },
     {
       "id": "cepas-2026",
@@ -687,7 +704,8 @@
       },
       "absentSrc": {
         "pitch": "https://www.cepas.org/"
-      }
+      },
+      "type": "conference"
     },
     {
       "id": "sim-expo-2026",
@@ -785,7 +803,8 @@
       },
       "absentSrc": {
         "pitch": "https://simulationcanada.ca/conferences-events/sim-expo/"
-      }
+      },
+      "type": "conference"
     },
     {
       "id": "hlth-usa-2026",
@@ -858,7 +877,8 @@
           "url": "https://hlth.com/events/usa"
         }
       ],
-      "verified": "2026-08-26"
+      "verified": "2026-08-26",
+      "type": "conference"
     },
     {
       "id": "medica-2026",
@@ -964,7 +984,8 @@
           "url": "https://innovationworldcup.com"
         }
       ],
-      "verified": "2026-08-26"
+      "verified": "2026-08-26",
+      "type": "conference"
     },
     {
       "id": "medtech-innovator-2027",
@@ -1010,9 +1031,9 @@
       "absent": {
         "present": "n/a",
         "attend": "n/a",
-        "exhibit": "n/a",
-        "teach": "n/a"
-      }
+        "exhibit": "n/a"
+      },
+      "type": "accelerator"
     },
     {
       "id": "imsh-2027",
@@ -1077,7 +1098,7 @@
           "url": "https://imsh2027.org/expo-hall"
         },
         {
-          "mode": "teach",
+          "mode": "present",
           "label": "Run a pre-conference immersive course",
           "deadline": null,
           "deadlineLabel": "2027 course call not announced",
@@ -1112,7 +1133,8 @@
           "url": "https://imsh2027.org"
         }
       ],
-      "verified": "2026-08-26"
+      "verified": "2026-08-26",
+      "type": "conference"
     },
     {
       "id": "whx-tech-2027",
@@ -1188,7 +1210,8 @@
           "url": "https://www.worldhealthexpo.com/events/healthcare/tech"
         }
       ],
-      "verified": "2026-08-26"
+      "verified": "2026-08-26",
+      "type": "conference"
     },
     {
       "id": "ucsf-stanford-pdc",
@@ -1236,9 +1259,9 @@
       "absent": {
         "present": "n/a",
         "attend": "n/a",
-        "exhibit": "n/a",
-        "teach": "n/a"
-      }
+        "exhibit": "n/a"
+      },
+      "type": "competition"
     },
     {
       "id": "nccpdi-2027",
@@ -1284,9 +1307,9 @@
       "absent": {
         "present": "n/a",
         "attend": "n/a",
-        "exhibit": "n/a",
-        "teach": "n/a"
-      }
+        "exhibit": "n/a"
+      },
+      "type": "competition"
     },
     {
       "id": "neoped-2027",
@@ -1329,7 +1352,8 @@
           "url": "https://neoped.eu"
         }
       ],
-      "verified": "2026-08-26"
+      "verified": "2026-08-26",
+      "type": "conference"
     },
     {
       "id": "pas-2027",
@@ -1382,7 +1406,7 @@
           "checked": "26 Aug 2026, read off the PAS 2027 key dates table: Call for Scholarly Sessions, Workshops, APA & PAS SIGs and Early Ancillary Events all run 3 Aug to 16 Sep 2026. Call for Abstracts runs 12 Aug to 2 Nov 2026. Late Ancillary Events runs 17 Sep 2026 to 3 Mar 2027. Early registration ends 16 Mar 2027."
         },
         {
-          "mode": "teach",
+          "mode": "present",
           "label": "Call for Workshops",
           "deadline": "2026-09-16",
           "deadlineLabel": "3 Aug to 16 Sep 2026",
@@ -1474,7 +1498,8 @@
       },
       "absentSrc": {
         "pitch": "https://www.pas-meeting.org/2027-key-dates/"
-      }
+      },
+      "type": "conference"
     },
     {
       "id": "ipeg-2027",
@@ -1511,7 +1536,7 @@
           }
         },
         {
-          "mode": "teach",
+          "mode": "present",
           "label": "Simulation and skills pre-courses",
           "deadline": null,
           "deadlineLabel": "Not yet announced",
@@ -1556,7 +1581,8 @@
       },
       "absentSrc": {
         "pitch": "https://www.ipeg.org/"
-      }
+      },
+      "type": "conference"
     },
     {
       "id": "medtech-forum-2027",
@@ -1604,7 +1630,8 @@
       },
       "absentSrc": {
         "pitch": "https://www.themedtechforum.eu/"
-      }
+      },
+      "type": "conference"
     },
     {
       "id": "apsa-2027",
@@ -1669,7 +1696,7 @@
           }
         },
         {
-          "mode": "teach",
+          "mode": "present",
           "label": "Pre-meeting symposia and skills courses",
           "deadline": null,
           "deadlineLabel": "2027 course line-up not announced",
@@ -1695,7 +1722,8 @@
       },
       "absentSrc": {
         "pitch": "https://apsapedsurg.org/continuing-education/events/annual-meeting/"
-      }
+      },
+      "type": "conference"
     },
     {
       "id": "eupsa-2027",
@@ -1730,7 +1758,7 @@
           }
         },
         {
-          "mode": "teach",
+          "mode": "present",
           "label": "Pre-congress hands-on and skills courses",
           "deadline": null,
           "deadlineLabel": "Not yet announced",
@@ -1771,7 +1799,8 @@
       },
       "absentSrc": {
         "pitch": "https://eupsa.info"
-      }
+      },
+      "type": "conference"
     },
     {
       "id": "espnic-2027",
@@ -1833,7 +1862,8 @@
       },
       "absentSrc": {
         "pitch": "https://www.mcascientificevents.eu/espnic/"
-      }
+      },
+      "type": "conference"
     },
     {
       "id": "baps-2027",
@@ -1880,7 +1910,8 @@
       },
       "absentSrc": {
         "pitch": "https://congress.baps.org.uk/"
-      }
+      },
+      "type": "conference"
     },
     {
       "id": "hlth-europe-2027",
@@ -1951,7 +1982,8 @@
           "url": "https://hlth.com/events/europe"
         }
       ],
-      "verified": "2026-08-26"
+      "verified": "2026-08-26",
+      "type": "conference"
     },
     {
       "id": "phm-2027",
@@ -2012,7 +2044,8 @@
       },
       "absentSrc": {
         "pitch": "https://www.academicpeds.org/events/phmmeeting/"
-      }
+      },
+      "type": "conference"
     },
     {
       "id": "robotic-surgery-2027",
@@ -2075,7 +2108,8 @@
       },
       "absentSrc": {
         "pitch": "https://nationwidechildrens.cloud-cme.com/course/courseoverview?P=5&EID=49874&IsExhibitor=false"
-      }
+      },
+      "type": "conference"
     },
     {
       "id": "jens-2027",
@@ -2126,7 +2160,7 @@
           "url": "https://www.mcascientificevents.eu/jens/registration/"
         },
         {
-          "mode": "teach",
+          "mode": "present",
           "label": "Pre-congress course",
           "deadline": null,
           "deadlineLabel": "Pricing listed as available soon",
@@ -2153,7 +2187,8 @@
       },
       "absentSrc": {
         "pitch": "https://www.mcascientificevents.eu/jens/"
-      }
+      },
+      "type": "conference"
     },
     {
       "id": "pdc-joint-pitch",
@@ -2192,8 +2227,7 @@
       "absent": {
         "present": "n/a",
         "attend": "n/a",
-        "exhibit": "n/a",
-        "teach": "n/a"
+        "exhibit": "n/a"
       },
       "links": [
         {
@@ -2206,7 +2240,8 @@
         }
       ],
       "tracker": "",
-      "verified": "2026-08-26"
+      "verified": "2026-08-26",
+      "type": "competition"
     },
     {
       "id": "sages-2027",
@@ -2244,7 +2279,7 @@
           "url": "https://www.sages.org/meetings/etabstracts/"
         },
         {
-          "mode": "teach",
+          "mode": "present",
           "label": "Hands-on postgraduate courses",
           "deadline": null,
           "deadlineLabel": "2027 course line-up not announced",
@@ -2288,7 +2323,8 @@
         }
       ],
       "tracker": "",
-      "verified": "2026-08-26"
+      "verified": "2026-08-26",
+      "type": "conference"
     },
     {
       "id": "lsi-usa-2027",
@@ -2355,9 +2391,6 @@
           "url": "https://www.lsiusasummit.com/apply-to-speak"
         }
       ],
-      "absent": {
-        "teach": "none"
-      },
       "links": [
         {
           "label": "lsiusasummit.com",
@@ -2365,7 +2398,8 @@
         }
       ],
       "tracker": "",
-      "verified": "2026-08-26"
+      "verified": "2026-08-26",
+      "type": "conference"
     },
     {
       "id": "sesam-2027",
@@ -2425,7 +2459,8 @@
         }
       ],
       "tracker": "",
-      "verified": "2026-08-26"
+      "verified": "2026-08-26",
+      "type": "conference"
     },
     {
       "id": "ctip-cpi-2027",
@@ -2464,13 +2499,191 @@
       "absent": {
         "present": "n/a",
         "attend": "n/a",
-        "exhibit": "n/a",
-        "teach": "n/a"
+        "exhibit": "n/a"
       },
       "links": [
         {
           "label": "ctipmedtech.org",
           "url": "https://www.ctipmedtech.org/"
+        }
+      ],
+      "tracker": "",
+      "verified": "2026-08-26",
+      "type": "competition"
+    },
+    {
+      "id": "impact4kids-2027",
+      "type": "accelerator",
+      "name": "Impact4Kids 2026/27 acceleration programme",
+      "org": "i4KIDS and Impact1, hosted by Sant Joan de Deu Barcelona Children's Hospital",
+      "dateLabel": "Programme 20 Oct 2026 to 27 Apr 2027",
+      "start": "2026-10-20",
+      "end": "2027-04-27",
+      "confirmed": true,
+      "where": "Barcelona, coordinated; immersion in both Europe and the US",
+      "country": "Spain",
+      "region": "Europe",
+      "tags": [
+        "pediatric",
+        "startup"
+      ],
+      "priority": true,
+      "summary": "Six-month programme bridging the EU and US paediatric innovation ecosystems. No cost, no equity and no funding: what you get is fortnightly structured training, one-to-one mentorship and ecosystem immersion on both sides of the Atlantic. Up to six projects selected. The first edition drew 73 applications, 44 percent from the US.",
+      "audience": "Fetal, neonatal, paediatric or maternal health technology at TRL 3 to 6, based in Europe or the US, with under USD 5 million raised in dilutive funding and at least one full-time team member.",
+      "participate": [
+        {
+          "mode": "pitch",
+          "label": "Apply to the programme",
+          "deadline": "2026-09-27",
+          "deadlineLabel": "Closes 27 Sep 2026",
+          "status": "open",
+          "note": "Scored on Idea 25 percent, Impact 25 percent, Implementation 20 percent and Team 30 percent. Selection is announced 9 Oct 2026 and the programme launches 20 Oct 2026.",
+          "cost": {
+            "amount": "Free, no equity",
+            "detail": "The programme states it involves no financial cost for participating projects, and takes no equity stake. It also provides no funding or financial compensation: the return is training, mentorship and access.",
+            "basis": "free",
+            "source": "https://www.innovation4kids.org/en/impact4kids-2026-2027/"
+          },
+          "url": "https://www.innovation4kids.org/en/impact4kids-2026-2027/",
+          "checked": "26 Aug 2026: application deadline 27 September 2026, selection 9 October, programme runs 20 October 2026 to 27 April 2027. Eligibility TRL 3 to 6, Europe or US, under USD 5M dilutive raised."
+        }
+      ],
+      "absent": {
+        "present": "n/a",
+        "attend": "n/a",
+        "exhibit": "n/a"
+      },
+      "links": [
+        {
+          "label": "Impact4Kids 2026/27",
+          "url": "https://www.innovation4kids.org/en/impact4kids-2026-2027/"
+        },
+        {
+          "label": "Programme overview",
+          "url": "https://www.innovation4kids.org/en/impact4kids-acceleration-program/"
+        }
+      ],
+      "tracker": "",
+      "verified": "2026-08-26"
+    },
+    {
+      "id": "craash-barcelona-2026",
+      "type": "accelerator",
+      "name": "CRAASH Barcelona, 8th edition",
+      "org": "Biocat, with i4KIDS as paediatric partner",
+      "dateLabel": "Est. 2026/27 cycle, dates not posted",
+      "start": "2027-01-15",
+      "confirmed": false,
+      "where": "Barcelona, with immersion in the US",
+      "country": "Spain",
+      "region": "Europe",
+      "tags": [
+        "startup",
+        "industry"
+      ],
+      "priority": false,
+      "summary": "Three-month accelerator taking medical devices, diagnostics and digital health through clinical and market validation, with immersion periods in both the European and US healthcare ecosystems. i4KIDS joined the 8th edition as a strategic partner and guarantees at least one paediatric project a place.",
+      "audience": "Research teams and companies at TRL 3 to 6 seeking clinical and market validation.",
+      "participate": [
+        {
+          "mode": "pitch",
+          "label": "Apply to CRAASH Barcelona",
+          "deadline": null,
+          "deadlineLabel": "8th edition dates not posted",
+          "status": "unannounced",
+          "note": "The i4KIDS partnership reserves at least one place for a paediatric project, which materially improves the odds for a neonatal device against a general health-tech field.",
+          "cost": {
+            "amount": "Not published",
+            "detail": "Biocat does not publish a participation fee for the programme on the apply page. Confirm with Biocat directly.",
+            "basis": "unknown",
+            "source": "https://www.biocat.cat/en/programs/craash-barcelona/apply-craash-barcelona"
+          },
+          "url": "https://www.biocat.cat/en/programs/craash-barcelona/apply-craash-barcelona",
+          "checked": "26 Aug 2026: the Biocat apply page describes the programme and the i4KIDS partnership but posts no deadline for the 8th edition. TRL 3 to 6 scope confirmed."
+        }
+      ],
+      "absent": {
+        "present": "n/a",
+        "attend": "n/a",
+        "exhibit": "n/a"
+      },
+      "links": [
+        {
+          "label": "Apply to CRAASH Barcelona",
+          "url": "https://www.biocat.cat/en/programs/craash-barcelona/apply-craash-barcelona"
+        },
+        {
+          "label": "i4KIDS partnership note",
+          "url": "https://www.innovation4kids.org/en/biocat-craash-acceleration-programme/"
+        }
+      ],
+      "tracker": "",
+      "verified": "2026-08-26"
+    },
+    {
+      "id": "i4kids-pid-helsinki-2026",
+      "type": "conference",
+      "name": "i4KIDS Pediatric Innovation Day 2026",
+      "org": "i4KIDS with HUS Helsinki University Hospital and the New Children's Hospital",
+      "dateLabel": "18 Sep 2026",
+      "start": "2026-09-18",
+      "confirmed": true,
+      "where": "New Children's Hospital, Helsinki",
+      "country": "Finland",
+      "region": "Europe",
+      "tags": [
+        "pediatric",
+        "startup"
+      ],
+      "priority": false,
+      "summary": "One-day paediatric innovation gathering built around three themes: human-centred paediatric care, AI in healthcare, and clinical innovation. Speakers come from leading children's hospitals across Europe. The same network that runs Impact4Kids, so it is a cheap way into that ecosystem.",
+      "audience": "Paediatric clinicians, hospital innovation teams and companies selling into children's hospitals.",
+      "participate": [
+        {
+          "mode": "attend",
+          "label": "Attend",
+          "deadline": null,
+          "deadlineLabel": "Registration open via Eventbrite",
+          "status": "rolling",
+          "note": "",
+          "cost": {
+            "amount": "Not published",
+            "detail": "Registration runs through Eventbrite; no price is stated on the i4KIDS event page.",
+            "basis": "unknown",
+            "source": "https://www.innovation4kids.org/en/pid-2026-helsinki/"
+          },
+          "url": "https://www.innovation4kids.org/en/pid-2026-helsinki/",
+          "checked": "26 Aug 2026: dated 18 September 2026 in Helsinki, registration via Eventbrite, no price shown."
+        },
+        {
+          "mode": "exhibit",
+          "label": "Sponsor the day",
+          "deadline": null,
+          "deadlineLabel": "Open, contact the organiser",
+          "status": "rolling",
+          "note": "i4KIDS invites companies to sponsor. For a company trying to get known inside the i4KIDS network before applying to Impact4Kids, this is the cheaper door.",
+          "cost": {
+            "amount": "Not published",
+            "detail": "Sponsorship is quoted on request via the i4KIDS contact form.",
+            "basis": "unknown",
+            "source": "https://www.innovation4kids.org/en/pid-2026-helsinki/"
+          },
+          "url": "https://www.innovation4kids.org/en/pid-2026-helsinki/",
+          "checked": "26 Aug 2026: the page carries a Become a sponsor invitation with no published rate."
+        }
+      ],
+      "absent": {
+        "pitch": "none",
+        "present": "none"
+      },
+      "absentSrc": {
+        "pitch": "https://www.innovation4kids.org/en/pid-2026-helsinki/",
+        "present": "https://www.innovation4kids.org/en/pid-2026-helsinki/"
+      },
+      "links": [
+        {
+          "label": "i4KIDS Pediatric Innovation Day 2026",
+          "url": "https://www.innovation4kids.org/en/pid-2026-helsinki/"
         }
       ],
       "tracker": "",

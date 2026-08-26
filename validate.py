@@ -16,7 +16,7 @@ import json, sys, datetime, collections, re
 
 TODAY = datetime.date.today()
 STALE_DAYS = 45
-MODES = {"present", "pitch", "attend", "exhibit", "teach"}
+MODES = {"present", "pitch", "attend", "exhibit"}
 TAGS = {"pediatric", "surgery", "simulation", "startup", "industry"}
 STATUSES = {"open", "closed", "unannounced", "rolling"}
 BASES = {"published", "prior-year", "approx", "free", "unknown"}
@@ -30,6 +30,8 @@ def iso(s):
     try: return datetime.date.fromisoformat(s)
     except Exception: return None
 
+TYPES = {"conference", "competition", "accelerator"}
+
 d = json.load(open("events.json"))
 events = d["events"]
 
@@ -41,6 +43,9 @@ by_source = collections.defaultdict(list)
 
 for e in events:
     eid = e["id"]
+
+    if e.get("type") not in TYPES:
+        E(eid, f"type is {e.get('type')!r}, expected one of {sorted(TYPES)}")
 
     for t in e.get("tags", []):
         if t not in TAGS: E(eid, f"unknown tag {t!r}")
