@@ -1,0 +1,7 @@
+# Private: Katka's internal read on each event. The repo is public.
+notes.json
+
+# Derived offline snapshot with the private notes baked in.
+infantsim-event-radar-internal.html
+
+.DS_Store

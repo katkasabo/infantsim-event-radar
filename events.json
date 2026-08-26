@@ -1,0 +1,1285 @@
+{
+  "meta": {
+    "updated": "2026-08-26",
+    "sourceVerified": "2026-08-26",
+    "windowFrom": "2026-09-01",
+    "windowTo": "2027-09-30"
+  },
+  "changelog": [
+    {
+      "date": "2026-08-26",
+      "items": [
+        "jENS 2027 abstracts: the 31 March date is 2027, not 2026. Submission opened 21 July 2026 and closes 31 March 2027, so this is open now.",
+        "IMSH 2027 Call for Content closed 27 May 2026. The SimVentors Showcase is 25 January 2027 and excludes commercially available technologies.",
+        "SWPDC and AAP SOATT prize: the consortium states eligibility is limited to devices going through the FDA regulatory pathway. 2026 round still unannounced.",
+        "UCSF-Stanford PDC: the accelerator is stated as restricted to US-based applicants. Award size is up to 100K USD, not 50K. Runs twice a year.",
+        "MedTech Innovator: the 2026 cohort closed 1 December 2025, earlier than the 16 December recorded. The window has moved earlier two years running.",
+        "MEDICA competitions confirmed at 10 September 2026, 23:59 CET. MEDICA states no MDR or FDA conformity is required to enter.",
+        "IPEG 2027 confirmed as 27 to 30 April in Naples, in collaboration with ESPES and SICP. Abstract details still pending.",
+        "APSA 2027 call not yet posted. The 2026 guide appeared in August of the preceding year, so it is due imminently."
+      ]
+    },
+    {
+      "date": "2026-08-26",
+      "items": [
+        "First build of the radar from the tracker sheet: 29 events, 62 ways to participate.",
+        "Deadline status computed live against today's date rather than typed by hand."
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "swpdc-soatt",
+      "name": "SWPDC + AAP SOATT Pediatric Device Prize",
+      "org": "Southwest-Midwest PDC (Texas Children's / Baylor) with AAP SOATT",
+      "dateLabel": "Application cycle, est. early Sep 2026",
+      "start": "2026-09-05",
+      "confirmed": false,
+      "where": "Virtual application; consortium in Houston, TX",
+      "country": "USA",
+      "region": "North America",
+      "tags": [
+        "pediatric",
+        "startup"
+      ],
+      "priority": true,
+      "summary": "FDA P50-backed pediatric device prize of up to ~25K USD, run with the AAP Section on Advances in Therapeutics and Technology.",
+      "audience": "Pediatric medical device innovators at any stage.",
+      "participate": [
+        {
+          "mode": "pitch",
+          "label": "Apply for the prize",
+          "deadline": null,
+          "deadlineLabel": "2026 round not yet announced",
+          "status": "unannounced",
+          "note": "The consortium states eligibility is limited to devices that will go through the US FDA regulatory pathway, and that projects developing devices which do not require FDA regulation are not eligible. Application is a short questionnaire, itemised budget and an optional 1 to 2 minute video pitch."
+        }
+      ],
+      "links": [
+        {
+          "label": "swpdc.org/aapsoatt",
+          "url": "https://swpdc.org/aapsoitt/"
+        },
+        {
+          "label": "Virtual accelerator application",
+          "url": "https://airtable.com/app5MJN9vmJ3UDdco/shrCXfPOaNgKSkrr5"
+        }
+      ],
+      "verified": "2026-08-14"
+    },
+    {
+      "id": "elevate-cix",
+      "name": "Elevate Festival 2026 + CIX Startup Awards",
+      "org": "Elevate / CIX",
+      "dateLabel": "22 to 24 Sep 2026",
+      "start": "2026-09-22",
+      "end": "2026-09-24",
+      "confirmed": true,
+      "where": "Downtown Toronto, Ontario",
+      "country": "Canada",
+      "region": "North America",
+      "tags": [
+        "startup"
+      ],
+      "priority": false,
+      "summary": "Canada's largest tech festival, housing the CIX Startup Awards and investor-pitch program with a health-innovation category.",
+      "audience": "Founders and investors. CIX curates startups before 600+ investors and 94+ North American judges.",
+      "participate": [
+        {
+          "mode": "attend",
+          "label": "Attend the festival",
+          "deadline": null,
+          "deadlineLabel": "Registration open",
+          "status": "rolling",
+          "note": ""
+        },
+        {
+          "mode": "pitch",
+          "label": "CIX Startup Awards pitch",
+          "deadline": null,
+          "deadlineLabel": "2026 applications closed 30 Nov 2025. 2027 cycle not announced, expected to open autumn 2026.",
+          "status": "unannounced",
+          "note": "Watch cixsummit.com."
+        }
+      ],
+      "links": [
+        {
+          "label": "elevatefestival.ca",
+          "url": "https://elevatefestival.ca"
+        },
+        {
+          "label": "cixsummit.com",
+          "url": "https://cixsummit.com"
+        }
+      ],
+      "verified": "2026-08-14"
+    },
+    {
+      "id": "eaps-2026",
+      "name": "EAPS 2026",
+      "org": "European Academy of Paediatric Societies",
+      "dateLabel": "24 to 27 Sep 2026",
+      "start": "2026-09-24",
+      "end": "2026-09-27",
+      "confirmed": true,
+      "where": "Megaron Athens International Conference Centre, Athens",
+      "country": "Greece",
+      "region": "Europe",
+      "tags": [
+        "pediatric",
+        "simulation"
+      ],
+      "priority": false,
+      "summary": "Large multidisciplinary European paediatric and neonatal congress with hands-on simulation sessions. Now a commercial event after the 2025 EAPS/CEPAS split.",
+      "audience": "Paediatricians, neonatologists, nurses, researchers, trainees.",
+      "participate": [
+        {
+          "mode": "attend",
+          "label": "Attend",
+          "deadline": "2026-08-18",
+          "deadlineLabel": "Registration savings ended 18 Aug 2026",
+          "status": "closed",
+          "note": ""
+        },
+        {
+          "mode": "pitch",
+          "label": "Team Simulation Competition",
+          "deadline": null,
+          "deadlineLabel": "Entry deadline not published. Needs verifying.",
+          "status": "unannounced",
+          "note": "Winning team gets free registration."
+        }
+      ],
+      "links": [
+        {
+          "label": "eaps.kenes.com",
+          "url": "https://eaps.kenes.com"
+        }
+      ],
+      "verified": "2026-08-14"
+    },
+    {
+      "id": "aap-nce-2026",
+      "name": "AAP National Conference & Exhibition 2026",
+      "org": "American Academy of Pediatrics",
+      "dateLabel": "2 to 6 Oct 2026",
+      "start": "2026-10-02",
+      "end": "2026-10-06",
+      "confirmed": true,
+      "where": "San Diego Convention Center, San Diego, CA",
+      "country": "USA",
+      "region": "North America",
+      "tags": [
+        "pediatric"
+      ],
+      "priority": false,
+      "summary": "Largest annual US gathering of pediatricians and subspecialists, with the biggest pediatric tech exhibit hall.",
+      "audience": "Pediatric clinicians, hospitalists, sim-lab and education leaders, device exhibitors.",
+      "participate": [
+        {
+          "mode": "attend",
+          "label": "Attend",
+          "deadline": null,
+          "deadlineLabel": "Registration open",
+          "status": "rolling",
+          "note": "2027 edition is 15 to 19 Oct 2027 in Chicago."
+        },
+        {
+          "mode": "abstract",
+          "label": "Submit an abstract",
+          "deadline": null,
+          "deadlineLabel": "2026 abstract deadlines have passed",
+          "status": "closed",
+          "note": ""
+        },
+        {
+          "mode": "exhibit",
+          "label": "Exhibit",
+          "deadline": null,
+          "deadlineLabel": "Space via the 2026 prospectus",
+          "status": "rolling",
+          "note": "SOATT innovation programming runs here."
+        }
+      ],
+      "links": [
+        {
+          "label": "aapexperience.org",
+          "url": "https://aapexperience.org"
+        }
+      ],
+      "verified": "2026-08-14"
+    },
+    {
+      "id": "htid-2026",
+      "name": "HealthTech Innovation Days 2026",
+      "org": "HealthTech For Care (France Biotech)",
+      "dateLabel": "Est. early to mid Oct 2026",
+      "start": "2026-10-07",
+      "confirmed": false,
+      "where": "Paris. 2026 venue not confirmed.",
+      "country": "France",
+      "region": "Europe",
+      "tags": [
+        "startup",
+        "industry"
+      ],
+      "priority": false,
+      "summary": "Two-day European healthtech partnering event: structured 1:1 meetings, roundtables, pitch sessions, investor networking.",
+      "audience": "European healthtech, medtech and biotech companies, global investors, pharma, patient associations.",
+      "participate": [
+        {
+          "mode": "pitch",
+          "label": "Pitch session",
+          "deadline": null,
+          "deadlineLabel": "Not yet announced",
+          "status": "unannounced",
+          "note": "1:1 meetings run through partneringONE."
+        },
+        {
+          "mode": "attend",
+          "label": "Attend, early bird",
+          "deadline": null,
+          "deadlineLabel": "Not yet announced. Verify on htfc-eu.com/htid.",
+          "status": "unannounced",
+          "note": "2025 edition was 7 to 8 Oct 2025."
+        }
+      ],
+      "links": [
+        {
+          "label": "htfc-eu.com/htid",
+          "url": "https://htfc-eu.com/htid"
+        }
+      ],
+      "verified": "2026-08-14"
+    },
+    {
+      "id": "europaediatrics-2026",
+      "name": "12th Europaediatrics Congress",
+      "org": "EPA-UNEPSA, organiser MCA Scientific Events",
+      "dateLabel": "8 to 10 Oct 2026",
+      "start": "2026-10-08",
+      "end": "2026-10-10",
+      "confirmed": true,
+      "where": "Venice",
+      "country": "Italy",
+      "region": "Europe",
+      "tags": [
+        "pediatric"
+      ],
+      "priority": false,
+      "summary": "Flagship triennial pan-European general paediatrics congress, with CME programme and exhibition.",
+      "audience": "General and subspecialty paediatricians, neonatologists, researchers across Europe.",
+      "participate": [
+        {
+          "mode": "abstract",
+          "label": "Submit an abstract",
+          "deadline": null,
+          "deadlineLabel": "Not confirmed. Verify with MCA.",
+          "status": "unannounced",
+          "note": ""
+        },
+        {
+          "mode": "attend",
+          "label": "Attend, early bird",
+          "deadline": null,
+          "deadlineLabel": "Not confirmed. Verify with MCA.",
+          "status": "unannounced",
+          "note": "info@mcascientificevents.eu"
+        }
+      ],
+      "links": [
+        {
+          "label": "mcascientificevents.eu",
+          "url": "https://www.mcascientificevents.eu/europaediatrics"
+        }
+      ],
+      "verified": "2026-08-14"
+    },
+    {
+      "id": "medtech-conference-2026",
+      "name": "The MedTech Conference 2026",
+      "org": "AdvaMed",
+      "dateLabel": "18 to 21 Oct 2026",
+      "start": "2026-10-18",
+      "end": "2026-10-21",
+      "confirmed": true,
+      "where": "Menino Convention & Exhibition Center, Boston, MA",
+      "country": "USA",
+      "region": "North America",
+      "tags": [
+        "industry",
+        "startup"
+      ],
+      "priority": false,
+      "summary": "Leading US medical-device industry conference covering business development, capital and regulatory. Hosts the MedTech Innovator finals.",
+      "audience": "Medtech executives, device startups, strategics and OEMs, investors, regulatory.",
+      "participate": [
+        {
+          "mode": "attend",
+          "label": "Attend",
+          "deadline": null,
+          "deadlineLabel": "Registration open",
+          "status": "rolling",
+          "note": ""
+        },
+        {
+          "mode": "abstract",
+          "label": "Call for Sessions",
+          "deadline": null,
+          "deadlineLabel": "Not dated. Needs verifying.",
+          "status": "unannounced",
+          "note": ""
+        }
+      ],
+      "links": [
+        {
+          "label": "themedtechconference.com",
+          "url": "https://themedtechconference.com/register"
+        }
+      ],
+      "verified": "2026-08-14"
+    },
+    {
+      "id": "gatech-pid-2026",
+      "name": "Georgia Tech Pediatric Innovation Day & Showcase 2026",
+      "org": "Georgia Tech",
+      "dateLabel": "Est. Oct 2026",
+      "start": "2026-10-21",
+      "confirmed": false,
+      "where": "Atlanta / Sandy Springs, GA",
+      "country": "USA",
+      "region": "North America",
+      "tags": [
+        "pediatric",
+        "startup"
+      ],
+      "priority": false,
+      "summary": "Live pediatric device showcase and pitch where FDA-funded consortia award innovation prizes of ~25K USD, with an investor audience.",
+      "audience": "Pediatric device startups pitching to investors and consortia.",
+      "participate": [
+        {
+          "mode": "pitch",
+          "label": "Apply to pitch",
+          "deadline": null,
+          "deadlineLabel": "2026 deadline not announced. 2025 cycle closed ~20 Jul 2025.",
+          "status": "unannounced",
+          "note": "Contact tpaden3@gatech.edu."
+        }
+      ],
+      "links": [
+        {
+          "label": "pediatrics.research.gatech.edu",
+          "url": "https://pediatrics.research.gatech.edu"
+        }
+      ],
+      "verified": "2026-08-14"
+    },
+    {
+      "id": "cepas-2026",
+      "name": "CEPAS 2026",
+      "org": "EAP + ESPR, organiser Eurokongress",
+      "dateLabel": "28 to 31 Oct 2026",
+      "start": "2026-10-28",
+      "end": "2026-10-31",
+      "confirmed": true,
+      "where": "Lyon",
+      "country": "France",
+      "region": "Europe",
+      "tags": [
+        "pediatric"
+      ],
+      "priority": false,
+      "summary": "New academic paediatric congress, the society-led successor to EAPS, with a strong neonatal science base.",
+      "audience": "Academic paediatricians, neonatologists in the ESPR community, researchers.",
+      "participate": [
+        {
+          "mode": "abstract",
+          "label": "Submit an abstract",
+          "deadline": "2026-04-15",
+          "deadlineLabel": "Closed 15 Apr 2026",
+          "status": "closed",
+          "note": ""
+        },
+        {
+          "mode": "attend",
+          "label": "Attend, early bird",
+          "deadline": null,
+          "deadlineLabel": "Not confirmed",
+          "status": "unannounced",
+          "note": "cepas@eurokongress.de"
+        }
+      ],
+      "links": [
+        {
+          "label": "cepas.org",
+          "url": "https://cepas.org"
+        }
+      ],
+      "verified": ""
+    },
+    {
+      "id": "sim-expo-2026",
+      "name": "Simulation Canada SIM Expo 2026",
+      "org": "Simulation Canada",
+      "dateLabel": "9 to 10 Nov 2026",
+      "start": "2026-11-09",
+      "end": "2026-11-10",
+      "confirmed": true,
+      "where": "Halifax Marriott Harbourfront Hotel, Halifax, Nova Scotia",
+      "country": "Canada",
+      "region": "North America",
+      "tags": [
+        "simulation"
+      ],
+      "priority": false,
+      "summary": "Canada's national healthcare simulation conference, run by Simulation Canada, formerly SIM-one / CNSH.",
+      "audience": "Simulation educators, sim-lab directors, nurse and physician educators, vendors.",
+      "participate": [
+        {
+          "mode": "abstract",
+          "label": "Submit an abstract",
+          "deadline": "2026-04-17",
+          "deadlineLabel": "Closed 17 Apr 2026",
+          "status": "closed",
+          "note": "The tracker also records a submission deadline of 13 July. Worth settling which applies."
+        },
+        {
+          "mode": "attend",
+          "label": "Attend",
+          "deadline": null,
+          "deadlineLabel": "General registration open",
+          "status": "rolling",
+          "note": "Full pass 800 CAD, 600 CAD for organisation members. Presenter registration closed 8 Jun 2026."
+        },
+        {
+          "mode": "attend",
+          "label": "Hotel block",
+          "deadline": "2026-10-08",
+          "deadlineLabel": "8 Oct 2026",
+          "status": "open",
+          "note": ""
+        },
+        {
+          "mode": "exhibit",
+          "label": "Exhibit",
+          "deadline": null,
+          "deadlineLabel": "Contact the organiser",
+          "status": "rolling",
+          "note": ""
+        }
+      ],
+      "links": [
+        {
+          "label": "simulationcanada.ca",
+          "url": "https://simulationcanada.ca/conferences-events/sim-expo"
+        },
+        {
+          "label": "Sim company directory",
+          "url": "https://simulationcanada.ca/resources/sim-company-directory/"
+        }
+      ],
+      "verified": "2026-08-14"
+    },
+    {
+      "id": "hlth-usa-2026",
+      "name": "HLTH USA 2026",
+      "org": "HLTH",
+      "dateLabel": "15 to 18 Nov 2026",
+      "start": "2026-11-15",
+      "end": "2026-11-18",
+      "confirmed": true,
+      "where": "Venetian Expo, Las Vegas, NV",
+      "country": "USA",
+      "region": "North America",
+      "tags": [
+        "startup",
+        "industry"
+      ],
+      "priority": false,
+      "summary": "One of the largest US health-innovation conferences, heavy on investors, digital health and startups.",
+      "audience": "Healthtech founders, investors, payers, providers, executives.",
+      "participate": [
+        {
+          "mode": "pitch",
+          "label": "Startup Pitch",
+          "deadline": null,
+          "deadlineLabel": "Applications closed",
+          "status": "closed",
+          "note": "Eligibility: founded under 4 years, raised under 8M USD. Prize 25K cash plus 25K credit."
+        },
+        {
+          "mode": "attend",
+          "label": "Attend",
+          "deadline": "2026-11-06",
+          "deadlineLabel": "Registration transfers close 6 Nov 2026",
+          "status": "open",
+          "note": ""
+        }
+      ],
+      "links": [
+        {
+          "label": "hlth.com/events/usa",
+          "url": "https://hlth.com/events/usa"
+        }
+      ],
+      "verified": "2026-08-14"
+    },
+    {
+      "id": "medica-2026",
+      "name": "MEDICA 2026",
+      "org": "Messe Dusseldorf",
+      "dateLabel": "16 to 19 Nov 2026",
+      "start": "2026-11-16",
+      "end": "2026-11-19",
+      "confirmed": true,
+      "where": "Messe Dusseldorf. START-UP PARK in Hall 17, Innovation Forum in Hall 12.",
+      "country": "Germany",
+      "region": "Europe",
+      "tags": [
+        "industry",
+        "startup"
+      ],
+      "priority": false,
+      "summary": "World's largest medical technology and healthcare trade fair with around 5,000 exhibitors, plus START-UP PARK, pitch competitions and an investor lounge.",
+      "audience": "Medtech and healthtech professionals, hospital buyers, distributors, corporates, investors.",
+      "participate": [
+        {
+          "mode": "pitch",
+          "label": "Innovation World Cup + MEDICA START-UP Competition",
+          "deadline": "2026-09-10",
+          "deadlineLabel": "10 Sep 2026, 23:59 CET",
+          "status": "open",
+          "note": "Free to enter. MEDICA states conformity with the Medical Device Directive or FDA approval is not required. Categories include AI in healthcare, robotics, lab diagnostics and others. Top 12 of each competition pitch at MEDICA, 16 and 17 Nov, with 3,500 EUR in cash prizes."
+        },
+        {
+          "mode": "exhibit",
+          "label": "START-UP PARK booth",
+          "deadline": null,
+          "deadlineLabel": "Apply early",
+          "status": "rolling",
+          "note": "EUR 2,950 plus VAT, plus EUR 550 for a pitch slot. Contact startup@medica.de."
+        }
+      ],
+      "links": [
+        {
+          "label": "medica-tradefair.com",
+          "url": "https://www.medica-tradefair.com"
+        },
+        {
+          "label": "innovationworldcup.com",
+          "url": "https://innovationworldcup.com"
+        }
+      ],
+      "verified": ""
+    },
+    {
+      "id": "medtech-innovator-2027",
+      "name": "MedTech Innovator 2027",
+      "org": "MedTech Innovator",
+      "dateLabel": "Application window est. Nov to Dec 2026",
+      "start": "2026-12-01",
+      "confirmed": false,
+      "where": "Virtual and in-person across the US. Finals in Boston.",
+      "country": "USA",
+      "region": "North America",
+      "tags": [
+        "startup",
+        "industry"
+      ],
+      "priority": true,
+      "summary": "World's largest medtech accelerator and pitch competition, non-dilutive, with a 350K USD grand prize. Finals sit at The MedTech Conference.",
+      "audience": "Early to mid-stage medical device, diagnostic and digital health companies, pre-Series C, with a prototype.",
+      "participate": [
+        {
+          "mode": "pitch",
+          "label": "Apply to the accelerator",
+          "deadline": null,
+          "deadlineLabel": "2027 window not yet open. Waitlist live.",
+          "status": "unannounced",
+          "note": "The 2026 cohort closed 1 Dec 2025 and the 2025 cohort closed 15 Jan 2025, so the window has been moving earlier. Join the waitlist at medtechinnovator.org/apply."
+        }
+      ],
+      "links": [
+        {
+          "label": "medtechinnovator.org/apply",
+          "url": "https://medtechinnovator.org/apply"
+        }
+      ],
+      "verified": "2026-08-14"
+    },
+    {
+      "id": "imsh-2027",
+      "name": "IMSH 2027",
+      "org": "Society for Simulation in Healthcare",
+      "dateLabel": "23 to 27 Jan 2027",
+      "start": "2027-01-23",
+      "end": "2027-01-27",
+      "confirmed": true,
+      "where": "Ernest N. Morial Convention Center, New Orleans, LA",
+      "country": "USA",
+      "region": "North America",
+      "tags": [
+        "simulation"
+      ],
+      "priority": false,
+      "summary": "World's largest scientific conference dedicated to healthcare simulation. Companies launch new products here.",
+      "audience": "Simulation educators, sim-center directors, clinicians, technologists, mannequin and device vendors.",
+      "participate": [
+        {
+          "mode": "attend",
+          "label": "Attend",
+          "deadline": null,
+          "deadlineLabel": "Registration opens autumn 2026",
+          "status": "unannounced",
+          "note": ""
+        },
+        {
+          "mode": "abstract",
+          "label": "Call for Content, including the SimVentor showcase",
+          "deadline": "2026-05-27",
+          "deadlineLabel": "Closed 27 May 2026",
+          "status": "closed",
+          "note": "SimVentors Showcase runs 25 Jan 2027. The category excludes commercially available technologies, and promotional material is not permitted during the showcase."
+        },
+        {
+          "mode": "exhibit",
+          "label": "Expo hall",
+          "deadline": null,
+          "deadlineLabel": "See imsh2027.org/expo-hall",
+          "status": "rolling",
+          "note": ""
+        }
+      ],
+      "links": [
+        {
+          "label": "imsh2027.org",
+          "url": "https://imsh2027.org"
+        }
+      ],
+      "verified": "2026-08-14"
+    },
+    {
+      "id": "whx-tech-2027",
+      "name": "WHX Tech 2027",
+      "org": "Informa, World Health Expo, with HIMSS",
+      "dateLabel": "27 to 29 Jan 2027",
+      "start": "2027-01-27",
+      "end": "2027-01-29",
+      "confirmed": true,
+      "where": "Dubai World Trade Centre, inside World Healthcare Week",
+      "country": "UAE",
+      "region": "Middle East",
+      "tags": [
+        "startup",
+        "industry"
+      ],
+      "priority": false,
+      "summary": "Digital-health and medtech innovation event in the Informa WHX family, formerly Arab Health, with a startup pitch competition.",
+      "audience": "Digital-health professionals, founders, medtech manufacturers, buyers, investors.",
+      "participate": [
+        {
+          "mode": "pitch",
+          "label": "Xcelerate pitch competition",
+          "deadline": "2026-11-04",
+          "deadlineLabel": "4 Nov 2026",
+          "status": "open",
+          "note": "USD 30,000 prize pool, around 50 pitch and 12 finalists. Shortlist end Nov 2026, grand finale 29 Jan 2027."
+        },
+        {
+          "mode": "exhibit",
+          "label": "Exhibit, early bird",
+          "deadline": null,
+          "deadlineLabel": "Not yet announced",
+          "status": "unannounced",
+          "note": ""
+        }
+      ],
+      "links": [
+        {
+          "label": "worldhealthexpo.com",
+          "url": "https://www.worldhealthexpo.com/events/healthcare/tech"
+        }
+      ],
+      "verified": ""
+    },
+    {
+      "id": "ucsf-stanford-pdc",
+      "name": "UCSF-Stanford PDC Pitch Competition",
+      "org": "UCSF-Stanford Pediatric Device Consortium",
+      "dateLabel": "Runs twice a year, spring and autumn",
+      "start": "2027-03-15",
+      "confirmed": false,
+      "where": "San Francisco Bay Area, CA",
+      "country": "USA",
+      "region": "North America",
+      "tags": [
+        "pediatric",
+        "startup"
+      ],
+      "priority": true,
+      "summary": "FDA-funded pediatric device consortium accelerator pitch, Shark Tank style. Accepted projects can receive a grant of up to 100K USD plus mentoring and commercialisation services.",
+      "audience": "Pediatric medical device startups and innovators.",
+      "participate": [
+        {
+          "mode": "pitch",
+          "label": "Apply to pitch",
+          "deadline": null,
+          "deadlineLabel": "Next cycle not yet announced",
+          "status": "unannounced",
+          "note": "The consortium states the accelerator programme is restricted to US-based applicants, and to ideas meeting the FDA definition of a medical device. Projects at any stage may apply, with no restriction on therapeutic area."
+        }
+      ],
+      "links": [
+        {
+          "label": "pediatricdeviceconsortium.org",
+          "url": "https://pediatricdeviceconsortium.org"
+        }
+      ],
+      "verified": "2026-08-14"
+    },
+    {
+      "id": "nccpdi-2027",
+      "name": "NCC-PDI Make Your Medical Device Pitch for Kids",
+      "org": "Children's National + University of Maryland / APDI",
+      "dateLabel": "Est. spring 2027",
+      "start": "2027-04-01",
+      "confirmed": false,
+      "where": "Washington, DC area, Children's National Hospital",
+      "country": "USA",
+      "region": "North America",
+      "tags": [
+        "pediatric",
+        "startup"
+      ],
+      "priority": true,
+      "summary": "Flagship FDA-funded pediatric device pitch competition, with roughly 150K to 250K USD in FDA grants across winners.",
+      "audience": "Pediatric medical device startups, researchers, clinician-entrepreneurs.",
+      "participate": [
+        {
+          "mode": "pitch",
+          "label": "Apply to pitch",
+          "deadline": null,
+          "deadlineLabel": "Main deadline not yet announced. Email apdi@childrensnational.org to join the list.",
+          "status": "unannounced",
+          "note": "Each cycle is themed by sector, past themes include cardiovascular, orthopaedic and spine, NICU, and remote monitoring. Applications have historically run through MedTech Innovator. Past deadlines have landed in February, April and August depending on the year."
+        }
+      ],
+      "links": [
+        {
+          "label": "innovate4kids.org",
+          "url": "https://innovate4kids.org"
+        }
+      ],
+      "verified": "2026-08-14"
+    },
+    {
+      "id": "neoped-2027",
+      "name": "NeoPed 2027",
+      "org": "NeoPed",
+      "dateLabel": "Est. spring 2027",
+      "start": "2027-04-22",
+      "confirmed": false,
+      "where": "2026 was Berlin. 2027 venue to be announced.",
+      "country": "Germany",
+      "region": "Europe",
+      "tags": [
+        "pediatric",
+        "startup"
+      ],
+      "priority": false,
+      "summary": "Dedicated neonatal and paediatric medtech investment summit uniting startups, investors and clinicians. Not association-run.",
+      "audience": "Neonatal and paediatric medtech startups, investors, clinicians.",
+      "participate": [
+        {
+          "mode": "pitch",
+          "label": "Pitch and investor programme",
+          "deadline": null,
+          "deadlineLabel": "2027 dates and deadlines not yet announced",
+          "status": "unannounced",
+          "note": "Site is intermittently down. Verify before relying on it."
+        }
+      ],
+      "links": [
+        {
+          "label": "neoped.eu",
+          "url": "https://neoped.eu"
+        }
+      ],
+      "verified": ""
+    },
+    {
+      "id": "pas-2027",
+      "name": "Pediatric Academic Societies Meeting 2027",
+      "org": "AAP + APA + APS + SPR",
+      "dateLabel": "30 Apr to 3 May 2027",
+      "start": "2027-04-30",
+      "end": "2027-05-03",
+      "confirmed": true,
+      "where": "Minneapolis Convention Center, Minneapolis, MN",
+      "country": "USA",
+      "region": "North America",
+      "tags": [
+        "pediatric"
+      ],
+      "priority": true,
+      "summary": "Largest North American general-pediatric academic meeting, with a heavy neonatology presence and 7,500+ attendees.",
+      "audience": "Academic pediatricians, neonatologists, researchers, fellows, exhibitors.",
+      "participate": [
+        {
+          "mode": "abstract",
+          "label": "Submit an abstract",
+          "deadline": "2026-11-02",
+          "deadlineLabel": "12 Aug to 2 Nov 2026",
+          "status": "open",
+          "note": ""
+        },
+        {
+          "mode": "abstract",
+          "label": "Call for sessions",
+          "deadline": "2026-09-16",
+          "deadlineLabel": "3 Aug to 16 Sep 2026",
+          "status": "open",
+          "note": ""
+        },
+        {
+          "mode": "attend",
+          "label": "Attend, early registration",
+          "deadline": "2027-03-16",
+          "deadlineLabel": "Ends 16 Mar 2027",
+          "status": "open",
+          "note": ""
+        },
+        {
+          "mode": "exhibit",
+          "label": "Exhibit",
+          "deadline": null,
+          "deadlineLabel": "See the exhibitor prospectus",
+          "status": "rolling",
+          "note": "The commercial route to neonatal clinicians and academic buyers."
+        }
+      ],
+      "links": [
+        {
+          "label": "pas-meeting.org key dates",
+          "url": "https://www.pas-meeting.org/2027-key-dates"
+        }
+      ],
+      "verified": "2026-08-14"
+    },
+    {
+      "id": "ipeg-2027",
+      "name": "IPEG 2027, 36th annual congress",
+      "org": "International Pediatric Endosurgery Group",
+      "dateLabel": "27 to 30 Apr 2027",
+      "start": "2027-04-27",
+      "end": "2027-04-30",
+      "confirmed": true,
+      "where": "Naples",
+      "country": "Italy",
+      "region": "Europe",
+      "tags": [
+        "pediatric",
+        "surgery",
+        "simulation"
+      ],
+      "priority": true,
+      "summary": "Main global meeting for minimally invasive and endoscopic pediatric surgery, held in collaboration with ESPES and SICP. Strong technical, skills and simulation focus.",
+      "audience": "Pediatric minimally invasive surgeons, endoscopists, fellows, industry. ESPES and Italian pediatric surgery also present.",
+      "participate": [
+        {
+          "mode": "abstract",
+          "label": "Submit an abstract",
+          "deadline": null,
+          "deadlineLabel": "Not yet announced. IPEG states details are coming soon.",
+          "status": "unannounced",
+          "note": ""
+        },
+        {
+          "mode": "exhibit",
+          "label": "Simulation and skills pre-courses",
+          "deadline": null,
+          "deadlineLabel": "Not yet announced",
+          "status": "unannounced",
+          "note": "A natural showcase slot."
+        }
+      ],
+      "links": [
+        {
+          "label": "ipeg.org",
+          "url": "https://www.ipeg.org"
+        },
+        {
+          "label": "jointcongress.org",
+          "url": "https://jointcongress.org"
+        }
+      ],
+      "verified": "2026-08-14"
+    },
+    {
+      "id": "medtech-forum-2027",
+      "name": "The MedTech Forum 2027",
+      "org": "MedTech Europe",
+      "dateLabel": "Est. spring 2027",
+      "start": "2027-05-11",
+      "confirmed": false,
+      "where": "Rotates cities. 2026 was Stockholm; 2027 host not announced.",
+      "country": "Europe",
+      "region": "Europe",
+      "tags": [
+        "industry"
+      ],
+      "priority": false,
+      "summary": "Largest European medtech industry conference, covering trends, innovation and regulation. No Forum-run pitch competition found.",
+      "audience": "Industry executives, policymakers, regulators, clinicians, investors.",
+      "participate": [
+        {
+          "mode": "attend",
+          "label": "Attend, early bird",
+          "deadline": null,
+          "deadlineLabel": "Not announced. 2026 early bird was 20 Mar 2026.",
+          "status": "unannounced",
+          "note": "For a pitch focus, MedTech World or the Informa MedTech Summit fit better."
+        }
+      ],
+      "links": [
+        {
+          "label": "themedtechforum.eu",
+          "url": "https://www.themedtechforum.eu"
+        }
+      ],
+      "verified": ""
+    },
+    {
+      "id": "apsa-2027",
+      "name": "APSA 2027, 58th annual meeting",
+      "org": "American Pediatric Surgical Association",
+      "dateLabel": "12 to 15 May 2027",
+      "start": "2027-05-12",
+      "end": "2027-05-15",
+      "confirmed": true,
+      "where": "Manchester Grand Hyatt San Diego, San Diego, CA",
+      "country": "USA",
+      "region": "North America",
+      "tags": [
+        "pediatric",
+        "surgery",
+        "simulation"
+      ],
+      "priority": true,
+      "summary": "Flagship US pediatric surgery meeting, with a high-fidelity hands-on simulation lab using neonatal and infant models, plus an Education & Innovation session.",
+      "audience": "Pediatric surgeons, fellows, surgical nurses, researchers, industry exhibitors.",
+      "participate": [
+        {
+          "mode": "abstract",
+          "label": "Submit an abstract",
+          "deadline": null,
+          "deadlineLabel": "2027 call not yet posted",
+          "status": "unannounced",
+          "note": "The 2026 submission guide was published in August of the preceding year, so the 2027 call is due imminently. In the 2026 cycle, authors were notified by 15 February and manuscripts ran 15 Feb to 15 Mar."
+        },
+        {
+          "mode": "exhibit",
+          "label": "Exhibit",
+          "deadline": null,
+          "deadlineLabel": "Not yet announced",
+          "status": "unannounced",
+          "note": ""
+        }
+      ],
+      "links": [
+        {
+          "label": "apsapedsurg.org",
+          "url": "https://apsapedsurg.org/continuing-education/events/annual-meeting"
+        }
+      ],
+      "verified": "2026-08-14"
+    },
+    {
+      "id": "eupsa-2027",
+      "name": "EUPSA 2027, 28th congress",
+      "org": "European Paediatric Surgeons Association",
+      "dateLabel": "Est. May to Jun 2027",
+      "start": "2027-05-20",
+      "confirmed": false,
+      "where": "Not yet announced. 2026 was the Joint Congress with IPEG and ESPES in Vienna.",
+      "country": "Europe",
+      "region": "Europe",
+      "tags": [
+        "pediatric",
+        "surgery"
+      ],
+      "priority": false,
+      "summary": "Main annual congress of European pediatric surgeons, covering the full breadth of pediatric and neonatal surgery, with pre-congress hands-on courses.",
+      "audience": "European pediatric surgeons, trainees, nurses, industry.",
+      "participate": [
+        {
+          "mode": "abstract",
+          "label": "Submit an abstract",
+          "deadline": null,
+          "deadlineLabel": "2027 deadlines not yet announced",
+          "status": "unannounced",
+          "note": ""
+        },
+        {
+          "mode": "exhibit",
+          "label": "Pre-congress hands-on and skills courses",
+          "deadline": null,
+          "deadlineLabel": "Not yet announced",
+          "status": "unannounced",
+          "note": ""
+        }
+      ],
+      "links": [
+        {
+          "label": "eupsa.info",
+          "url": "https://eupsa.info"
+        }
+      ],
+      "verified": ""
+    },
+    {
+      "id": "espnic-2027",
+      "name": "ESPNIC 2027, 36th congress",
+      "org": "ESPNIC, organiser MCA Scientific Events",
+      "dateLabel": "15 to 18 Jun 2027",
+      "start": "2027-06-15",
+      "end": "2027-06-18",
+      "confirmed": true,
+      "where": "Budapest",
+      "country": "Hungary",
+      "region": "Europe",
+      "tags": [
+        "pediatric"
+      ],
+      "priority": false,
+      "summary": "Annual congress covering paediatric and neonatal intensive care medicine and nursing.",
+      "audience": "Paediatric and neonatal intensivists, ICU nurses, allied professionals, researchers.",
+      "participate": [
+        {
+          "mode": "abstract",
+          "label": "Submit an abstract",
+          "deadline": null,
+          "deadlineLabel": "Not yet announced",
+          "status": "unannounced",
+          "note": ""
+        },
+        {
+          "mode": "attend",
+          "label": "Attend",
+          "deadline": null,
+          "deadlineLabel": "Not yet announced",
+          "status": "unannounced",
+          "note": ""
+        }
+      ],
+      "links": [
+        {
+          "label": "mcascientificevents.eu/espnic",
+          "url": "https://www.mcascientificevents.eu/espnic"
+        }
+      ],
+      "verified": ""
+    },
+    {
+      "id": "baps-2027",
+      "name": "BAPS 2027, 73rd congress",
+      "org": "British Association of Paediatric Surgeons",
+      "dateLabel": "Est. Jun to Jul 2027",
+      "start": "2027-06-16",
+      "confirmed": false,
+      "where": "Not yet announced. 2026 was Manchester, 17 to 19 Jun 2026.",
+      "country": "UK",
+      "region": "Europe",
+      "tags": [
+        "pediatric",
+        "surgery"
+      ],
+      "priority": false,
+      "summary": "Annual international congress of pediatric surgeons of the British Isles.",
+      "audience": "UK, Irish and international pediatric surgeons, trainees, nurses.",
+      "participate": [
+        {
+          "mode": "abstract",
+          "label": "Submit an abstract",
+          "deadline": null,
+          "deadlineLabel": "2027 deadlines not yet announced",
+          "status": "unannounced",
+          "note": "One unverified listing hinted at Aug 2027 in Lausanne."
+        }
+      ],
+      "links": [
+        {
+          "label": "congress.baps.org.uk",
+          "url": "https://congress.baps.org.uk"
+        }
+      ],
+      "verified": ""
+    },
+    {
+      "id": "hlth-europe-2027",
+      "name": "HLTH Europe 2027",
+      "org": "HLTH",
+      "dateLabel": "21 to 24 Jun 2027",
+      "start": "2027-06-21",
+      "end": "2027-06-24",
+      "confirmed": true,
+      "where": "RAI Convention Centre, Amsterdam",
+      "country": "Netherlands",
+      "region": "Europe",
+      "tags": [
+        "startup",
+        "industry"
+      ],
+      "priority": false,
+      "summary": "Europe's largest health innovation conference, spanning healthtech, digital health and medtech, with 400+ speakers from 65+ countries.",
+      "audience": "Founders, 300+ VCs and institutional investors, providers, payers, pharma, policymakers.",
+      "participate": [
+        {
+          "mode": "pitch",
+          "label": "Startup Pitch Competition, EUR 30,000",
+          "deadline": null,
+          "deadlineLabel": "2027 applications not open yet. Expected late 2026 or winter.",
+          "status": "unannounced",
+          "note": "Startup rate applies to companies under 5 years old that have raised under EUR 5m."
+        },
+        {
+          "mode": "exhibit",
+          "label": "Exhibit, early bird",
+          "deadline": null,
+          "deadlineLabel": "Not dated",
+          "status": "unannounced",
+          "note": ""
+        }
+      ],
+      "links": [
+        {
+          "label": "hlth.com/events/europe",
+          "url": "https://hlth.com/events/europe"
+        }
+      ],
+      "verified": ""
+    },
+    {
+      "id": "phm-2027",
+      "name": "PHM 2027, Pediatric Hospital Medicine",
+      "org": "APA, AAP and SHM",
+      "dateLabel": "29 Jul to 1 Aug 2027",
+      "start": "2027-07-29",
+      "end": "2027-08-01",
+      "confirmed": true,
+      "where": "New Orleans Marriott, New Orleans, LA",
+      "country": "USA",
+      "region": "North America",
+      "tags": [
+        "pediatric"
+      ],
+      "priority": false,
+      "summary": "National conference for pediatric hospitalists covering inpatient pediatric care, quality improvement and education.",
+      "audience": "Pediatric hospitalists, inpatient and NICU-adjacent clinicians, educators.",
+      "participate": [
+        {
+          "mode": "abstract",
+          "label": "Submit an abstract",
+          "deadline": null,
+          "deadlineLabel": "Not yet announced",
+          "status": "unannounced",
+          "note": ""
+        },
+        {
+          "mode": "attend",
+          "label": "Attend",
+          "deadline": null,
+          "deadlineLabel": "Not yet announced",
+          "status": "unannounced",
+          "note": ""
+        }
+      ],
+      "links": [
+        {
+          "label": "academicpeds.org",
+          "url": "https://www.academicpeds.org"
+        }
+      ],
+      "verified": "2026-08-14"
+    },
+    {
+      "id": "robotic-surgery-2027",
+      "name": "5th Annual Robotic Surgery for Pediatric Surgeons",
+      "org": "Nationwide Children's Hospital, Center for Robotic Surgery",
+      "dateLabel": "Likely Aug 2027",
+      "start": "2027-08-19",
+      "confirmed": false,
+      "where": "Columbus, Ohio",
+      "country": "USA",
+      "region": "North America",
+      "tags": [
+        "pediatric",
+        "surgery",
+        "simulation"
+      ],
+      "priority": true,
+      "summary": "Two-day conference on robotic surgery program development, clinical application presentations and case discussions, plus a clinical lab experience introducing robotic surgery to practising pediatric surgeons.",
+      "audience": "Practising pediatric surgeons.",
+      "participate": [
+        {
+          "mode": "attend",
+          "label": "Attend",
+          "deadline": null,
+          "deadlineLabel": "Not announced yet. The 2026 edition ran 19 to 21 Aug 2026.",
+          "status": "unannounced",
+          "note": ""
+        }
+      ],
+      "links": [
+        {
+          "label": "Nationwide Children's course page",
+          "url": "https://nationwidechildrens.cloud-cme.com/course/courseoverview?P=5&EID=49874&IsExhibitor=false"
+        }
+      ],
+      "verified": "2026-08-14"
+    },
+    {
+      "id": "jens-2027",
+      "name": "jENS 2027, 7th joint European Neonatal Societies congress",
+      "org": "ESPR + UENPS + GFCNI, organiser MCA Scientific Events",
+      "dateLabel": "21 to 25 Sep 2027",
+      "start": "2027-09-21",
+      "end": "2027-09-25",
+      "confirmed": true,
+      "where": "Bilbao",
+      "country": "Spain",
+      "region": "Europe",
+      "tags": [
+        "pediatric"
+      ],
+      "priority": false,
+      "summary": "Biennial flagship European neonatal congress, the top pan-European neonatal venue. Sits just beyond the 12-month window.",
+      "audience": "Neonatologists, neonatal nurses, perinatal researchers, allied professionals.",
+      "participate": [
+        {
+          "mode": "abstract",
+          "label": "Submit an abstract",
+          "deadline": "2027-03-31",
+          "deadlineLabel": "Closes 31 Mar 2027",
+          "status": "open",
+          "note": "Opened 21 Jul 2026. Structured abstract, 350 words, one table or one image. Submit via the MCA events portal. Topic list has no surgery category; General is the closest."
+        },
+        {
+          "mode": "attend",
+          "label": "Attend",
+          "deadline": null,
+          "deadlineLabel": "Not yet announced",
+          "status": "unannounced",
+          "note": ""
+        }
+      ],
+      "links": [
+        {
+          "label": "jENS abstract submission",
+          "url": "https://www.mcascientificevents.eu/jens/abstract-submission/"
+        }
+      ],
+      "verified": "2026-08-14"
+    }
+  ]
+}
