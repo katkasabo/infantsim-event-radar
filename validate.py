@@ -102,6 +102,13 @@ for e in events:
                 W(w, "cost basis is 'unknown' but the detail does not say where the figure "
                      "lives or who to ask")
 
+        if p.get("mode") == "pitch" and not p.get("prize"):
+            W(w, "pitch route with no prize recorded. Cost alone is half the decision: "
+                 "say what can be won, even if that is 'Not published'.")
+        pz = p.get("prize")
+        if pz and not pz.get("source"):
+            E(w, "prize has no source link")
+
         if not (p.get("url") or (c or {}).get("source")):
             E(w, "no link at all, so the table cell cannot link out")
 

@@ -9,6 +9,16 @@
     {
       "date": "2026-08-26",
       "items": [
+        "Pitch routes now show what you can win next to what it costs to enter. Cost alone was only half the decision.",
+        "The comparison is unflattering in one case: MEDICA costs EUR 3,500 to get on the stage and the entire prize pool is EUR 3,500 in cash. That is a visibility spend, not a funding route, and it now reads that way on the page.",
+        "Biggest prizes on the board: MedTech Innovator USD 350,000 non-dilutive, the UCSF-Stanford PDC platinum award USD 100,000, WHX Tech Xcelerate USD 30,000 equity free, HLTH Europe EUR 30,000, HLTH USA USD 25,000.",
+        "The CIX Startup Awards at Elevate are a dead end and are now marked closed. The 2026 cohort of fourteen was named in February, and the award is for Canadian startups.",
+        "Impact4Kids pays nothing and takes nothing. Six places, six months, training and mentorship and EU-US immersion. Worth entering for the access, not the money."
+      ]
+    },
+    {
+      "date": "2026-08-26",
+      "items": [
         "Teach is no longer its own column. Running a hands-on course is a way of actively participating, so it folds into Present. Route labels already say which kind it is, for example the PAS Call for Workshops.",
         "Events are now typed as conference, competition or accelerator, and the type can be filtered. Accelerators are not conferences but they are the same kind of visibility lever and they run on the same deadlines.",
         "Impact4Kids 2026/27 added and marked priority. Applications close 27 September 2026. No cost, no equity, no funding: fortnightly training, one-to-one mentorship and immersion in both the EU and US ecosystems. Eligibility is TRL 3 to 6, Europe or US, under USD 5M dilutive raised, which InfantSim fits.",
@@ -138,7 +148,12 @@
             "basis": "free",
             "source": "https://pedsinnovation.org/2026/07/23/fall-2026-pediatric-device-pitch-competition-applications-now-open/"
           },
-          "url": "https://pedsinnovation.org/2026/07/23/fall-2026-pediatric-device-pitch-competition-applications-now-open/"
+          "url": "https://pedsinnovation.org/2026/07/23/fall-2026-pediatric-device-pitch-competition-applications-now-open/",
+          "prize": {
+            "amount": "Up to USD 50,000",
+            "detail": "Per project, from a pool of up to USD 300,000 across the round. Winners also get advising and mentorship from consortium leaders, prototyping help and commercialisation coaching.",
+            "source": "https://pedsinnovation.org/2026/07/23/fall-2026-pediatric-device-pitch-competition-applications-now-open/"
+          }
         }
       ],
       "links": [
@@ -196,15 +211,21 @@
           "mode": "pitch",
           "label": "CIX Startup Awards pitch",
           "deadline": null,
-          "deadlineLabel": "2026 applications closed 30 Nov 2025. 2027 cycle not announced, expected to open autumn 2026.",
-          "status": "unannounced",
+          "deadlineLabel": "2026 winners announced Feb 2026",
+          "status": "closed",
           "note": "Watch cixsummit.com.",
           "cost": {
             "amount": "Not published",
             "detail": "CIX Startup Awards entry terms and any fee for the 2026 round are not posted.",
             "basis": "unknown",
             "source": "https://cixsummit.com"
-          }
+          },
+          "prize": {
+            "amount": "No cash prize",
+            "detail": "Recognition and a stage at the CIX Summit in front of 600-plus investors, not money. Two blockers: the 2026 cohort of fourteen was already named in February 2026 from over 370 applications, and the award is explicitly for Canada's top startups, so a Slovak company is very unlikely to be eligible.",
+            "source": "https://elevate.ca/blog/2026-cix-startup-award-winners/"
+          },
+          "checked": "26 Aug 2026: fourteen 2026 winners were announced in February 2026, selected by 94 North American investors from over 370 applications. Framed throughout as an award for Canadian startups."
         },
         {
           "mode": "present",
@@ -282,7 +303,12 @@
             "basis": "unknown",
             "source": "https://eaps.kenes.com"
           },
-          "url": "https://eaps.kenes.com"
+          "url": "https://eaps.kenes.com",
+          "prize": {
+            "amount": "Not published",
+            "detail": "No prize or award published for this round.",
+            "source": "https://eaps.kenes.com"
+          }
         }
       ],
       "links": [
@@ -405,7 +431,12 @@
             "source": "https://htfc-eu.com/htid/"
           },
           "url": "https://htfc-eu.com/htid/",
-          "checked": "26 Aug 2026: htfc-eu.com resolves but returns nothing over HTTPS, so the organiser site could not be read directly. Event date of 1 Oct 2026 confirmed through Choose Paris Region and Informa partneringONE instead."
+          "checked": "26 Aug 2026: htfc-eu.com resolves but returns nothing over HTTPS, so the organiser site could not be read directly. Event date of 1 Oct 2026 confirmed through Choose Paris Region and Informa partneringONE instead.",
+          "prize": {
+            "amount": "Not published",
+            "detail": "No prize or award published for this round.",
+            "source": "https://htfc-eu.com/htid/"
+          }
         },
         {
           "mode": "attend",
@@ -568,7 +599,12 @@
             "source": "https://themedtechconference.com/medtech-innovator/"
           },
           "url": "https://themedtechconference.com/medtech-innovator/",
-          "checked": "26 Aug 2026: the page names all 65 companies in the 2026 Accelerator Cohort and says five finalists will pitch on the keynote stage. Selection is done."
+          "checked": "26 Aug 2026: the page names all 65 companies in the 2026 Accelerator Cohort and says five finalists will pitch on the keynote stage. Selection is done.",
+          "prize": {
+            "amount": "USD 350,000",
+            "detail": "Non-dilutive, plus the MedTech Innovator title. Five finalists pitch on the keynote stage and the audience votes.",
+            "source": "https://themedtechconference.com/medtech-innovator/"
+          }
         },
         {
           "mode": "exhibit",
@@ -626,7 +662,12 @@
             "basis": "free",
             "source": "https://pediatrics.research.gatech.edu/events/pediatric-innovation-day-and-showcase"
           },
-          "url": "https://pediatrics.research.gatech.edu/events/pediatric-innovation-day-and-showcase"
+          "url": "https://pediatrics.research.gatech.edu/events/pediatric-innovation-day-and-showcase",
+          "prize": {
+            "amount": "USD 25,000",
+            "detail": "Innovation prize awarded at the showcase by APDI alongside two other FDA-funded pediatric device consortia.",
+            "source": "https://pediatrics.research.gatech.edu/events/pediatric-innovation-day-and-showcase"
+          }
         }
       ],
       "links": [
@@ -838,7 +879,13 @@
             "basis": "unknown",
             "source": "https://hlth.com/events/usa/agenda/startup-pitch/"
           },
-          "url": "https://hlth.com/events/usa/agenda/startup-pitch/"
+          "url": "https://hlth.com/events/usa/agenda/startup-pitch/",
+          "prize": {
+            "amount": "USD 25,000",
+            "detail": "Plus two complimentary passes to HLTH USA 2027 and a featured blog and interview on the HLTH platform. Eligibility is under 5 years old and under USD 8M raised.",
+            "source": "https://hlth.com/events/usa/agenda/startup-pitch/"
+          },
+          "checked": "26 Aug 2026: the startup pitch application page now returns HTTP 404, consistent with the 2026 round being closed. Prize and eligibility read from the pitch agenda page."
         },
         {
           "mode": "attend",
@@ -911,7 +958,13 @@
             "detail": "Full cost to pitch, plus VAT. The stage slot is not sold on its own: it is the EUR 2,950 START-UP PARK booth plus the EUR 550 stage upgrade. Entering the Innovation World Cup itself carries no separate fee.",
             "basis": "published",
             "source": "https://www.medica-tradefair.com/en/Program/Specials/MEDICA_START-UP_PARK"
-          }
+          },
+          "prize": {
+            "amount": "EUR 3,500",
+            "detail": "Cash prizes totalling EUR 3,500 across the winners, plus international marketing, MEDICA Main Stage exposure in Hall 12, free use of production labs and test facilities, development kits from STMicroelectronics and Wuerth Elektronik, and a Hall of Fame placement. Note the arithmetic: the prize pool matches the EUR 3,500 it costs to get on that stage, so this is a visibility play, not a funding one.",
+            "source": "https://www.innovationworldcup.com/medica-startup-competition/"
+          },
+          "checked": "26 Aug 2026: registration open until 10 September 2026. Prize pool confirmed at EUR 3,500 total cash."
         },
         {
           "mode": "exhibit",
@@ -1018,7 +1071,12 @@
             "basis": "free",
             "source": "https://medtechinnovator.org/apply/"
           },
-          "url": "https://medtechinnovator.org/apply/"
+          "url": "https://medtechinnovator.org/apply/",
+          "prize": {
+            "amount": "USD 350,000",
+            "detail": "Non-dilutive grand prize, decided by audience vote among five finalists on the keynote stage at The MedTech Conference. Reaching that stage means first winning a place in the accelerator cohort: 65 places from over 1,800 applicants in 2026.",
+            "source": "https://themedtechconference.com/medtech-innovator/"
+          }
         }
       ],
       "links": [
@@ -1124,7 +1182,12 @@
             "basis": "prior-year",
             "source": "https://imsh2026.org/registration"
           },
-          "url": "https://www.ssih.org/ssh-fund/impact/simventors-awards"
+          "url": "https://www.ssih.org/ssh-fund/impact/simventors-awards",
+          "prize": {
+            "amount": "No cash yet",
+            "detail": "The SSH Fund is raising money for SimVentors Awards, intended to attach monetary awards to the showcase from IMSH 2027 onward. Until that closes, the award is recognition only.",
+            "source": "https://www.ssih.org/ssh-fund/impact/simventors-awards"
+          }
         }
       ],
       "links": [
@@ -1169,7 +1232,12 @@
             "source": "https://www.worldhealthexpo.com/events/healthcare/tech/whats-on/features/xcelerate-your-startup-pitch-competition/"
           },
           "url": "https://www.worldhealthexpo.com/events/healthcare/tech/whats-on/features/xcelerate-your-startup-pitch-competition/",
-          "checked": "26 Aug 2026: application deadline 4 November 2026; pitches run 27 to 29 January 2027 with the Grand Finale on 29 January."
+          "checked": "26 Aug 2026: application deadline 4 November 2026; pitches run 27 to 29 January 2027 with the Grand Finale on 29 January.",
+          "prize": {
+            "amount": "USD 30,000 pool",
+            "detail": "All equity free: USD 15,000 Champion of Innovation, USD 10,000 Best Early-Stage Startup, USD 5,000 Best Scale-Up. Winners also get complimentary startup pods and Deloitte mentoring.",
+            "source": "https://www.worldhealthexpo.com/events/healthcare/tech/whats-on/features/xcelerate-your-startup-pitch-competition/"
+          }
         },
         {
           "mode": "exhibit",
@@ -1246,7 +1314,12 @@
           },
           "url": "https://pediatricdeviceconsortium.org/",
           "flag": true,
-          "checked": "26 Aug 2026: the page banner reads \"UCSF STANFORD PDC PITCH - 2026 ACCEPTING APPLICATION NOW\". The same page still advertises a symposium dated 3 November 2025, so it is partly stale."
+          "checked": "26 Aug 2026: the page banner reads \"UCSF STANFORD PDC PITCH - 2026 ACCEPTING APPLICATION NOW\". The same page still advertises a symposium dated 3 November 2025, so it is partly stale.",
+          "prize": {
+            "amount": "USD 100,000",
+            "detail": "Platinum award. The consortium does not publish the full award ladder below that tier.",
+            "source": "https://pediatricdeviceconsortium.org/"
+          }
         }
       ],
       "links": [
@@ -1294,7 +1367,12 @@
             "basis": "free",
             "source": "https://innovate4kids.org/"
           },
-          "url": "https://innovate4kids.org/"
+          "url": "https://innovate4kids.org/",
+          "prize": {
+            "amount": "USD 25,000",
+            "detail": "APDI innovation prize. The 2027 round is not yet announced.",
+            "source": "https://innovate4kids.org/"
+          }
         }
       ],
       "links": [
@@ -1343,7 +1421,12 @@
             "source": "https://neoped.eu"
           },
           "url": "https://neoped.eu",
-          "checked": "26 Aug 2026: neoped.eu does not resolve in DNS from here, so nothing could be verified at source. Search listings still describe it as the Neonatal & Pediatric MedTech Investment Summit, last held 23 to 24 April 2026 in Berlin. Treat this record as unconfirmed until the site answers."
+          "checked": "26 Aug 2026: neoped.eu does not resolve in DNS from here, so nothing could be verified at source. Search listings still describe it as the Neonatal & Pediatric MedTech Investment Summit, last held 23 to 24 April 2026 in Berlin. Treat this record as unconfirmed until the site answers.",
+          "prize": {
+            "amount": "Not published",
+            "detail": "No prize or award published for this round.",
+            "source": "https://neoped.eu"
+          }
         }
       ],
       "links": [
@@ -1944,6 +2027,11 @@
             "detail": "Prize is EUR 30,000. No entry fee published. Start-up status requires under 5 years trading and under EUR 5M raised.",
             "basis": "free",
             "source": "https://hlth.helpscoutdocs.com/article/61-startup-ticket-rate-qualification"
+          },
+          "prize": {
+            "amount": "EUR 30,000",
+            "detail": "Start-up status requires under 5 years trading and under EUR 5M raised.",
+            "source": "https://hlth.helpscoutdocs.com/article/61-startup-ticket-rate-qualification"
           }
         },
         {
@@ -2221,7 +2309,12 @@
             "basis": "free",
             "source": "https://pedsinnovation.org/2026/07/23/fall-2026-pediatric-device-pitch-competition-applications-now-open/"
           },
-          "url": "https://pedsinnovation.org/2026/07/23/fall-2026-pediatric-device-pitch-competition-applications-now-open/"
+          "url": "https://pedsinnovation.org/2026/07/23/fall-2026-pediatric-device-pitch-competition-applications-now-open/",
+          "prize": {
+            "amount": "Up to USD 50,000",
+            "detail": "Per project, from up to USD 300,000 across the round, plus mentorship, prototyping support and commercialisation coaching from the five consortia.",
+            "source": "https://pedsinnovation.org/2026/07/23/fall-2026-pediatric-device-pitch-competition-applications-now-open/"
+          }
         }
       ],
       "absent": {
@@ -2358,7 +2451,12 @@
             "basis": "unknown",
             "source": "https://www.lsiusasummit.com/"
           },
-          "url": "https://www.lsiusasummit.com/"
+          "url": "https://www.lsiusasummit.com/",
+          "prize": {
+            "amount": "No prize",
+            "detail": "Not a prize competition. The return is stage time in front of an investor-dense room, 1:1 partnering meetings and the Funding Fast Track.",
+            "source": "https://www.lsiusasummit.com/"
+          }
         },
         {
           "mode": "attend",
@@ -2493,7 +2591,12 @@
             "basis": "free",
             "source": "https://www.ctipmedtech.org/"
           },
-          "url": "https://www.ctipmedtech.org/"
+          "url": "https://www.ctipmedtech.org/",
+          "prize": {
+            "amount": "USD 25,000 to 50,000",
+            "detail": "Non-dilutive, per award. Open to projects at any stage of development.",
+            "source": "https://www.ctipmedtech.org/"
+          }
         }
       ],
       "absent": {
@@ -2545,7 +2648,12 @@
             "source": "https://www.innovation4kids.org/en/impact4kids-2026-2027/"
           },
           "url": "https://www.innovation4kids.org/en/impact4kids-2026-2027/",
-          "checked": "26 Aug 2026: application deadline 27 September 2026, selection 9 October, programme runs 20 October 2026 to 27 April 2027. Eligibility TRL 3 to 6, Europe or US, under USD 5M dilutive raised."
+          "checked": "26 Aug 2026: application deadline 27 September 2026, selection 9 October, programme runs 20 October 2026 to 27 April 2027. Eligibility TRL 3 to 6, Europe or US, under USD 5M dilutive raised.",
+          "prize": {
+            "amount": "No funding",
+            "detail": "Explicitly no funding, no equity taken and no financial compensation. What you get is fortnightly structured training, one-to-one mentorship and ecosystem immersion across Europe and the US, from a six-month programme that takes only six projects.",
+            "source": "https://www.innovation4kids.org/en/impact4kids-2026-2027/"
+          }
         }
       ],
       "absent": {
@@ -2599,7 +2707,12 @@
             "source": "https://www.biocat.cat/en/programs/craash-barcelona/apply-craash-barcelona"
           },
           "url": "https://www.biocat.cat/en/programs/craash-barcelona/apply-craash-barcelona",
-          "checked": "26 Aug 2026: the Biocat apply page describes the programme and the i4KIDS partnership but posts no deadline for the 8th edition. TRL 3 to 6 scope confirmed."
+          "checked": "26 Aug 2026: the Biocat apply page describes the programme and the i4KIDS partnership but posts no deadline for the 8th edition. TRL 3 to 6 scope confirmed.",
+          "prize": {
+            "amount": "Not published",
+            "detail": "No prize or award published for this round.",
+            "source": "https://www.biocat.cat/en/programs/craash-barcelona/apply-craash-barcelona"
+          }
         }
       ],
       "absent": {

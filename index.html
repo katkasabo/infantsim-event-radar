@@ -217,6 +217,16 @@ tr.detail.hidden{display:none}
 .dt-way-l{font-size:13px;font-weight:600;margin:3px 0 0;line-height:1.3}
 .dt-dl{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:4px;display:flex;gap:7px;align-items:center;flex-wrap:wrap}
 .dt-cost{margin-top:7px;padding-top:7px;border-top:1px dotted var(--line-soft);font-size:12px;line-height:1.45}
+.dt-cap{font-family:var(--mono);font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
+  display:block;margin-bottom:1px}
+.dt-win b{color:var(--teal)}
+.win{
+  font-family:var(--mono);font-size:11px;font-weight:600;line-height:1.25;letter-spacing:-.02em;
+  color:var(--teal);margin-top:3px;word-break:break-word;
+}
+.win b{display:block;font-size:8.5px;letter-spacing:.09em;text-transform:uppercase;color:#8CA5A3;
+  font-weight:500;margin-bottom:1px}
+.win.none{color:#93A2A3;font-weight:400}
 .dt-cost b{font-family:var(--mono);font-size:12.5px}
 .dt-cost p{margin:2px 0 0;color:var(--muted)}
 .dt-cost a{font-size:11px;font-family:var(--mono)}
@@ -425,6 +435,11 @@ tr.detail.hidden{display:none}
       <span><b>Not checked</b> not researched yet, queued for a Sunday check</span>
       <span>Every cell links out to the source.</span>
     </div>
+    <div class="legend">
+      <span>Pitches:</span>
+      <span>each shows what it <b>costs</b> to enter and what you can <b>win</b>.</span>
+      <span>MEDICA is the one to read twice: EUR 3,500 in, EUR 3,500 total prize pool.</span>
+    </div>
   </div>
   <div id="view-timeline" class="hidden">
     <div class="legend">
@@ -587,12 +602,18 @@ function absentHTML(e, mode){
   }
   return `<span class="absent"><b>Not checked</b></span>`;
 }
+function prizeHTML(p){
+  if(!p.prize) return "";
+  const none = /^(no |not published)/i.test(p.prize.amount);
+  return `<div class="win${none ? " none" : ""}"><b>Win</b>${esc(p.prize.amount)}</div>`;
+}
 function sheetCell(e, mode){
   const ways = e.participate.filter(p => p.mode === mode);
   if(!ways.length) return `<td class="mc">${absentHTML(e, mode)}</td>`;
   return `<td class="mc">` + ways.map(p => {
     const st = liveStatus(p), u = routeURL(e, p);
     const inner = `<div class="cw-label">${esc(p.label)}</div>${costHTML(p)}` +
+                  prizeHTML(p) +
                   `<span class="pill ${st}">${pillText(p, st)}</span>`;
     return u ? `<a class="cellway" href="${esc(u)}" target="_blank" rel="noopener" title="${esc(p.label)}">${inner}</a>`
              : `<div class="cellway">${inner}</div>`;
@@ -607,10 +628,15 @@ function detailHTML(e){
       <div class="dt-way-l">${esc(p.label)}</div>
       <div class="dt-dl"><span class="dl-text${p.flag ? " flagged" : ""}">${esc(p.deadlineLabel)}</span></div>
       ${p.checked ? `<div class="dt-checked">${esc(p.checked)}</div>` : ""}
-      <div class="dt-cost"><b>${esc(c.amount || "Not published")}</b>
+      <div class="dt-cost"><span class="dt-cap">Costs</span><b>${esc(c.amount || "Not published")}</b>
         ${c.detail ? `<p>${esc(c.detail)}</p>` : ""}
         <a href="${esc(routeURL(e, p))}" target="_blank" rel="noopener">more information</a>
       </div>
+      ${p.prize ? `<div class="dt-cost dt-win"><span class="dt-cap">Wins</span>
+        <b>${esc(p.prize.amount)}</b>
+        ${p.prize.detail ? `<p>${esc(p.prize.detail)}</p>` : ""}
+        ${p.prize.source ? `<a href="${esc(p.prize.source)}" target="_blank" rel="noopener">prize source</a>` : ""}
+      </div>` : ""}
       ${p.note ? `<div class="dt-note">${esc(p.note)}</div>` : ""}
     </div>`;
   }).join("");
