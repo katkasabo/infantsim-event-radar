@@ -9,6 +9,46 @@
     {
       "date": "2026-08-26",
       "items": [
+        "A validator now runs before every commit. On its first run it found the Europaediatrics link was dead, two organiser sites unreachable, and a schema slip of my own making.",
+        "Europaediatrics 2026 is fine, but its link was not. The old MCA page returns HTTP 410 Gone; the congress moved to an EventsAir portal and is still on for 8 to 10 October 2026 in Venice. Link replaced.",
+        "Two organiser sites would not answer at all on 26 Aug 2026: htfc-eu.com for HealthTech Innovation Days, and neoped.eu, which does not resolve in DNS. Both records now say so rather than implying they were verified at source. NeoPed should be treated as unconfirmed."
+      ]
+    },
+    {
+      "date": "2026-08-26",
+      "items": [
+        "PAS 2027 was collapsing six separate calls into two vague rows. It is now broken out into the actual named calls from the PAS key dates table, each with its own window.",
+        "That surfaced a route worth having: the PAS Call for Workshops, 3 Aug to 16 Sep 2026, is the taught hands-on route and the closest fit at PAS for a simulator. It closes the same day as the scholarly sessions call.",
+        "Also added at PAS: the Call for APA and PAS Special Interest Groups, and the ancillary events window for running your own satellite session, which stays open to 3 Mar 2027.",
+        "Table cells now name the route. Previously a cell with two entries showed two costs and two countdowns with no way to tell which was which."
+      ]
+    },
+    {
+      "date": "2026-08-26",
+      "items": [
+        "Four statuses were wrong because they were inferred from a missing date rather than read off the page. Katka caught the first one. Fixed, and a validator now runs before every commit so this class of error cannot ship again.",
+        "The MedTech Innovator route at The MedTech Conference said 'not announced'. The page names all 65 companies in the 2026 cohort and says the five finalists are set, so the round is closed. The way back in is the 2027 accelerator, tracked separately.",
+        "The MedTech Conference Call for Sessions said 'not announced'. It closed on 20 February 2026. The AdvaMed page still advertises it as open while naming a window that has passed, so the page copy is stale and is now flagged as such.",
+        "The UCSF-Stanford PDC pitch said 'not announced'. It is accepting applications now. That page is also internally inconsistent, advertising a 2026 round next to a 2025 event date.",
+        "WHX Tech Xcelerate now has a real deadline: applications close 4 November 2026, prize pool USD 30,000 equity free, split 15,000 / 10,000 / 5,000.",
+        "The WHX Tech date conflict is mostly resolved: the landing page and the Xcelerate page both say 27 to 29 January 2027, against one call-for-speakers page saying September 2027. January is the better supported date."
+      ]
+    },
+    {
+      "date": "2026-08-26",
+      "items": [
+        "Calls for speakers are now tracked separately from academic abstract calls. They are a different route with a different gatekeeper, and five were being missed entirely.",
+        "WHX Tech has an open call for speakers that closes 28 August 2026, which is two days out. It is the most urgent thing on the board.",
+        "WHX Tech dates are in conflict between two Informa pages. The call-for-speakers page says September 2027 at the Dubai World Trade Centre; the WHX Tech landing page says 27 to 29 January 2027. Flagged on the record, unresolved.",
+        "Speaking at MEDICA is bought rather than submitted. A MEDICA connected healthcare forum slot is EUR 550 on top of a stand; the cheapest route to any stage is still the EUR 3,500 START-UP PARK package.",
+        "Exhibit pricing found and added: AAP National Conference USD 3,800 per 10 x 10 plus USD 200 per corner, and PAS USD 3,500 per 10 x 10 from the 2026 prospectus.",
+        "MEDICA standard stand costed out at EUR 4,983 for the smallest permitted 12 sqm row stand, all compulsory fees included. That is about 70 percent more than the START-UP PARK package for the same show.",
+        "Exhibit routes added for The MedTech Conference, HLTH USA and SAGES. None publish a rate; each now names who to ask instead of showing a blank."
+      ]
+    },
+    {
+      "date": "2026-08-26",
+      "items": [
         "Five events added: the joint five-consortium Pediatric Device Pitch Competition, SAGES 2027, LSI USA '27, SESAM 2027 and the CTIP Catalyzing Pediatric Innovation grant.",
         "The SWPDC and AAP SOATT prize is no longer a standalone prize. It is now one joint round run with APDI, CTIP, MPDC and the UCSF-Stanford PDC, it closed on 14 August 2026, and eligibility requires a device meeting the FDA definition plus a pediatric indication for use. The record is marked closed.",
         "SAGES 2027 Emerging Technology is the notable new opening: it accepts industry engineers and inventors presenting their own work, with no formal experimental data required. The window runs 15 Sep to 4 Nov 2026.",
@@ -154,6 +194,21 @@
             "basis": "unknown",
             "source": "https://cixsummit.com"
           }
+        },
+        {
+          "mode": "present",
+          "label": "Become a speaker",
+          "deadline": null,
+          "deadlineLabel": "Rolling, no deadline posted",
+          "status": "rolling",
+          "note": "Elevate runs an open Become A Speaker route on its speakers page. No deadline is published; the line-up is updated on a rolling basis.",
+          "cost": {
+            "amount": "Not published",
+            "detail": "No speaker fee published.",
+            "basis": "unknown",
+            "source": "https://elevatefestival.ca/speakers/"
+          },
+          "url": "https://elevatefestival.ca/speakers/"
         }
       ],
       "links": [
@@ -282,12 +337,12 @@
           "status": "rolling",
           "note": "SOATT innovation programming runs here.",
           "cost": {
-            "amount": "Not published",
-            "detail": "Booth rates are in the exhibitor prospectus, not on the public site.",
-            "basis": "unknown",
-            "source": "https://aapexperience.org"
+            "amount": "USD 3,800",
+            "detail": "Per 10 x 10 booth, plus USD 200 per corner. Includes backdrape and siderail, ID sign, five exhibitor badges and the online directory listing. Registered nonprofits pay 2,800, limited to one booth.",
+            "basis": "published",
+            "source": "https://aapexperience.org/exhibitor-prospectus/"
           },
-          "url": "https://aapexperience.org"
+          "url": "https://aapexperience.org/exhibitor-prospectus/"
         }
       ],
       "links": [
@@ -335,7 +390,8 @@
             "basis": "unknown",
             "source": "https://htfc-eu.com/htid/"
           },
-          "url": "https://htfc-eu.com/htid/"
+          "url": "https://htfc-eu.com/htid/",
+          "checked": "26 Aug 2026: htfc-eu.com resolves but returns nothing over HTTPS, so the organiser site could not be read directly. Event date of 1 Oct 2026 confirmed through Choose Paris Region and Informa partneringONE instead."
         },
         {
           "mode": "attend",
@@ -350,7 +406,8 @@
             "basis": "unknown",
             "source": "https://htfc-eu.com/htid/"
           },
-          "url": "https://htfc-eu.com/htid/"
+          "url": "https://htfc-eu.com/htid/",
+          "checked": "26 Aug 2026: htfc-eu.com resolves but returns nothing over HTTPS, so the organiser site could not be read directly. Event date of 1 Oct 2026 confirmed through Choose Paris Region and Informa partneringONE instead."
         }
       ],
       "links": [
@@ -388,10 +445,12 @@
           "note": "",
           "cost": {
             "amount": "Not published",
-            "detail": "Abstract deadline not posted. The registration page returned HTTP 410 on 26 Aug 2026.",
+            "detail": "Not published on the congress portal. The previous site was retired and returns HTTP 410, so nothing is quotable yet. Ask via the portal contact form.",
             "basis": "unknown",
-            "source": "https://www.mcascientificevents.eu/europaediatrics/welcome/"
-          }
+            "source": "https://mcaevents.eventsair.com/QuickEventWebsitePortal/12th-epa-unepsa-congress/12th-europaediatrics-2026/"
+          },
+          "url": "https://mcaevents.eventsair.com/QuickEventWebsitePortal/12th-epa-unepsa-congress/12th-europaediatrics-2026/",
+          "checked": "26 Aug 2026: the old mcascientificevents.eu/europaediatrics page now returns HTTP 410 Gone. The congress is not cancelled: MCA moved it to an EventsAir portal and it is still dated 8 to 10 Oct 2026 in Venice. Link replaced. Fees and abstract deadline still not published."
         },
         {
           "mode": "attend",
@@ -402,16 +461,22 @@
           "note": "info@mcascientificevents.eu",
           "cost": {
             "amount": "Not published",
-            "detail": "Registration page returned HTTP 410 on 26 Aug 2026. Fees not retrievable.",
+            "detail": "Not published on the congress portal. The previous site was retired and returns HTTP 410, so nothing is quotable yet. Ask via the portal contact form.",
             "basis": "unknown",
-            "source": "https://www.mcascientificevents.eu/europaediatrics/welcome/"
-          }
+            "source": "https://mcaevents.eventsair.com/QuickEventWebsitePortal/12th-epa-unepsa-congress/12th-europaediatrics-2026/"
+          },
+          "url": "https://mcaevents.eventsair.com/QuickEventWebsitePortal/12th-epa-unepsa-congress/12th-europaediatrics-2026/",
+          "checked": "26 Aug 2026: the old mcascientificevents.eu/europaediatrics page now returns HTTP 410 Gone. The congress is not cancelled: MCA moved it to an EventsAir portal and it is still dated 8 to 10 Oct 2026 in Venice. Link replaced. Fees and abstract deadline still not published."
         }
       ],
       "links": [
         {
-          "label": "mcascientificevents.eu",
-          "url": "https://www.mcascientificevents.eu/europaediatrics"
+          "label": "12th Europaediatrics congress portal",
+          "url": "https://mcaevents.eventsair.com/QuickEventWebsitePortal/12th-epa-unepsa-congress/12th-europaediatrics-2026/"
+        },
+        {
+          "label": "epa-unepsa.org",
+          "url": "https://www.europaediatrics.org/"
         }
       ],
       "verified": "2026-08-26",
@@ -419,7 +484,7 @@
         "pitch": "none"
       },
       "absentSrc": {
-        "pitch": "https://www.mcascientificevents.eu/europaediatrics/welcome/"
+        "pitch": "https://mcaevents.eventsair.com/QuickEventWebsitePortal/12th-epa-unepsa-congress/12th-europaediatrics-2026/"
       }
     },
     {
@@ -459,32 +524,50 @@
         {
           "mode": "present",
           "label": "Call for Sessions",
-          "deadline": null,
-          "deadlineLabel": "Not dated. Needs verifying.",
-          "status": "unannounced",
-          "note": "",
+          "deadline": "2026-02-20",
+          "deadlineLabel": "Closed 20 Feb 2026",
+          "status": "closed",
+          "note": "Treat the AdvaMed page copy with suspicion: it advertises the call as open while naming a window that closed in February. Expect the 2027 call to open in early January.",
           "cost": {
             "amount": "USD 2,000",
             "detail": "No separate submission fee. Session leads pay standard registration above.",
             "basis": "published",
             "source": "https://themedtechconference.com/register/"
           },
-          "url": "https://www.advamed.org/events/the-medtech-conference-call-for-sessions/"
+          "url": "https://www.advamed.org/events/the-medtech-conference-call-for-sessions/",
+          "flag": true,
+          "checked": "26 Aug 2026: the page copy still reads \"Call for Sessions is open\" but the window it states is 7 Jan to 20 Feb 2026, which has passed. The copy is stale, the date is not."
         },
         {
           "mode": "pitch",
           "label": "MedTech Innovator Showcase and Finals",
           "deadline": null,
-          "deadlineLabel": "Via the MedTech Innovator accelerator round",
-          "status": "unannounced",
-          "note": "Not a direct entry. Companies reach the stage by being selected into the MedTech Innovator accelerator cohort, which drew over 1,800 applicants for 65 places in 2026. Five finalists pitch on the keynote stage.",
+          "deadlineLabel": "2026 cohort already selected, applications closed",
+          "status": "closed",
+          "note": "Not a direct entry. Companies reach the stage by being selected into the MedTech Innovator accelerator cohort, 65 places from over 1,800 applicants in 2026. The route back in is the 2027 accelerator round, tracked separately under MedTech Innovator 2027, which has not opened.",
           "cost": {
             "amount": "Free, no equity",
             "detail": "No entry fee and no equity for the accelerator or the showcase. Finals prize is USD 350,000 in non-dilutive funding. Conference registration is separate.",
             "basis": "free",
             "source": "https://themedtechconference.com/medtech-innovator/"
           },
-          "url": "https://themedtechconference.com/medtech-innovator/"
+          "url": "https://themedtechconference.com/medtech-innovator/",
+          "checked": "26 Aug 2026: the page names all 65 companies in the 2026 Accelerator Cohort and says five finalists will pitch on the keynote stage. Selection is done."
+        },
+        {
+          "mode": "exhibit",
+          "label": "Exhibit",
+          "deadline": null,
+          "deadlineLabel": "Space sold until the hall fills",
+          "status": "rolling",
+          "note": "Roughly 1,800 companies attend. Booth rates are not on the public site. Worth knowing: an Exhibit Hall Only pass is USD 1,100 to 17 Oct 2026, which buys floor access without a booth.",
+          "cost": {
+            "amount": "Not published",
+            "detail": "Booth rates sit in the exhibitor prospectus. The Exhibit Hall Only pass, which is not a booth, is USD 1,100 until 17 Oct 2026 and 1,200 onsite.",
+            "basis": "unknown",
+            "source": "https://themedtechconference.com/exhibit-hall-pass/"
+          },
+          "url": "https://themedtechconference.com/exhibit-hall-pass/"
         }
       ],
       "links": [
@@ -752,6 +835,21 @@
             "source": "https://hlth.com/events/usa/register/"
           },
           "url": "https://hlth.com/events/usa/register/"
+        },
+        {
+          "mode": "exhibit",
+          "label": "Exhibit or Startup Pavilion pod",
+          "deadline": null,
+          "deadlineLabel": "Sold until the floor fills",
+          "status": "rolling",
+          "note": "About 950 exhibitors across dedicated hubs including a Startups hub. Start-ups can apply for a Startup Pavilion pod rather than a full booth. Every booth package includes two full-conference tickets.",
+          "cost": {
+            "amount": "Not published",
+            "detail": "No package is priced publicly. HLTH quotes on request via sales@hlth.com. For scale, the European edition sold a start-up booth at EUR 1,500 and a company kiosk at EUR 2,500, both excluding VAT.",
+            "basis": "unknown",
+            "source": "https://hlth.com/events/usa/sponsorship/opportunities/"
+          },
+          "url": "https://hlth.com/events/usa/sponsorship/opportunities/"
         }
       ],
       "links": [
@@ -824,6 +922,36 @@
             "source": "https://www.medica-tradefair.com"
           },
           "url": "https://www.medica-tradefair.com"
+        },
+        {
+          "mode": "present",
+          "label": "Speaking slot, MEDICA Innovation Forum",
+          "deadline": null,
+          "deadlineLabel": "Sold with a stand package",
+          "status": "rolling",
+          "note": "Speaking at MEDICA is bought, not submitted. The START-UP PARK stage upgrade is the cheapest way in. A slot in the MEDICA connected healthcare forum is EUR 550 on top of a stand, and hubs or accelerators can buy a bundle of slots for EUR 3,250 excluding VAT.",
+          "cost": {
+            "amount": "EUR 550",
+            "detail": "Excluding VAT, on top of a stand. This is the add-on price only: it assumes you already hold a stand. The all-in cheapest route to a stage is the EUR 3,500 START-UP PARK package.",
+            "basis": "published",
+            "source": "https://www.medica-tradefair.com/en/Program/Forums_Stages/MEDICA_INNOVATION_FORUM"
+          },
+          "url": "https://www.medica-tradefair.com/en/Program/Forums_Stages/MEDICA_INNOVATION_FORUM"
+        },
+        {
+          "mode": "exhibit",
+          "label": "Standard stand, not the START-UP PARK",
+          "deadline": null,
+          "deadlineLabel": "Space sold until the hall fills",
+          "status": "rolling",
+          "note": "The alternative to the START-UP PARK package, worth knowing because it is the reference point: a plain stand costs roughly 70 percent more than the start-up package for the smallest permitted footprint.",
+          "cost": {
+            "amount": "EUR 4,983 minimum",
+            "detail": "Calculated on the smallest permitted stand, 12 sqm in a row position: 12 x EUR 304/sqm space, plus the EUR 995 fixed media fee, plus EUR 0.60/sqm AUMA, EUR 2.70/sqm waste and EUR 25/sqm technical prepayment. Corner 317, end of block 327, island 336 per sqm. Stand construction, electricity and cleaning are all extra.",
+            "basis": "published",
+            "source": "https://www.medica-tradefair.com/en/Exhibit/Become_an_exhibitor/Stand_cost_calculator"
+          },
+          "url": "https://www.medica-tradefair.com/en/Exhibit/Become_an_exhibitor/Stand_cost_calculator"
         }
       ],
       "links": [
@@ -942,11 +1070,11 @@
           "note": "",
           "cost": {
             "amount": "Not published",
-            "detail": "Booth rates are in the exhibitor prospectus, not on the public site.",
+            "detail": "Priority point exhibit and sponsorship sales are open and the IMSH 2027 prospectus is a downloadable PDF, but no rate appears on the public page. Contact ofleenor@ssih.org. Over 140 companies exhibit.",
             "basis": "unknown",
-            "source": "https://imsh2027.org"
+            "source": "https://imsh2027.org/expo-hall"
           },
-          "url": "https://imsh2027.org"
+          "url": "https://imsh2027.org/expo-hall"
         },
         {
           "mode": "teach",
@@ -1009,16 +1137,17 @@
           "mode": "pitch",
           "label": "Xcelerate pitch competition",
           "deadline": "2026-11-04",
-          "deadlineLabel": "4 Nov 2026",
+          "deadlineLabel": "Closes 4 Nov 2026",
           "status": "open",
-          "note": "USD 30,000 prize pool, around 50 pitch and 12 finalists. Shortlist end Nov 2026, grand finale 29 Jan 2027.",
+          "note": "Up to 40 startups are shortlisted to pitch on the Xcelerate Stage, and 12 reach the Grand Finale. Open to healthcare startups across all verticals.",
           "cost": {
-            "amount": "Not published",
-            "detail": "Entry terms and any fee not published. Organiser contact is support.whxtechdubai@informa.com.",
-            "basis": "unknown",
-            "source": "https://www.worldhealthexpo.com/events/healthcare/tech/"
+            "amount": "Free to enter",
+            "detail": "No entry fee. Prize pool is USD 30,000 equity free: USD 15,000 Champion of Innovation, USD 10,000 Best Early-Stage Startup, USD 5,000 Best Scale-Up. Winners also get complimentary startup pods and Deloitte mentoring.",
+            "basis": "free",
+            "source": "https://www.worldhealthexpo.com/events/healthcare/tech/whats-on/features/xcelerate-your-startup-pitch-competition/"
           },
-          "url": "https://www.worldhealthexpo.com/events/healthcare/tech/"
+          "url": "https://www.worldhealthexpo.com/events/healthcare/tech/whats-on/features/xcelerate-your-startup-pitch-competition/",
+          "checked": "26 Aug 2026: application deadline 4 November 2026; pitches run 27 to 29 January 2027 with the Grand Finale on 29 January."
         },
         {
           "mode": "exhibit",
@@ -1034,6 +1163,23 @@
             "source": "https://exportvirginia.org/event/whx-dubai-2027"
           },
           "url": "https://www.worldhealthexpo.com/events/healthcare/tech/"
+        },
+        {
+          "mode": "present",
+          "label": "Call for speakers",
+          "deadline": "2026-08-28",
+          "deadlineLabel": "Closes 28 Aug 2026",
+          "status": "open",
+          "note": "Informa is taking speaker proposals across five tracks: digital health founders and technologists, AI and data leaders, healthcare executives and policymakers, investors, and clinicians and researchers. Submitted through a Smartsheet form. Note the date conflict: this page says September 2027, while the landing page and the Xcelerate page both say 27 to 29 January 2027.",
+          "cost": {
+            "amount": "Free to submit",
+            "detail": "No submission fee published. Speaker perks such as travel or honorarium are not stated.",
+            "basis": "free",
+            "source": "https://www.worldhealthexpo.com/events/healthcare/tech/conferences/call-for-speakers/"
+          },
+          "url": "https://www.worldhealthexpo.com/events/healthcare/tech/conferences/call-for-speakers/",
+          "flag": true,
+          "checked": "26 Aug 2026: submission closes 28 August 2026. This page dates the event to September 2027, which contradicts the WHX Tech landing page and the Xcelerate page. Both of those say 27 to 29 January 2027, so January is the better supported date."
         }
       ],
       "links": [
@@ -1066,16 +1212,18 @@
           "mode": "pitch",
           "label": "Apply to pitch",
           "deadline": null,
-          "deadlineLabel": "Next cycle not yet announced",
-          "status": "unannounced",
-          "note": "The consortium states the accelerator programme is restricted to US-based applicants, and to ideas meeting the FDA definition of a medical device. Projects at any stage may apply, with no restriction on therapeutic area.",
+          "deadlineLabel": "Accepting applications now, no closing date posted",
+          "status": "rolling",
+          "note": "Open now, but the page is internally inconsistent: it advertises a 2026 application round alongside a 2025 event date and posts no closing date. Worth an email to confirm before building an application.",
           "cost": {
             "amount": "No fee stated",
             "detail": "Platinum award is USD 100,000. The consortium does not publish an application fee. Runs twice yearly, spring and autumn.",
             "basis": "unknown",
             "source": "https://pediatricdeviceconsortium.org/"
           },
-          "url": "https://pediatricdeviceconsortium.org/"
+          "url": "https://pediatricdeviceconsortium.org/",
+          "flag": true,
+          "checked": "26 Aug 2026: the page banner reads \"UCSF STANFORD PDC PITCH - 2026 ACCEPTING APPLICATION NOW\". The same page still advertises a symposium dated 3 November 2025, so it is partly stale."
         }
       ],
       "links": [
@@ -1171,7 +1319,8 @@
             "basis": "unknown",
             "source": "https://neoped.eu"
           },
-          "url": "https://neoped.eu"
+          "url": "https://neoped.eu",
+          "checked": "26 Aug 2026: neoped.eu does not resolve in DNS from here, so nothing could be verified at source. Search listings still describe it as the Neonatal & Pediatric MedTech Investment Summit, last held 23 to 24 April 2026 in Berlin. Treat this record as unconfirmed until the site answers."
         }
       ],
       "links": [
@@ -1180,7 +1329,7 @@
           "url": "https://neoped.eu"
         }
       ],
-      "verified": ""
+      "verified": "2026-08-26"
     },
     {
       "id": "pas-2027",
@@ -1202,61 +1351,115 @@
       "participate": [
         {
           "mode": "present",
-          "label": "Submit an abstract",
+          "label": "Call for Abstracts",
           "deadline": "2026-11-02",
           "deadlineLabel": "12 Aug to 2 Nov 2026",
           "status": "open",
-          "note": "",
+          "note": "The main scientific route. Notifications go out 19 Jan 2027.",
           "cost": {
             "amount": "Not published",
-            "detail": "No separate abstract fee historically. Registration and hotel sites open November 2026, so attendee rates are not yet posted. Early registration ends 16 Mar 2027.",
-            "basis": "unknown",
-            "source": "https://www.pas-meeting.org/2027-key-dates/"
-          }
-        },
-        {
-          "mode": "present",
-          "label": "Call for sessions",
-          "deadline": "2026-09-16",
-          "deadlineLabel": "3 Aug to 16 Sep 2026",
-          "status": "open",
-          "note": "",
-          "cost": {
-            "amount": "Not published",
-            "detail": "No submission fee historically. Session leads pay standard registration, which is not yet posted.",
-            "basis": "unknown",
-            "source": "https://www.pas-meeting.org/2027-key-dates/"
-          }
-        },
-        {
-          "mode": "attend",
-          "label": "Attend, early registration",
-          "deadline": "2027-03-16",
-          "deadlineLabel": "Ends 16 Mar 2027",
-          "status": "open",
-          "note": "",
-          "cost": {
-            "amount": "Not published",
-            "detail": "Registration site opens November 2026. Early registration closes 16 Mar 2027.",
+            "detail": "PAS has never charged a submission fee. Presenters pay standard registration, and the registration site does not open until November 2026, so no attendee rate exists yet.",
             "basis": "unknown",
             "source": "https://www.pas-meeting.org/2027-key-dates/"
           },
-          "url": "https://www.pas-meeting.org/2027-key-dates/"
+          "url": "https://www.pas-meeting.org/2027-key-dates/",
+          "checked": "26 Aug 2026, read off the PAS 2027 key dates table: Call for Scholarly Sessions, Workshops, APA & PAS SIGs and Early Ancillary Events all run 3 Aug to 16 Sep 2026. Call for Abstracts runs 12 Aug to 2 Nov 2026. Late Ancillary Events runs 17 Sep 2026 to 3 Mar 2027. Early registration ends 16 Mar 2027."
+        },
+        {
+          "mode": "present",
+          "label": "Call for Scholarly Sessions",
+          "deadline": "2026-09-16",
+          "deadlineLabel": "3 Aug to 16 Sep 2026",
+          "status": "open",
+          "note": "Propose a full session rather than a single abstract. Notifications 11 to 13 Nov 2026.",
+          "cost": {
+            "amount": "Not published",
+            "detail": "PAS has never charged a submission fee. Presenters pay standard registration, and the registration site does not open until November 2026, so no attendee rate exists yet.",
+            "basis": "unknown",
+            "source": "https://www.pas-meeting.org/2027-key-dates/"
+          },
+          "url": "https://www.pas-meeting.org/2027-key-dates/",
+          "checked": "26 Aug 2026, read off the PAS 2027 key dates table: Call for Scholarly Sessions, Workshops, APA & PAS SIGs and Early Ancillary Events all run 3 Aug to 16 Sep 2026. Call for Abstracts runs 12 Aug to 2 Nov 2026. Late Ancillary Events runs 17 Sep 2026 to 3 Mar 2027. Early registration ends 16 Mar 2027."
+        },
+        {
+          "mode": "teach",
+          "label": "Call for Workshops",
+          "deadline": "2026-09-16",
+          "deadlineLabel": "3 Aug to 16 Sep 2026",
+          "status": "open",
+          "note": "The hands-on route at PAS, and the closest fit for a simulator: workshops are taught sessions rather than podium talks. Same window as the scholarly sessions call, notifications 11 to 13 Nov 2026.",
+          "cost": {
+            "amount": "Not published",
+            "detail": "PAS has never charged a submission fee. Presenters pay standard registration, and the registration site does not open until November 2026, so no attendee rate exists yet.",
+            "basis": "unknown",
+            "source": "https://www.pas-meeting.org/2027-key-dates/"
+          },
+          "url": "https://www.pas-meeting.org/2027-key-dates/",
+          "checked": "26 Aug 2026, read off the PAS 2027 key dates table: Call for Scholarly Sessions, Workshops, APA & PAS SIGs and Early Ancillary Events all run 3 Aug to 16 Sep 2026. Call for Abstracts runs 12 Aug to 2 Nov 2026. Late Ancillary Events runs 17 Sep 2026 to 3 Mar 2027. Early registration ends 16 Mar 2027."
+        },
+        {
+          "mode": "present",
+          "label": "Call for APA and PAS Special Interest Groups",
+          "deadline": "2026-09-16",
+          "deadlineLabel": "3 Aug to 16 Sep 2026",
+          "status": "open",
+          "note": "Propose or convene a SIG. Lower profile than a scholarly session but an easier first foothold.",
+          "cost": {
+            "amount": "Not published",
+            "detail": "PAS has never charged a submission fee. Presenters pay standard registration, and the registration site does not open until November 2026, so no attendee rate exists yet.",
+            "basis": "unknown",
+            "source": "https://www.pas-meeting.org/2027-key-dates/"
+          },
+          "url": "https://www.pas-meeting.org/2027-key-dates/",
+          "checked": "26 Aug 2026, read off the PAS 2027 key dates table: Call for Scholarly Sessions, Workshops, APA & PAS SIGs and Early Ancillary Events all run 3 Aug to 16 Sep 2026. Call for Abstracts runs 12 Aug to 2 Nov 2026. Late Ancillary Events runs 17 Sep 2026 to 3 Mar 2027. Early registration ends 16 Mar 2027."
+        },
+        {
+          "mode": "exhibit",
+          "label": "Host an ancillary event",
+          "deadline": "2027-03-03",
+          "deadlineLabel": "Late window, 17 Sep 2026 to 3 Mar 2027",
+          "status": "open",
+          "note": "Run your own satellite session alongside the meeting. The early window closed 16 Sep 2026; the late window runs to 3 Mar 2027 with notification on 11 Mar 2027.",
+          "cost": {
+            "amount": "Not published",
+            "detail": "Ancillary event fees are set out in the sponsor prospectus, not on the key dates page.",
+            "basis": "unknown",
+            "source": "https://www.pas-meeting.org/sponsor-exhibit/"
+          },
+          "url": "https://www.pas-meeting.org/sponsor-exhibit/",
+          "checked": "26 Aug 2026, read off the PAS 2027 key dates table: Call for Scholarly Sessions, Workshops, APA & PAS SIGs and Early Ancillary Events all run 3 Aug to 16 Sep 2026. Call for Abstracts runs 12 Aug to 2 Nov 2026. Late Ancillary Events runs 17 Sep 2026 to 3 Mar 2027. Early registration ends 16 Mar 2027."
         },
         {
           "mode": "exhibit",
           "label": "Exhibit",
           "deadline": null,
-          "deadlineLabel": "See the exhibitor prospectus",
-          "status": "rolling",
-          "note": "The commercial route to neonatal clinicians and academic buyers.",
+          "deadlineLabel": "Booth sales open with registration, Nov 2026",
+          "status": "unannounced",
+          "note": "128 exhibitors and 37 sponsors at the 2026 meeting. The exhibit hall also carries over 3,000 posters.",
+          "cost": {
+            "amount": "USD 3,500",
+            "detail": "Per 10 x 10 booth, deposit 1,750, from the PAS 2026 prospectus; 2027 not yet priced. 501(c)(3) and government bodies pay 2,500. Custom sponsorship packages ran 50,000 to 95,000.",
+            "basis": "prior-year",
+            "source": "https://www.pas-meeting.org/wp-content/uploads/PAS-Prospectus-2026-P2b.pdf"
+          },
+          "url": "https://www.pas-meeting.org/wp-content/uploads/PAS-Prospectus-2026-P2b.pdf",
+          "checked": "26 Aug 2026, read off the PAS 2027 key dates table: Call for Scholarly Sessions, Workshops, APA & PAS SIGs and Early Ancillary Events all run 3 Aug to 16 Sep 2026. Call for Abstracts runs 12 Aug to 2 Nov 2026. Late Ancillary Events runs 17 Sep 2026 to 3 Mar 2027. Early registration ends 16 Mar 2027."
+        },
+        {
+          "mode": "attend",
+          "label": "Attend, early registration",
+          "deadline": "2027-03-16",
+          "deadlineLabel": "Registration opens Nov 2026, early rate ends 16 Mar 2027",
+          "status": "open",
+          "note": "Registration and hotel sites both open in November 2026. Rates are not published until then.",
           "cost": {
             "amount": "Not published",
-            "detail": "Booth and sponsor pricing is in the PAS prospectus. Contacts are listed on the sponsor page.",
+            "detail": "PAS has never charged a submission fee. Presenters pay standard registration, and the registration site does not open until November 2026, so no attendee rate exists yet.",
             "basis": "unknown",
-            "source": "https://www.pas-meeting.org/sponsor-exhibit/"
+            "source": "https://www.pas-meeting.org/2027-key-dates/"
           },
-          "url": "https://www.pas-meeting.org/sponsor-exhibit/"
+          "url": "https://www.pas-meeting.org/2027-key-dates/",
+          "checked": "26 Aug 2026, read off the PAS 2027 key dates table: Call for Scholarly Sessions, Workshops, APA & PAS SIGs and Early Ancillary Events all run 3 Aug to 16 Sep 2026. Call for Abstracts runs 12 Aug to 2 Nov 2026. Late Ancillary Events runs 17 Sep 2026 to 3 Mar 2027. Early registration ends 16 Mar 2027."
         }
       ],
       "links": [
@@ -1725,6 +1928,21 @@
             "basis": "prior-year",
             "source": "https://europe.hlth.com/register"
           }
+        },
+        {
+          "mode": "present",
+          "label": "Call for speakers",
+          "deadline": null,
+          "deadlineLabel": "Applications open Oct 2026",
+          "status": "unannounced",
+          "note": "The page currently takes expressions of interest only: \"Register your interest below and we'll reach out when applications open in October.\" For the 2025 edition the window closed 31 January.",
+          "cost": {
+            "amount": "Free to submit",
+            "detail": "No submission fee published.",
+            "basis": "free",
+            "source": "https://hlth.com/events/europe/become-a-speaker/"
+          },
+          "url": "https://hlth.com/events/europe/become-a-speaker/"
         }
       ],
       "links": [
@@ -1916,10 +2134,11 @@
           "note": "jENS lists a pre-congress course and a networking dinner as add-ons to registration.",
           "cost": {
             "amount": "Not published",
-            "detail": "The registration page lists the pre-congress course as Available soon.",
+            "detail": "The registration page lists the pre-congress course and the networking dinner as add-ons with pricing marked Available soon. Nothing published as of 26 Aug 2026.",
             "basis": "unknown",
             "source": "https://www.mcascientificevents.eu/jens/registration/"
-          }
+          },
+          "url": "https://www.mcascientificevents.eu/jens/registration/"
         }
       ],
       "links": [
@@ -1997,7 +2216,7 @@
       "start": "2027-04-06",
       "end": "2027-04-09",
       "confirmed": true,
-      "where": "Las Vegas, NV",
+      "where": "Rio Hotel, Las Vegas, NV",
       "country": "USA",
       "region": "North America",
       "tags": [
@@ -2033,17 +2252,30 @@
           "note": "SAGES runs ticketed hands-on and postgraduate courses around the main meeting. The 2027 programme is not posted.",
           "cost": {
             "amount": "Not published",
-            "detail": "2027 course fees not posted.",
+            "detail": "SAGES is built around its Annual Postgraduate Course and runs ticketed hands-on sessions, but the 2027 line-up and fees are not posted. Venue is the Rio Hotel, Las Vegas.",
             "basis": "unknown",
             "source": "https://www.sages2027.org/"
           },
           "url": "https://www.sages2027.org/"
+        },
+        {
+          "mode": "exhibit",
+          "label": "Exhibit",
+          "deadline": null,
+          "deadlineLabel": "2027 prospectus not yet posted",
+          "status": "unannounced",
+          "note": "SAGES sells exhibit space around the Annual Postgraduate Course and Scientific Session.",
+          "cost": {
+            "amount": "Not published",
+            "detail": "2027 rates not posted. Booth price includes up to five exhibit staff per 10 x 10; extra badges were USD 50 each. Contact Shelley Ginsberg, +1 310 437 0544 x111.",
+            "basis": "unknown",
+            "source": "https://www.sages.org/industry/exhibits/"
+          },
+          "url": "https://www.sages.org/industry/exhibits/"
         }
       ],
       "absent": {
-        "pitch": "none",
-        "attend": "unchecked",
-        "exhibit": "unchecked"
+        "pitch": "none"
       },
       "links": [
         {
@@ -2106,11 +2338,24 @@
             "source": "https://www.lsiusasummit.com/"
           },
           "url": "https://www.lsiusasummit.com/"
+        },
+        {
+          "mode": "present",
+          "label": "Apply to speak on a panel",
+          "deadline": null,
+          "deadlineLabel": "Applications open, no deadline posted",
+          "status": "rolling",
+          "note": "Two routes: a panel speaking slot, or a startup company presentation. Self-nomination is allowed.",
+          "cost": {
+            "amount": "Not published",
+            "detail": "No speaker fee published and no delegate price on the public site.",
+            "basis": "unknown",
+            "source": "https://www.lsiusasummit.com/apply-to-speak"
+          },
+          "url": "https://www.lsiusasummit.com/apply-to-speak"
         }
       ],
       "absent": {
-        "present": "none",
-        "exhibit": "unchecked",
         "teach": "none"
       },
       "links": [
@@ -2171,9 +2416,7 @@
         }
       ],
       "absent": {
-        "pitch": "none",
-        "exhibit": "unchecked",
-        "teach": "unchecked"
+        "pitch": "none"
       },
       "links": [
         {

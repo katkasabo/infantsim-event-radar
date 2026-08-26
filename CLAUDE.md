@@ -102,6 +102,53 @@ pitch route costs EUR 3,500, the booth plus the stage upgrade, not EUR 550.
 Set `rail: false` on anything that is logistics rather than a way to take part,
 such as a hotel block. It stays on the page and stays out of "Closing next".
 
+### Reading status off a page, not guessing it
+
+Four statuses shipped wrong in one sitting because `unannounced` was used as a
+dumping ground for "I could not find a date". These are three different facts and
+must not be collapsed:
+
+| Status | Means | Test |
+|---|---|---|
+| `open` | A published window is running. **Requires a `deadline`.** | You can name the closing date |
+| `closed` | The window has passed, **or the outcome is already public** | Date passed, or the cohort, finalists or programme are named |
+| `unannounced` | The organiser has published nothing for this edition | You looked and the page says nothing |
+| `rolling` | Genuinely open-ended, no closing date exists | Page says "applications open" with no date |
+
+Two traps, both of which bit:
+
+- **A named cohort means closed.** If the page lists who got in, the round is
+  over, whatever the application page still says.
+- **Page copy lies, dates do not.** AdvaMed's Call for Sessions page reads
+  "Call for Sessions is open" while naming a window that closed in February.
+  Believe the date, flag the page.
+
+Every route with `status: "unannounced"` needs a `checked` field: one line saying
+what the page actually showed and when. If you cannot write that line, you did not
+read the page. `checked` renders in the expanded row, so it is visible to Katka.
+
+### Before committing
+
+```bash
+python3 validate.py            # structural checks
+python3 validate.py --links    # also HTTP-check every source URL
+```
+
+Errors block the commit. It catches a passed deadline that is not marked closed,
+`unannounced` with a date set, `open` with no date, a missing cost or source, two
+routes in one event sharing a label (which makes table cells indistinguishable),
+and dead links. Warnings are the backlog, chiefly "Not checked" cells and
+`unannounced` routes with no `checked` note.
+
+### One row per named call
+
+If an organiser publishes several distinct calls, each gets its own route with its
+own name and window. PAS is the worked example: it publishes six, and collapsing
+them into "Submit an abstract" and "Call for sessions" produced two table cells
+that both read "Not published" with different countdowns and no way to tell them
+apart. Route labels are what the table cell shows, so they must be specific enough
+to identify the route on their own, and unique within an event.
+
 Status is recomputed in the browser against today's date. A route with a
 `deadline` in the past renders as closed regardless of the stored `status`, and
 one within 30 days renders in the urgent colour. So `status` only really matters
@@ -122,6 +169,7 @@ routine, in order:
 3. Check the confirmed events for changed dates or venues.
 4. Update `events.json`, and add a dated entry to the `changelog` array at the
    top of that file. The site's "What changed" tab renders it.
+4b. Run `python3 validate.py --links` and fix every error before committing.
 5. Commit and push. The live site updates immediately.
 6. Email the digest to katka@sabotageworks.com, subject
    `InfantSim event radar, week of [date]`, sections in this order: closing in

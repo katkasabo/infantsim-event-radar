@@ -170,13 +170,15 @@ a.cellway{
 a.cellway:hover{background:#E4EEEC;box-shadow:inset 0 0 0 1px var(--line-soft)}
 a.cellway:hover .cost{color:var(--teal)}
 .cellway{padding:1px 0}
-.cellway + .cellway{margin-top:9px;padding-top:8px;border-top:1px dotted var(--line-soft)}
+.cellway + .cellway{margin-top:8px;padding-top:7px;border-top:1px dotted var(--line-soft)}
+.cw-label{font-size:11px;font-weight:600;line-height:1.3;color:var(--ink);margin-bottom:3px}
+a.cellway:hover .cw-label{color:var(--teal)}
 .cost{font-family:var(--mono);font-size:12px;font-weight:600;line-height:1.3;letter-spacing:-.02em;word-break:break-word}
 .cost.np{font-weight:400;color:#93A2A3}
 .cost.free{color:var(--teal)}
 .basis{
   font-family:var(--mono);font-size:8.5px;letter-spacing:.09em;text-transform:uppercase;
-  color:var(--muted);display:inline-block;margin-top:2px;
+  color:var(--muted);display:block;margin-top:2px;
 }
 .basis.prev{color:var(--amber)}
 .cellway .pill{margin-top:4px;display:inline-block}
@@ -204,6 +206,8 @@ tr.detail.hidden{display:none}
 .dt-cost p{margin:2px 0 0;color:var(--muted)}
 .dt-cost a{font-size:11px;font-family:var(--mono)}
 .dt-note{font-size:11.5px;color:var(--muted);margin-top:6px;line-height:1.45}
+.dt-checked{font-size:11px;color:#6E7F81;margin-top:5px;line-height:1.45;border-left:2px solid var(--line);
+  padding-left:8px;font-style:italic}
 .dt-foot{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:13px;font-size:12px}
 .dt-foot .verified{margin:0}
 
@@ -552,7 +556,8 @@ function sheetCell(e, mode){
   if(!ways.length) return `<td class="mc">${absentHTML(e, mode)}</td>`;
   return `<td class="mc">` + ways.map(p => {
     const st = liveStatus(p), u = routeURL(e, p);
-    const inner = `${costHTML(p)}<span class="pill ${st}">${pillText(p, st)}</span>`;
+    const inner = `<div class="cw-label">${esc(p.label)}</div>${costHTML(p)}` +
+                  `<span class="pill ${st}">${pillText(p, st)}</span>`;
     return u ? `<a class="cellway" href="${esc(u)}" target="_blank" rel="noopener" title="${esc(p.label)}">${inner}</a>`
              : `<div class="cellway">${inner}</div>`;
   }).join("") + `</td>`;
@@ -565,6 +570,7 @@ function detailHTML(e){
         <span class="pill ${st}">${pillText(p, st)}</span></div>
       <div class="dt-way-l">${esc(p.label)}</div>
       <div class="dt-dl"><span class="dl-text${p.flag ? " flagged" : ""}">${esc(p.deadlineLabel)}</span></div>
+      ${p.checked ? `<div class="dt-checked">${esc(p.checked)}</div>` : ""}
       <div class="dt-cost"><b>${esc(c.amount || "Not published")}</b>
         ${c.detail ? `<p>${esc(c.detail)}</p>` : ""}
         <a href="${esc(routeURL(e, p))}" target="_blank" rel="noopener">more information</a>
