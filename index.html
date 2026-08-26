@@ -162,8 +162,54 @@ table.sheet{border-collapse:separate;border-spacing:0;table-layout:fixed;width:1
 }
 .ty-accelerator{color:#7A4E12;border-color:#DBC08A;background:#FBF4E7}
 .ty-competition{color:#1F5F52;border-color:#A8CFC4;background:#EDF6F3}
+.trk{display:flex;align-items:center;gap:4px;cursor:pointer;flex:0 0 auto;margin-left:auto;
+  font-family:var(--mono);font-size:8.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.trk input{margin:0;width:12px;height:12px;accent-color:var(--teal);cursor:pointer}
+.trk:hover{color:var(--teal)}
+.tab-n{display:inline-block;background:var(--teal-2);color:#fff;border-radius:10px;padding:0 5px;
+  font-size:10px;margin-left:4px;min-width:16px;text-align:center}
+.tab-n:empty{display:none}
+
+.plan-head h2{font-family:var(--display);font-size:21px;margin:0 0 5px;letter-spacing:-.01em}
+.plan-head p{font-size:13px;color:var(--muted);margin:0 0 18px;max-width:74ch;line-height:1.55}
+.tot{background:var(--ink);color:#DDE9E8;border-radius:4px;padding:16px 18px;margin-bottom:20px;
+  display:flex;flex-wrap:wrap;gap:22px;align-items:center;justify-content:space-between}
+.tot-main{display:flex;flex-wrap:wrap;gap:26px}
+.tot-cur b{display:block;font-family:var(--mono);font-size:23px;color:#fff;letter-spacing:-.02em;line-height:1.15}
+.tot-cur span{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:#8FADAF}
+.tot-side{font-size:11.5px;color:#9FB8B8;line-height:1.5;max-width:46ch}
+.tot-warn{color:#F0C08A;margin-top:3px}
+.tot-note{color:#7E999B;margin-top:3px;font-style:italic}
+
+.plan-month{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--muted);margin:20px 0 8px;padding-bottom:5px;border-bottom:1px solid var(--line)}
+.plan-ev{background:var(--surface);border:1px solid var(--line-soft);border-radius:4px;
+  box-shadow:var(--shadow);padding:14px 16px;margin-bottom:10px}
+.plan-ev-h{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.plan-ev-name{font-family:var(--display);font-weight:600;font-size:15px;line-height:1.25}
+.plan-ev-sub{font-size:12px;color:var(--muted);margin-top:2px}
+.untrack{background:none;border:0;color:#B6C4C3;font-size:17px;cursor:pointer;line-height:1;padding:0 2px}
+.untrack:hover{color:var(--alert)}
+.plan-dl{font-family:var(--mono);font-size:11px;color:var(--alert);margin-top:7px}
+.plan-dl b{color:var(--alert)}
+.plan-routes{margin-top:10px;border-top:1px solid var(--line-soft);padding-top:8px}
+.pr{display:grid;grid-template-columns:18px 62px 1fr auto 96px;gap:9px;align-items:center;
+  padding:5px 6px;border-radius:3px;cursor:pointer;font-size:12.5px}
+.pr:hover{background:#F2F6F5}
+.pr.on{background:#EDF4F3}
+.pr input{margin:0;width:13px;height:13px;accent-color:var(--teal);cursor:pointer}
+.pr-mode{font-family:var(--mono);font-size:9px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.pr-label{line-height:1.3}
+.pr-cost{font-family:var(--mono);font-size:12px;font-weight:600;text-align:right;letter-spacing:-.02em}
+.pr-cost.np{font-weight:400;color:#93A2A3}
+@media (max-width:720px){
+  .pr{grid-template-columns:18px 1fr auto;}
+  .pr-mode,.pr-cost{grid-column:2}
+}
 .prio-chip{border-color:var(--line);color:var(--muted)}
 .prio-chip[aria-pressed="true"]{background:var(--amber);border-color:var(--amber);color:#fff}
+.miss-chip{border-color:var(--line);color:var(--muted)}
+.miss-chip[aria-pressed="true"]{background:var(--petrol);border-color:var(--petrol);color:#fff}
 .ev-btn{
   all:unset;cursor:pointer;display:block;width:100%;
   font-family:var(--display);font-weight:600;font-size:14px;line-height:1.3;letter-spacing:-.005em;color:var(--ink);
@@ -233,6 +279,16 @@ tr.detail.hidden{display:none}
 .dt-note{font-size:11.5px;color:var(--muted);margin-top:6px;line-height:1.45}
 .dt-checked{font-size:11px;color:#6E7F81;margin-top:5px;line-height:1.45;border-left:2px solid var(--line);
   padding-left:8px;font-style:italic}
+.dt-expect{margin-top:7px;padding-top:7px;border-top:1px dotted var(--line-soft);font-size:12px;line-height:1.45}
+.dt-expect b{font-family:var(--mono);font-size:12.5px;color:var(--amber)}
+.dt-expect p{margin:2px 0 0;color:var(--muted);font-size:11.5px}
+.dt-watch{display:inline-block;margin-top:4px;font-family:var(--mono);font-size:10px;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--amber);border:1px solid #DBC08A;background:#FBF4E7;
+  padding:2px 6px;border-radius:2px}
+.nxt{font-family:var(--mono);font-size:10px;line-height:1.25;color:var(--amber);margin-top:4px;
+  word-break:break-word}
+.nxt b{display:block;font-size:8.5px;letter-spacing:.09em;text-transform:uppercase;color:#B49A63;
+  font-weight:500;margin-bottom:1px}
 .dt-foot{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:13px;font-size:12px}
 .dt-foot .verified{margin:0}
 
@@ -357,6 +413,7 @@ tr.detail.hidden{display:none}
 <nav class="tabs" role="tablist" aria-label="Views">
   <div class="wrap">
     <button class="tab" role="tab" id="tab-table" aria-selected="true" data-view="table">Table</button>
+    <button class="tab" role="tab" id="tab-plan" aria-selected="false" data-view="plan">Plan <span class="tab-n" id="tabPlanN"></span></button>
     <button class="tab" role="tab" id="tab-timeline" aria-selected="false" data-view="timeline">Timeline</button>
     <button class="tab" role="tab" id="tab-changed" aria-selected="false" data-view="changed">What changed</button>
     <button class="tab" role="tab" id="tab-add" aria-selected="false" data-view="add">Add an event</button>
@@ -397,6 +454,7 @@ tr.detail.hidden{display:none}
     <div class="count">
       <span id="resultCount"></span>
       <button class="chip prio-chip" id="prioBtn" aria-pressed="false">&#9733; Starred only</button>
+      <button class="chip miss-chip" id="missBtn" aria-pressed="false">Missed, coming back</button>
       <button class="reset" id="resetBtn">Clear filters</button>
     </div>
   </div>
@@ -440,6 +498,21 @@ tr.detail.hidden{display:none}
       <span>each shows what it <b>costs</b> to enter and what you can <b>win</b>.</span>
       <span>MEDICA is the one to read twice: EUR 3,500 in, EUR 3,500 total prize pool.</span>
     </div>
+    <div class="legend">
+      <span>Missed it?</span>
+      <span>A closed route shows <b>Back</b> and when the window is expected to reopen, based on the last cycle.</span>
+      <span>Open the row for the reasoning and the date to start watching.</span>
+    </div>
+  </div>
+  <div id="view-plan" class="hidden">
+    <div class="plan-head">
+      <h2>InfantSim's next 12+ months</h2>
+      <p>Tick <b>Track</b> on any row in the table and it lands here. Then tick the individual routes you actually
+         intend to do, and the cost adds up. Nothing is converted between currencies: rates move, and a made-up
+         exchange rate in a budget is worse than three honest subtotals.</p>
+    </div>
+    <div id="planTotals"></div>
+    <div id="planBody"></div>
   </div>
   <div id="view-timeline" class="hidden">
     <div class="legend">
@@ -504,7 +577,8 @@ const FLAG = {
   USA:"\u{1F1FA}\u{1F1F8}", Canada:"\u{1F1E8}\u{1F1E6}", Greece:"\u{1F1EC}\u{1F1F7}",
   France:"\u{1F1EB}\u{1F1F7}", Italy:"\u{1F1EE}\u{1F1F9}", Germany:"\u{1F1E9}\u{1F1EA}",
   UAE:"\u{1F1E6}\u{1F1EA}", Netherlands:"\u{1F1F3}\u{1F1F1}", Spain:"\u{1F1EA}\u{1F1F8}",
-  Hungary:"\u{1F1ED}\u{1F1FA}", UK:"\u{1F1EC}\u{1F1E7}", Europe:"\u{1F1EA}\u{1F1FA}"
+  Hungary:"\u{1F1ED}\u{1F1FA}", UK:"\u{1F1EC}\u{1F1E7}", Europe:"\u{1F1EA}\u{1F1FA}",
+  Finland:"\u{1F1EB}\u{1F1EE}"
 };
 const NONE_LABEL = {
   present:"No open call found", pitch:"No competition found", attend:"Not open to attendees",
@@ -512,12 +586,24 @@ const NONE_LABEL = {
 };
 
 const state = {view:"table", tags:new Set(), modes:new Set(), types:new Set(),
-               region:"all", status:"all", q:"", prioOnly:false};
+               region:"all", status:"all", q:"", prioOnly:false, missedOnly:false};
 
 /* Starred rows live in the browser. The page is static, so there is nowhere else
    to put them; they follow the device, not the person. `priority` in events.json
    is the shipped baseline and starring layers on top. */
 const STAR_KEY = "radar.starred.v1";
+const TRACK_KEY = "radar.tracked.v1";
+const BUDGET_KEY = "radar.budget.v1";
+function loadSet(key){
+  try { return new Set(JSON.parse(localStorage.getItem(key) || "[]")); }
+  catch(err){ return new Set(); }
+}
+function saveSet(key, s){
+  try { localStorage.setItem(key, JSON.stringify([...s])); } catch(err){}
+}
+function tracked(){ return loadSet(TRACK_KEY); }
+function budget(){ return loadSet(BUDGET_KEY); }
+function rkey(e, p){ return e.id + "||" + p.label; }
 function starred(){
   try { return new Set(JSON.parse(localStorage.getItem(STAR_KEY) || "[]")); }
   catch(err){ return new Set(); }
@@ -560,6 +646,7 @@ function esc(s){ return (s||"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;"
 /* ---------- filtering ---------- */
 function matches(e){
   if(state.prioOnly && !isPriority(e)) return false;
+  if(state.missedOnly && !e.participate.some(p => liveStatus(p) === "closed" && p.expect)) return false;
   if(state.types.size && !state.types.has(e.type)) return false;
   if(state.tags.size && ![...state.tags].some(t => e.tags.includes(t))) return false;
   if(state.modes.size && !e.participate.some(p => state.modes.has(p.mode))) return false;
@@ -614,7 +701,9 @@ function sheetCell(e, mode){
     const st = liveStatus(p), u = routeURL(e, p);
     const inner = `<div class="cw-label">${esc(p.label)}</div>${costHTML(p)}` +
                   prizeHTML(p) +
-                  `<span class="pill ${st}">${pillText(p, st)}</span>`;
+                  `<span class="pill ${st}">${pillText(p, st)}</span>` +
+                  (st === "closed" && p.expect
+                    ? `<div class="nxt"><b>Back</b>${esc(p.expect.when)}</div>` : "");
     return u ? `<a class="cellway" href="${esc(u)}" target="_blank" rel="noopener" title="${esc(p.label)}">${inner}</a>`
              : `<div class="cellway">${inner}</div>`;
   }).join("") + `</td>`;
@@ -628,6 +717,9 @@ function detailHTML(e){
       <div class="dt-way-l">${esc(p.label)}</div>
       <div class="dt-dl"><span class="dl-text${p.flag ? " flagged" : ""}">${esc(p.deadlineLabel)}</span></div>
       ${p.checked ? `<div class="dt-checked">${esc(p.checked)}</div>` : ""}
+      ${p.expect ? `<div class="dt-expect"><span class="dt-cap">Expect it back</span>
+        <b>${esc(p.expect.when)}</b><p>${esc(p.expect.basis)}</p>
+        <span class="dt-watch">Start watching ${fmt(p.expect.watch, true)}</span></div>` : ""}
       <div class="dt-cost"><span class="dt-cap">Costs</span><b>${esc(c.amount || "Not published")}</b>
         ${c.detail ? `<p>${esc(c.detail)}</p>` : ""}
         <a href="${esc(routeURL(e, p))}" target="_blank" rel="noopener">more information</a>
@@ -653,11 +745,15 @@ function detailHTML(e){
 function sheetRowHTML(e){
   const city = (e.where || "").split(",")[0].trim();
   const star = starred().has(e.id);
+  const trk = tracked().has(e.id);
   return `<tr class="srow${isPriority(e) ? " prio" : ""}" data-row="${e.id}">
     <td class="c-ev">
       <div class="ev-top">
         <button class="star${star ? " on" : ""}" data-star="${e.id}"
           title="${star ? "Starred" : "Star as priority"}" aria-pressed="${star}">${star ? "\u2605" : "\u2606"}</button>
+        <label class="trk" title="Track this for the plan">
+          <input type="checkbox" data-track="${e.id}"${trk ? " checked" : ""}><span>Track</span>
+        </label>
         <button class="ev-btn" data-toggle="${e.id}" aria-expanded="false">
           <span class="caret">&#9656;</span>${esc(e.name)}
         </button>
@@ -676,6 +772,27 @@ function sheetRowHTML(e){
   </tr>` + detailHTML(e);
 }
 function bindSheet(){
+  document.querySelectorAll("[data-track]").forEach(cb => cb.addEventListener("change", ev => {
+    ev.stopPropagation();
+    const t = tracked(), id = cb.dataset.track;
+    if(cb.checked){
+      t.add(id);
+      // start the budget off with the cheapest priced way of simply being there
+      const e = DATA.events.find(x => x.id === id);
+      const cands = e.participate.filter(p => p.mode === "attend" && p.cost && typeof p.cost.value === "number");
+      if(cands.length){
+        const cheapest = cands.reduce((a, b) => a.cost.value <= b.cost.value ? a : b);
+        const b = budget(); b.add(rkey(e, cheapest)); saveSet(BUDGET_KEY, b);
+      }
+    } else {
+      t.delete(id);
+      const b = budget();
+      [...b].filter(k => k.startsWith(id + "||")).forEach(k => b.delete(k));
+      saveSet(BUDGET_KEY, b);
+    }
+    saveSet(TRACK_KEY, t);
+    renderPlan();
+  }));
   document.querySelectorAll("[data-star]").forEach(b => b.addEventListener("click", ev => {
     ev.stopPropagation();
     const on = toggleStar(b.dataset.star);
@@ -740,6 +857,103 @@ function timelineHTML(list){
   }).join("");
 }
 
+/* ---------- render: plan ---------- */
+function money(n){ return n.toLocaleString("en-GB", {maximumFractionDigits:0}); }
+
+function renderPlan(){
+  const t = tracked(), b = budget();
+  const list = DATA.events.filter(e => t.has(e.id))
+                          .sort((a, c) => (a.start || "").localeCompare(c.start || ""));
+  document.getElementById("tabPlanN").textContent = list.length ? list.length : "";
+
+  const body = document.getElementById("planBody");
+  const totals = document.getElementById("planTotals");
+  if(!list.length){
+    totals.innerHTML = "";
+    body.innerHTML = `<div class="empty-state"><strong>Nothing tracked yet</strong>
+      Tick Track on any row in the table and it shows up here, in date order, with the costs added up.</div>`;
+    return;
+  }
+
+  const sums = {}; let picked = 0, unpriced = 0, approx = false;
+  list.forEach(e => e.participate.forEach(p => {
+    if(!b.has(rkey(e, p))) return;
+    picked++;
+    const c = p.cost || {};
+    if(typeof c.value !== "number"){ unpriced++; return; }
+    if(c.value === 0) return;
+    if(c.valueApprox) approx = true;
+    sums[c.currency] = (sums[c.currency] || 0) + c.value;
+  }));
+
+  const cur = Object.keys(sums).sort();
+  totals.innerHTML = `<div class="tot">
+    <div class="tot-main">
+      ${cur.length
+        ? cur.map(k => `<div class="tot-cur"><b>${k} ${money(sums[k])}</b><span>${k} subtotal</span></div>`).join("")
+        : `<div class="tot-cur"><b>Nothing costed</b><span>tick some routes below</span></div>`}
+    </div>
+    <div class="tot-side">
+      <div>${list.length} event${list.length === 1 ? "" : "s"} tracked, ${picked} route${picked === 1 ? "" : "s"} in the budget</div>
+      ${unpriced ? `<div class="tot-warn">${unpriced} selected route${unpriced === 1 ? " has" : "s have"} no published price, so the subtotals are a floor, not a forecast</div>` : ""}
+      ${approx ? `<div class="tot-warn">Some figures are a range or a minimum. The low end is used.</div>` : ""}
+      <div class="tot-note">Currencies are kept apart on purpose. No exchange rate is applied.</div>
+    </div>
+  </div>`;
+
+  let lastMonth = "";
+  body.innerHTML = list.map(e => {
+    const m = (e.start || "").slice(0, 7);
+    let head = "";
+    if(m && m !== lastMonth){
+      lastMonth = m;
+      const dd = new Date(m + "-01T00:00:00");
+      head = `<div class="plan-month">${dd.toLocaleDateString("en-GB", {month:"long"})} ${dd.getFullYear()}</div>`;
+    }
+    const openDl = e.participate.filter(p => ["open","urgent"].includes(liveStatus(p)));
+    const routes = e.participate.map(p => {
+      const c = p.cost || {}, on = b.has(rkey(e, p)), st = liveStatus(p);
+      const amt = typeof c.value === "number"
+        ? (c.value === 0 ? "no fee" : `${c.currency} ${money(c.value)}${c.valueApprox ? "+" : ""}`)
+        : "not priced";
+      return `<label class="pr${on ? " on" : ""}">
+        <input type="checkbox" data-bud="${esc(rkey(e, p))}"${on ? " checked" : ""}>
+        <span class="pr-mode">${MODE_LABEL[p.mode]}</span>
+        <span class="pr-label">${esc(p.label)}</span>
+        <span class="pill ${st}">${pillText(p, st)}</span>
+        <span class="pr-cost${typeof c.value === "number" ? "" : " np"}">${amt}</span>
+      </label>`;
+    }).join("");
+    return head + `<div class="plan-ev">
+      <div class="plan-ev-h">
+        <div>
+          <div class="plan-ev-name">${esc(e.name)}</div>
+          <div class="plan-ev-sub">${esc(e.dateLabel)} &middot; ${esc(e.where)} ${
+            FLAG[e.country] ? `<span class="flag">${FLAG[e.country]}</span>` : ""}${esc(e.country)}</div>
+        </div>
+        <button class="untrack" data-untrack="${e.id}" title="Stop tracking">&times;</button>
+      </div>
+      ${openDl.length ? `<div class="plan-dl">Closing: ${openDl.map(p =>
+        `${esc(p.label)} <b>${pillText(p, liveStatus(p))}</b>`).join(" &middot; ")}</div>` : ""}
+      <div class="plan-routes">${routes}</div>
+    </div>`;
+  }).join("");
+
+  body.querySelectorAll("[data-bud]").forEach(cb => cb.addEventListener("change", () => {
+    const s = budget();
+    cb.checked ? s.add(cb.dataset.bud) : s.delete(cb.dataset.bud);
+    saveSet(BUDGET_KEY, s);
+    renderPlan();
+  }));
+  body.querySelectorAll("[data-untrack]").forEach(x => x.addEventListener("click", () => {
+    const t2 = tracked(); t2.delete(x.dataset.untrack); saveSet(TRACK_KEY, t2);
+    const s = budget();
+    [...s].filter(k => k.startsWith(x.dataset.untrack + "||")).forEach(k => s.delete(k));
+    saveSet(BUDGET_KEY, s);
+    renderPlan(); render();
+  }));
+}
+
 /* ---------- render: closing rail ---------- */
 function renderClosing(){
   const items = [];
@@ -782,6 +996,7 @@ function render(){
     : `<tr><td colspan="7"><div class="empty-state"><strong>Nothing matches those filters</strong>Clear one of them to widen the view.</div></td></tr>`;
   bindSheet();
   document.getElementById("timeline").innerHTML = timelineHTML(list);
+  renderPlan();
   const openCount = list.reduce((n,e) => n + e.participate.filter(p => ["open","urgent"].includes(liveStatus(p))).length, 0);
   document.getElementById("resultCount").textContent = `${list.length} of ${DATA.events.length} events / ${openCount} deadlines open`;
 }
@@ -789,7 +1004,7 @@ function render(){
 function setView(v){
   state.view = v;
   document.querySelectorAll(".tab").forEach(t => t.setAttribute("aria-selected", String(t.dataset.view === v)));
-  ["table","timeline","changed","add"].forEach(x => document.getElementById("view-"+x).classList.toggle("hidden", x !== v));
+  ["table","plan","timeline","changed","add"].forEach(x => document.getElementById("view-"+x).classList.toggle("hidden", x !== v));
   document.getElementById("controls").classList.toggle("hidden", v === "changed" || v === "add");
 }
 
@@ -816,6 +1031,9 @@ function initIntake(){
 function resetFilters(doRender){
   state.types = new Set();
   state.prioOnly = false;
+  state.missedOnly = false;
+  const mb = document.getElementById("missBtn");
+  if(mb) mb.setAttribute("aria-pressed","false");
   document.querySelectorAll("[data-type]").forEach(c => c.setAttribute("aria-pressed","false"));
   const pb = document.getElementById("prioBtn");
   if(pb) pb.setAttribute("aria-pressed","false");
@@ -863,6 +1081,11 @@ function init(){
     on ? state.types.delete(c.dataset.type) : state.types.add(c.dataset.type);
     render();
   }));
+  document.getElementById("missBtn").addEventListener("click", () => {
+    state.missedOnly = !state.missedOnly;
+    document.getElementById("missBtn").setAttribute("aria-pressed", String(state.missedOnly));
+    render();
+  });
   document.getElementById("prioBtn").addEventListener("click", () => {
     state.prioOnly = !state.prioOnly;
     document.getElementById("prioBtn").setAttribute("aria-pressed", String(state.prioOnly));
