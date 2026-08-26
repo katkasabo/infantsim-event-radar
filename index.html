@@ -148,6 +148,86 @@ main{padding:26px 0 70px}
 .links{margin:12px 0 0;display:flex;flex-wrap:wrap;gap:12px;font-size:12px}
 .verified{font-family:var(--mono);font-size:10.5px;color:var(--muted);margin-top:10px}
 
+/* ---------- sheet (default view) ---------- */
+.sheet-wrap{
+  background:var(--surface);border:1px solid var(--line-soft);border-radius:4px;
+  box-shadow:var(--shadow);overflow-x:auto;
+}
+table.sheet{border-collapse:separate;border-spacing:0;table-layout:fixed;width:100%;min-width:1080px;font-size:13px}
+.sheet thead th{
+  position:sticky;top:0;z-index:2;background:#F1F5F4;
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);
+  text-align:left;font-weight:500;padding:10px 11px;border-bottom:1px solid var(--line);
+  line-height:1.35;
+}
+.sheet thead th.c-ev{width:296px}
+.sheet thead th.c-when{width:116px}
+.sheet thead th.c-where{width:138px}
+.sheet thead th.mh{border-left:1px solid var(--line-soft);width:116px}
+.sheet thead th.mh b{display:block;color:var(--teal);font-weight:600;letter-spacing:.06em}
+.sheet tbody td{padding:10px 11px;border-bottom:1px solid var(--line-soft);vertical-align:top}
+.sheet tbody tr.srow:hover>td{background:#F2F7F6}
+.sheet tbody tr.srow.open>td{background:#EDF4F3}
+.sheet td.mc{border-left:1px solid var(--line-soft)}
+
+.ev-btn{
+  all:unset;cursor:pointer;display:block;width:100%;
+  font-family:var(--display);font-weight:600;font-size:14px;line-height:1.3;letter-spacing:-.005em;color:var(--ink);
+}
+.ev-btn:hover{color:var(--teal)}
+.ev-btn .caret{color:var(--muted);font-size:10px;margin-right:5px}
+.srow.open .ev-btn .caret{color:var(--teal)}
+.ev-org{font-size:11.5px;color:var(--muted);font-style:italic;margin-top:2px;line-height:1.35}
+.ev-flags{display:flex;gap:5px;margin-top:5px;flex-wrap:wrap}
+.t-when{font-family:var(--mono);font-size:11.5px;line-height:1.4}
+.t-when .est{color:var(--amber);display:block;font-size:10px;letter-spacing:.05em}
+.t-where{font-size:11.5px;color:var(--muted);line-height:1.4}
+.t-where b{display:block;color:var(--ink);font-weight:600}
+
+.cellway{padding:1px 0}
+.cellway + .cellway{margin-top:9px;padding-top:8px;border-top:1px dotted var(--line-soft)}
+.cost{font-family:var(--mono);font-size:12px;font-weight:600;line-height:1.3;letter-spacing:-.02em;word-break:break-word}
+.cost.np{font-weight:400;color:#93A2A3}
+.cost.free{color:var(--teal)}
+.basis{
+  font-family:var(--mono);font-size:8.5px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--muted);display:inline-block;margin-top:2px;
+}
+.basis.prev{color:var(--amber)}
+.cellway .pill{margin-top:4px;display:inline-block}
+.nodash{color:#C3CFCF;font-family:var(--mono);font-size:13px}
+
+tr.detail>td{background:#F7FAF9;border-bottom:2px solid var(--line);padding:0}
+tr.detail.hidden{display:none}
+.dt{padding:15px 16px 16px}
+.dt-sum{font-size:13.5px;color:#22383C;margin:0 0 3px;max-width:78ch}
+.dt-aud{font-size:12.5px;color:var(--muted);margin:0 0 13px}
+.dt-ways{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:11px}
+.dt-way{background:#fff;border:1px solid var(--line-soft);border-radius:3px;padding:10px 12px}
+.dt-way-h{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.dt-mode{font-family:var(--mono);font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--teal)}
+.dt-way-l{font-size:13px;font-weight:600;margin:3px 0 0;line-height:1.3}
+.dt-dl{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:4px;display:flex;gap:7px;align-items:center;flex-wrap:wrap}
+.dt-cost{margin-top:7px;padding-top:7px;border-top:1px dotted var(--line-soft);font-size:12px;line-height:1.45}
+.dt-cost b{font-family:var(--mono);font-size:12.5px}
+.dt-cost p{margin:2px 0 0;color:var(--muted)}
+.dt-cost a{font-size:11px;font-family:var(--mono)}
+.dt-note{font-size:11.5px;color:var(--muted);margin-top:6px;line-height:1.45}
+.dt-foot{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:13px;font-size:12px}
+.dt-foot .verified{margin:0}
+
+.legend{
+  display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin:11px 2px 0;
+  font-family:var(--mono);font-size:10.5px;color:var(--muted);
+}
+.legend span b{color:var(--ink);font-weight:600}
+.legend span.prev b{color:var(--amber)}
+.legend span.free b{color:var(--teal)}
+
+@media (max-width:720px){
+  .sheet-wrap{border-radius:0;margin:0 -24px;border-left:0;border-right:0}
+}
+
 /* ---------- timeline ---------- */
 .timeline{max-width:900px}
 .month{display:grid;grid-template-columns:112px 1fr;gap:0;position:relative}
@@ -257,7 +337,8 @@ main{padding:26px 0 70px}
 
 <nav class="tabs" role="tablist" aria-label="Views">
   <div class="wrap">
-    <button class="tab" role="tab" id="tab-events" aria-selected="true" data-view="events">Events</button>
+    <button class="tab" role="tab" id="tab-table" aria-selected="true" data-view="table">Table</button>
+    <button class="tab" role="tab" id="tab-events" aria-selected="false" data-view="events">Cards</button>
     <button class="tab" role="tab" id="tab-timeline" aria-selected="false" data-view="timeline">Timeline</button>
     <button class="tab" role="tab" id="tab-changed" aria-selected="false" data-view="changed">What changed</button>
     <button class="tab" role="tab" id="tab-add" aria-selected="false" data-view="add">Add an event</button>
@@ -299,7 +380,34 @@ main{padding:26px 0 70px}
 </section>
 
 <main class="wrap">
-  <div id="view-events"><div class="grid" id="cards"></div></div>
+  <div id="view-table">
+    <div class="sheet-wrap">
+      <table class="sheet">
+        <thead>
+          <tr>
+            <th class="c-ev">Event</th>
+            <th class="c-when">When</th>
+            <th class="c-where">Where</th>
+            <th class="mh"><b>Present</b>actively present</th>
+            <th class="mh"><b>Pitch</b>startup competition</th>
+            <th class="mh"><b>Attend</b>regular attendee</th>
+            <th class="mh"><b>Exhibit</b>paid on-site booth</th>
+            <th class="mh"><b>Teach</b>hands-on course</th>
+          </tr>
+        </thead>
+        <tbody id="sheetBody"></tbody>
+      </table>
+    </div>
+    <div class="legend">
+      <span>Cost basis:</span>
+      <span><b>1,050</b> published for this edition</span>
+      <span class="prev"><b>1,050 PREV</b> last edition, this one not priced</span>
+      <span><b>~1,050</b> approximate, third party</span>
+      <span class="free"><b>Free</b> no fee to enter</span>
+      <span><b>Not published</b> nothing on the record</span>
+    </div>
+  </div>
+  <div id="view-events" class="hidden"><div class="grid" id="cards"></div></div>
   <div id="view-timeline" class="hidden">
     <div class="legend">
       <span><i style="background:var(--teal)"></i>Deadline</span>
@@ -370,14 +478,19 @@ const TAGS = [
   ["industry","Medtech industry"]
 ];
 const MODES = [
-  ["attend","Attend"],
-  ["abstract","Abstract"],
-  ["pitch","Pitch or apply"],
-  ["exhibit","Exhibit or sponsor"]
+  ["present","Actively present"],
+  ["pitch","Pitch in a competition"],
+  ["attend","Attend as an attendee"],
+  ["exhibit","Exhibit or sponsor"],
+  ["teach","Run a hands-on course"]
 ];
-const MODE_LABEL = {attend:"Attend", abstract:"Abstract", pitch:"Pitch", exhibit:"Exhibit"};
+const MODE_ORDER = ["present","pitch","attend","exhibit","teach"];
+const MODE_LABEL = {
+  present:"Present", pitch:"Pitch", attend:"Attend", exhibit:"Exhibit", teach:"Teach"
+};
+const BASIS_LABEL = {published:"", "prior-year":"prev edition", approx:"approx", free:"", unknown:""};
 
-const state = {view:"events", tags:new Set(), modes:new Set(), region:"all", status:"all", q:""};
+const state = {view:"table", tags:new Set(), modes:new Set(), region:"all", status:"all", q:""};
 
 /* ---------- helpers ---------- */
 function days(iso){
@@ -461,6 +574,79 @@ function cardHTML(e){
   </article>`;
 }
 
+/* ---------- render: sheet ---------- */
+function costHTML(p){
+  const c = p.cost || {amount:"Not published", detail:"", basis:"unknown", source:""};
+  const cls = c.basis === "unknown" ? " np" : (c.basis === "free" ? " free" : "");
+  const pre = c.basis === "approx" ? "~" : "";
+  const b = BASIS_LABEL[c.basis] || "";
+  return `<div class="cost${cls}">${pre}${esc(c.amount)}</div>` +
+         (b ? `<div class="basis${c.basis === "prior-year" ? " prev" : ""}">${b}</div>` : "");
+}
+function sheetCell(e, mode){
+  const ways = e.participate.filter(p => p.mode === mode);
+  if(!ways.length) return `<td class="mc"><span class="nodash">&mdash;</span></td>`;
+  return `<td class="mc">` + ways.map(p => {
+    const st = liveStatus(p);
+    return `<div class="cellway">${costHTML(p)}<span class="pill ${st}">${pillText(p, st)}</span></div>`;
+  }).join("") + `</td>`;
+}
+function detailHTML(e){
+  const ways = e.participate.map(p => {
+    const st = liveStatus(p), c = p.cost || {};
+    return `<div class="dt-way">
+      <div class="dt-way-h"><span class="dt-mode">${MODE_LABEL[p.mode]}</span>
+        <span class="pill ${st}">${pillText(p, st)}</span></div>
+      <div class="dt-way-l">${esc(p.label)}</div>
+      <div class="dt-dl"><span class="dl-text${p.flag ? " flagged" : ""}">${esc(p.deadlineLabel)}</span></div>
+      <div class="dt-cost"><b>${esc(c.amount || "Not published")}</b>
+        ${c.detail ? `<p>${esc(c.detail)}</p>` : ""}
+        ${c.source ? `<a href="${esc(c.source)}" target="_blank" rel="noopener">source</a>` : ""}
+      </div>
+      ${p.note ? `<div class="dt-note">${esc(p.note)}</div>` : ""}
+    </div>`;
+  }).join("");
+  return `<tr class="detail hidden" data-detail="${e.id}"><td colspan="8"><div class="dt">
+    <p class="dt-sum">${esc(e.summary)}</p>
+    <p class="dt-aud">Who it is for: ${esc(e.audience)}</p>
+    <div class="dt-ways">${ways}</div>
+    <div class="dt-foot">
+      <div class="links">${e.links.map(l => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a>`).join("")}</div>
+      ${e.verified ? `<div class="verified">Checked ${fmt(e.verified, true)}</div>` : ""}
+    </div>
+  </div></td></tr>`;
+}
+function sheetRowHTML(e){
+  const city = (e.where || "").split(",")[0].trim();
+  return `<tr class="srow" data-row="${e.id}">
+    <td class="c-ev">
+      <button class="ev-btn" data-toggle="${e.id}" aria-expanded="false">
+        <span class="caret">&#9656;</span>${esc(e.name)}
+      </button>
+      <div class="ev-org">${esc(e.org)}</div>
+      <div class="ev-flags">
+        ${e.priority ? '<span class="prio-mark">PRIORITY</span>' : ''}
+        ${e.tags.map(t => `<span class="tag">${TAGS.find(x=>x[0]===t)[1]}</span>`).join("")}
+      </div>
+    </td>
+    <td class="c-when"><div class="t-when">${esc(e.dateLabel)}${e.confirmed ? "" : '<span class="est">not confirmed</span>'}</div></td>
+    <td class="c-where"><div class="t-where"><b>${esc(city)}</b>${esc(e.country)}</div></td>
+    ${MODE_ORDER.map(m => sheetCell(e, m)).join("")}
+  </tr>` + detailHTML(e);
+}
+function bindSheet(){
+  document.querySelectorAll("[data-toggle]").forEach(b => b.addEventListener("click", () => {
+    const id = b.dataset.toggle;
+    const det = document.querySelector(`[data-detail="${CSS.escape(id)}"]`);
+    const row = document.querySelector(`[data-row="${CSS.escape(id)}"]`);
+    const open = !det.classList.contains("hidden");
+    det.classList.toggle("hidden", open);
+    row.classList.toggle("open", !open);
+    b.setAttribute("aria-expanded", String(!open));
+    b.querySelector(".caret").innerHTML = open ? "&#9656;" : "&#9662;";
+  }));
+}
+
 /* ---------- render: timeline ---------- */
 function timelineHTML(list){
   const rows = [];
@@ -535,6 +721,10 @@ function render(){
   document.getElementById("cards").innerHTML = list.length
     ? list.map(e => cardHTML(e).replace("<article", `<article data-card="${e.id}"`)).join("")
     : `<div class="empty-state"><strong>Nothing matches those filters</strong>Clear one of them to widen the view.</div>`;
+  document.getElementById("sheetBody").innerHTML = list.length
+    ? list.map(sheetRowHTML).join("")
+    : `<tr><td colspan="8"><div class="empty-state"><strong>Nothing matches those filters</strong>Clear one of them to widen the view.</div></td></tr>`;
+  bindSheet();
   document.getElementById("timeline").innerHTML = timelineHTML(list);
   const openCount = list.reduce((n,e) => n + e.participate.filter(p => ["open","urgent"].includes(liveStatus(p))).length, 0);
   document.getElementById("resultCount").textContent = `${list.length} of ${DATA.events.length} events / ${openCount} deadlines open`;
@@ -543,7 +733,7 @@ function render(){
 function setView(v){
   state.view = v;
   document.querySelectorAll(".tab").forEach(t => t.setAttribute("aria-selected", String(t.dataset.view === v)));
-  ["events","timeline","changed","add"].forEach(x => document.getElementById("view-"+x).classList.toggle("hidden", x !== v));
+  ["table","events","timeline","changed","add"].forEach(x => document.getElementById("view-"+x).classList.toggle("hidden", x !== v));
   document.getElementById("controls").classList.toggle("hidden", v === "changed" || v === "add");
 }
 

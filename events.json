@@ -9,6 +9,19 @@
     {
       "date": "2026-08-26",
       "items": [
+        "Ways to take part are now five named routes rather than four generic ones: present, pitch, attend, exhibit and teach. Abstract became present. The hands-on pre-congress courses at IPEG and EUPSA were sitting under exhibit and are now their own teach route.",
+        "Every route now carries a cost with a source link, and a basis flag saying whether the figure is published for this edition, carried over from the previous edition, approximate, free or simply not published.",
+        "HealthTech Innovation Days 2026 is confirmed for 1 October 2026 in Paris. It was previously logged as an estimate of early to mid October.",
+        "The MedTech Forum 2027 is confirmed for 10 to 11 May 2027 in Rome. The host city was previously unannounced.",
+        "Georgia Tech Pediatric Innovation Day ran on 7 July 2026, so the record was pointing at a date that had already passed. It now tracks the 2027 cycle.",
+        "APSA 2027 call for abstracts is still not posted, which now makes it more than a year late against the 2026 pattern. Checked again 26 Aug 2026.",
+        "MedTech Innovator 2027 applications have still not opened. The 2026 cohort closed and only a waitlist is live.",
+        "New routes added: attend and teach for APSA 2027, attend for IPEG 2027 and EUPSA 2027, a pre-conference course route for IMSH 2027, a pre-congress course for jENS 2027, exhibitor tier for the Nationwide Children's robotic surgery course, and visitor entry for MEDICA 2026."
+      ]
+    },
+    {
+      "date": "2026-08-26",
+      "items": [
         "jENS 2027 abstracts: the 31 March date is 2027, not 2026. Submission opened 21 July 2026 and closes 31 March 2027, so this is open now.",
         "IMSH 2027 Call for Content closed 27 May 2026. The SimVentors Showcase is 25 January 2027 and excludes commercially available technologies.",
         "SWPDC and AAP SOATT prize: the consortium states eligibility is limited to devices going through the FDA regulatory pathway. 2026 round still unannounced.",
@@ -52,7 +65,13 @@
           "deadline": null,
           "deadlineLabel": "2026 round not yet announced",
           "status": "unannounced",
-          "note": "The consortium states eligibility is limited to devices that will go through the US FDA regulatory pathway, and that projects developing devices which do not require FDA regulation are not eligible. Application is a short questionnaire, itemised budget and an optional 1 to 2 minute video pitch."
+          "note": "The consortium states eligibility is limited to devices that will go through the US FDA regulatory pathway, and that projects developing devices which do not require FDA regulation are not eligible. Application is a short questionnaire, itemised budget and an optional 1 to 2 minute video pitch.",
+          "cost": {
+            "amount": "Free to apply",
+            "detail": "Prize is up to ~USD 25,000. No entry fee stated. Eligibility limited to devices taking a US FDA regulatory pathway.",
+            "basis": "free",
+            "source": "https://swpdc.org/aapsoitt/"
+          }
         }
       ],
       "links": [
@@ -91,7 +110,13 @@
           "deadline": null,
           "deadlineLabel": "Registration open",
           "status": "rolling",
-          "note": ""
+          "note": "",
+          "cost": {
+            "amount": "CAD 450 to 550",
+            "detail": "General Admission band quoted on the ticket page. Startup, Investor and Trailblazer tiers priced separately. Super early bird closed 31 May 2026, advance closed 6 Aug 2026.",
+            "basis": "approx",
+            "source": "https://elevatefestival.ca/tickets/"
+          }
         },
         {
           "mode": "pitch",
@@ -99,7 +124,13 @@
           "deadline": null,
           "deadlineLabel": "2026 applications closed 30 Nov 2025. 2027 cycle not announced, expected to open autumn 2026.",
           "status": "unannounced",
-          "note": "Watch cixsummit.com."
+          "note": "Watch cixsummit.com.",
+          "cost": {
+            "amount": "Not published",
+            "detail": "CIX Startup Awards entry terms and any fee for the 2026 round are not posted.",
+            "basis": "unknown",
+            "source": "https://cixsummit.com"
+          }
         }
       ],
       "links": [
@@ -112,7 +143,7 @@
           "url": "https://cixsummit.com"
         }
       ],
-      "verified": "2026-08-14"
+      "verified": "2026-08-26"
     },
     {
       "id": "eaps-2026",
@@ -139,7 +170,13 @@
           "deadline": "2026-08-18",
           "deadlineLabel": "Registration savings ended 18 Aug 2026",
           "status": "closed",
-          "note": ""
+          "note": "",
+          "cost": {
+            "amount": "EUR 640",
+            "detail": "Non-member early rate, to 24 Jun 2026. Member EUR 510. Regular 750 / 600 to 18 Aug, onsite 850 / 680. Nurse or early career investigator 320 / 260 early. Online-only 320.",
+            "basis": "published",
+            "source": "https://eaps.kenes.com/register/"
+          }
         },
         {
           "mode": "pitch",
@@ -147,7 +184,13 @@
           "deadline": null,
           "deadlineLabel": "Entry deadline not published. Needs verifying.",
           "status": "unannounced",
-          "note": "Winning team gets free registration."
+          "note": "Winning team gets free registration.",
+          "cost": {
+            "amount": "Not published",
+            "detail": "Competition terms for 2026 not posted. No separate entry fee published.",
+            "basis": "unknown",
+            "source": "https://eaps.kenes.com"
+          }
         }
       ],
       "links": [
@@ -156,7 +199,7 @@
           "url": "https://eaps.kenes.com"
         }
       ],
-      "verified": "2026-08-14"
+      "verified": "2026-08-26"
     },
     {
       "id": "aap-nce-2026",
@@ -182,15 +225,27 @@
           "deadline": null,
           "deadlineLabel": "Registration open",
           "status": "rolling",
-          "note": "2027 edition is 15 to 19 Oct 2027 in Chicago."
+          "note": "2027 edition is 15 to 19 Oct 2027 in Chicago.",
+          "cost": {
+            "amount": "USD 1,050",
+            "detail": "Non-member physician, early rate to 21 Aug 2026, rising to 1,315 from 22 Aug. AAP member 735 then 920. One-day 530. Virtual-only 735 to 18 Sep.",
+            "basis": "published",
+            "source": "https://aapexperience.org/registration/"
+          }
         },
         {
-          "mode": "abstract",
+          "mode": "present",
           "label": "Submit an abstract",
           "deadline": null,
           "deadlineLabel": "2026 abstract deadlines have passed",
           "status": "closed",
-          "note": ""
+          "note": "",
+          "cost": {
+            "amount": "USD 1,050",
+            "detail": "No separate abstract fee. Presenters pay the standard registration above. Submission for 2026 has closed.",
+            "basis": "published",
+            "source": "https://aapexperience.org/registration/"
+          }
         },
         {
           "mode": "exhibit",
@@ -198,7 +253,13 @@
           "deadline": null,
           "deadlineLabel": "Space via the 2026 prospectus",
           "status": "rolling",
-          "note": "SOATT innovation programming runs here."
+          "note": "SOATT innovation programming runs here.",
+          "cost": {
+            "amount": "Not published",
+            "detail": "Booth rates are in the exhibitor prospectus, not on the public site.",
+            "basis": "unknown",
+            "source": "https://aapexperience.org"
+          }
         }
       ],
       "links": [
@@ -207,15 +268,15 @@
           "url": "https://aapexperience.org"
         }
       ],
-      "verified": "2026-08-14"
+      "verified": "2026-08-26"
     },
     {
       "id": "htid-2026",
       "name": "HealthTech Innovation Days 2026",
       "org": "HealthTech For Care (France Biotech)",
-      "dateLabel": "Est. early to mid Oct 2026",
-      "start": "2026-10-07",
-      "confirmed": false,
+      "dateLabel": "1 Oct 2026",
+      "start": "2026-10-01",
+      "confirmed": true,
       "where": "Paris. 2026 venue not confirmed.",
       "country": "France",
       "region": "Europe",
@@ -233,7 +294,13 @@
           "deadline": null,
           "deadlineLabel": "Not yet announced",
           "status": "unannounced",
-          "note": "1:1 meetings run through partneringONE."
+          "note": "1:1 meetings run through partneringONE.",
+          "cost": {
+            "amount": "Not published",
+            "detail": "Pitch application terms and any fee for 2026 not posted.",
+            "basis": "unknown",
+            "source": "https://htfc-eu.com/htid/"
+          }
         },
         {
           "mode": "attend",
@@ -241,7 +308,13 @@
           "deadline": null,
           "deadlineLabel": "Not yet announced. Verify on htfc-eu.com/htid.",
           "status": "unannounced",
-          "note": "2025 edition was 7 to 8 Oct 2025."
+          "note": "2025 edition was 7 to 8 Oct 2025.",
+          "cost": {
+            "amount": "Not published",
+            "detail": "Delegate fee not posted. Event confirmed for 1 Oct 2026, Paris.",
+            "basis": "unknown",
+            "source": "https://htfc-eu.com/htid/"
+          }
         }
       ],
       "links": [
@@ -250,7 +323,7 @@
           "url": "https://htfc-eu.com/htid"
         }
       ],
-      "verified": "2026-08-14"
+      "verified": "2026-08-26"
     },
     {
       "id": "europaediatrics-2026",
@@ -271,12 +344,18 @@
       "audience": "General and subspecialty paediatricians, neonatologists, researchers across Europe.",
       "participate": [
         {
-          "mode": "abstract",
+          "mode": "present",
           "label": "Submit an abstract",
           "deadline": null,
           "deadlineLabel": "Not confirmed. Verify with MCA.",
           "status": "unannounced",
-          "note": ""
+          "note": "",
+          "cost": {
+            "amount": "Not published",
+            "detail": "Abstract deadline not posted. The registration page returned HTTP 410 on 26 Aug 2026.",
+            "basis": "unknown",
+            "source": "https://www.mcascientificevents.eu/europaediatrics/welcome/"
+          }
         },
         {
           "mode": "attend",
@@ -284,7 +363,13 @@
           "deadline": null,
           "deadlineLabel": "Not confirmed. Verify with MCA.",
           "status": "unannounced",
-          "note": "info@mcascientificevents.eu"
+          "note": "info@mcascientificevents.eu",
+          "cost": {
+            "amount": "Not published",
+            "detail": "Registration page returned HTTP 410 on 26 Aug 2026. Fees not retrievable.",
+            "basis": "unknown",
+            "source": "https://www.mcascientificevents.eu/europaediatrics/welcome/"
+          }
         }
       ],
       "links": [
@@ -293,7 +378,7 @@
           "url": "https://www.mcascientificevents.eu/europaediatrics"
         }
       ],
-      "verified": "2026-08-14"
+      "verified": "2026-08-26"
     },
     {
       "id": "medtech-conference-2026",
@@ -320,15 +405,27 @@
           "deadline": null,
           "deadlineLabel": "Registration open",
           "status": "rolling",
-          "note": ""
+          "note": "",
+          "cost": {
+            "amount": "USD 2,000",
+            "detail": "Non-member start-up or emerging medtech under USD 100M revenue, to 17 Oct 2026, then 2,200. AdvaMed member Accel start-up pre-revenue to USD 1M pays 1,100. Investors and hospital executives complimentary.",
+            "basis": "published",
+            "source": "https://themedtechconference.com/register/"
+          }
         },
         {
-          "mode": "abstract",
+          "mode": "present",
           "label": "Call for Sessions",
           "deadline": null,
           "deadlineLabel": "Not dated. Needs verifying.",
           "status": "unannounced",
-          "note": ""
+          "note": "",
+          "cost": {
+            "amount": "USD 2,000",
+            "detail": "No separate submission fee. Session leads pay standard registration above.",
+            "basis": "published",
+            "source": "https://themedtechconference.com/register/"
+          }
         }
       ],
       "links": [
@@ -337,14 +434,14 @@
           "url": "https://themedtechconference.com/register"
         }
       ],
-      "verified": "2026-08-14"
+      "verified": "2026-08-26"
     },
     {
       "id": "gatech-pid-2026",
-      "name": "Georgia Tech Pediatric Innovation Day & Showcase 2026",
+      "name": "Georgia Tech Pediatric Innovation Day & Showcase 2027",
       "org": "Georgia Tech",
-      "dateLabel": "Est. Oct 2026",
-      "start": "2026-10-21",
+      "dateLabel": "Est. mid 2027",
+      "start": "2027-07-07",
       "confirmed": false,
       "where": "Atlanta / Sandy Springs, GA",
       "country": "USA",
@@ -354,7 +451,7 @@
         "startup"
       ],
       "priority": false,
-      "summary": "Live pediatric device showcase and pitch where FDA-funded consortia award innovation prizes of ~25K USD, with an investor audience.",
+      "summary": "Pediatric Innovation Network showcase where APDI and two other FDA-funded pediatric device consortia award USD 25,000 innovation prizes. The 2026 edition ran on 7 July 2026, so the next cycle falls in 2027.",
       "audience": "Pediatric device startups pitching to investors and consortia.",
       "participate": [
         {
@@ -363,7 +460,13 @@
           "deadline": null,
           "deadlineLabel": "2026 deadline not announced. 2025 cycle closed ~20 Jul 2025.",
           "status": "unannounced",
-          "note": "Contact tpaden3@gatech.edu."
+          "note": "Contact tpaden3@gatech.edu.",
+          "cost": {
+            "amount": "Free to apply",
+            "detail": "APDI and two other FDA-funded pediatric device consortia award USD 25,000 innovation prizes at the event. The 2026 edition ran 7 Jul 2026, so the next cycle is 2027.",
+            "basis": "free",
+            "source": "https://pediatrics.research.gatech.edu/events/pediatric-innovation-day-and-showcase"
+          }
         }
       ],
       "links": [
@@ -372,7 +475,7 @@
           "url": "https://pediatrics.research.gatech.edu"
         }
       ],
-      "verified": "2026-08-14"
+      "verified": "2026-08-26"
     },
     {
       "id": "cepas-2026",
@@ -393,12 +496,18 @@
       "audience": "Academic paediatricians, neonatologists in the ESPR community, researchers.",
       "participate": [
         {
-          "mode": "abstract",
+          "mode": "present",
           "label": "Submit an abstract",
           "deadline": "2026-04-15",
           "deadlineLabel": "Closed 15 Apr 2026",
           "status": "closed",
-          "note": ""
+          "note": "",
+          "cost": {
+            "amount": "EUR 590",
+            "detail": "No separate abstract fee. Presenters pay the registration below. Submission for 2026 has closed.",
+            "basis": "published",
+            "source": "https://www.cepas.org/registration"
+          }
         },
         {
           "mode": "attend",
@@ -406,7 +515,13 @@
           "deadline": null,
           "deadlineLabel": "Not confirmed",
           "status": "unannounced",
-          "note": "cepas@eurokongress.de"
+          "note": "cepas@eurokongress.de",
+          "cost": {
+            "amount": "EUR 590",
+            "detail": "Non-member early, to 31 Jul 2026. EAP or ESPR member 450. Regular 720 / 550 from 1 Aug, late 900 / 685 from 1 Oct. Nurse, allied health or early career 320 / 260 early. Industry representative 950 flat. Includes 10% French VAT.",
+            "basis": "published",
+            "source": "https://www.cepas.org/registration"
+          }
         }
       ],
       "links": [
@@ -415,7 +530,7 @@
           "url": "https://cepas.org"
         }
       ],
-      "verified": ""
+      "verified": "2026-08-26"
     },
     {
       "id": "sim-expo-2026",
@@ -436,12 +551,18 @@
       "audience": "Simulation educators, sim-lab directors, nurse and physician educators, vendors.",
       "participate": [
         {
-          "mode": "abstract",
+          "mode": "present",
           "label": "Submit an abstract",
           "deadline": "2026-04-17",
           "deadlineLabel": "Closed 17 Apr 2026",
           "status": "closed",
-          "note": "The tracker also records a submission deadline of 13 July. Worth settling which applies."
+          "note": "The tracker also records a submission deadline of 13 July. Worth settling which applies.",
+          "cost": {
+            "amount": "CAD 720",
+            "detail": "No submission fee. Accepted presenters get 10% off registration, so the full 2-day non-member rate of 800 becomes 720. Submission has closed.",
+            "basis": "published",
+            "source": "https://simulationcanada.ca/conferences-events/sim-expo/"
+          }
         },
         {
           "mode": "attend",
@@ -449,7 +570,13 @@
           "deadline": null,
           "deadlineLabel": "General registration open",
           "status": "rolling",
-          "note": "Full pass 800 CAD, 600 CAD for organisation members. Presenter registration closed 8 Jun 2026."
+          "note": "Full pass 800 CAD, 600 CAD for organisation members. Presenter registration closed 8 Jun 2026.",
+          "cost": {
+            "amount": "CAD 800",
+            "detail": "Full 2-day non-member. Individual member 640, organisational member 600. One-day 480. Resident 425, student 300. Sales tax added on top.",
+            "basis": "published",
+            "source": "https://simulationcanada.ca/conferences-events/sim-expo/"
+          }
         },
         {
           "mode": "attend",
@@ -457,7 +584,13 @@
           "deadline": "2026-10-08",
           "deadlineLabel": "8 Oct 2026",
           "status": "open",
-          "note": ""
+          "note": "",
+          "cost": {
+            "amount": "Not published",
+            "detail": "Room rate for the Halifax Marriott Harbourfront block is released with the booking link, not on the event page.",
+            "basis": "unknown",
+            "source": "https://simulationcanada.ca/conferences-events/sim-expo/"
+          }
         },
         {
           "mode": "exhibit",
@@ -465,7 +598,13 @@
           "deadline": null,
           "deadlineLabel": "Contact the organiser",
           "status": "rolling",
-          "note": ""
+          "note": "",
+          "cost": {
+            "amount": "Not published",
+            "detail": "Booth and sponsor tiers are in the Exhibitor and Sponsor Prospectus, not on the public page.",
+            "basis": "unknown",
+            "source": "https://simulationcanada.ca/conferences-events/sim-expo/"
+          }
         }
       ],
       "links": [
@@ -478,7 +617,7 @@
           "url": "https://simulationcanada.ca/resources/sim-company-directory/"
         }
       ],
-      "verified": "2026-08-14"
+      "verified": "2026-08-26"
     },
     {
       "id": "hlth-usa-2026",
@@ -505,7 +644,13 @@
           "deadline": null,
           "deadlineLabel": "Applications closed",
           "status": "closed",
-          "note": "Eligibility: founded under 4 years, raised under 8M USD. Prize 25K cash plus 25K credit."
+          "note": "Eligibility: founded under 4 years, raised under 8M USD. Prize 25K cash plus 25K credit.",
+          "cost": {
+            "amount": "Not published",
+            "detail": "No entry fee published. Applications for the 2026 pitch have closed.",
+            "basis": "unknown",
+            "source": "https://hlth.com/events/usa/agenda/startup-pitch/"
+          }
         },
         {
           "mode": "attend",
@@ -513,7 +658,13 @@
           "deadline": "2026-11-06",
           "deadlineLabel": "Registration transfers close 6 Nov 2026",
           "status": "open",
-          "note": ""
+          "note": "",
+          "cost": {
+            "amount": "USD 1,500",
+            "detail": "Early rate for clinicians, start-ups and government or non-profit. Provider, payer and employer executives and investors 2,295 early. Solution providers and vendors 2,795 early. Standard rates rise to 3,395, or 3,995 for vendors. Market Connect and media passes can be free with approval.",
+            "basis": "published",
+            "source": "https://hlth.com/events/usa/register/"
+          }
         }
       ],
       "links": [
@@ -522,7 +673,7 @@
           "url": "https://hlth.com/events/usa"
         }
       ],
-      "verified": "2026-08-14"
+      "verified": "2026-08-26"
     },
     {
       "id": "medica-2026",
@@ -549,7 +700,13 @@
           "deadline": "2026-09-10",
           "deadlineLabel": "10 Sep 2026, 23:59 CET",
           "status": "open",
-          "note": "Free to enter. MEDICA states conformity with the Medical Device Directive or FDA approval is not required. Categories include AI in healthcare, robotics, lab diagnostics and others. Top 12 of each competition pitch at MEDICA, 16 and 17 Nov, with 3,500 EUR in cash prizes."
+          "note": "Free to enter. MEDICA states conformity with the Medical Device Directive or FDA approval is not required. Categories include AI in healthcare, robotics, lab diagnostics and others. Top 12 of each competition pitch at MEDICA, 16 and 17 Nov, with 3,500 EUR in cash prizes.",
+          "cost": {
+            "amount": "EUR 550",
+            "detail": "No standalone entry fee published for the competition. The pitch slot itself is the START-UP PARK stage upgrade at EUR 550 plus VAT on top of the booth.",
+            "basis": "published",
+            "source": "https://www.medica-tradefair.com/en/Program/Specials/MEDICA_START-UP_PARK"
+          }
         },
         {
           "mode": "exhibit",
@@ -557,7 +714,27 @@
           "deadline": null,
           "deadlineLabel": "Apply early",
           "status": "rolling",
-          "note": "EUR 2,950 plus VAT, plus EUR 550 for a pitch slot. Contact startup@medica.de."
+          "note": "EUR 2,950 plus VAT, plus EUR 550 for a pitch slot. Contact startup@medica.de.",
+          "cost": {
+            "amount": "EUR 2,950",
+            "detail": "Plus VAT, for the Hall 17 START-UP PARK package: counter with 2 stools, display stand, exhibitor graphic, electricity, Wi-Fi, daily cleaning, database listing and media fee. Stage upgrade with a live pitch slot is a further EUR 550, total 3,500.",
+            "basis": "published",
+            "source": "https://www.medica-tradefair.com/en/Program/Specials/MEDICA_START-UP_PARK"
+          }
+        },
+        {
+          "mode": "attend",
+          "label": "Attend as a visitor",
+          "deadline": null,
+          "deadlineLabel": "Day and season tickets sold throughout",
+          "status": "rolling",
+          "note": "MEDICA sells visitor day tickets and season tickets online through the trade fair shop.",
+          "cost": {
+            "amount": "Not published",
+            "detail": "Visitor ticket prices sit behind the MEDICA ticket shop rather than on the public programme pages.",
+            "basis": "unknown",
+            "source": "https://www.medica-tradefair.com"
+          }
         }
       ],
       "links": [
@@ -570,7 +747,7 @@
           "url": "https://innovationworldcup.com"
         }
       ],
-      "verified": ""
+      "verified": "2026-08-26"
     },
     {
       "id": "medtech-innovator-2027",
@@ -596,7 +773,13 @@
           "deadline": null,
           "deadlineLabel": "2027 window not yet open. Waitlist live.",
           "status": "unannounced",
-          "note": "The 2026 cohort closed 1 Dec 2025 and the 2025 cohort closed 15 Jan 2025, so the window has been moving earlier. Join the waitlist at medtechinnovator.org/apply."
+          "note": "The 2026 cohort closed 1 Dec 2025 and the 2025 cohort closed 15 Jan 2025, so the window has been moving earlier. Join the waitlist at medtechinnovator.org/apply.",
+          "cost": {
+            "amount": "Free, no equity",
+            "detail": "MedTech Innovator takes no fee and no equity. Companies that have raised up to Series C are eligible. 2026 applications are closed and the 2027 window has not opened; there is a waitlist.",
+            "basis": "free",
+            "source": "https://medtechinnovator.org/apply/"
+          }
         }
       ],
       "links": [
@@ -605,7 +788,7 @@
           "url": "https://medtechinnovator.org/apply"
         }
       ],
-      "verified": "2026-08-14"
+      "verified": "2026-08-26"
     },
     {
       "id": "imsh-2027",
@@ -631,15 +814,27 @@
           "deadline": null,
           "deadlineLabel": "Registration opens autumn 2026",
           "status": "unannounced",
-          "note": ""
+          "note": "",
+          "cost": {
+            "amount": "USD 1,065",
+            "detail": "IMSH 2026 rate, 2027 not yet published. Non-member early bird; SSH member 850. Regular 1,220 / 1,005, late and onsite 1,320 / 1,105. One-day pass 475. Registration opens autumn 2026.",
+            "basis": "prior-year",
+            "source": "https://imsh2026.org/registration"
+          }
         },
         {
-          "mode": "abstract",
+          "mode": "present",
           "label": "Call for Content, including the SimVentor showcase",
           "deadline": "2026-05-27",
           "deadlineLabel": "Closed 27 May 2026",
           "status": "closed",
-          "note": "SimVentors Showcase runs 25 Jan 2027. The category excludes commercially available technologies, and promotional material is not permitted during the showcase."
+          "note": "SimVentors Showcase runs 25 Jan 2027. The category excludes commercially available technologies, and promotional material is not permitted during the showcase.",
+          "cost": {
+            "amount": "USD 1,065",
+            "detail": "No submission fee. Presenters pay standard registration. Call for Content closed 27 May 2026. SimVentors excludes commercially available products.",
+            "basis": "prior-year",
+            "source": "https://imsh2026.org/registration"
+          }
         },
         {
           "mode": "exhibit",
@@ -647,7 +842,27 @@
           "deadline": null,
           "deadlineLabel": "See imsh2027.org/expo-hall",
           "status": "rolling",
-          "note": ""
+          "note": "",
+          "cost": {
+            "amount": "Not published",
+            "detail": "Booth rates are in the exhibitor prospectus, not on the public site.",
+            "basis": "unknown",
+            "source": "https://imsh2027.org"
+          }
+        },
+        {
+          "mode": "teach",
+          "label": "Run a pre-conference immersive course",
+          "deadline": null,
+          "deadlineLabel": "2027 course call not announced",
+          "status": "unannounced",
+          "note": "IMSH sells immersive courses and a Technology Forum alongside the main programme. Slots are allocated through the Call for Content, which closed 27 May 2026 for 2027.",
+          "cost": {
+            "amount": "USD 299",
+            "detail": "2026 delegate price of an immersive course. The Technology Forum was USD 150 for IMSH attendees, 250 for non-attendees. What a provider is paid or charged is not published.",
+            "basis": "prior-year",
+            "source": "https://imsh2026.org/registration"
+          }
         }
       ],
       "links": [
@@ -656,7 +871,7 @@
           "url": "https://imsh2027.org"
         }
       ],
-      "verified": "2026-08-14"
+      "verified": "2026-08-26"
     },
     {
       "id": "whx-tech-2027",
@@ -683,7 +898,13 @@
           "deadline": "2026-11-04",
           "deadlineLabel": "4 Nov 2026",
           "status": "open",
-          "note": "USD 30,000 prize pool, around 50 pitch and 12 finalists. Shortlist end Nov 2026, grand finale 29 Jan 2027."
+          "note": "USD 30,000 prize pool, around 50 pitch and 12 finalists. Shortlist end Nov 2026, grand finale 29 Jan 2027.",
+          "cost": {
+            "amount": "Not published",
+            "detail": "Entry terms and any fee not published. Organiser contact is support.whxtechdubai@informa.com.",
+            "basis": "unknown",
+            "source": "https://www.worldhealthexpo.com/events/healthcare/tech/"
+          }
         },
         {
           "mode": "exhibit",
@@ -691,7 +912,13 @@
           "deadline": null,
           "deadlineLabel": "Not yet announced",
           "status": "unannounced",
-          "note": ""
+          "note": "",
+          "cost": {
+            "amount": "USD 3,500",
+            "detail": "Approximate. Not published by Informa directly. Export Virginia quotes USD 3,500 per company for pavilion participation at WHX Dubai 2027; UK pod stands are quoted around GBP 3,800 to 5,000.",
+            "basis": "approx",
+            "source": "https://exportvirginia.org/event/whx-dubai-2027"
+          }
         }
       ],
       "links": [
@@ -700,7 +927,7 @@
           "url": "https://www.worldhealthexpo.com/events/healthcare/tech"
         }
       ],
-      "verified": ""
+      "verified": "2026-08-26"
     },
     {
       "id": "ucsf-stanford-pdc",
@@ -726,7 +953,13 @@
           "deadline": null,
           "deadlineLabel": "Next cycle not yet announced",
           "status": "unannounced",
-          "note": "The consortium states the accelerator programme is restricted to US-based applicants, and to ideas meeting the FDA definition of a medical device. Projects at any stage may apply, with no restriction on therapeutic area."
+          "note": "The consortium states the accelerator programme is restricted to US-based applicants, and to ideas meeting the FDA definition of a medical device. Projects at any stage may apply, with no restriction on therapeutic area.",
+          "cost": {
+            "amount": "No fee stated",
+            "detail": "Platinum award is USD 100,000. The consortium does not publish an application fee. Runs twice yearly, spring and autumn.",
+            "basis": "unknown",
+            "source": "https://pediatricdeviceconsortium.org/"
+          }
         }
       ],
       "links": [
@@ -735,7 +968,7 @@
           "url": "https://pediatricdeviceconsortium.org"
         }
       ],
-      "verified": "2026-08-14"
+      "verified": "2026-08-26"
     },
     {
       "id": "nccpdi-2027",
@@ -761,7 +994,13 @@
           "deadline": null,
           "deadlineLabel": "Main deadline not yet announced. Email apdi@childrensnational.org to join the list.",
           "status": "unannounced",
-          "note": "Each cycle is themed by sector, past themes include cardiovascular, orthopaedic and spine, NICU, and remote monitoring. Applications have historically run through MedTech Innovator. Past deadlines have landed in February, April and August depending on the year."
+          "note": "Each cycle is themed by sector, past themes include cardiovascular, orthopaedic and spine, NICU, and remote monitoring. Applications have historically run through MedTech Innovator. Past deadlines have landed in February, April and August depending on the year.",
+          "cost": {
+            "amount": "Free to apply",
+            "detail": "APDI awards USD 25,000 innovation prizes. No application fee published. The 2027 round is not yet announced.",
+            "basis": "free",
+            "source": "https://innovate4kids.org/"
+          }
         }
       ],
       "links": [
@@ -770,7 +1009,7 @@
           "url": "https://innovate4kids.org"
         }
       ],
-      "verified": "2026-08-14"
+      "verified": "2026-08-26"
     },
     {
       "id": "neoped-2027",
@@ -796,7 +1035,13 @@
           "deadline": null,
           "deadlineLabel": "2027 dates and deadlines not yet announced",
           "status": "unannounced",
-          "note": "Site is intermittently down. Verify before relying on it."
+          "note": "Site is intermittently down. Verify before relying on it.",
+          "cost": {
+            "amount": "Not published",
+            "detail": "2027 edition, venue and pricing all unannounced. 2026 was Berlin.",
+            "basis": "unknown",
+            "source": "https://neoped.eu"
+          }
         }
       ],
       "links": [
@@ -826,20 +1071,32 @@
       "audience": "Academic pediatricians, neonatologists, researchers, fellows, exhibitors.",
       "participate": [
         {
-          "mode": "abstract",
+          "mode": "present",
           "label": "Submit an abstract",
           "deadline": "2026-11-02",
           "deadlineLabel": "12 Aug to 2 Nov 2026",
           "status": "open",
-          "note": ""
+          "note": "",
+          "cost": {
+            "amount": "Not published",
+            "detail": "No separate abstract fee historically. Registration and hotel sites open November 2026, so attendee rates are not yet posted. Early registration ends 16 Mar 2027.",
+            "basis": "unknown",
+            "source": "https://www.pas-meeting.org/2027-key-dates/"
+          }
         },
         {
-          "mode": "abstract",
+          "mode": "present",
           "label": "Call for sessions",
           "deadline": "2026-09-16",
           "deadlineLabel": "3 Aug to 16 Sep 2026",
           "status": "open",
-          "note": ""
+          "note": "",
+          "cost": {
+            "amount": "Not published",
+            "detail": "No submission fee historically. Session leads pay standard registration, which is not yet posted.",
+            "basis": "unknown",
+            "source": "https://www.pas-meeting.org/2027-key-dates/"
+          }
         },
         {
           "mode": "attend",
@@ -847,7 +1104,13 @@
           "deadline": "2027-03-16",
           "deadlineLabel": "Ends 16 Mar 2027",
           "status": "open",
-          "note": ""
+          "note": "",
+          "cost": {
+            "amount": "Not published",
+            "detail": "Registration site opens November 2026. Early registration closes 16 Mar 2027.",
+            "basis": "unknown",
+            "source": "https://www.pas-meeting.org/2027-key-dates/"
+          }
         },
         {
           "mode": "exhibit",
@@ -855,7 +1118,13 @@
           "deadline": null,
           "deadlineLabel": "See the exhibitor prospectus",
           "status": "rolling",
-          "note": "The commercial route to neonatal clinicians and academic buyers."
+          "note": "The commercial route to neonatal clinicians and academic buyers.",
+          "cost": {
+            "amount": "Not published",
+            "detail": "Booth and sponsor pricing is in the PAS prospectus. Contacts are listed on the sponsor page.",
+            "basis": "unknown",
+            "source": "https://www.pas-meeting.org/sponsor-exhibit/"
+          }
         }
       ],
       "links": [
@@ -864,7 +1133,7 @@
           "url": "https://www.pas-meeting.org/2027-key-dates"
         }
       ],
-      "verified": "2026-08-14"
+      "verified": "2026-08-26"
     },
     {
       "id": "ipeg-2027",
@@ -887,20 +1156,46 @@
       "audience": "Pediatric minimally invasive surgeons, endoscopists, fellows, industry. ESPES and Italian pediatric surgery also present.",
       "participate": [
         {
-          "mode": "abstract",
+          "mode": "present",
           "label": "Submit an abstract",
           "deadline": null,
           "deadlineLabel": "Not yet announced. IPEG states details are coming soon.",
           "status": "unannounced",
-          "note": ""
+          "note": "",
+          "cost": {
+            "amount": "EUR 780",
+            "detail": "No submission fee. Presenters pay registration. Figure is the 2026 Joint Congress non-member early rate; IPEG 2027 rates not yet published.",
+            "basis": "prior-year",
+            "source": "https://www.jointcongress.org/registration/"
+          }
         },
         {
-          "mode": "exhibit",
+          "mode": "teach",
           "label": "Simulation and skills pre-courses",
           "deadline": null,
           "deadlineLabel": "Not yet announced",
           "status": "unannounced",
-          "note": "A natural showcase slot."
+          "note": "A natural showcase slot.",
+          "cost": {
+            "amount": "EUR 810",
+            "detail": "2026 Joint Congress rate for the IPEG Mastery Laparoscopy course, member; non-member 930. The Joint Laparoscopy Course was 240 / 300 and the ESPES robotics and urology masterclasses 120 / 150. 2027 programme not yet published.",
+            "basis": "prior-year",
+            "source": "https://www.jointcongress.org/registration/"
+          }
+        },
+        {
+          "mode": "attend",
+          "label": "Attend",
+          "deadline": null,
+          "deadlineLabel": "2027 registration not open",
+          "status": "unannounced",
+          "note": "IPEG 2027 is the 36th annual congress, in Naples.",
+          "cost": {
+            "amount": "EUR 780",
+            "detail": "2026 Joint Congress non-member early rate, to 31 Mar; 930 then 1,080. Member 660 / 810 / 960. Trainee member 480. Allied health 450. Student 330. Includes 20% VAT. 2027 rates not published.",
+            "basis": "prior-year",
+            "source": "https://www.jointcongress.org/registration/"
+          }
         }
       ],
       "links": [
@@ -913,17 +1208,17 @@
           "url": "https://jointcongress.org"
         }
       ],
-      "verified": "2026-08-14"
+      "verified": "2026-08-26"
     },
     {
       "id": "medtech-forum-2027",
       "name": "The MedTech Forum 2027",
       "org": "MedTech Europe",
-      "dateLabel": "Est. spring 2027",
-      "start": "2027-05-11",
-      "confirmed": false,
-      "where": "Rotates cities. 2026 was Stockholm; 2027 host not announced.",
-      "country": "Europe",
+      "dateLabel": "10 to 11 May 2027",
+      "start": "2027-05-10",
+      "confirmed": true,
+      "where": "Rome (Italy)",
+      "country": "Italy",
       "region": "Europe",
       "tags": [
         "industry"
@@ -938,7 +1233,13 @@
           "deadline": null,
           "deadlineLabel": "Not announced. 2026 early bird was 20 Mar 2026.",
           "status": "unannounced",
-          "note": "For a pitch focus, MedTech World or the Informa MedTech Summit fit better."
+          "note": "For a pitch focus, MedTech World or the Informa MedTech Summit fit better.",
+          "cost": {
+            "amount": "Not published",
+            "detail": "Confirmed for 10 to 11 May 2027 in Rome. Delegate fees not yet posted.",
+            "basis": "unknown",
+            "source": "https://www.themedtechforum.eu/"
+          }
         }
       ],
       "links": [
@@ -947,7 +1248,8 @@
           "url": "https://www.themedtechforum.eu"
         }
       ],
-      "verified": ""
+      "verified": "2026-08-26",
+      "end": "2027-05-11"
     },
     {
       "id": "apsa-2027",
@@ -970,12 +1272,18 @@
       "audience": "Pediatric surgeons, fellows, surgical nurses, researchers, industry exhibitors.",
       "participate": [
         {
-          "mode": "abstract",
+          "mode": "present",
           "label": "Submit an abstract",
           "deadline": null,
           "deadlineLabel": "2027 call not yet posted",
           "status": "unannounced",
-          "note": "The 2026 submission guide was published in August of the preceding year, so the 2027 call is due imminently. In the 2026 cycle, authors were notified by 15 February and manuscripts ran 15 Feb to 15 Mar."
+          "note": "The 2026 submission guide was published in August of the preceding year, so the 2027 call is due imminently. In the 2026 cycle, authors were notified by 15 February and manuscripts ran 15 Feb to 15 Mar.",
+          "cost": {
+            "amount": "USD 925",
+            "detail": "No submission fee. Presenters pay registration. Figure is the APSA 2026 physician non-member early rate; 2027 rates not published and the call for abstracts is still not posted.",
+            "basis": "prior-year",
+            "source": "https://apsapedsurg.org/registration/"
+          }
         },
         {
           "mode": "exhibit",
@@ -983,7 +1291,41 @@
           "deadline": null,
           "deadlineLabel": "Not yet announced",
           "status": "unannounced",
-          "note": ""
+          "note": "",
+          "cost": {
+            "amount": "Not published",
+            "detail": "Booth rates are in the exhibitor prospectus. 2027 meeting page shows no fee information yet.",
+            "basis": "unknown",
+            "source": "https://apsapedsurg.org/continuing-education/events/annual-meeting/"
+          }
+        },
+        {
+          "mode": "attend",
+          "label": "Attend",
+          "deadline": null,
+          "deadlineLabel": "2027 registration not open",
+          "status": "unannounced",
+          "note": "APSA 2027 runs 12 to 15 May 2027 at the Manchester Grand Hyatt San Diego. Room reservations open in 2027.",
+          "cost": {
+            "amount": "USD 925",
+            "detail": "APSA 2026 physician non-member early rate, to 1 Apr; 975 after. APSA member 795 then 895. Resident or fellow 400 then 450. Nurse or allied non-member 500 then 550. 2027 rates not posted.",
+            "basis": "prior-year",
+            "source": "https://apsapedsurg.org/registration/"
+          }
+        },
+        {
+          "mode": "teach",
+          "label": "Pre-meeting symposia and skills courses",
+          "deadline": null,
+          "deadlineLabel": "2027 course line-up not announced",
+          "status": "unannounced",
+          "note": "APSA runs ticketed add-on courses around the main meeting. In 2026 these included an ECMO course, a burn symposium and a grant writing symposium.",
+          "cost": {
+            "amount": "USD 350 to 450",
+            "detail": "2026 ECMO course, varying by status. Burn symposium was 50 to 100 and the grant writing symposium 100. 2027 programme not published.",
+            "basis": "prior-year",
+            "source": "https://apsapedsurg.org/registration/"
+          }
         }
       ],
       "links": [
@@ -992,7 +1334,7 @@
           "url": "https://apsapedsurg.org/continuing-education/events/annual-meeting"
         }
       ],
-      "verified": "2026-08-14"
+      "verified": "2026-08-26"
     },
     {
       "id": "eupsa-2027",
@@ -1013,20 +1355,46 @@
       "audience": "European pediatric surgeons, trainees, nurses, industry.",
       "participate": [
         {
-          "mode": "abstract",
+          "mode": "present",
           "label": "Submit an abstract",
           "deadline": null,
           "deadlineLabel": "2027 deadlines not yet announced",
           "status": "unannounced",
-          "note": ""
+          "note": "",
+          "cost": {
+            "amount": "EUR 780",
+            "detail": "No submission fee. Presenters pay registration. Figure is the 2026 Joint Congress non-member early rate; EUPSA 2027 host and rates not yet announced.",
+            "basis": "prior-year",
+            "source": "https://www.jointcongress.org/registration/"
+          }
         },
         {
-          "mode": "exhibit",
+          "mode": "teach",
           "label": "Pre-congress hands-on and skills courses",
           "deadline": null,
           "deadlineLabel": "Not yet announced",
           "status": "unannounced",
-          "note": ""
+          "note": "",
+          "cost": {
+            "amount": "EUR 120 to 300",
+            "detail": "2026 Joint Congress range: EUPSA neonatal, oncology and colorectal masterclasses 120 member / 150 non-member; Joint Laparoscopy Course 240 / 300. 2027 programme not yet published.",
+            "basis": "prior-year",
+            "source": "https://www.jointcongress.org/registration/"
+          }
+        },
+        {
+          "mode": "attend",
+          "label": "Attend",
+          "deadline": null,
+          "deadlineLabel": "2027 host and registration not announced",
+          "status": "unannounced",
+          "note": "2026 was the Joint Congress with IPEG and ESPES in Vienna. The 2027 host city is not yet announced.",
+          "cost": {
+            "amount": "EUR 780",
+            "detail": "2026 Joint Congress non-member early rate. Member 660. Trainee member 480. Allied health 450. Includes 20% VAT. 2027 rates not published.",
+            "basis": "prior-year",
+            "source": "https://www.jointcongress.org/registration/"
+          }
         }
       ],
       "links": [
@@ -1035,7 +1403,7 @@
           "url": "https://eupsa.info"
         }
       ],
-      "verified": ""
+      "verified": "2026-08-26"
     },
     {
       "id": "espnic-2027",
@@ -1056,12 +1424,18 @@
       "audience": "Paediatric and neonatal intensivists, ICU nurses, allied professionals, researchers.",
       "participate": [
         {
-          "mode": "abstract",
+          "mode": "present",
           "label": "Submit an abstract",
           "deadline": null,
           "deadlineLabel": "Not yet announced",
           "status": "unannounced",
-          "note": ""
+          "note": "",
+          "cost": {
+            "amount": "Not published",
+            "detail": "No submission fee historically. Registration info on the congress site reads Coming soon as of 26 Aug 2026.",
+            "basis": "unknown",
+            "source": "https://www.mcascientificevents.eu/espnic/registration/"
+          }
         },
         {
           "mode": "attend",
@@ -1069,7 +1443,13 @@
           "deadline": null,
           "deadlineLabel": "Not yet announced",
           "status": "unannounced",
-          "note": ""
+          "note": "",
+          "cost": {
+            "amount": "Not published",
+            "detail": "Registration info reads Coming soon. Enquiries go to registration@espniccongress.eu.",
+            "basis": "unknown",
+            "source": "https://www.mcascientificevents.eu/espnic/registration/"
+          }
         }
       ],
       "links": [
@@ -1078,7 +1458,7 @@
           "url": "https://www.mcascientificevents.eu/espnic"
         }
       ],
-      "verified": ""
+      "verified": "2026-08-26"
     },
     {
       "id": "baps-2027",
@@ -1099,12 +1479,18 @@
       "audience": "UK, Irish and international pediatric surgeons, trainees, nurses.",
       "participate": [
         {
-          "mode": "abstract",
+          "mode": "present",
           "label": "Submit an abstract",
           "deadline": null,
           "deadlineLabel": "2027 deadlines not yet announced",
           "status": "unannounced",
-          "note": "One unverified listing hinted at Aug 2027 in Lausanne."
+          "note": "One unverified listing hinted at Aug 2027 in Lausanne.",
+          "cost": {
+            "amount": "Not published",
+            "detail": "2027 dates, host and fees all unannounced. The 72nd congress ran 17 to 19 Jun 2026 at University Place, Manchester, and its registration is now closed.",
+            "basis": "unknown",
+            "source": "https://congress.baps.org.uk/"
+          }
         }
       ],
       "links": [
@@ -1113,7 +1499,7 @@
           "url": "https://congress.baps.org.uk"
         }
       ],
-      "verified": ""
+      "verified": "2026-08-26"
     },
     {
       "id": "hlth-europe-2027",
@@ -1140,7 +1526,13 @@
           "deadline": null,
           "deadlineLabel": "2027 applications not open yet. Expected late 2026 or winter.",
           "status": "unannounced",
-          "note": "Startup rate applies to companies under 5 years old that have raised under EUR 5m."
+          "note": "Startup rate applies to companies under 5 years old that have raised under EUR 5m.",
+          "cost": {
+            "amount": "Free to enter",
+            "detail": "Prize is EUR 30,000. No entry fee published. Start-up status requires under 5 years trading and under EUR 5M raised.",
+            "basis": "free",
+            "source": "https://hlth.helpscoutdocs.com/article/61-startup-ticket-rate-qualification"
+          }
         },
         {
           "mode": "exhibit",
@@ -1148,7 +1540,13 @@
           "deadline": null,
           "deadlineLabel": "Not dated",
           "status": "unannounced",
-          "note": ""
+          "note": "",
+          "cost": {
+            "amount": "EUR 1,500",
+            "detail": "2026 rate, excluding VAT, for a start-up booth. A company kiosk was EUR 2,500 excluding VAT. 2027 rates not yet published.",
+            "basis": "prior-year",
+            "source": "https://europe.hlth.com/register"
+          }
         }
       ],
       "links": [
@@ -1157,7 +1555,7 @@
           "url": "https://hlth.com/events/europe"
         }
       ],
-      "verified": ""
+      "verified": "2026-08-26"
     },
     {
       "id": "phm-2027",
@@ -1178,12 +1576,18 @@
       "audience": "Pediatric hospitalists, inpatient and NICU-adjacent clinicians, educators.",
       "participate": [
         {
-          "mode": "abstract",
+          "mode": "present",
           "label": "Submit an abstract",
           "deadline": null,
           "deadlineLabel": "Not yet announced",
           "status": "unannounced",
-          "note": ""
+          "note": "",
+          "cost": {
+            "amount": "Not published",
+            "detail": "No submission fee historically. 2027 rates not posted. For reference, PHM 2026 early-bird registration closed 7 Jul 2026.",
+            "basis": "unknown",
+            "source": "https://www.aap.org/en/pedialink/2026-pediatric-hospital-medicine-conference/"
+          }
         },
         {
           "mode": "attend",
@@ -1191,7 +1595,13 @@
           "deadline": null,
           "deadlineLabel": "Not yet announced",
           "status": "unannounced",
-          "note": ""
+          "note": "",
+          "cost": {
+            "amount": "Not published",
+            "detail": "2027 registration not open. PHM 2026 ran 6 to 9 Aug 2026 in Kansas City with an early-bird deadline of 7 Jul 2026.",
+            "basis": "unknown",
+            "source": "https://www.aap.org/en/pedialink/2026-pediatric-hospital-medicine-conference/"
+          }
         }
       ],
       "links": [
@@ -1200,7 +1610,7 @@
           "url": "https://www.academicpeds.org"
         }
       ],
-      "verified": "2026-08-14"
+      "verified": "2026-08-26"
     },
     {
       "id": "robotic-surgery-2027",
@@ -1227,7 +1637,27 @@
           "deadline": null,
           "deadlineLabel": "Not announced yet. The 2026 edition ran 19 to 21 Aug 2026.",
           "status": "unannounced",
-          "note": ""
+          "note": "",
+          "cost": {
+            "amount": "USD 750",
+            "detail": "4th annual course rate, 19 to 21 Aug 2026; 2027 not yet posted. Day 1 in person 750; Day 1 plus one lab 1,250; Day 1 plus two labs 1,750; livestream 500. Trainee 150, or 650 for both days. Rates rise USD 100 after the 1 Jul early deadline.",
+            "basis": "prior-year",
+            "source": "https://nationwidechildrens.cloud-cme.com/course/courseoverview?P=5&EID=49874&IsExhibitor=false"
+          }
+        },
+        {
+          "mode": "exhibit",
+          "label": "Exhibit",
+          "deadline": null,
+          "deadlineLabel": "2027 exhibitor call not announced",
+          "status": "unannounced",
+          "note": "Nationwide Children's sells a single exhibitor tier for this course.",
+          "cost": {
+            "amount": "USD 2,500",
+            "detail": "2026 Silver Exhibitor Package: one 6-foot table, two badges and meals. 2027 not yet posted.",
+            "basis": "prior-year",
+            "source": "https://nationwidechildrens.cloud-cme.com/course/courseoverview?P=5&EID=49874&IsExhibitor=false"
+          }
         }
       ],
       "links": [
@@ -1236,7 +1666,7 @@
           "url": "https://nationwidechildrens.cloud-cme.com/course/courseoverview?P=5&EID=49874&IsExhibitor=false"
         }
       ],
-      "verified": "2026-08-14"
+      "verified": "2026-08-26"
     },
     {
       "id": "jens-2027",
@@ -1257,12 +1687,18 @@
       "audience": "Neonatologists, neonatal nurses, perinatal researchers, allied professionals.",
       "participate": [
         {
-          "mode": "abstract",
+          "mode": "present",
           "label": "Submit an abstract",
           "deadline": "2027-03-31",
           "deadlineLabel": "Closes 31 Mar 2027",
           "status": "open",
-          "note": "Opened 21 Jul 2026. Structured abstract, 350 words, one table or one image. Submit via the MCA events portal. Topic list has no surgery category; General is the closest."
+          "note": "Opened 21 Jul 2026. Structured abstract, 350 words, one table or one image. Submit via the MCA events portal. Topic list has no surgery category; General is the closest.",
+          "cost": {
+            "amount": "EUR 847",
+            "detail": "No submission fee. Presenters pay registration, shown here including VAT (EUR 700 excluding). Submission opened 21 Jul 2026 and closes 31 Mar 2027.",
+            "basis": "published",
+            "source": "https://www.mcascientificevents.eu/jens/registration/"
+          }
         },
         {
           "mode": "attend",
@@ -1270,7 +1706,27 @@
           "deadline": null,
           "deadlineLabel": "Not yet announced",
           "status": "unannounced",
-          "note": ""
+          "note": "",
+          "cost": {
+            "amount": "EUR 847",
+            "detail": "Full registration including VAT; EUR 700 excluding. Nurse, allied health, student or early career investigator 303 incl. Corporate or industry 1,210 incl. No early bird tier published; a 5% newsletter discount is offered.",
+            "basis": "published",
+            "source": "https://www.mcascientificevents.eu/jens/registration/"
+          }
+        },
+        {
+          "mode": "teach",
+          "label": "Pre-congress course",
+          "deadline": null,
+          "deadlineLabel": "Pricing listed as available soon",
+          "status": "unannounced",
+          "note": "jENS lists a pre-congress course and a networking dinner as add-ons to registration.",
+          "cost": {
+            "amount": "Not published",
+            "detail": "The registration page lists the pre-congress course as Available soon.",
+            "basis": "unknown",
+            "source": "https://www.mcascientificevents.eu/jens/registration/"
+          }
         }
       ],
       "links": [
@@ -1279,7 +1735,7 @@
           "url": "https://www.mcascientificevents.eu/jens/abstract-submission/"
         }
       ],
-      "verified": "2026-08-14"
+      "verified": "2026-08-26"
     }
   ]
 }
