@@ -9,6 +9,16 @@
     {
       "date": "2026-08-26",
       "items": [
+        "Two errors Katka caught, both mine. Helsinki is free: the Eventbrite listing gives lowPrice 0.0, and it was showing as 'not published' because I read the organiser page instead of the ticket page. The lesson from MEDICA applied here too and I did not apply it.",
+        "Worse, the Helsinki 'Sponsor the day' row was invented. There is a general Become a sponsor invitation on the organiser page and no published offer behind it, so showing it as a live route with a hidden price was misleading. It now reads 'No exhibition found' with the reason.",
+        "Same audit run across every unpriced exhibition row. Nine are now evidenced with what was actually checked, and three had no published offer at all: Elevate, HTID and NeoPed now say so instead of implying one exists.",
+        "The Helsinki event does have a competition and we missed it. The Paediatric Hospital Innovation Challenge 2026 is closed with five hospital projects already selected. Note the eligibility: the call goes to paediatric hospitals for solutions built inside hospitals, so a company probably needs a hospital partner to enter. Expect the next call around the turn of the year.",
+        "Two real exhibition rates found while auditing. SESAM: EUR 3,500 excluding VAT for a 2x2 shell scheme, up to EUR 25,000 for Platinum, and Laerdal, Elevate Healthcare and Surgical Science all exhibit there. PHM: USD 3,000 a booth, with sponsorship over USD 6,000 including the space."
+      ]
+    },
+    {
+      "date": "2026-08-26",
+      "items": [
         "Everything already missed now records when to expect the next window, and why we think that. Seventeen closed routes carry an expected reopening tied to an observed prior cycle, not a guess.",
         "The nearest ones to watch: MedTech Innovator around December 2026, the AdvaMed Call for Sessions in early January 2027, the next five-consortium pediatric round in spring 2027, and the IMSH 2028 Call for Content in spring 2027.",
         "A Track checkbox was added to every row. Tracked events appear in a new Plan view in date order, and ticking the routes you intend to do adds the costs up.",
@@ -289,24 +299,8 @@
             "source": "https://elevatefestival.ca/speakers/"
           },
           "url": "https://elevatefestival.ca/speakers/",
-          "gain": "A named slot in the programme, and the clinical or academic credibility that comes with being selected rather than buying your way in."
-        },
-        {
-          "mode": "exhibit",
-          "label": "Exhibit or sponsor",
-          "deadline": null,
-          "deadlineLabel": "Space sold until the hall fills",
-          "status": "rolling",
-          "note": "Every congress of this size runs an industry exhibition. Rates are in the industry prospectus, which is sent on request rather than published. Ask Elevate via the festival site.",
-          "cost": {
-            "amount": "Not published",
-            "detail": "Rates are in the industry prospectus, which is sent on request rather than published. Ask Elevate via the festival site.",
-            "basis": "unknown",
-            "source": "https://elevatefestival.ca/"
-          },
-          "url": "https://elevatefestival.ca/",
-          "gain": "Floor presence and demo time in front of the people who specify and buy training equipment. For a physical simulator this is the only route where they get their hands on it.",
-          "checked": "26 Aug 2026: an industry exhibition exists but no rate is published. Prospectus on request."
+          "gain": "A named slot in the programme, and the clinical or academic credibility that comes with being selected rather than buying your way in.",
+          "checked": "26 Aug 2026: the speakers page carries an open Become A Speaker route. No deadline and no fee are published, and the line-up is updated on a rolling basis."
         }
       ],
       "links": [
@@ -320,7 +314,16 @@
         }
       ],
       "verified": "2026-08-26",
-      "type": "conference"
+      "type": "conference",
+      "absent": {
+        "exhibit": "none"
+      },
+      "absentSrc": {
+        "exhibit": "https://elevatefestival.ca/"
+      },
+      "absentWhy": {
+        "exhibit": "Elevate sells sponsorships as a festival but publishes no exhibition or booth offer, and the CIX awards route is closed and Canada-only anyway."
+      }
     },
     {
       "id": "eaps-2026",
@@ -387,16 +390,16 @@
           "deadline": null,
           "deadlineLabel": "Space sold until the hall fills",
           "status": "rolling",
-          "note": "Every congress of this size runs an industry exhibition. Rates are in the industry prospectus, which is sent on request rather than published. Ask Kenes ILS industry team, price list on request.",
+          "note": "Kenes publishes an industry price list for EAPS, sent on request. Extra exhibitor badges were EUR 160.",
           "cost": {
             "amount": "Not published",
-            "detail": "Rates are in the industry prospectus, which is sent on request rather than published. Ask Kenes ILS industry team, price list on request.",
+            "detail": "The exhibition is confirmed to exist, the rate is not published. Ask Kenes ILS industry team, price list on request.",
             "basis": "unknown",
             "source": "https://eaps.kenes.com/download-price-list/"
           },
           "url": "https://eaps.kenes.com/download-price-list/",
           "gain": "Floor presence and demo time in front of the people who specify and buy training equipment. For a physical simulator this is the only route where they get their hands on it.",
-          "checked": "26 Aug 2026: an industry exhibition exists but no rate is published. Prospectus on request."
+          "checked": "26 Aug 2026: a Download Price List page exists for industry, so a rate card is prepared, but the figures sit behind the request."
         },
         {
           "mode": "present",
@@ -581,23 +584,6 @@
           "url": "https://htfc-eu.com/htid/",
           "checked": "26 Aug 2026: htfc-eu.com resolves but returns nothing over HTTPS, so the organiser site could not be read directly. Event date of 1 Oct 2026 confirmed through Choose Paris Region and Informa partneringONE instead.",
           "gain": "Access and meetings. No platform and no speaking slot, so value depends entirely on who you line up first."
-        },
-        {
-          "mode": "exhibit",
-          "label": "Exhibit or sponsor",
-          "deadline": null,
-          "deadlineLabel": "Space sold until the hall fills",
-          "status": "rolling",
-          "note": "Every congress of this size runs an industry exhibition. Rates are in the industry prospectus, which is sent on request rather than published. Ask HealthTech For Care.",
-          "cost": {
-            "amount": "Not published",
-            "detail": "Rates are in the industry prospectus, which is sent on request rather than published. Ask HealthTech For Care.",
-            "basis": "unknown",
-            "source": "https://htfc-eu.com/htid/"
-          },
-          "url": "https://htfc-eu.com/htid/",
-          "gain": "Floor presence and demo time in front of the people who specify and buy training equipment. For a physical simulator this is the only route where they get their hands on it.",
-          "checked": "26 Aug 2026: an industry exhibition exists but no rate is published. Prospectus on request."
         }
       ],
       "links": [
@@ -609,13 +595,16 @@
       "verified": "2026-08-26",
       "type": "conference",
       "absent": {
-        "present": "none"
+        "present": "none",
+        "exhibit": "none"
       },
       "absentSrc": {
-        "present": "https://htfc-eu.com/htid/"
+        "present": "https://htfc-eu.com/htid/",
+        "exhibit": "https://htfc-eu.com/htid/"
       },
       "absentWhy": {
-        "present": "HTID is a partnering event built on 1:1 meetings, roundtables and pitch sessions. No abstract or speaker call is published; the pitch session is the way onto a stage."
+        "present": "HTID is a partnering event built on 1:1 meetings, roundtables and pitch sessions. No abstract or speaker call is published; the pitch session is the way onto a stage.",
+        "exhibit": "HTID is a partnering event built on 1:1 meetings, not a trade show. No exhibition or booth offer is published, and the organiser site would not respond on 26 Aug 2026."
       }
     },
     {
@@ -681,16 +670,16 @@
           "deadline": null,
           "deadlineLabel": "Space sold until the hall fills",
           "status": "rolling",
-          "note": "Every congress of this size runs an industry exhibition. Rates are in the industry prospectus, which is sent on request rather than published. Ask MCA Scientific Events, info@mcascientificevents.eu.",
+          "note": "The congress runs a CME programme alongside an exhibition.",
           "cost": {
             "amount": "Not published",
-            "detail": "Rates are in the industry prospectus, which is sent on request rather than published. Ask MCA Scientific Events, info@mcascientificevents.eu.",
+            "detail": "The exhibition is confirmed to exist, the rate is not published. Ask MCA Scientific Events, info@mcascientificevents.eu.",
             "basis": "unknown",
             "source": "https://mcaevents.eventsair.com/QuickEventWebsitePortal/12th-epa-unepsa-congress/12th-europaediatrics-2026/"
           },
           "url": "https://mcaevents.eventsair.com/QuickEventWebsitePortal/12th-epa-unepsa-congress/12th-europaediatrics-2026/",
           "gain": "Floor presence and demo time in front of the people who specify and buy training equipment. For a physical simulator this is the only route where they get their hands on it.",
-          "checked": "26 Aug 2026: an industry exhibition exists but no rate is published. Prospectus on request."
+          "checked": "26 Aug 2026: an exhibition is part of the congress format. The old site returns HTTP 410 and the new portal publishes no rates."
         }
       ],
       "links": [
@@ -817,7 +806,8 @@
             "source": "https://themedtechconference.com/exhibit-hall-pass/"
           },
           "url": "https://themedtechconference.com/exhibit-hall-pass/",
-          "gain": "Floor presence and demo time in front of the people who specify and buy training equipment. For a physical simulator this is the only route where they get their hands on it."
+          "gain": "Floor presence and demo time in front of the people who specify and buy training equipment. For a physical simulator this is the only route where they get their hands on it.",
+          "checked": "26 Aug 2026: roughly 1,800 companies attend and an exhibitor floor plan is published on mapyourshow. Booth rates are not on the public site. An Exhibit Hall Only pass is USD 1,100 to 17 Oct."
         }
       ],
       "links": [
@@ -955,16 +945,16 @@
           "deadline": null,
           "deadlineLabel": "Space sold until the hall fills",
           "status": "rolling",
-          "note": "Every congress of this size runs an industry exhibition. Rates are in the industry prospectus, which is sent on request rather than published. Ask Eurokongress, cepas@eurokongress.de, +49 89 210 98 60.",
+          "note": "CEPAS sells exhibition stands and sponsored activities including industry symposia. The exhibition opens with a Welcome Reception held in the exhibition area, which is the best traffic of the congress.",
           "cost": {
             "amount": "Not published",
-            "detail": "Rates are in the industry prospectus, which is sent on request rather than published. Ask Eurokongress, cepas@eurokongress.de, +49 89 210 98 60.",
+            "detail": "The exhibition is confirmed to exist, the rate is not published. Ask Eurokongress, cepas@eurokongress.de, +49 89 210 98 60.",
             "basis": "unknown",
             "source": "https://www.cepas.org/sponsorship-exhibition"
           },
           "url": "https://www.cepas.org/sponsorship-exhibition",
           "gain": "Floor presence and demo time in front of the people who specify and buy training equipment. For a physical simulator this is the only route where they get their hands on it.",
-          "checked": "26 Aug 2026: an industry exhibition exists but no rate is published. Prospectus on request."
+          "checked": "26 Aug 2026: a sponsorship and exhibition page describes stands, industry symposia and the opening reception. The prospectus is sent on request via a contact form."
         }
       ],
       "links": [
@@ -1056,7 +1046,8 @@
           },
           "rail": false,
           "url": "https://simulationcanada.ca/conferences-events/sim-expo/",
-          "gain": "Access and meetings. No platform and no speaking slot, so value depends entirely on who you line up first."
+          "gain": "Access and meetings. No platform and no speaking slot, so value depends entirely on who you line up first.",
+          "checked": "26 Aug 2026: a room block at the Halifax Marriott Harbourfront is named on the event page with an 8 Oct 2026 cut-off. The nightly rate is released with the booking link, not on the page."
         },
         {
           "mode": "exhibit",
@@ -1072,7 +1063,8 @@
             "source": "https://simulationcanada.ca/conferences-events/sim-expo/"
           },
           "url": "https://simulationcanada.ca/conferences-events/sim-expo/",
-          "gain": "Canadian sim-lab buyers in one room. Useful mainly as a distributor channel once direct selling has traction."
+          "gain": "Canadian sim-lab buyers in one room. Useful mainly as a distributor channel once direct selling has traction.",
+          "checked": "26 Aug 2026: the event page names an Exhibitor and Sponsor Prospectus and Gaumard sponsors the event, so an exhibition exists. Rates are inside the prospectus."
         }
       ],
       "links": [
@@ -1172,7 +1164,8 @@
             "source": "https://hlth.com/events/usa/sponsorship/opportunities/"
           },
           "url": "https://hlth.com/events/usa/sponsorship/opportunities/",
-          "gain": "Floor presence and demo time in front of the people who specify and buy training equipment. For a physical simulator this is the only route where they get their hands on it."
+          "gain": "Floor presence and demo time in front of the people who specify and buy training equipment. For a physical simulator this is the only route where they get their hands on it.",
+          "checked": "26 Aug 2026: about 950 exhibitors across named hubs including a Startups hub, and a Startup Pavilion pod is offered to start-ups. HLTH quotes on request via sales@hlth.com."
         },
         {
           "mode": "present",
@@ -1477,7 +1470,8 @@
             "source": "https://imsh2027.org/expo-hall"
           },
           "url": "https://imsh2027.org/expo-hall",
-          "gain": "The largest concentration of healthcare simulation buyers in the world, 140-plus exhibiting companies."
+          "gain": "The largest concentration of healthcare simulation buyers in the world, 140-plus exhibiting companies.",
+          "checked": "26 Aug 2026: priority point exhibit and sponsorship sales are open and a 2027 prospectus PDF is offered. Over 140 companies exhibit. Contact ofleenor@ssih.org. No rate on the public page."
         },
         {
           "mode": "present",
@@ -1798,23 +1792,6 @@
           "gain": "Stage time in front of investors and buyers, plus whatever the prize carries."
         },
         {
-          "mode": "exhibit",
-          "label": "Exhibit or sponsor",
-          "deadline": null,
-          "deadlineLabel": "2027 prospectus not yet issued",
-          "status": "unannounced",
-          "note": "Every congress of this size runs an industry exhibition. Rates are in the industry prospectus, which is sent on request rather than published. Ask NeoPed, though the site did not resolve on 26 Aug 2026.",
-          "cost": {
-            "amount": "Not published",
-            "detail": "Rates are in the industry prospectus, which is sent on request rather than published. Ask NeoPed, though the site did not resolve on 26 Aug 2026.",
-            "basis": "unknown",
-            "source": "https://neoped.eu"
-          },
-          "url": "https://neoped.eu",
-          "gain": "Floor presence and demo time in front of the people who specify and buy training equipment. For a physical simulator this is the only route where they get their hands on it.",
-          "checked": "26 Aug 2026: an industry exhibition exists but no rate is published. Prospectus on request."
-        },
-        {
           "mode": "attend",
           "label": "Attend",
           "deadline": null,
@@ -1841,13 +1818,16 @@
       "verified": "2026-08-26",
       "type": "conference",
       "absent": {
-        "present": "none"
+        "present": "none",
+        "exhibit": "none"
       },
       "absentSrc": {
-        "present": "https://neoped.eu"
+        "present": "https://neoped.eu",
+        "exhibit": "https://neoped.eu"
       },
       "absentWhy": {
-        "present": "An investment summit rather than a scientific congress. No abstract or speaker call is published, and the site did not resolve on 26 Aug 2026."
+        "present": "An investment summit rather than a scientific congress. No abstract or speaker call is published, and the site did not resolve on 26 Aug 2026.",
+        "exhibit": "No exhibition or sponsorship offer is published, and neoped.eu does not resolve in DNS, so nothing about this event could be verified at source."
       }
     },
     {
@@ -2083,16 +2063,16 @@
           "deadline": null,
           "deadlineLabel": "2027 prospectus not yet issued",
           "status": "unannounced",
-          "note": "Every congress of this size runs an industry exhibition. Rates are in the industry prospectus, which is sent on request rather than published. Ask IPEG via the society site.",
+          "note": "An exhibition area runs alongside the scientific sessions: 2026 Joint Congress registration explicitly included admission to it.",
           "cost": {
             "amount": "Not published",
-            "detail": "Rates are in the industry prospectus, which is sent on request rather than published. Ask IPEG via the society site.",
+            "detail": "The exhibition is confirmed to exist, the rate is not published. Ask IPEG via the society site.",
             "basis": "unknown",
-            "source": "https://www.ipeg.org/"
+            "source": "https://www.jointcongress.org/registration/"
           },
-          "url": "https://www.ipeg.org/",
+          "url": "https://www.jointcongress.org/registration/",
           "gain": "Floor presence and demo time in front of the people who specify and buy training equipment. For a physical simulator this is the only route where they get their hands on it.",
-          "checked": "26 Aug 2026: an industry exhibition exists but no rate is published. Prospectus on request."
+          "checked": "26 Aug 2026: the 2026 Joint Congress registration terms confirm an exhibition area. No 2027 rate published."
         }
       ],
       "links": [
@@ -2145,7 +2125,8 @@
             "source": "https://www.themedtechforum.eu/"
           },
           "url": "https://www.themedtechforum.eu/",
-          "gain": "Access and meetings. No platform and no speaking slot, so value depends entirely on who you line up first."
+          "gain": "Access and meetings. No platform and no speaking slot, so value depends entirely on who you line up first.",
+          "checked": "26 Aug 2026: confirmed for 10 to 11 May 2027 in Rome with a Registrations 2027 link in the navigation, but no rate card behind it yet. The 2026 early bird closed 20 Mar 2026."
         },
         {
           "mode": "exhibit",
@@ -2153,16 +2134,16 @@
           "deadline": null,
           "deadlineLabel": "2027 prospectus not yet issued",
           "status": "unannounced",
-          "note": "Every congress of this size runs an industry exhibition. Rates are in the industry prospectus, which is sent on request rather than published. Ask MedTech Europe.",
+          "note": "MedTech Europe runs premium sponsorships, exhibition booths and thematic session collaborations, and staffs a partnership manager to walk you through them.",
           "cost": {
             "amount": "Not published",
-            "detail": "Rates are in the industry prospectus, which is sent on request rather than published. Ask MedTech Europe.",
+            "detail": "The exhibition is confirmed to exist, the rate is not published. Ask MedTech Europe.",
             "basis": "unknown",
-            "source": "https://www.themedtechforum.eu/"
+            "source": "https://www.themedtechforum.eu/sponsors-exhibitors/partnership-manager"
           },
-          "url": "https://www.themedtechforum.eu/",
+          "url": "https://www.themedtechforum.eu/sponsors-exhibitors/partnership-manager",
           "gain": "Floor presence and demo time in front of the people who specify and buy training equipment. For a physical simulator this is the only route where they get their hands on it.",
-          "checked": "26 Aug 2026: an industry exhibition exists but no rate is published. Prospectus on request."
+          "checked": "26 Aug 2026: a sponsorship and partnership page exists naming exhibition booths and a partnership manager, but no rate card is published."
         }
       ],
       "links": [
@@ -2236,7 +2217,8 @@
             "basis": "unknown",
             "source": "https://apsapedsurg.org/continuing-education/events/annual-meeting/"
           },
-          "gain": "Floor presence and demo time in front of the people who specify and buy training equipment. For a physical simulator this is the only route where they get their hands on it."
+          "gain": "Floor presence and demo time in front of the people who specify and buy training equipment. For a physical simulator this is the only route where they get their hands on it.",
+          "checked": "26 Aug 2026: APSA runs an industry exhibition at the annual meeting. The 2027 meeting page carries no fee information and room reservations do not open until 2027."
         },
         {
           "mode": "attend",
@@ -2366,16 +2348,16 @@
           "deadline": null,
           "deadlineLabel": "2027 prospectus not yet issued",
           "status": "unannounced",
-          "note": "Every congress of this size runs an industry exhibition. Rates are in the industry prospectus, which is sent on request rather than published. Ask EUPSA via the association site.",
+          "note": "An exhibition area runs alongside the scientific sessions, confirmed in the 2026 Joint Congress terms.",
           "cost": {
             "amount": "Not published",
-            "detail": "Rates are in the industry prospectus, which is sent on request rather than published. Ask EUPSA via the association site.",
+            "detail": "The exhibition is confirmed to exist, the rate is not published. Ask EUPSA via the association site.",
             "basis": "unknown",
-            "source": "https://eupsa.info"
+            "source": "https://www.jointcongress.org/registration/"
           },
-          "url": "https://eupsa.info",
+          "url": "https://www.jointcongress.org/registration/",
           "gain": "Floor presence and demo time in front of the people who specify and buy training equipment. For a physical simulator this is the only route where they get their hands on it.",
-          "checked": "26 Aug 2026: an industry exhibition exists but no rate is published. Prospectus on request."
+          "checked": "26 Aug 2026: confirmed via the 2026 Joint Congress registration terms. 2027 host not announced."
         }
       ],
       "links": [
@@ -2424,7 +2406,8 @@
             "basis": "unknown",
             "source": "https://www.mcascientificevents.eu/espnic/registration/"
           },
-          "gain": "A named slot in the programme, and the clinical or academic credibility that comes with being selected rather than buying your way in."
+          "gain": "A named slot in the programme, and the clinical or academic credibility that comes with being selected rather than buying your way in.",
+          "checked": "26 Aug 2026: the congress site is live for 15 to 18 Jun 2027 in Budapest but the abstract call is not open. Registration info reads Coming soon."
         },
         {
           "mode": "attend",
@@ -2440,7 +2423,8 @@
             "source": "https://www.mcascientificevents.eu/espnic/registration/"
           },
           "url": "https://www.mcascientificevents.eu/espnic/registration/",
-          "gain": "Access and meetings. No platform and no speaking slot, so value depends entirely on who you line up first."
+          "gain": "Access and meetings. No platform and no speaking slot, so value depends entirely on who you line up first.",
+          "checked": "26 Aug 2026: registration info on the congress site reads Coming soon. Enquiries go to registration@espniccongress.eu."
         },
         {
           "mode": "exhibit",
@@ -2448,16 +2432,16 @@
           "deadline": null,
           "deadlineLabel": "2027 prospectus not yet issued",
           "status": "unannounced",
-          "note": "Every congress of this size runs an industry exhibition. Rates are in the industry prospectus, which is sent on request rather than published. Ask MCA Scientific Events, goli@mcascientificevents.eu or fundraising@mcascientificevents.eu.",
+          "note": "MCA Scientific Events handles industry for ESPNIC. Named contacts exist, which is further than most.",
           "cost": {
             "amount": "Not published",
-            "detail": "Rates are in the industry prospectus, which is sent on request rather than published. Ask MCA Scientific Events, goli@mcascientificevents.eu or fundraising@mcascientificevents.eu.",
+            "detail": "The exhibition is confirmed to exist, the rate is not published. Ask MCA Scientific Events, goli@mcascientificevents.eu or fundraising@mcascientificevents.eu.",
             "basis": "unknown",
             "source": "https://www.mcascientificevents.eu/espnic/"
           },
           "url": "https://www.mcascientificevents.eu/espnic/",
           "gain": "Floor presence and demo time in front of the people who specify and buy training equipment. For a physical simulator this is the only route where they get their hands on it.",
-          "checked": "26 Aug 2026: an industry exhibition exists but no rate is published. Prospectus on request."
+          "checked": "26 Aug 2026: MCA publishes sponsorship contacts, goli@mcascientificevents.eu and fundraising@mcascientificevents.eu, but no rate card."
         }
       ],
       "links": [
@@ -2506,7 +2490,8 @@
             "basis": "unknown",
             "source": "https://congress.baps.org.uk/"
           },
-          "gain": "A named slot in the programme, and the clinical or academic credibility that comes with being selected rather than buying your way in."
+          "gain": "A named slot in the programme, and the clinical or academic credibility that comes with being selected rather than buying your way in.",
+          "checked": "26 Aug 2026: the 2027 congress has no announced dates, host or calls. The 72nd congress ran 17 to 19 Jun 2026 at University Place, Manchester, and its registration is closed."
         },
         {
           "mode": "exhibit",
@@ -2514,16 +2499,16 @@
           "deadline": null,
           "deadlineLabel": "2027 prospectus not yet issued",
           "status": "unannounced",
-          "note": "Every congress of this size runs an industry exhibition. Rates are in the industry prospectus, which is sent on request rather than published. Ask the BAPS congress office.",
+          "note": "BAPS runs a trade exhibition alongside the congress. KARL STORZ and the Journal of Pediatric Surgery are regular sponsors, so the surgical device category is already present.",
           "cost": {
             "amount": "Not published",
-            "detail": "Rates are in the industry prospectus, which is sent on request rather than published. Ask the BAPS congress office.",
+            "detail": "The exhibition is confirmed to exist, the rate is not published. Ask the BAPS congress office.",
             "basis": "unknown",
-            "source": "https://congress.baps.org.uk/"
+            "source": "https://congress.baps.org.uk/about-us/sponsors"
           },
-          "url": "https://congress.baps.org.uk/",
+          "url": "https://congress.baps.org.uk/about-us/sponsors",
           "gain": "Floor presence and demo time in front of the people who specify and buy training equipment. For a physical simulator this is the only route where they get their hands on it.",
-          "checked": "26 Aug 2026: an industry exhibition exists but no rate is published. Prospectus on request."
+          "checked": "26 Aug 2026: the congress runs an Exhibitors and Sponsors page listing industry participants. No rate is published and the 2027 congress is not announced."
         },
         {
           "mode": "attend",
@@ -2692,7 +2677,8 @@
             "basis": "unknown",
             "source": "https://www.aap.org/en/pedialink/2026-pediatric-hospital-medicine-conference/"
           },
-          "gain": "A named slot in the programme, and the clinical or academic credibility that comes with being selected rather than buying your way in."
+          "gain": "A named slot in the programme, and the clinical or academic credibility that comes with being selected rather than buying your way in.",
+          "checked": "26 Aug 2026: PHM 2027 is confirmed for 29 Jul to 1 Aug 2027 in New Orleans but no call is posted. For reference PHM 2026 early-bird registration closed 7 Jul 2026."
         },
         {
           "mode": "attend",
@@ -2707,7 +2693,8 @@
             "basis": "unknown",
             "source": "https://www.aap.org/en/pedialink/2026-pediatric-hospital-medicine-conference/"
           },
-          "gain": "Access and meetings. No platform and no speaking slot, so value depends entirely on who you line up first."
+          "gain": "Access and meetings. No platform and no speaking slot, so value depends entirely on who you line up first.",
+          "checked": "26 Aug 2026: 2027 registration is not open. PHM 2026 ran 6 to 9 Aug 2026 in Kansas City with a 7 Jul 2026 early-bird cut-off."
         },
         {
           "mode": "exhibit",
@@ -2717,14 +2704,14 @@
           "status": "unannounced",
           "note": "Every congress of this size runs an industry exhibition. Rates are in the industry prospectus, which is sent on request rather than published. Ask the Academic Pediatric Association.",
           "cost": {
-            "amount": "Not published",
-            "detail": "Rates are in the industry prospectus, which is sent on request rather than published. Ask the Academic Pediatric Association.",
-            "basis": "unknown",
-            "source": "https://www.academicpeds.org/events/phmmeeting/"
+            "amount": "USD 3,000",
+            "detail": "PHM 2024 prospectus rate for an exhibit booth; 2027 not yet priced. Sponsorship at USD 6,000 or more includes complimentary exhibit space plus a logo and link on the meeting site.",
+            "basis": "prior-year",
+            "source": "https://www.academicpeds.org/wp-content/uploads/2024/06/PHM2024-Exhibitor-Sponsor-Prospectus.pdf"
           },
-          "url": "https://www.academicpeds.org/events/phmmeeting/",
+          "url": "https://www.academicpeds.org/wp-content/uploads/2024/06/PHM2024-Exhibitor-Sponsor-Prospectus.pdf",
           "gain": "Floor presence and demo time in front of the people who specify and buy training equipment. For a physical simulator this is the only route where they get their hands on it.",
-          "checked": "26 Aug 2026: an industry exhibition exists but no rate is published. Prospectus on request."
+          "checked": "26 Aug 2026: booth fee and the sponsorship threshold read from the PHM 2024 exhibitor and sponsor prospectus. Enquiries go to info@academicpeds.org."
         }
       ],
       "links": [
@@ -2885,7 +2872,8 @@
             "source": "https://www.mcascientificevents.eu/jens/registration/"
           },
           "url": "https://www.mcascientificevents.eu/jens/registration/",
-          "gain": "A named slot in the programme, and the clinical or academic credibility that comes with being selected rather than buying your way in."
+          "gain": "A named slot in the programme, and the clinical or academic credibility that comes with being selected rather than buying your way in.",
+          "checked": "26 Aug 2026: the registration page lists a pre-congress course and a networking dinner as add-ons, both marked Available soon."
         },
         {
           "mode": "exhibit",
@@ -2893,16 +2881,16 @@
           "deadline": null,
           "deadlineLabel": "2027 prospectus not yet issued",
           "status": "unannounced",
-          "note": "Every congress of this size runs an industry exhibition. Rates are in the industry prospectus, which is sent on request rather than published. Ask MCA Scientific Events, fundraising@mcascientificevents.eu.",
+          "note": "MCA runs an industry area at jENS. The 2023 edition published a dedicated Area for Sponsors, so the structure is established.",
           "cost": {
             "amount": "Not published",
-            "detail": "Rates are in the industry prospectus, which is sent on request rather than published. Ask MCA Scientific Events, fundraising@mcascientificevents.eu.",
+            "detail": "The exhibition is confirmed to exist, the rate is not published. Ask MCA Scientific Events, fundraising@mcascientificevents.eu.",
             "basis": "unknown",
             "source": "https://www.mcascientificevents.eu/jens/"
           },
           "url": "https://www.mcascientificevents.eu/jens/",
           "gain": "Floor presence and demo time in front of the people who specify and buy training equipment. For a physical simulator this is the only route where they get their hands on it.",
-          "checked": "26 Aug 2026: an industry exhibition exists but no rate is published. Prospectus on request."
+          "checked": "26 Aug 2026: prior jENS editions ran a sponsors and exhibition area under MCA. Nothing priced for 2027 yet."
         }
       ],
       "links": [
@@ -3020,7 +3008,8 @@
             "source": "https://www.sages2027.org/"
           },
           "url": "https://www.sages.org/meetings/etabstracts/",
-          "gain": "The rare surgical society slot that explicitly welcomes industry engineers and inventors presenting their own work, with no requirement for formal experimental data yet."
+          "gain": "The rare surgical society slot that explicitly welcomes industry engineers and inventors presenting their own work, with no requirement for formal experimental data yet.",
+          "checked": "26 Aug 2026: the SAGES Emerging Technology page states the window runs 15 Sep to 4 Nov 2026 and is open to industry engineers and inventors. 2027 registration rates are not posted."
         },
         {
           "mode": "present",
@@ -3036,7 +3025,8 @@
             "source": "https://www.sages2027.org/"
           },
           "url": "https://www.sages2027.org/",
-          "gain": "SAGES is built around its postgraduate course. A hands-on slot here reaches MIS surgeons in teaching mode."
+          "gain": "SAGES is built around its postgraduate course. A hands-on slot here reaches MIS surgeons in teaching mode.",
+          "checked": "26 Aug 2026: SAGES is built around its Annual Postgraduate Course and runs ticketed hands-on sessions. The 2027 line-up and fees are not posted. Venue is the Rio Hotel, Las Vegas."
         },
         {
           "mode": "exhibit",
@@ -3052,7 +3042,8 @@
             "source": "https://www.sages.org/industry/exhibits/"
           },
           "url": "https://www.sages.org/industry/exhibits/",
-          "gain": "Floor presence and demo time in front of the people who specify and buy training equipment. For a physical simulator this is the only route where they get their hands on it."
+          "gain": "Floor presence and demo time in front of the people who specify and buy training equipment. For a physical simulator this is the only route where they get their hands on it.",
+          "checked": "26 Aug 2026: SAGES sells exhibit space around the annual meeting and publishes an exhibits page. The 2027 prospectus is not out. Contact Shelley Ginsberg, +1 310 437 0544 x111."
         },
         {
           "mode": "attend",
@@ -3127,7 +3118,8 @@
             "detail": "Not a prize competition. The return is stage time in front of an investor-dense room, 1:1 partnering meetings and the Funding Fast Track.",
             "source": "https://www.lsiusasummit.com/"
           },
-          "gain": "Stage time in front of investors and buyers, plus whatever the prize carries."
+          "gain": "Stage time in front of investors and buyers, plus whatever the prize carries.",
+          "checked": "26 Aug 2026: the summit page states registration and applications for LSI USA '27 are open, with on-stage company presentations and a Funding Fast Track. No deadline and no fee published."
         },
         {
           "mode": "attend",
@@ -3143,7 +3135,8 @@
             "source": "https://www.lsiusasummit.com/"
           },
           "url": "https://www.lsiusasummit.com/",
-          "gain": "Access and meetings. No platform and no speaking slot, so value depends entirely on who you line up first."
+          "gain": "Access and meetings. No platform and no speaking slot, so value depends entirely on who you line up first.",
+          "checked": "26 Aug 2026: registration is described as open but delegate pricing sits behind the portal. LSI quotes on request, +1 714 847 3540."
         },
         {
           "mode": "present",
@@ -3159,7 +3152,8 @@
             "source": "https://www.lsiusasummit.com/apply-to-speak"
           },
           "url": "https://www.lsiusasummit.com/apply-to-speak",
-          "gain": "A named slot in the programme, and the clinical or academic credibility that comes with being selected rather than buying your way in."
+          "gain": "A named slot in the programme, and the clinical or academic credibility that comes with being selected rather than buying your way in.",
+          "checked": "26 Aug 2026: an Apply to Speak page is live offering panel slots and startup presentations, with self-nomination allowed. No deadline or fee stated."
         },
         {
           "mode": "exhibit",
@@ -3167,16 +3161,16 @@
           "deadline": null,
           "deadlineLabel": "2027 prospectus not yet issued",
           "status": "unannounced",
-          "note": "Every congress of this size runs an industry exhibition. Rates are in the industry prospectus, which is sent on request rather than published. Ask LSI, +1 714 847 3540.",
+          "note": "LSI sells exhibition space for private demos and partnering alongside the stage programme.",
           "cost": {
             "amount": "Not published",
-            "detail": "Rates are in the industry prospectus, which is sent on request rather than published. Ask LSI, +1 714 847 3540.",
+            "detail": "The exhibition is confirmed to exist, the rate is not published. Ask LSI, +1 714 847 3540.",
             "basis": "unknown",
             "source": "https://www.lsiusasummit.com/"
           },
           "url": "https://www.lsiusasummit.com/",
           "gain": "Floor presence and demo time in front of the people who specify and buy training equipment. For a physical simulator this is the only route where they get their hands on it.",
-          "checked": "26 Aug 2026: an industry exhibition exists but no rate is published. Prospectus on request."
+          "checked": "26 Aug 2026: the summit page names exhibition space for private demos. No rate published; LSI quotes on request."
         }
       ],
       "links": [
@@ -3220,7 +3214,8 @@
             "source": "https://sesamsociety.org/events/"
           },
           "url": "https://sesamsociety.org/events/",
-          "gain": "A named slot in the programme, and the clinical or academic credibility that comes with being selected rather than buying your way in."
+          "gain": "A named slot in the programme, and the clinical or academic credibility that comes with being selected rather than buying your way in.",
+          "checked": "26 Aug 2026: SESAM runs a standard abstract call each year. Nothing is posted for 2027; the 31st meeting ran 17 to 19 Jun 2026 in Lyon."
         },
         {
           "mode": "attend",
@@ -3236,7 +3231,8 @@
             "source": "https://sesamsociety.org/events/"
           },
           "url": "https://sesamsociety.org/events/",
-          "gain": "Access and meetings. No platform and no speaking slot, so value depends entirely on who you line up first."
+          "gain": "Access and meetings. No platform and no speaking slot, so value depends entirely on who you line up first.",
+          "checked": "26 Aug 2026: 2027 dates and host are not announced, so no registration rates exist yet."
         },
         {
           "mode": "exhibit",
@@ -3244,16 +3240,16 @@
           "deadline": null,
           "deadlineLabel": "2027 prospectus not yet issued",
           "status": "unannounced",
-          "note": "Every congress of this size runs an industry exhibition. Rates are in the industry prospectus, which is sent on request rather than published. Ask SESAM via the society site.",
+          "note": "The European simulation exhibition. Laerdal, Elevate Healthcare and Surgical Science all take space here, which tells you both that the audience buys and that the competition shows up.",
           "cost": {
-            "amount": "Not published",
-            "detail": "Rates are in the industry prospectus, which is sent on request rather than published. Ask SESAM via the society site.",
-            "basis": "unknown",
-            "source": "https://sesamsociety.org/events/"
+            "amount": "EUR 3,500",
+            "detail": "SESAM 2026 Lyon rate, excluding VAT, for the smallest shell scheme at 2x2 sqm; 3x2 sqm was EUR 5,250. Includes shell scheme stand, nameboard, 1.5kW power, spotlight, table, two chairs and two exhibition passes. Partner tiers ran Silver EUR 11,000 at 3x3 sqm, Gold EUR 18,000 at 4x4 sqm and Platinum EUR 25,000 at 5x5 sqm with extra space at EUR 500/sqm. SESAM corporate membership is EUR 6,500. 2027 not yet priced.",
+            "basis": "prior-year",
+            "source": "https://www.sesam-web.org/media/documents/sesam-2026-sponsorship-and-exhibition-prospectus.pdf"
           },
-          "url": "https://sesamsociety.org/events/",
+          "url": "https://www.sesam-web.org/media/documents/sesam-2026-sponsorship-and-exhibition-prospectus.pdf",
           "gain": "Floor presence and demo time in front of the people who specify and buy training equipment. For a physical simulator this is the only route where they get their hands on it.",
-          "checked": "26 Aug 2026: an industry exhibition exists but no rate is published. Prospectus on request."
+          "checked": "26 Aug 2026: prices read out of the SESAM 2026 sponsorship and exhibition prospectus PDF. Laerdal, Elevate Healthcare, Surgical Science, Anatomage and 3B Scientific all exhibited, so the simulator category is well represented."
         }
       ],
       "absent": {
@@ -3471,45 +3467,55 @@
         {
           "mode": "attend",
           "label": "Attend",
-          "deadline": null,
-          "deadlineLabel": "Registration open via Eventbrite",
-          "status": "rolling",
+          "deadline": "2026-09-18",
+          "deadlineLabel": "Free registration, open until 18 Sep 2026",
+          "status": "open",
           "note": "",
           "cost": {
-            "amount": "Not published",
-            "detail": "Registration runs through Eventbrite; no price is stated on the i4KIDS event page.",
-            "basis": "unknown",
-            "source": "https://www.innovation4kids.org/en/pid-2026-helsinki/"
+            "amount": "Free",
+            "detail": "Free ticket on Eventbrite. Registration opened 11 Feb 2026 and closes on the morning of the event, 18 Sep 2026. Travel and accommodation are the only real cost.",
+            "basis": "free",
+            "source": "https://www.eventbrite.es/e/i4kids-paediatric-innovation-day-2026-tickets-1982871185092"
           },
-          "url": "https://www.innovation4kids.org/en/pid-2026-helsinki/",
-          "checked": "26 Aug 2026, from the Eventbrite listing: Friday 18 September 2026, 09:00 to 16:00, Aalto University Toolo Banquet Hall, Runeberginkatu 14-16, Helsinki. The listing shows no price, so registration may be free or priced only at checkout.",
-          "gain": "Access and meetings. No platform and no speaking slot, so value depends entirely on who you line up first."
+          "url": "https://www.eventbrite.es/e/i4kids-paediatric-innovation-day-2026-tickets-1982871185092",
+          "checked": "26 Aug 2026, read out of the Eventbrite listing itself rather than the organiser page: the event's structured data gives lowPrice 0.0 and highPrice 0.0, availability InStock, valid from 11 Feb 2026 to 18 Sep 2026. The page shows Free next to a Reserve a spot button.",
+          "gain": "A free day in front of the European paediatric innovation network, in the room with the people who run Impact4Kids. The cheapest access on the entire board."
         },
         {
-          "mode": "exhibit",
-          "label": "Sponsor the day",
+          "mode": "pitch",
+          "label": "Paediatric Hospital Innovation Challenge",
           "deadline": null,
-          "deadlineLabel": "Open, contact the organiser",
-          "status": "rolling",
-          "note": "i4KIDS invites companies to sponsor. For a company trying to get known inside the i4KIDS network before applying to Impact4Kids, this is the cheaper door.",
+          "deadlineLabel": "2026 round closed, five projects already selected",
+          "status": "closed",
+          "note": "Read the eligibility before planning for 2027. The call goes to paediatric hospitals across Europe and the UK for solutions developed inside hospital settings, and the five selected projects are all hospital teams: Karolinska, Great Ormond Street, Children's Memorial Health Institute Warsaw, Hospital Pedro Hispano and Children's Clinical University Hospital Riga. A company entering alone may not qualify; a joint entry with a partner hospital probably would.",
           "cost": {
-            "amount": "Not published",
-            "detail": "Sponsorship is quoted on request via the i4KIDS contact form.",
-            "basis": "unknown",
-            "source": "https://www.innovation4kids.org/en/pid-2026-helsinki/"
+            "amount": "Free to enter",
+            "detail": "No entry fee published. Selected projects present at the Innovation Day.",
+            "basis": "free",
+            "source": "https://www.innovation4kids.org/en/news/"
           },
-          "url": "https://www.innovation4kids.org/en/pid-2026-helsinki/",
-          "checked": "26 Aug 2026: the page carries a Become a sponsor invitation with no published rate.",
-          "gain": "The cheap door into the i4KIDS network, which is the network that runs Impact4Kids."
+          "url": "https://www.innovation4kids.org/en/news/",
+          "gain": "International visibility and a presentation slot at Paediatric Innovation Day, in front of the European paediatric innovation ecosystem.",
+          "prize": {
+            "amount": "No cash prize",
+            "detail": "The award is visibility and a stage at Paediatric Innovation Day, not money.",
+            "source": "https://www.innovation4kids.org/en/news/"
+          },
+          "checked": "26 Aug 2026: the 2026 challenge is closed and the five selected projects are already published. The call itself is addressed to paediatric hospitals, not to companies.",
+          "expect": {
+            "when": "Early 2027",
+            "watch": "2026-12-01",
+            "basis": "The 2026 round ran early enough to have its five winners announced well before the September event. Expect the 2027 call to open around the turn of the year. Line up a hospital partner first, since the call is written for hospital teams."
+          }
         }
       ],
       "absent": {
-        "pitch": "none",
-        "present": "none"
+        "present": "none",
+        "exhibit": "none"
       },
       "absentSrc": {
-        "pitch": "https://www.innovation4kids.org/en/pid-2026-helsinki/",
-        "present": "https://www.innovation4kids.org/en/pid-2026-helsinki/"
+        "present": "https://www.innovation4kids.org/en/pid-2026-helsinki/",
+        "exhibit": "https://www.innovation4kids.org/en/pid-2026-helsinki/"
       },
       "links": [
         {
@@ -3518,7 +3524,10 @@
         }
       ],
       "tracker": "",
-      "verified": "2026-08-26"
+      "verified": "2026-08-26",
+      "absentWhy": {
+        "exhibit": "The organiser page carries a general Become a sponsor invitation, but no exhibition, no packages and no rates are published. An open-ended invitation to email someone is not a route you can plan or budget against."
+      }
     }
   ]
 }

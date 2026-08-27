@@ -102,6 +102,13 @@ for e in events:
                 W(w, "cost basis is 'unknown' but the detail does not say where the figure "
                      "lives or who to ask")
 
+        # An unpriced route must still prove the route EXISTS. Otherwise a generic
+        # "contact us" invitation renders identically to a real offer with a hidden
+        # price, which is how a fabricated sponsorship row shipped once.
+        if (c or {}).get("basis") == "unknown" and not p.get("checked"):
+            E(w, "cost is 'unknown' with no `checked` note. Evidence that this route "
+                 "actually exists, or delete it and set absent[mode]='none'.")
+
         if p.get("mode") == "pitch" and not p.get("prize"):
             W(w, "pitch route with no prize recorded. Cost alone is half the decision: "
                  "say what can be won, even if that is 'Not published'.")
@@ -121,6 +128,8 @@ for e in events:
         if kind not in ABSENT: E(eid, f"absent[{m}] is {kind!r}, expected one of {sorted(ABSENT)}")
         if kind == "none" and not e.get("absentSrc", {}).get(m):
             W(eid, f"absent[{m}] claims 'none found' with no absentSrc link proving what was checked")
+        if kind == "none" and not e.get("absentWhy", {}).get(m):
+            W(eid, f"absent[{m}] claims 'none found' with no absentWhy explaining what was looked for")
         if any(p["mode"] == m for p in e.get("participate", [])):
             E(eid, f"absent[{m}] is set but a {m} route also exists")
 

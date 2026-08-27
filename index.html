@@ -304,6 +304,10 @@ tr.detail.hidden{display:none}
   word-break:break-word}
 .nxt b{display:block;font-size:8.5px;letter-spacing:.09em;text-transform:uppercase;color:#B49A63;
   font-weight:500;margin-bottom:1px}
+.dt-none{margin-top:11px;background:#F1F5F3;border-left:3px solid var(--line);padding:9px 12px;
+  border-radius:0 3px 3px 0;font-size:11.5px;color:#4A5F61;line-height:1.5}
+.dt-none>div+div{margin-top:6px;padding-top:6px;border-top:1px dotted var(--line-soft)}
+.dt-none a{font-size:10.5px;font-family:var(--mono);margin-left:5px}
 .dt-foot{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:13px;font-size:12px}
 .dt-foot .verified{margin:0}
 
@@ -763,9 +767,11 @@ function absentHTML(e, mode){
   if(kind === "n/a") return `<span class="absent na"><b>Not applicable</b></span>`;
   if(kind === "none"){
     const src = (e.absentSrc || {})[mode] || (e.links[0] && e.links[0].url) || "";
+    const why = (e.absentWhy || {})[mode] || "";
     const body = `<b>${NONE_LABEL[mode]}</b>checked ${fmt(e.verified, true)}`;
-    return src ? `<a class="absent" href="${esc(src)}" target="_blank" rel="noopener">${body}</a>`
-               : `<span class="absent">${body}</span>`;
+    return src ? `<a class="absent" href="${esc(src)}" target="_blank" rel="noopener"
+                    title="${esc(why)}">${body}</a>`
+               : `<span class="absent" title="${esc(why)}">${body}</span>`;
   }
   return `<span class="absent"><b>Not checked</b></span>`;
 }
@@ -822,6 +828,11 @@ function detailHTML(e){
     <p class="dt-sum">${esc(e.summary)}</p>
     <p class="dt-aud">Who it is for: ${esc(e.audience)}</p>
     <div class="dt-ways">${ways}</div>
+    ${Object.keys(e.absentWhy || {}).length ? `<div class="dt-none">
+      ${Object.entries(e.absentWhy).map(([m, why]) =>
+        `<div><span class="dt-cap">${NONE_LABEL[m] || m}</span>${esc(why)}
+         ${(e.absentSrc||{})[m] ? `<a href="${esc(e.absentSrc[m])}" target="_blank" rel="noopener">what was checked</a>` : ""}</div>`).join("")}
+    </div>` : ""}
     <div class="dt-foot">
       <div class="links">${e.links.map(l => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a>`).join("")}</div>
       ${e.verified ? `<div class="verified">Checked ${fmt(e.verified, true)}</div>` : ""}

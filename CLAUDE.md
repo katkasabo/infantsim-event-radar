@@ -160,6 +160,33 @@ until the answer looks nicer.
 `closed` costs -6, but a closed route that records an `expect` window claws +5 back,
 because a deadline we missed and can predict is worth more than one we cannot.
 
+### A route must be evidenced, not inferred
+
+An unpriced route and a route that does not exist look identical on the page, so
+the difference has to live in the data. Every route whose `cost.basis` is
+`unknown` must carry a `checked` note evidencing that **the route itself exists** —
+an exhibitor prospectus, a named sponsorship contact, an exhibitor count, a
+registration link. "This kind of congress usually has an exhibition" is not
+evidence, and the validator now rejects it.
+
+Where there is no published offer, delete the route and set `absent[mode]` to
+`"none"`, with `absentSrc[mode]` linking to what was checked and `absentWhy[mode]`
+saying what was looked for. Both render on the page.
+
+This rule exists because a "Sponsor the day" row was invented for the Helsinki
+event off a generic "Become a sponsor" invitation, and then displayed as a live
+rolling route with a hidden price. An open-ended invitation to email someone is
+not a route you can plan or budget against.
+
+### Prices hide one click inside the booking flow
+
+If registration is open, the rates are usually reachable, just not on the page you
+land on. Two worked examples, both of which read "not published" until someone
+pushed further: MEDICA's visitor prices sit in the Messe Duesseldorf shop
+(EUR 50 a day, EUR 150 for the four days), and the Helsinki event's free ticket is
+only visible in the Eventbrite listing's structured data. Fetching the marketing
+page and recording "not published" is the failure mode. Open the shop.
+
 ### One row per named call
 
 If an organiser publishes several distinct calls, each gets its own route with its
