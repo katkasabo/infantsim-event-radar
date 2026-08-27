@@ -177,10 +177,21 @@ table.sheet{border-collapse:separate;border-spacing:0;table-layout:fixed;width:1
 }
 .ty-accelerator{color:#7A4E12;border-color:#DBC08A;background:#FBF4E7}
 .ty-competition{color:#1F5F52;border-color:#A8CFC4;background:#EDF6F3}
-.trk{display:flex;align-items:center;gap:4px;cursor:pointer;flex:0 0 auto;margin-left:auto;
-  font-family:var(--mono);font-size:8.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.trk input{margin:0;width:12px;height:12px;accent-color:var(--teal);cursor:pointer}
-.trk:hover{color:var(--teal)}
+.dec{display:inline-flex;flex:0 0 auto;margin-left:auto;border:1px solid var(--line);border-radius:3px;
+  overflow:hidden;background:#fff}
+.dc{
+  all:unset;cursor:pointer;font-family:var(--mono);font-size:8.5px;letter-spacing:.06em;text-transform:uppercase;
+  padding:3px 6px;color:var(--muted);text-align:center;
+}
+.dc + .dc{border-left:1px solid var(--line)}
+.dc:hover{background:#EDF4F3;color:var(--ink)}
+.dc-yes.on{background:var(--teal);color:#fff}
+.dc-maybe.on{background:var(--amber);color:#fff}
+.dc-no.on{background:#8A9A9B;color:#fff}
+.srow.d-no>td{opacity:.5}
+.srow.d-no:hover>td{opacity:1}
+.srow.d-yes>td:first-child{box-shadow:inset 3px 0 0 var(--teal)}
+.srow.d-maybe>td:first-child{box-shadow:inset 3px 0 0 var(--amber)}
 .tab-n{display:inline-block;background:var(--teal-2);color:#fff;border-radius:10px;padding:0 5px;
   font-size:10px;margin-left:4px;min-width:16px;text-align:center}
 .tab-n:empty{display:none}
@@ -202,6 +213,13 @@ table.sheet{border-collapse:separate;border-spacing:0;table-layout:fixed;width:1
   box-shadow:var(--shadow);padding:14px 16px;margin-bottom:10px}
 .plan-ev-h{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
 .plan-ev-name{font-family:var(--display);font-weight:600;font-size:15px;line-height:1.25}
+.pe-tag{font-family:var(--mono);font-size:8.5px;letter-spacing:.09em;text-transform:uppercase;
+  padding:2px 6px;border-radius:2px;margin-right:7px;vertical-align:2px}
+.pe-tag-yes{background:var(--teal);color:#fff}
+.pe-tag-maybe{background:var(--amber);color:#fff}
+.plan-ev.pe-maybe{border-left:3px solid var(--amber)}
+.plan-ev.pe-yes{border-left:3px solid var(--teal)}
+.tot-cur em{display:block;font-family:var(--mono);font-size:10.5px;font-style:normal;color:#E0B77E;margin-top:2px}
 .plan-ev-sub{font-size:12px;color:var(--muted);margin-top:2px}
 .untrack{background:none;border:0;color:#B6C4C3;font-size:17px;cursor:pointer;line-height:1;padding:0 2px}
 .untrack:hover{color:var(--alert)}
@@ -547,9 +565,11 @@ tr.detail.hidden{display:none}
   <div id="view-plan" class="hidden">
     <div class="plan-head">
       <h2>InfantSim's next 12+ months</h2>
-      <p>Tick <b>Track</b> on any row in the table and it lands here. Then tick the individual routes you actually
-         intend to do, and the cost adds up. Nothing is converted between currencies: rates move, and a made-up
-         exchange rate in a budget is worse than three honest subtotals.</p>
+      <p>Mark an event <b>Yes</b> or <b>Maybe</b> in the table and it lands here in date order. A <b>No</b> stays
+         out but is remembered, so the same event does not get re-argued every week. Then tick the individual
+         routes you actually intend to do, and the cost adds up. Yes and Maybe are totalled separately: one is a
+         commitment, the other is a ceiling. Nothing is converted between currencies, because a made-up exchange
+         rate in a budget is worse than honest subtotals.</p>
     </div>
     <div id="planTotals"></div>
     <div id="planBody"></div>
@@ -676,7 +696,8 @@ const state = {view:"table", sort:"date", tags:new Set(), modes:new Set(), types
    to put them; they follow the device, not the person. `priority` in events.json
    is the shipped baseline and starring layers on top. */
 const STAR_KEY = "radar.starred.v1";
-const TRACK_KEY = "radar.tracked.v1";
+const TRACK_KEY = "radar.tracked.v1";      // legacy, migrated on first load
+const DEC_KEY = "radar.decision.v1";
 const BUDGET_KEY = "radar.budget.v1";
 function loadSet(key){
   try { return new Set(JSON.parse(localStorage.getItem(key) || "[]")); }
@@ -685,7 +706,32 @@ function loadSet(key){
 function saveSet(key, s){
   try { localStorage.setItem(key, JSON.stringify([...s])); } catch(err){}
 }
-function tracked(){ return loadSet(TRACK_KEY); }
+/* Preliminary decision per event: "yes" | "maybe" | "no", or absent for undecided.
+   A map rather than a set, because "no" is a decision worth keeping: it stops the
+   same event being re-litigated every week. */
+function decisions(){
+  try {
+    const raw = JSON.parse(localStorage.getItem(DEC_KEY) || "null");
+    if(raw && typeof raw === "object") return raw;
+  } catch(err){}
+  // one-time migration: anything previously ticked as Track becomes a Yes
+  const legacy = loadSet(TRACK_KEY);
+  const seed = {};
+  legacy.forEach(id => seed[id] = "yes");
+  if(legacy.size) saveDecisions(seed);
+  return seed;
+}
+function saveDecisions(m){
+  try { localStorage.setItem(DEC_KEY, JSON.stringify(m)); } catch(err){}
+}
+function decisionOf(id){ return decisions()[id] || ""; }
+function setDecision(id, v){
+  const m = decisions();
+  if(m[id] === v) delete m[id]; else m[id] = v;   // clicking the active one clears it
+  saveDecisions(m);
+  return m[id] || "";
+}
+function inPlan(e){ return ["yes","maybe"].includes(decisionOf(e.id)); }
 function budget(){ return loadSet(BUDGET_KEY); }
 function rkey(e, p){ return e.id + "||" + p.label; }
 function starred(){
@@ -842,16 +888,18 @@ function detailHTML(e){
 function sheetRowHTML(e){
   const city = (e.where || "").split(",")[0].trim();
   const star = starred().has(e.id);
-  const trk = tracked().has(e.id);
+  const dec = decisionOf(e.id);
   const fs = eventScore(e);
-  return `<tr class="srow${isPriority(e) ? " prio" : ""}" data-row="${e.id}">
+  return `<tr class="srow${isPriority(e) ? " prio" : ""}${dec ? " d-" + dec : ""}" data-row="${e.id}">
     <td class="c-ev">
       <div class="ev-top">
         <button class="star${star ? " on" : ""}" data-star="${e.id}"
           title="${star ? "Starred" : "Star as priority"}" aria-pressed="${star}">${star ? "\u2605" : "\u2606"}</button>
-        <label class="trk" title="Track this for the plan">
-          <input type="checkbox" data-track="${e.id}"${trk ? " checked" : ""}><span>Track</span>
-        </label>
+        <span class="dec" role="group" aria-label="Preliminary decision">
+          ${["yes","maybe","no"].map(v =>
+            `<button class="dc dc-${v}${dec === v ? " on" : ""}" data-dec="${e.id}" data-v="${v}"
+               aria-pressed="${dec === v}" title="Preliminary decision: ${v}">${v}</button>`).join("")}
+        </span>
         <button class="ev-btn" data-toggle="${e.id}" aria-expanded="false">
           <span class="caret">&#9656;</span>${esc(e.name)}
         </button>
@@ -871,26 +919,27 @@ function sheetRowHTML(e){
   </tr>` + detailHTML(e);
 }
 function bindSheet(){
-  document.querySelectorAll("[data-track]").forEach(cb => cb.addEventListener("change", ev => {
+  document.querySelectorAll("[data-dec]").forEach(btn => btn.addEventListener("click", ev => {
     ev.stopPropagation();
-    const t = tracked(), id = cb.dataset.track;
-    if(cb.checked){
-      t.add(id);
-      // start the budget off with the cheapest priced way of simply being there
-      const e = DATA.events.find(x => x.id === id);
-      const cands = e.participate.filter(p => p.mode === "attend" && p.cost && typeof p.cost.value === "number");
-      if(cands.length){
-        const cheapest = cands.reduce((a, b) => a.cost.value <= b.cost.value ? a : b);
-        const b = budget(); b.add(rkey(e, cheapest)); saveSet(BUDGET_KEY, b);
+    const id = btn.dataset.dec;
+    const now = setDecision(id, btn.dataset.v);
+    const e = DATA.events.find(x => x.id === id);
+    if(["yes","maybe"].includes(now)){
+      // seed the budget with the cheapest priced way of simply being there
+      const b = budget();
+      if(![...b].some(k => k.startsWith(id + "||"))){
+        const cands = e.participate.filter(p => p.mode === "attend" && p.cost && typeof p.cost.value === "number");
+        if(cands.length){
+          const cheapest = cands.reduce((a, c) => a.cost.value <= c.cost.value ? a : c);
+          b.add(rkey(e, cheapest)); saveSet(BUDGET_KEY, b);
+        }
       }
     } else {
-      t.delete(id);
       const b = budget();
       [...b].filter(k => k.startsWith(id + "||")).forEach(k => b.delete(k));
       saveSet(BUDGET_KEY, b);
     }
-    saveSet(TRACK_KEY, t);
-    renderPlan();
+    render();
   }));
   document.querySelectorAll("[data-star]").forEach(b => b.addEventListener("click", ev => {
     ev.stopPropagation();
@@ -960,8 +1009,8 @@ function timelineHTML(list){
 function money(n){ return n.toLocaleString("en-GB", {maximumFractionDigits:0}); }
 
 function renderPlan(){
-  const t = tracked(), b = budget();
-  const list = DATA.events.filter(e => t.has(e.id))
+  const dm = decisions(), b = budget();
+  const list = DATA.events.filter(inPlan)
                           .sort((a, c) => (a.start || "").localeCompare(c.start || ""));
   document.getElementById("tabPlanN").textContent = list.length ? list.length : "";
 
@@ -969,32 +1018,43 @@ function renderPlan(){
   const totals = document.getElementById("planTotals");
   if(!list.length){
     totals.innerHTML = "";
-    body.innerHTML = `<div class="empty-state"><strong>Nothing tracked yet</strong>
-      Tick Track on any row in the table and it shows up here, in date order, with the costs added up.</div>`;
+    body.innerHTML = `<div class="empty-state"><strong>Nothing decided yet</strong>
+      Mark an event Yes or Maybe in the table and it shows up here, in date order, with the costs added up.
+      A No stays out of the plan but is remembered, so it does not get re-argued every week.</div>`;
     return;
   }
 
-  const sums = {}; let picked = 0, unpriced = 0, approx = false;
-  list.forEach(e => e.participate.forEach(p => {
-    if(!b.has(rkey(e, p))) return;
-    picked++;
-    const c = p.cost || {};
-    if(typeof c.value !== "number"){ unpriced++; return; }
-    if(c.value === 0) return;
-    if(c.valueApprox) approx = true;
-    sums[c.currency] = (sums[c.currency] || 0) + c.value;
-  }));
+  // Yes and Maybe are budgeted separately: one is a commitment, the other is a ceiling.
+  const sums = {yes:{}, maybe:{}};
+  let picked = 0, unpriced = 0, approx = false;
+  list.forEach(e => {
+    const d = dm[e.id];
+    e.participate.forEach(p => {
+      if(!b.has(rkey(e, p))) return;
+      picked++;
+      const c = p.cost || {};
+      if(typeof c.value !== "number"){ unpriced++; return; }
+      if(c.value === 0) return;
+      if(c.valueApprox) approx = true;
+      sums[d][c.currency] = (sums[d][c.currency] || 0) + c.value;
+    });
+  });
+  const allCur = [...new Set([...Object.keys(sums.yes), ...Object.keys(sums.maybe)])].sort();
+  const nYes = list.filter(e => dm[e.id] === "yes").length;
+  const nMaybe = list.length - nYes;
 
-  const cur = Object.keys(sums).sort();
   totals.innerHTML = `<div class="tot">
     <div class="tot-main">
-      ${cur.length
-        ? cur.map(k => `<div class="tot-cur"><b>${k} ${money(sums[k])}</b><span>${k} subtotal</span></div>`).join("")
+      ${allCur.length ? allCur.map(k => `<div class="tot-cur">
+          <b>${k} ${money(sums.yes[k] || 0)}</b>
+          <span>${k} committed</span>
+          ${sums.maybe[k] ? `<em>+ ${money(sums.maybe[k])} if the maybes convert</em>` : ""}
+        </div>`).join("")
         : `<div class="tot-cur"><b>Nothing costed</b><span>tick some routes below</span></div>`}
     </div>
     <div class="tot-side">
-      <div>${list.length} event${list.length === 1 ? "" : "s"} tracked, ${picked} route${picked === 1 ? "" : "s"} in the budget</div>
-      ${unpriced ? `<div class="tot-warn">${unpriced} selected route${unpriced === 1 ? " has" : "s have"} no published price, so the subtotals are a floor, not a forecast</div>` : ""}
+      <div>${nYes} yes, ${nMaybe} maybe &middot; ${picked} route${picked === 1 ? "" : "s"} in the budget</div>
+      ${unpriced ? `<div class="tot-warn">${unpriced} selected route${unpriced === 1 ? " has" : "s have"} no published price, so these are a floor, not a forecast</div>` : ""}
       ${approx ? `<div class="tot-warn">Some figures are a range or a minimum. The low end is used.</div>` : ""}
       <div class="tot-note">Currencies are kept apart on purpose. No exchange rate is applied.</div>
     </div>
@@ -1002,6 +1062,7 @@ function renderPlan(){
 
   let lastMonth = "";
   body.innerHTML = list.map(e => {
+    const d = dm[e.id];
     const m = (e.start || "").slice(0, 7);
     let head = "";
     if(m && m !== lastMonth){
@@ -1023,14 +1084,14 @@ function renderPlan(){
         <span class="pr-cost${typeof c.value === "number" ? "" : " np"}">${amt}</span>
       </label>`;
     }).join("");
-    return head + `<div class="plan-ev">
+    return head + `<div class="plan-ev pe-${d}">
       <div class="plan-ev-h">
         <div>
-          <div class="plan-ev-name">${esc(e.name)}</div>
+          <div class="plan-ev-name"><span class="pe-tag pe-tag-${d}">${d}</span>${esc(e.name)}</div>
           <div class="plan-ev-sub">${esc(e.dateLabel)} &middot; ${esc(e.where)} ${
             FLAG[e.country] ? `<span class="flag">${FLAG[e.country]}</span>` : ""}${esc(e.country)}</div>
         </div>
-        <button class="untrack" data-untrack="${e.id}" title="Stop tracking">&times;</button>
+        <button class="untrack" data-untrack="${e.id}" title="Remove from the plan">&times;</button>
       </div>
       ${openDl.length ? `<div class="plan-dl">Closing: ${openDl.map(p =>
         `${esc(p.label)} <b>${pillText(p, liveStatus(p))}</b>`).join(" &middot; ")}</div>` : ""}
@@ -1045,11 +1106,12 @@ function renderPlan(){
     renderPlan();
   }));
   body.querySelectorAll("[data-untrack]").forEach(x => x.addEventListener("click", () => {
-    const t2 = tracked(); t2.delete(x.dataset.untrack); saveSet(TRACK_KEY, t2);
+    const id = x.dataset.untrack, m2 = decisions();
+    delete m2[id]; saveDecisions(m2);
     const s = budget();
-    [...s].filter(k => k.startsWith(x.dataset.untrack + "||")).forEach(k => s.delete(k));
+    [...s].filter(k => k.startsWith(id + "||")).forEach(k => s.delete(k));
     saveSet(BUDGET_KEY, s);
-    renderPlan(); render();
+    render();
   }));
 }
 

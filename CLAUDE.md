@@ -160,6 +160,25 @@ until the answer looks nicer.
 `closed` costs -6, but a closed route that records an `expect` window claws +5 back,
 because a deadline we missed and can predict is worth more than one we cannot.
 
+### Preliminary decision, and the plan
+
+Each event carries a preliminary decision held in the browser, not in
+`events.json`: **Yes**, **Maybe**, or **No**. Clicking the active one clears it
+back to undecided. The Plan tab shows only Yes and Maybe, in date order.
+
+No is stored rather than treated as absence, because "we looked at this and said
+no" is worth keeping. It stops the same event being re-argued every week, and the
+row stays visible but dimmed so the decision can be revisited.
+
+Yes and Maybe are budgeted separately: one is a commitment, the other a ceiling.
+Marking an event Yes or Maybe seeds the budget with the cheapest priced `attend`
+route; every other route is opt-in per line. Totals are summed per currency and no
+exchange rate is applied.
+
+Decisions live in `localStorage` under `radar.decision.v1`, so they follow the
+device rather than the person. The page is static and there is nowhere else to put
+them. An older `radar.tracked.v1` set is migrated to Yes on first load.
+
 ### A route must be evidenced, not inferred
 
 An unpriced route and a route that does not exist look identical on the page, so
