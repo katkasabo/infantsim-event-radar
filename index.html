@@ -156,6 +156,21 @@ table.sheet{border-collapse:separate;border-spacing:0;table-layout:fixed;width:1
 .star:hover{color:var(--amber)}
 .star.on{color:var(--amber)}
 .srow.prio>td:first-child{box-shadow:inset 3px 0 0 var(--teal)}
+.fit{
+  font-family:var(--mono);font-size:10px;font-weight:600;padding:2px 6px;border-radius:2px;
+  background:#E4EDEC;color:#2C5257;border:1px solid transparent;
+}
+.fit.hi{background:var(--teal);color:#fff}
+.fit.lo{background:#fff;color:#93A2A3;border-color:var(--line)}
+.dt-fit{margin:0 0 10px;padding-bottom:9px;border-bottom:1px dotted var(--line-soft)}
+.fit-parts{display:flex;flex-wrap:wrap;gap:5px;margin-top:5px}
+.fp{
+  font-family:var(--mono);font-size:10px;padding:2px 6px;border-radius:2px;
+  background:#EDF4F3;color:#2C5257;
+}
+.fp i{font-style:normal;color:var(--muted)}
+.fp.neg{background:#FBEDE9;color:#8A4630}
+.fp.neg i{color:#A2705C}
 .ty{
   font-family:var(--mono);font-size:9px;letter-spacing:.09em;text-transform:uppercase;
   padding:2px 6px;border-radius:2px;border:1px solid var(--line);color:var(--muted);background:#fff;
@@ -297,6 +312,8 @@ tr.detail.hidden{display:none}
   font-family:var(--mono);font-size:10.5px;color:var(--muted);
 }
 .legend span b{color:var(--ink);font-weight:600}
+.legend span.fit-caveat{flex-basis:100%;color:var(--amber);line-height:1.5;margin-top:2px}
+.legend span.fit-caveat b{color:var(--amber)}
 .legend span.prev b{color:var(--amber)}
 .legend span.free b{color:var(--teal)}
 
@@ -439,6 +456,14 @@ tr.detail.hidden{display:none}
       <select id="regionSel"></select>
     </div>
     <div class="ctrl">
+      <span class="ctrl-label">Sort by</span>
+      <select id="sortSel">
+        <option value="date">Date, soonest first</option>
+        <option value="fit">Fit, best first</option>
+        <option value="deadline">Next deadline, closing first</option>
+      </select>
+    </div>
+    <div class="ctrl">
       <span class="ctrl-label">Deadline status</span>
       <select id="statusSel">
         <option value="all">Any status</option>
@@ -502,6 +527,17 @@ tr.detail.hidden{display:none}
       <span>Missed it?</span>
       <span>A closed route shows <b>Back</b> and when the window is expected to reopen, based on the last cycle.</span>
       <span>Open the row for the reasoning and the date to start watching.</span>
+    </div>
+    <div class="legend">
+      <span>Fit score:</span>
+      <span>pediatric, surgery and simulation +3 each, and +3 more for all three together.</span>
+      <span>Pitch or present +3, exhibit +1, attend 0.</span>
+      <span>Closing within 30 days +5, open +4, rolling +2, closed -6, but +5 back if we know when it reopens.</span>
+      <span>Free to enter +3, no published price -1, flagged priority +3, US-based +2.</span>
+      <span>Open any row to see the arithmetic. It is meant to be argued with.</span>
+      <span class="fit-caveat">It blends topical fit with how actionable the route is <b>today</b>. ESPNIC and
+        jENS score lower than their clinical relevance deserves, because almost everything about them is still
+        unannounced. That is a statement about timing, not about audience.</span>
     </div>
   </div>
   <div id="view-plan" class="hidden">
@@ -585,7 +621,51 @@ const NONE_LABEL = {
   exhibit:"No exhibition found"
 };
 
-const state = {view:"table", tags:new Set(), modes:new Set(), types:new Set(),
+/* ---------- fit scoring ----------
+   Computed in the browser from events.json, never stored, so it re-scores itself
+   as the data changes. Every component is shown in the expanded row: the score is
+   meant to be argued with, not trusted. Weights sit here in one place so changing
+   the model is a one-line edit.                                                   */
+const W = {
+  tag:   {pediatric:3, surgery:3, simulation:3, startup:2, industry:1},
+  mode:  {pitch:3, present:3, exhibit:1, attend:0},
+  status:{urgent:5, open:4, rolling:2, unannounced:0, closed:-6},
+  type:  {competition:2, accelerator:2, conference:0},
+  bullseye: 3,      // pediatric + surgery + simulation together
+  free: 3,          // costs nothing to enter
+  unpriced: -1,     // cannot be budgeted for
+  priority: 3,      // flagged by Katka or Petra
+  us: 2,            // the mandate is US market entry
+  comingBack: 5     // closed, but we know when it reopens: claw back most of the -6
+};
+function routeScore(e, p){
+  const parts = [];
+  const push = (n, why) => { if(n) parts.push({n, why}); };
+  e.tags.forEach(t => push(W.tag[t] || 0, TAGS.find(x => x[0] === t)[1]));
+  if(["pediatric","surgery","simulation"].every(t => e.tags.includes(t)))
+    push(W.bullseye, "pediatric + surgery + simulation");
+  push(W.type[e.type] || 0, e.type === "conference" ? "" : "direct opportunity");
+  push(W.mode[p.mode], MODE_LABEL[p.mode] + " route");
+  const st = liveStatus(p);
+  push(W.status[st], st === "closed" ? "closed" : st);
+  if(st === "closed" && p.expect) push(W.comingBack, "but reopens " + p.expect.when);
+  const b = (p.cost || {}).basis;
+  if(b === "free") push(W.free, "free to enter");
+  else if(b === "unknown") push(W.unpriced, "no published price");
+  if(e.priority) push(W.priority, "flagged priority");
+  if(e.country === "USA") push(W.us, "US based");
+  return {score: parts.reduce((s, x) => s + x.n, 0), parts};
+}
+function eventScore(e){
+  // one strong route is enough to make an event worth showing up to
+  return e.participate.reduce((best, p) => Math.max(best, routeScore(e, p).score), -99);
+}
+function bestRoute(e){
+  return e.participate.reduce((b, p) =>
+    routeScore(e, p).score > routeScore(e, b).score ? p : b, e.participate[0]);
+}
+
+const state = {view:"table", sort:"date", tags:new Set(), modes:new Set(), types:new Set(),
                region:"all", status:"all", q:"", prioOnly:false, missedOnly:false};
 
 /* Starred rows live in the browser. The page is static, so there is nowhere else
@@ -733,6 +813,12 @@ function detailHTML(e){
     </div>`;
   }).join("");
   return `<tr class="detail hidden" data-detail="${e.id}"><td colspan="7"><div class="dt">
+    <div class="dt-fit">
+      <span class="dt-cap">Fit score ${eventScore(e)}, from its strongest route: ${esc(bestRoute(e).label)}</span>
+      <div class="fit-parts">${routeScore(e, bestRoute(e)).parts.map(x =>
+        `<span class="fp${x.n < 0 ? " neg" : ""}">${x.n > 0 ? "+" : ""}${x.n}${
+          x.why ? ` <i>${esc(x.why)}</i>` : ""}</span>`).join("")}</div>
+    </div>
     <p class="dt-sum">${esc(e.summary)}</p>
     <p class="dt-aud">Who it is for: ${esc(e.audience)}</p>
     <div class="dt-ways">${ways}</div>
@@ -746,6 +832,7 @@ function sheetRowHTML(e){
   const city = (e.where || "").split(",")[0].trim();
   const star = starred().has(e.id);
   const trk = tracked().has(e.id);
+  const fs = eventScore(e);
   return `<tr class="srow${isPriority(e) ? " prio" : ""}" data-row="${e.id}">
     <td class="c-ev">
       <div class="ev-top">
@@ -760,6 +847,7 @@ function sheetRowHTML(e){
       </div>
       <div class="ev-org">${esc(e.org)}</div>
       <div class="ev-flags">
+        <span class="fit${fs >= 14 ? " hi" : fs <= 4 ? " lo" : ""}" title="Fit score, best route">${fs}</span>
         <span class="ty ty-${e.type}">${e.type}</span>
         ${e.priority ? '<span class="prio-mark">PRIORITY</span>' : ''}
         ${e.tags.map(t => `<span class="tag">${TAGS.find(x=>x[0]===t)[1]}</span>`).join("")}
@@ -990,7 +1078,18 @@ function renderClosing(){
 
 /* ---------- main render ---------- */
 function render(){
-  const list = DATA.events.filter(matches).slice().sort((a,b) => (a.start||"").localeCompare(b.start||""));
+  const byDate = (a,b) => (a.start||"").localeCompare(b.start||"");
+  const nextDl = e => {
+    const ds = e.participate.map(p => days(p.deadline))
+                            .filter(x => x !== null && x >= 0);
+    return ds.length ? Math.min(...ds) : 99999;
+  };
+  const SORTS = {
+    date: byDate,
+    fit:  (a,b) => eventScore(b) - eventScore(a) || byDate(a,b),
+    deadline: (a,b) => nextDl(a) - nextDl(b) || byDate(a,b)
+  };
+  const list = DATA.events.filter(matches).slice().sort(SORTS[state.sort] || byDate);
   document.getElementById("sheetBody").innerHTML = list.length
     ? list.map(sheetRowHTML).join("")
     : `<tr><td colspan="7"><div class="empty-state"><strong>Nothing matches those filters</strong>Clear one of them to widen the view.</div></td></tr>`;
@@ -1092,6 +1191,7 @@ function init(){
     render();
   });
   document.getElementById("regionSel").addEventListener("change", e => { state.region = e.target.value; render(); });
+  document.getElementById("sortSel").addEventListener("change", e => { state.sort = e.target.value; render(); });
   document.getElementById("statusSel").addEventListener("change", e => { state.status = e.target.value; render(); });
   document.getElementById("search").addEventListener("input", e => { state.q = e.target.value.trim(); render(); });
   document.getElementById("resetBtn").addEventListener("click", () => resetFilters(true));

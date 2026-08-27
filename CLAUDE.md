@@ -140,6 +140,26 @@ routes in one event sharing a label (which makes table cells indistinguishable),
 and dead links. Warnings are the backlog, chiefly "Not checked" cells and
 `unannounced` routes with no `checked` note.
 
+### The fit score
+
+Computed in the browser in `index.html` from `events.json`, never stored, so it
+re-scores itself when the data changes. Weights live in one object, `W`, near the
+top of the script; changing the model is a one-line edit.
+
+An event scores as its single strongest route, on the grounds that one good way in
+is enough to justify showing up. The breakdown renders in the expanded row so the
+number is auditable and arguable.
+
+It deliberately blends **topical fit** with **how actionable the route is today**.
+An unannounced congress scores low because there is nothing to act on yet, not
+because the audience is wrong. ESPNIC and jENS are the worked examples: both are
+strong neonatal audiences and both score below their clinical relevance while their
+dates and fees stay unpublished. Say that out loud rather than tuning the weights
+until the answer looks nicer.
+
+`closed` costs -6, but a closed route that records an `expect` window claws +5 back,
+because a deadline we missed and can predict is worth more than one we cannot.
+
 ### One row per named call
 
 If an organiser publishes several distinct calls, each gets its own route with its
