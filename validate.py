@@ -109,6 +109,14 @@ for e in events:
             E(w, "cost is 'unknown' with no `checked` note. Evidence that this route "
                  "actually exists, or delete it and set absent[mode]='none'.")
 
+        # Katka's rule: for every event x column, either it is n/a, or we say under
+        # what conditions, for how much, and when and how to register.
+        for f, why in [("conditions", "who can take this route and on what terms"),
+                       ("how", "when and how to register or apply"),
+                       ("gain", "what you get out of it")]:
+            if not p.get(f):
+                E(w, f"no `{f}`: every route must say {why}")
+
         if p.get("mode") == "pitch" and not p.get("prize"):
             W(w, "pitch route with no prize recorded. Cost alone is half the decision: "
                  "say what can be won, even if that is 'Not published'.")

@@ -289,7 +289,7 @@ tr.detail.hidden{display:none}
 .dt{padding:15px 16px 16px}
 .dt-sum{font-size:13.5px;color:#22383C;margin:0 0 3px;max-width:78ch}
 .dt-aud{font-size:12.5px;color:var(--muted);margin:0 0 13px}
-.dt-ways{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:11px}
+.dt-ways{display:grid;grid-template-columns:repeat(auto-fill,minmax(400px,1fr));gap:11px}
 .dt-way{background:#fff;border:1px solid var(--line-soft);border-radius:3px;padding:10px 12px}
 .dt-way-h{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
 .dt-mode{font-family:var(--mono);font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--teal)}
@@ -309,6 +309,8 @@ tr.detail.hidden{display:none}
 .dt-cost b{font-family:var(--mono);font-size:12.5px}
 .dt-cost p{margin:2px 0 0;color:var(--muted)}
 .dt-cost a{font-size:11px;font-family:var(--mono)}
+.dt-block{margin-top:7px;padding-top:7px;border-top:1px dotted var(--line-soft);font-size:12px}
+.dt-block p{margin:1px 0 0;color:#2C3E41;line-height:1.5}
 .dt-note{font-size:11.5px;color:var(--muted);margin-top:6px;line-height:1.45}
 .dt-checked{font-size:11px;color:#6E7F81;margin-top:5px;line-height:1.45;border-left:2px solid var(--line);
   padding-left:8px;font-style:italic}
@@ -328,6 +330,26 @@ tr.detail.hidden{display:none}
 .dt-none a{font-size:10.5px;font-family:var(--mono);margin-left:5px}
 .dt-foot{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:13px;font-size:12px}
 .dt-foot .verified{margin:0}
+
+.refresh-bar{
+  display:flex;gap:18px;align-items:center;background:var(--surface);border:1px solid var(--line-soft);
+  border-radius:4px;box-shadow:var(--shadow);padding:14px 18px;margin:0 0 16px;flex-wrap:wrap;
+}
+.refresh-btn{
+  font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:.02em;background:var(--teal);
+  color:#fff;border:0;border-radius:4px;padding:14px 30px;cursor:pointer;flex:0 0 auto;
+}
+.refresh-btn:hover{background:#0F565E}
+.refresh-btn:disabled{background:#B6C4C3;cursor:wait}
+.refresh-note{flex:1 1 340px;font-size:11.5px;color:var(--muted);line-height:1.5}
+.refresh-note b{display:block;color:var(--ink);font-family:var(--mono);font-size:12px;margin-bottom:3px}
+.refresh-note span b{display:inline;font-size:11.5px;font-family:var(--mono)}
+.recheck-btn{
+  font-family:var(--body);font-size:12.5px;font-weight:500;background:#fff;color:var(--teal);
+  border:1px solid var(--teal);border-radius:3px;padding:9px 15px;cursor:pointer;flex:0 0 auto;
+}
+.recheck-btn:hover{background:#EDF4F3}
+.refresh-said{font-family:var(--mono);font-size:11px;color:var(--teal);flex-basis:100%}
 
 .legend{
   display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin:11px 2px 0;
@@ -509,6 +531,17 @@ tr.detail.hidden{display:none}
 
 <main class="wrap">
   <div id="view-table">
+    <div class="refresh-bar">
+      <button class="refresh-btn" id="refreshBtn">Refresh</button>
+      <div class="refresh-note">
+        <b id="refreshState"></b>
+        <span>Refresh re-pulls the data file and bypasses your browser cache, so you get whatever was published
+          last. It cannot go and re-read the organisers' websites from here: this page is static and has no server
+          behind it. To have all <b id="refreshCells">0</b> cells re-verified at source, ask for a re-check and it
+          goes into the Sunday job.</span>
+      </div>
+      <button class="recheck-btn" id="recheckBtn">Request a full re-check</button>
+    </div>
     <div class="sheet-wrap">
       <table class="sheet">
         <thead>
@@ -536,7 +569,7 @@ tr.detail.hidden{display:none}
     <div class="legend">
       <span>Empty cells:</span>
       <span><b>No competition found</b> checked, this event does not run one</span>
-      <span><b>Not applicable</b> an application or prize, there is nothing to attend</span>
+      <span><b>n/a</b> an application or prize, there is nothing to attend</span>
       <span><b>Not checked</b> not researched yet, queued for a Sunday check</span>
       <span>Every cell links out to the source.</span>
     </div>
@@ -810,7 +843,7 @@ function routeURL(e, p){
 }
 function absentHTML(e, mode){
   const kind = (e.absent || {})[mode];
-  if(kind === "n/a") return `<span class="absent na"><b>Not applicable</b></span>`;
+  if(kind === "n/a") return `<span class="absent na"><b>n/a</b></span>`;
   if(kind === "none"){
     const src = (e.absentSrc || {})[mode] || (e.links[0] && e.links[0].url) || "";
     const why = (e.absentWhy || {})[mode] || "";
@@ -856,6 +889,12 @@ function detailHTML(e){
         ${c.detail ? `<p>${esc(c.detail)}</p>` : ""}
         <a href="${esc(routeURL(e, p))}" target="_blank" rel="noopener">more information</a>
       </div>
+      ${p.conditions ? `<div class="dt-block"><span class="dt-cap">Who can, and on what terms</span>
+        <p>${esc(p.conditions)}</p></div>` : ""}
+      ${p.how ? `<div class="dt-block"><span class="dt-cap">How and when to register</span>
+        <p>${esc(p.how)}</p></div>` : ""}
+      ${p.gain ? `<div class="dt-block"><span class="dt-cap">What you get out of it</span>
+        <p>${esc(p.gain)}</p></div>` : ""}
       ${p.prize ? `<div class="dt-cost dt-win"><span class="dt-cap">Wins</span>
         <b>${esc(p.prize.amount)}</b>
         ${p.prize.detail ? `<p>${esc(p.prize.detail)}</p>` : ""}
@@ -1217,6 +1256,77 @@ function resetFilters(doRender){
   if(doRender !== false) render();
 }
 
+/* ---------- refresh ----------
+   Honest about its limits. It can re-pull events.json past the cache; it cannot
+   re-research the web, because this is a static page with no server. The second
+   button raises a re-check request that the Sunday job picks up.               */
+const RECHECK_RULE = [
+  "Please re-run the radar against the rule below and republish.",
+  "",
+  "For every event (row) and every way of taking part (column), ask explicitly:",
+  "does this event offer this opportunity?",
+  "",
+  "  - If no: mark it n/a, with a link to what was checked and a line saying what",
+  "    was looked for.",
+  "  - If yes: record the conditions and eligibility, the cost, when and how to",
+  "    register, and anything else that matters for judging the opportunity.",
+  "",
+  "Do not infer that a route exists because events of this kind usually have one.",
+  "Where registration is open, follow the booking flow rather than reading the",
+  "landing page: the rates are usually one click in.",
+  ""
+].join("\n");
+
+function refreshStamp(){
+  const el = document.getElementById("refreshState");
+  if(!el || !DATA) return;
+  const v = new Date(DATA.meta.sourceVerified + "T00:00:00");
+  const age = Math.round((TODAY - v) / 86400000);
+  el.textContent = `Sources last re-checked ${fmt(DATA.meta.sourceVerified, true)}`
+    + (age > 0 ? `, ${age} day${age === 1 ? "" : "s"} ago` : ", today");
+  const cells = DATA.events.length * MODE_ORDER.length;
+  const c = document.getElementById("refreshCells");
+  if(c) c.textContent = cells;
+}
+function say(msg){
+  const bar = document.querySelector(".refresh-bar");
+  let s = bar.querySelector(".refresh-said");
+  if(!s){ s = document.createElement("div"); s.className = "refresh-said"; bar.appendChild(s); }
+  s.textContent = msg;
+  setTimeout(() => { if(s) s.textContent = ""; }, 6000);
+}
+function initRefresh(){
+  document.getElementById("refreshBtn").addEventListener("click", async () => {
+    const btn = document.getElementById("refreshBtn");
+    btn.disabled = true; btn.textContent = "Refreshing";
+    const before = JSON.stringify(DATA);
+    try {
+      const r = await fetch("events.json?v=" + Date.now(), {cache: "no-store"});
+      if(!r.ok) throw new Error("HTTP " + r.status);
+      DATA = await r.json();
+      renderClosing(); render(); refreshStamp();
+      document.getElementById("changelog").innerHTML = DATA.changelog.map(c =>
+        `<div class="entry"><div class="entry-date">${fmt(c.date, true)}</div><ul>${
+          c.items.map(i => `<li>${esc(i)}</li>`).join("")}</ul></div>`).join("");
+      say(JSON.stringify(DATA) === before
+        ? "Re-pulled. Nothing has changed since this page loaded."
+        : "Re-pulled, and the data has changed. The table is updated.");
+    } catch(err){
+      say("Could not re-pull the data file: " + err.message);
+    }
+    btn.disabled = false; btn.textContent = "Refresh";
+  });
+  document.getElementById("recheckBtn").addEventListener("click", () => {
+    const body = RECHECK_RULE + "Requested from the radar on "
+      + new Date().toISOString().slice(0, 10)
+      + ". Data on the page at the time was last re-checked " + DATA.meta.sourceVerified + ".";
+    window.location.href = "mailto:" + INTAKE_TO
+      + "?subject=" + encodeURIComponent("RADAR: full re-check requested")
+      + "&body=" + encodeURIComponent(body);
+  });
+  refreshStamp();
+}
+
 /* ---------- init ---------- */
 function init(){
   document.getElementById("stampUpdated").textContent = fmt(DATA.meta.updated, true);
@@ -1274,6 +1384,7 @@ function init(){
     `<div class="entry"><div class="entry-date">${fmt(c.date, true)}</div><ul>${c.items.map(i => `<li>${esc(i)}</li>`).join("")}</ul></div>`).join("");
 
   initIntake();
+  initRefresh();
   renderClosing();
   render();
 }
