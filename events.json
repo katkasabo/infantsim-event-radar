@@ -1,11 +1,24 @@
 {
   "meta": {
-    "updated": "2026-08-28",
-    "sourceVerified": "2026-08-28",
+    "updated": "2026-08-31",
+    "sourceVerified": "2026-08-31",
     "windowFrom": "2026-09-01",
     "windowTo": "2027-09-30"
   },
   "changelog": [
+    {
+      "date": "2026-08-31",
+      "items": [
+        "Cross-checked the five events marked green in Katka's 12-month calendar sheet against this board: Georgia Tech Pediatric Innovation Day, MEDICA 2026, WHX Tech 2027, NeoPed 2027 and The MedTech Forum 2027. All five were already here. Four of them needed correcting.",
+        "Georgia Tech, two corrections and one of them matters. There was no 2026 edition on 7 Jul 2026; that date was in the record with nothing behind it and is gone. The pitch now runs inside the Pediatric Healthcare Innovation Summit with iSPI, last held 5 to 6 Nov 2025 in Atlanta with applications closing 20 Jul 2025, and the pool is USD 80,000 from the FDA Pediatric Device Consortia. The gate: only companies based in the US, or holding a US office and a US taxpayer ID, are eligible for the cash. Consultation prizes are open to everyone. With no US entity, the cash is not currently winnable.",
+        "WHX Tech Xcelerate is not free after all. Applying costs nothing, but eligibility requires shortlisted startups to hold a confirmed WHX Tech Startup Pod, and Informa publishes no pod price. The route now says so rather than reading as a free shot at USD 30,000. Numbers corrected too: around 50 pitch, up to 40 shortlisted, 12 in the Grand Finale. Deadline unchanged at 4 Nov 2026.",
+        "WHX Tech's call for speakers closed on 28 Aug 2026 and is now marked closed. The page still displays as open and still dates the event to September 2027, while the landing page, the Xcelerate page and ABHI all say 27 to 29 January 2027. The flag stays until Informa fixes the page.",
+        "MEDICA's pitch deadline is unchanged at 10 Sep 2026, 23:59 CET, now 10 days out, and the prices are unchanged. Three eligibility gates are newly recorded: submissions in English only, nothing launched before 2023, and the solution must be available in at least one market by the end of Q2 2027. That last one is the real constraint for a TRL 4 simulator. The final is 17 Nov 2026 at 15:00 CET.",
+        "The MedTech Forum's 2027 registrations page is live and reads 'The registration fees will be available soon.' Dates and city re-confirmed: 10 to 11 May 2027, Rome.",
+        "NeoPed's site is still down. neoped.eu was NXDOMAIN on Google, Cloudflare and a third resolver, so it is the domain and not local DNS. The 2026 edition was real: 23 to 24 Apr 2026 in Berlin, with SIOP Europe as media partner. Nothing about 2027 can be verified while the site is dark.",
+        "Housekeeping caught by the link checker: HLTH Europe's old registration link (europe.hlth.com/register) is dead. Repointed to the become-a-sponsor enquiry form and the 2027 register-interest page, both live. Still no published rate. Separately, htfc-eu.com stopped resolving, so HealthTech Innovation Days now has the same problem NeoPed has."
+      ]
+    },
     {
       "date": "2026-08-28",
       "items": [
@@ -880,12 +893,12 @@
     },
     {
       "id": "gatech-pid-2026",
-      "name": "Georgia Tech Pediatric Innovation Day & Showcase 2027",
+      "name": "Georgia Tech Pediatric Innovation Day & Showcase, now the Pediatric Healthcare Innovation Summit",
       "org": "Georgia Tech",
-      "dateLabel": "Est. mid 2027",
-      "start": "2027-07-07",
+      "dateLabel": "Est. autumn 2027. Not announced.",
+      "start": "2027-11-04",
       "confirmed": false,
-      "where": "Atlanta / Sandy Springs, GA",
+      "where": "Atlanta, GA. The 2025 edition ran at Science Square and the Academy of Medicine.",
       "country": "USA",
       "region": "North America",
       "tags": [
@@ -893,48 +906,52 @@
         "startup"
       ],
       "priority": false,
-      "summary": "Pediatric Innovation Network showcase where APDI and two other FDA-funded pediatric device consortia award USD 25,000 innovation prizes. The 2026 edition ran on 7 July 2026, so the next cycle falls in 2027.",
+      "summary": "Georgia Tech's pediatric device pitch, now run as the Pediatric Healthcare Innovation Summit with iSPI. USD 80,000 in awards from the FDA Pediatric Device Consortia, including USD 25,000 prizes from three of them. Last confirmed edition ran 5 to 6 Nov 2025 in Atlanta, with applications closing 20 Jul 2025.",
       "audience": "Pediatric device startups pitching to investors and consortia.",
       "participate": [
         {
           "mode": "pitch",
           "label": "Apply to pitch",
           "deadline": null,
-          "deadlineLabel": "2026 deadline not announced. 2025 cycle closed ~20 Jul 2025.",
+          "deadlineLabel": "Not announced. The 2025 cycle closed 20 Jul 2025.",
           "status": "unannounced",
-          "note": "Contact tpaden3@gatech.edu.",
+          "note": "Contact tpaden3@gatech.edu. Monetary prizes are restricted to US-registered entities: see conditions.",
           "cost": {
             "amount": "Free to apply",
-            "detail": "APDI and two other FDA-funded pediatric device consortia award USD 25,000 innovation prizes at the event. The 2026 edition ran 7 Jul 2026, so the next cycle is 2027.",
+            "detail": "Free to apply. USD 80,000 in awards from the FDA Pediatric Device Consortia, including USD 25,000 prizes from three of them. The 2025 cycle closed 20 Jul 2025 and pitched 5 Nov 2025.",
             "basis": "free",
-            "source": "https://pediatrics.research.gatech.edu/events/pediatric-innovation-day-and-showcase",
+            "source": "https://www.ispi4kids.org/phis2025/",
             "value": 0.0,
             "currency": "NONE"
           },
-          "url": "https://pediatrics.research.gatech.edu/events/pediatric-innovation-day-and-showcase",
+          "url": "https://pediatrics.research.gatech.edu/events/pediatric-healthcare-innovation-summit",
           "prize": {
-            "amount": "USD 25,000",
-            "detail": "Innovation prize awarded at the showcase by APDI alongside two other FDA-funded pediatric device consortia.",
-            "source": "https://pediatrics.research.gatech.edu/events/pediatric-innovation-day-and-showcase"
+            "amount": "USD 80,000 pool",
+            "detail": "USD 80,000 in awards from the FDA Pediatric Device Consortia for FDA-regulated medical device companies, including USD 25,000 prizes from three of the consortia. Consultation prizes with industry professionals such as Health Innovation Capital sit alongside the cash.",
+            "source": "https://www.ispi4kids.org/phis2025/"
           },
-          "gain": "Stage time in front of investors and buyers, plus whatever the prize carries.",
+          "gain": "Stage time in front of pediatric device investors, buyers and the FDA consortia. Without a US entity the realistic prize is the consultation award and the room, not the cash.",
           "expect": {
             "when": "Around Jul 2027",
             "watch": "2027-06-01",
-            "basis": "The 2025 cycle deadline was around 20 Jul 2025 and the 2026 event ran on 7 Jul 2026. Expect a mid-year application window."
+            "basis": "The 2025 cycle closed applications on 20 Jul 2025 and pitched 5 Nov 2025. The prior edition, then called Pediatric Innovation Day and Showcase, ran 21 Oct 2024. Annual, autumn event with a mid-summer application window."
           },
-          "conditions": "Pediatric device startups. Prizes are awarded by APDI alongside two other FDA-funded pediatric device consortia, so the FDA-pathway framing of those consortia applies.",
-          "how": "Apply through pediatrics.research.gatech.edu. The 2025 cycle deadline was around 20 Jul 2025 and the 2026 event ran 7 Jul 2026, so expect a mid-year window. Contact tpaden3@gatech.edu. Pitch coaching is offered free via Keiretsu Forum.",
-          "checked": "28 Aug 2026: the 2026 event ran 7 Jul 2026, so the record now tracks the 2027 cycle. No 2027 application window is posted."
+          "conditions": "Pediatric device startups. Read the eligibility line before spending time on this: only companies based in the US, or holding a US office and a US taxpayer ID, are eligible for the monetary prizes. InfantSim has no US entity, so as things stand the cash is out of reach and only the consultation prizes, which are open to all companies, are winnable. The cash awards are also framed for FDA-regulated medical device companies, which an educational training device is not.",
+          "how": "Apply through the summit page when the next window opens. The 2025 cycle closed 20 Jul 2025 and pitched 5 Nov 2025, so expect a summer window ahead of an autumn event. Contact tpaden3@gatech.edu.",
+          "checked": "2026-08-31: corrected. An earlier record had a 2026 edition running 7 Jul 2026; no source supports that. The last confirmed edition is the Pediatric Healthcare Innovation Summit, 5 to 6 Nov 2025 in Atlanta, applications closed 20 Jul 2025. No 2026 or 2027 edition is announced: the Georgia Tech pediatric events page lists none, and a 2026 autumn edition would have had its application window in July, which passed with nothing published. Also newly recorded: monetary prizes require a US base or a US office plus US taxpayer ID."
         }
       ],
       "links": [
         {
           "label": "pediatrics.research.gatech.edu",
           "url": "https://pediatrics.research.gatech.edu"
+        },
+        {
+          "label": "ispi4kids.org/phis2025",
+          "url": "https://www.ispi4kids.org/phis2025/"
         }
       ],
-      "verified": "2026-08-28",
+      "verified": "2026-08-31",
       "absent": {
         "present": "n/a",
         "attend": "n/a",
@@ -1315,7 +1332,7 @@
           "deadline": "2026-09-10",
           "deadlineLabel": "10 Sep 2026, 23:59 CET",
           "status": "open",
-          "note": "Free to enter. MEDICA states conformity with the Medical Device Directive or FDA approval is not required. Categories include AI in healthcare, robotics, lab diagnostics and others. Top 12 of each competition pitch at MEDICA, 16 and 17 Nov, with 3,500 EUR in cash prizes.",
+          "note": "Free to enter. MEDICA states conformity with the Medical Device Directive or FDA approval is not required. Categories include AI in healthcare, robotics, lab diagnostics, resilience and cybersecurity. The pitch and award ceremony is 17 Nov 2026 at 15:00 CET on the MEDICA Main Stage, with cash prizes up to EUR 3,500.",
           "cost": {
             "amount": "EUR 3,500",
             "detail": "Full cost to pitch, plus VAT. The stage slot is not sold on its own: it is the EUR 2,950 START-UP PARK booth plus the EUR 550 stage upgrade. Entering the Innovation World Cup itself carries no separate fee.",
@@ -1329,15 +1346,15 @@
             "detail": "Cash prizes totalling EUR 3,500 across the winners, plus international marketing, MEDICA Main Stage exposure in Hall 12, free use of production labs and test facilities, development kits from STMicroelectronics and Wuerth Elektronik, and a Hall of Fame placement. Note the arithmetic: the prize pool matches the EUR 3,500 it costs to get on that stage, so this is a visibility play, not a funding one.",
             "source": "https://www.innovationworldcup.com/medica-startup-competition/"
           },
-          "checked": "28 Aug 2026: registration open until 10 September 2026. Prize pool confirmed at EUR 3,500 total cash.",
+          "checked": "2026-08-31: re-read at source. Deadline still 10 September 2026, 23:59 CET, 10 days out. Final confirmed as 17 Nov 2026 at 15:00 CET. Prize pool still cash up to EUR 3,500. Eligibility gates recorded: English only, no launch before 2023, must be available in at least one market by end of Q2 2027.",
           "gain": "MEDICA Main Stage exposure in Hall 12, international marketing, lab and test facility access and dev kits. Read the money carefully: it costs EUR 3,500 to get on that stage and the whole prize pool is EUR 3,500.",
           "expect": {
             "when": "Around Jul 2027",
             "watch": "2027-06-01",
             "basis": "Registration for the 2026 competition ran until 10 Sep 2026, a couple of months before the November fair. Expect the same shape for MEDICA 2027."
           },
-          "conditions": "Open to innovators in AI in medicine, robotics, laboratory diagnostics, resilience and other healthcare solutions. Entering the competition itself carries no fee, but the stage slot is not sold separately from a stand, which is what makes the real cost EUR 3,500.",
-          "how": "Register at innovationworldcup.com by 10 Sep 2026, 23:59 CET. Top medical start-ups pitch on the MEDICA Main Stage in Hall 12 during the grand final at the 16 to 19 Nov 2026 fair.",
+          "conditions": "Open to innovators in AI in medicine, robotics, laboratory diagnostics, resilience and other healthcare solutions. Three eligibility gates that are easy to miss: submissions in English only, the company or product cannot have launched before 2023, and the solution must be available in at least one market by the end of Q2 2027. That last one is the binding constraint for a TRL 4 simulator. Entering carries no fee, but the stage slot is not sold separately from a stand, which is what makes the real cost EUR 3,500.",
+          "how": "Register at innovationworldcup.com by 10 Sep 2026, 23:59 CET. The pitch and award ceremony is 17 Nov 2026 at 15:00 CET on the MEDICA Main Stage in Hall 12, during the 16 to 19 Nov 2026 fair.",
           "url": "https://www.innovationworldcup.com/medica-startup-competition/"
         },
         {
@@ -1359,7 +1376,7 @@
           "gain": "A fully equipped booth at the world's largest medtech trade fair without the cost of a standard stand: EUR 2,950 against EUR 4,983 for the smallest plain stand.",
           "conditions": "Medtech start-ups. Space in Hall 17 is limited and allocated on application.",
           "how": "Apply by email to startup@medica.de, or contact Elena Walter or Dr Claudio Bucchi on +49 211 4560-489. EUR 2,950 plus VAT covers counter and two stools, display stand, exhibitor graphic, electricity, Wi-Fi, daily cleaning, database listing and media fee. The stage upgrade with a live pitch slot is a further EUR 550.",
-          "checked": "28 Aug 2026: package price, inclusions and the EUR 550 stage upgrade read off the MEDICA START-UP PARK page."
+          "checked": "2026-08-31: re-read the START-UP PARK page. EUR 2,950 plus VAT unchanged, stage upgrade still plus EUR 550 for EUR 3,500 total, still Hall 17, contacts unchanged."
         },
         {
           "mode": "attend",
@@ -1436,7 +1453,7 @@
           "url": "https://innovationworldcup.com"
         }
       ],
-      "verified": "2026-08-28",
+      "verified": "2026-08-31",
       "type": "conference"
     },
     {
@@ -1657,7 +1674,7 @@
       "start": "2027-01-27",
       "end": "2027-01-29",
       "confirmed": true,
-      "where": "Dubai World Trade Centre, inside World Healthcare Week",
+      "where": "Dubai World Trade Centre, inside World Healthcare Week, 25 to 29 Jan 2027",
       "country": "UAE",
       "region": "Middle East",
       "tags": [
@@ -1674,25 +1691,23 @@
           "deadline": "2026-11-04",
           "deadlineLabel": "Closes 4 Nov 2026",
           "status": "open",
-          "note": "Up to 40 startups are shortlisted to pitch on the Xcelerate Stage, and 12 reach the Grand Finale. Open to healthcare startups across all verticals.",
+          "note": "Around 50 startups pitch across the early-stage and scale-up tracks, up to 40 are shortlisted to pitch live, and 12 reach the Grand Finale. The application is free, but shortlisted startups must hold a confirmed WHX Tech Startup Pod, and Informa does not publish its price.",
           "cost": {
-            "amount": "Free to enter",
-            "detail": "No entry fee. Prize pool is USD 30,000 equity free: USD 15,000 Champion of Innovation, USD 10,000 Best Early-Stage Startup, USD 5,000 Best Scale-Up. Winners also get complimentary startup pods and Deloitte mentoring.",
-            "basis": "free",
-            "source": "https://www.worldhealthexpo.com/events/healthcare/tech/whats-on/features/xcelerate-your-startup-pitch-competition/",
-            "value": 0.0,
-            "currency": "NONE"
+            "amount": "Free to apply, pod required if shortlisted",
+            "detail": "The application carries no fee, but eligibility requires shortlisted startups to hold a confirmed WHX Tech Startup Pod, subject to availability, and Informa has not published a pod rate. Ask support.whxtechdubai@informa.com for the figure. For scale, Export Virginia quotes USD 3,500 per company for pavilion participation and UK pod stands are quoted around GBP 3,800 to 5,000, so treat the true cost of reaching the stage as low four figures, not zero.",
+            "basis": "unknown",
+            "source": "https://www.worldhealthexpo.com/events/healthcare/tech/whats-on/features/xcelerate-your-startup-pitch-competition/"
           },
           "url": "https://www.worldhealthexpo.com/events/healthcare/tech/whats-on/features/xcelerate-your-startup-pitch-competition/",
-          "checked": "28 Aug 2026: application deadline 4 November 2026; pitches run 27 to 29 January 2027 with the Grand Finale on 29 January.",
+          "checked": "2026-08-31: re-read at source. Deadline still 4 November 2026. Newly recorded and material: eligibility now requires shortlisted startups to hold a confirmed WHX Tech Startup Pod, so the earlier 'free to enter' reading was only true of the application. No pod price is published. Numbers corrected: around 50 pitch, up to 40 shortlisted, 12 finalists.",
           "prize": {
             "amount": "USD 30,000 pool",
             "detail": "All equity free: USD 15,000 Champion of Innovation, USD 10,000 Best Early-Stage Startup, USD 5,000 Best Scale-Up. Winners also get complimentary startup pods and Deloitte mentoring.",
             "source": "https://www.worldhealthexpo.com/events/healthcare/tech/whats-on/features/xcelerate-your-startup-pitch-competition/"
           },
-          "gain": "USD 30,000 equity free, a complimentary startup pod and Deloitte mentoring, off a free application.",
-          "conditions": "Healthcare startups across all innovation verticals including hospital operations, clinical workflow, revenue cycle, care management, chronic care, wellness and longevity. No fee to enter.",
-          "how": "Apply through the Xcelerate page by 4 Nov 2026. Up to 40 startups are shortlisted to pitch on the Xcelerate Stage across 27 to 29 Jan 2027, with 12 reaching the Grand Finale on 29 January."
+          "gain": "USD 30,000 equity free, a complimentary startup pod for winners and Deloitte mentoring. Net it against the pod you have to hold to be shortlisted in the first place.",
+          "conditions": "A healthcare or health-adjacent startup, with a working product, at early-stage or scale-up, operating as a legally registered company. The condition that changes the arithmetic: shortlisted startups must hold, or be willing to secure, a WHX Tech Startup Pod, subject to availability. So the application is free and the pitch is not.",
+          "how": "Apply through the Xcelerate page by 4 Nov 2026. Around 50 startups pitch across 27 to 29 Jan 2027, up to 40 shortlisted to pitch live, 12 reach the Grand Finale on 29 January. Secure a Startup Pod alongside the application: ask support.whxtechdubai@informa.com for the rate."
         },
         {
           "mode": "exhibit",
@@ -1713,15 +1728,15 @@
           "gain": "Floor presence and demo time in front of the people who specify and buy training equipment. For a physical simulator this is the only route where they get their hands on it.",
           "conditions": "Open to industry. Startup pods are offered as part of the Xcelerate prize, so winning the competition is a cheaper route to floor presence than buying it.",
           "how": "Informa does not publish a rate. The USD 3,500 figure is Export Virginia's per-company pavilion price, not Informa's. Contact support.whxtechdubai@informa.com or +971 4 408 2888.",
-          "checked": "28 Aug 2026: Informa publishes no exhibitor rate. The USD 3,500 is Export Virginia's pavilion price per company and UK pod stands are quoted around GBP 3,800 to 5,000, so treat it as an order of magnitude only."
+          "checked": "2026-08-31: Informa still publishes no exhibitor rate. Export Virginia's USD 3,500 per-company pavilion price and UK pod stands at around GBP 3,800 to 5,000 remain the only figures on record, so treat this as an order of magnitude. ABHI runs a UK pavilion but publishes no price either."
         },
         {
           "mode": "present",
           "label": "Call for speakers",
           "deadline": "2026-08-28",
-          "deadlineLabel": "Closes 28 Aug 2026",
-          "status": "open",
-          "note": "Informa is taking speaker proposals across five tracks: digital health founders and technologists, AI and data leaders, healthcare executives and policymakers, investors, and clinicians and researchers. Submitted through a Smartsheet form. Note the date conflict: this page says September 2027, while the landing page and the Xcelerate page both say 27 to 29 January 2027.",
+          "deadlineLabel": "Closed 28 Aug 2026",
+          "status": "closed",
+          "note": "Closed on 28 Aug 2026. The page still displays as open and still dates the event to September 2027, while the WHX Tech landing page, the Xcelerate page and ABHI all say 27 to 29 January 2027. Believe the date, not the page copy.",
           "cost": {
             "amount": "Free to submit",
             "detail": "No submission fee published. Speaker perks such as travel or honorarium are not stated.",
@@ -1732,10 +1747,15 @@
           },
           "url": "https://www.worldhealthexpo.com/events/healthcare/tech/conferences/call-for-speakers/",
           "flag": true,
-          "checked": "28 Aug 2026: submission closes 28 August 2026. This page dates the event to September 2027, which contradicts the WHX Tech landing page and the Xcelerate page. Both of those say 27 to 29 January 2027, so January is the better supported date.",
+          "checked": "2026-08-31: the deadline of 28 Aug 2026 has passed, so this is closed regardless of the page still reading as open. The page also still says WHX Tech returns to Dubai in September 2027, which contradicts the landing page, the Xcelerate page and ABHI, all of which say 27 to 29 January 2027. Flag stands.",
           "gain": "A speaking slot in front of Gulf and international health-system buyers, decided on merit rather than bought.",
           "conditions": "Five tracks: digital health founders and technologists, AI and data leaders, healthcare executives and policymakers, investors and venture builders, clinicians and researchers. No fee to submit and no speaker perks such as travel or honorarium are stated.",
-          "how": "Submit a proposal through the Smartsheet form linked from the call-for-speakers page by 28 Aug 2026. Note the date conflict: that page says the event is September 2027 while the landing and Xcelerate pages both say 27 to 29 January 2027."
+          "how": "Submissions ran through a Smartsheet form linked from the call-for-speakers page and closed 28 Aug 2026. Watch the same page for the next edition's call.",
+          "expect": {
+            "when": "Around Aug 2027",
+            "watch": "2027-06-15",
+            "basis": "The 2027 call closed 28 Aug 2026, around five months before the January event."
+          }
         },
         {
           "mode": "attend",
@@ -1752,7 +1772,7 @@
           },
           "url": "https://www.worldhealthexpo.com/events/healthcare/tech/",
           "gain": "Access and meetings. No platform and no speaking slot, so value depends entirely on who you line up first.",
-          "checked": "28 Aug 2026: no registration rates published for this edition.",
+          "checked": "2026-08-31: still no registration rates published for this edition. Event dates re-confirmed as 27 to 29 Jan 2027 at Dubai World Trade Centre, inside World Healthcare Week 25 to 29 Jan 2027.",
           "conditions": "Open to digital health professionals, founders, medtech manufacturers, buyers and investors.",
           "how": "Registration runs through worldhealthexpo.com. No delegate rate is published. Contact support.whxtechdubai@informa.com."
         }
@@ -1763,7 +1783,7 @@
           "url": "https://www.worldhealthexpo.com/events/healthcare/tech"
         }
       ],
-      "verified": "2026-08-28",
+      "verified": "2026-08-31",
       "type": "conference"
     },
     {
@@ -1900,7 +1920,7 @@
         "startup"
       ],
       "priority": false,
-      "summary": "Dedicated neonatal and paediatric medtech investment summit uniting startups, investors and clinicians. Not association-run.",
+      "summary": "Dedicated neonatal and paediatric medtech investment summit uniting startups, investors and clinicians. Not association-run. One of the few events on this board addressed at exactly InfantSim's category. Its website has been offline since at least 28 Aug 2026, so the 2027 edition cannot be confirmed.",
       "audience": "Neonatal and paediatric medtech startups, investors, clinicians.",
       "participate": [
         {
@@ -1912,12 +1932,12 @@
           "note": "Site is intermittently down. Verify before relying on it.",
           "cost": {
             "amount": "Not published",
-            "detail": "2027 edition, venue and pricing all unannounced. 2026 was Berlin.",
+            "detail": "Not published. The 2027 edition, venue and pricing are all unannounced and neoped.eu does not resolve, so there is nobody to ask through the site. 2026 was Berlin, 23 to 24 Apr 2026.",
             "basis": "unknown",
             "source": "https://neoped.eu"
           },
           "url": "https://neoped.eu",
-          "checked": "28 Aug 2026: neoped.eu does not resolve in DNS from here, so nothing could be verified at source. Search listings still describe it as the Neonatal & Pediatric MedTech Investment Summit, last held 23 to 24 April 2026 in Berlin. Treat this record as unconfirmed until the site answers.",
+          "checked": "2026-08-31: neoped.eu still does not resolve. Checked against Google (8.8.8.8) and Cloudflare (1.1.1.1) public resolvers and through a separate fetch service, all NXDOMAIN, so this is the domain and not local DNS. Four days dead and counting. The event itself was real: the 2026 edition ran 23 to 24 Apr 2026 in Berlin and SIOP Europe was its official media partner. Nothing about a 2027 edition can be verified while the site is down.",
           "prize": {
             "amount": "Not published",
             "detail": "No prize or award published for this round.",
@@ -1925,7 +1945,7 @@
           },
           "gain": "Stage time in front of investors and buyers, plus whatever the prize carries.",
           "conditions": "Neonatal and paediatric medtech startups, which makes it one of the few events on this board addressed at exactly this category rather than health tech generally.",
-          "how": "Through neoped.eu, which does not resolve in DNS as of 28 Aug 2026, so nothing could be verified at source. The 2026 edition ran 23 to 24 Apr 2026 in Berlin. Treat as unconfirmed until the site answers."
+          "how": "Through neoped.eu, which has not resolved in DNS since at least 28 Aug 2026 and was still NXDOMAIN on 31 Aug 2026. The 2026 edition ran 23 to 24 Apr 2026 in Berlin. Treat as unconfirmed until the site answers."
         },
         {
           "mode": "attend",
@@ -1936,13 +1956,13 @@
           "note": "Registration for this edition has not opened. Ask NeoPed, though the site did not resolve on 28 Aug 2026.",
           "cost": {
             "amount": "Not published",
-            "detail": "Rates are published when registration opens. Ask NeoPed, though the site did not resolve on 28 Aug 2026.",
+            "detail": "Not published. The 2027 edition, venue and pricing are all unannounced and neoped.eu does not resolve, so there is nobody to ask through the site. 2026 was Berlin, 23 to 24 Apr 2026.",
             "basis": "unknown",
             "source": "https://neoped.eu"
           },
           "url": "https://neoped.eu",
           "gain": "Access and meetings. No platform and no speaking slot, so value depends entirely on who you line up first.",
-          "checked": "28 Aug 2026: no registration rates published for this edition.",
+          "checked": "2026-08-31: neoped.eu still does not resolve. Checked against Google (8.8.8.8) and Cloudflare (1.1.1.1) public resolvers and through a separate fetch service, all NXDOMAIN, so this is the domain and not local DNS. Four days dead and counting. The event itself was real: the 2026 edition ran 23 to 24 Apr 2026 in Berlin and SIOP Europe was its official media partner. Nothing about a 2027 edition can be verified while the site is down.",
           "conditions": "Startups, investors and clinicians in neonatal and paediatric medtech.",
           "how": "Registration would run through neoped.eu, which did not resolve on 28 Aug 2026. No date, venue or fee for 2027."
         }
@@ -1953,7 +1973,7 @@
           "url": "https://neoped.eu"
         }
       ],
-      "verified": "2026-08-28",
+      "verified": "2026-08-31",
       "type": "conference",
       "absent": {
         "present": "none",
@@ -2285,15 +2305,20 @@
           "note": "For a pitch focus, MedTech World or the Informa MedTech Summit fit better.",
           "cost": {
             "amount": "Not published",
-            "detail": "Confirmed for 10 to 11 May 2027 in Rome. Delegate fees not yet posted.",
+            "detail": "Not published. The 2027 registrations page is live and reads 'The registration fees will be available soon.' Dates and city are confirmed: 10 to 11 May 2027, Rome.",
             "basis": "unknown",
-            "source": "https://www.themedtechforum.eu/"
+            "source": "https://www.themedtechforum.eu/registrations-2027"
           },
-          "url": "https://www.themedtechforum.eu/",
+          "url": "https://www.themedtechforum.eu/registrations-2027",
           "gain": "Access and meetings. No platform and no speaking slot, so value depends entirely on who you line up first.",
-          "checked": "28 Aug 2026: confirmed for 10 to 11 May 2027 in Rome with a Registrations 2027 link in the navigation, but no rate card behind it yet. The 2026 early bird closed 20 Mar 2026.",
+          "checked": "2026-08-31: opened the 2027 registrations page itself rather than the landing page. It exists and says 'The registration fees will be available soon.' Dates and host city re-confirmed as 10 to 11 May 2027 in Rome. No call for speakers, abstracts or pitch is published.",
           "conditions": "Open to industry executives, policymakers, regulators, clinicians and investors. A policy and networking conference rather than a trade show.",
-          "how": "Registration runs through themedtechforum.eu, which carries a Registrations 2027 link but no rate card. The 2026 early bird closed 20 Mar 2026. Event is 10 to 11 May 2027 in Rome."
+          "how": "Register through themedtechforum.eu/registrations-2027, which is live but states the fees will be available soon. The 2026 early bird closed 20 Mar 2026, so expect a comparable window. Event is 10 to 11 May 2027 in Rome.",
+          "expect": {
+            "when": "Around Mar 2027",
+            "watch": "2027-01-15",
+            "basis": "The 2026 early bird closed 20 Mar 2026, roughly seven weeks before the May event."
+          }
         },
         {
           "mode": "exhibit",
@@ -2310,7 +2335,7 @@
           },
           "url": "https://www.themedtechforum.eu/sponsors-exhibitors/partnership-manager",
           "gain": "Floor presence and demo time in front of the people who specify and buy training equipment. For a physical simulator this is the only route where they get their hands on it.",
-          "checked": "28 Aug 2026: a sponsorship and partnership page exists naming exhibition booths and a partnership manager, but no rate card is published.",
+          "checked": "2026-08-31: the sponsorship and partnership page still names exhibition booths, premium sponsorships and a partnership manager, with no rate card published.",
           "conditions": "Options span premium sponsorship packages, targeted exhibition booths and thematic session collaborations, described as flexible to fit a range of budgets.",
           "how": "MedTech Europe staffs a partnership manager to walk you through it. Start at themedtechforum.eu/sponsors-exhibitors/partnership-manager. No rate card is published."
         }
@@ -2321,7 +2346,7 @@
           "url": "https://www.themedtechforum.eu"
         }
       ],
-      "verified": "2026-08-28",
+      "verified": "2026-08-31",
       "end": "2027-05-11",
       "absent": {
         "pitch": "none",
@@ -2808,17 +2833,17 @@
           "note": "",
           "cost": {
             "amount": "EUR 1,500",
-            "detail": "2026 rate, excluding VAT, for a start-up booth. A company kiosk was EUR 2,500 excluding VAT. 2027 rates not yet published.",
+            "detail": "Not published. HLTH does not post an exhibitor or sponsor rate card; the become-a-sponsor page is an enquiry form. Ask HLTH through it.",
             "basis": "prior-year",
-            "source": "https://europe.hlth.com/register",
+            "source": "https://hlth.com/events/europe/sponsors/become-a-sponsor/",
             "value": 1500.0,
             "currency": "EUR"
           },
           "gain": "Floor presence and demo time in front of the people who specify and buy training equipment. For a physical simulator this is the only route where they get their hands on it.",
           "conditions": "Start-ups can take a booth at a lower tier than a full company kiosk. Rates shown exclude VAT.",
-          "how": "Contact HLTH Europe through hlth.com/events/europe. 2026 comparators: start-up booth EUR 1,500 excluding VAT, company kiosk EUR 2,500 excluding VAT. 2027 not yet priced.",
-          "checked": "28 Aug 2026: the EUR 1,500 start-up booth and EUR 2,500 kiosk are 2026 rates excluding VAT. 2027 not priced.",
-          "url": "https://hlth.com/events/europe/"
+          "how": "Enquire through hlth.com/events/europe/sponsors/become-a-sponsor. No rate card is published. Registration of interest for 2027 is at hlth.com/events/europe/about/register-interest-2027.",
+          "checked": "2026-08-31: the old source link, europe.hlth.com/register, now returns 404. HLTH has moved to hlth.com/events/europe with a become-a-sponsor enquiry form and a register-interest-2027 page. Neither publishes a rate.",
+          "url": "https://hlth.com/events/europe/sponsors/become-a-sponsor/"
         },
         {
           "mode": "present",
