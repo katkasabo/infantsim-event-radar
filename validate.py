@@ -20,6 +20,7 @@ MODES = {"present", "pitch", "attend", "exhibit"}
 TAGS = {"pediatric", "surgery", "simulation", "startup", "industry"}
 STATUSES = {"open", "closed", "unannounced", "rolling"}
 BASES = {"published", "prior-year", "approx", "free", "unknown"}
+DECISIONS = {"yes", "maybe", "no"}
 ABSENT = {"none", "n/a"}
 
 errors, warns = [], []
@@ -49,6 +50,11 @@ for e in events:
 
     for t in e.get("tags", []):
         if t not in TAGS: E(eid, f"unknown tag {t!r}")
+
+    # A decision seeds the browser once and then never again, so a typo here
+    # is silently ignored by the page rather than shown as an error.
+    if "decision" in e and e["decision"] not in DECISIONS:
+        E(eid, f"decision {e['decision']!r} is not one of yes, maybe, no")
 
     start = iso(e.get("start") or "")
     if start and start < TODAY and e.get("confirmed"):

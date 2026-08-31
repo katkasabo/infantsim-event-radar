@@ -734,6 +734,7 @@ const state = {view:"table", sort:"date", tags:new Set(), modes:new Set(), types
 const STAR_KEY = "radar.starred.v1";
 const TRACK_KEY = "radar.tracked.v1";      // legacy, migrated on first load
 const DEC_KEY = "radar.decision.v1";
+const SEED_KEY = "radar.decision.seeded.v1";  // ids already seeded from the data file
 const BUDGET_KEY = "radar.budget.v1";
 function loadSet(key){
   try { return new Set(JSON.parse(localStorage.getItem(key) || "[]")); }
@@ -759,6 +760,33 @@ function decisions(){
 }
 function saveDecisions(m){
   try { localStorage.setItem(DEC_KEY, JSON.stringify(m)); } catch(err){}
+}
+/* Seed decisions from the data file.
+
+   Decisions used to live only in localStorage, which meant they existed on one
+   browser and nowhere else: open the page on another machine and the Plan tab
+   was empty with no way to recover it. An event may now carry
+   "decision": "yes" | "maybe" | "no", which is applied once per event and then
+   never again, so a decision changed or cleared in the browser stays changed.
+   The browser wins; the file only supplies a starting point. */
+function seedDecisions(){
+  if(!DATA || !Array.isArray(DATA.events)) return;
+  let seeded;
+  try { seeded = new Set(JSON.parse(localStorage.getItem(SEED_KEY) || "[]")); }
+  catch(err){ seeded = new Set(); }
+  const m = decisions();
+  let touched = false;
+  DATA.events.forEach(e => {
+    if(!["yes","maybe","no"].includes(e.decision)) return;
+    if(seeded.has(e.id)) return;
+    seeded.add(e.id);
+    touched = true;
+    if(!m[e.id]) m[e.id] = e.decision;
+  });
+  if(touched){
+    saveDecisions(m);
+    try { localStorage.setItem(SEED_KEY, JSON.stringify([...seeded])); } catch(err){}
+  }
 }
 function decisionOf(id){ return decisions()[id] || ""; }
 function setDecision(id, v){
@@ -1332,6 +1360,7 @@ function initRefresh(){
 
 /* ---------- init ---------- */
 function init(){
+  seedDecisions();
   document.getElementById("stampUpdated").textContent = fmt(DATA.meta.updated, true);
   document.getElementById("stampChecked").textContent = fmt(DATA.meta.sourceVerified, true);
   const lc = document.getElementById("stampLinks");

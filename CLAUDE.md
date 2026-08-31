@@ -15,7 +15,7 @@ dependencies. It is published with GitHub Pages.
 | `events.json` | **Master data.** 29 events, 55 participation routes. | yes |
 | `robots.txt` | Keeps the page out of search results. | yes |
 | `CLAUDE.md` | This file. | yes |
-| `notes.json` | **Private.** Katka's internal read on each event. | **never** |
+| `notes.json` | **Private.** Katka's internal read on each event, plus the full `decisions` map. | **never** |
 | `infantsim-event-radar-internal.html` | Derived offline snapshot with the private notes baked in. | **never** |
 | `build-internal.py` | Regenerates the snapshot above. | yes |
 
@@ -196,8 +196,29 @@ route; every other route is opt-in per line. Totals are summed per currency and 
 exchange rate is applied.
 
 Decisions live in `localStorage` under `radar.decision.v1`, so they follow the
-device rather than the person. The page is static and there is nowhere else to put
-them. An older `radar.tracked.v1` set is migrated to Yes on first load.
+device rather than the person. An older `radar.tracked.v1` set is migrated to Yes
+on first load.
+
+Because localStorage is per-browser, decisions used to exist on one machine and
+nowhere else: open the page anywhere else and the Plan tab was empty with no way
+to recover it. An event may now carry a seed:
+
+```jsonc
+"decision": "maybe"        // yes | maybe | no, optional
+```
+
+It is applied **once per event**, tracked in `radar.decision.seeded.v1`, and then
+never again. So a decision changed or cleared by hand stays changed: the browser
+always wins and the file only supplies a starting point.
+
+**Which decisions go where.** A complete Yes/No list is Katka's commercial
+judgement and this repo is world-readable, so the full set lives in `notes.json`
+under `decisions`, and `build-internal.py` bakes it into the internal snapshot.
+Only a shortlist she has explicitly asked to publish goes in `events.json`. As of
+31 Aug 2026 that is the five events she marked green in the 12-month calendar
+sheet, all seeded as Maybe: Georgia Tech, MEDICA 2026, WHX Tech 2027, NeoPed 2027
+and The MedTech Forum 2027. Georgia Tech is a deliberate override, since its
+private note reads "not worth attending".
 
 ### A route must be evidenced, not inferred
 

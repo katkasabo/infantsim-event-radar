@@ -45,7 +45,8 @@
         "The SIM Expo open item is resolved. Two abstract deadlines were on record, 17 Apr and 13 Jul. The Simulation Canada page gives one: Friday 17 April 2026 at 5pm ET. The 13 Jul date is dropped.",
         "The robotic surgery course has run. The 4th annual was 19 to 21 Aug 2026 in Columbus, registration having closed 12 Aug. No 5th annual is announced, so its figures stay marked prior-year.",
         "Georgia Tech, root cause found. The phantom '7 Jul 2026 edition' was the date of an APDI press release announcing USD 25,000 prizes at the showcase, misread as the date of the showcase itself. The release carries no event date and no deadline, and nothing else publishes one.",
-        "The page now carries a link-check line: how many links resolved, when they were checked, and which hosts did not answer. Checked is not the same as guaranteed, and the wording says so."
+        "The page now carries a link-check line: how many links resolved, when they were checked, and which hosts did not answer. Checked is not the same as guaranteed, and the wording says so.",
+        "Decisions are no longer trapped in one browser. Yes, Maybe and No lived only in localStorage, so they existed on the machine that set them and nowhere else, and the Plan tab came up empty anywhere else. An event can now carry a decision in the data file, which seeds the browser once per event and then never again, so anything changed or cleared by hand stays that way. The five events marked green in the 12-month calendar sheet (Georgia Tech, MEDICA 2026, WHX Tech 2027, NeoPed 2027, The MedTech Forum 2027) are seeded as Maybe. Note that the private notes read 'not worth attending' for Georgia Tech, so that one is a deliberate override."
       ]
     },
     {
@@ -985,7 +986,8 @@
         "attend": "n/a",
         "exhibit": "n/a"
       },
-      "type": "competition"
+      "type": "competition",
+      "decision": "maybe"
     },
     {
       "id": "cepas-2026",
@@ -1482,7 +1484,8 @@
         }
       ],
       "verified": "2026-08-31",
-      "type": "conference"
+      "type": "conference",
+      "decision": "maybe"
     },
     {
       "id": "medtech-innovator-2027",
@@ -1812,7 +1815,8 @@
         }
       ],
       "verified": "2026-08-31",
-      "type": "conference"
+      "type": "conference",
+      "decision": "maybe"
     },
     {
       "id": "ucsf-stanford-pdc",
@@ -2014,7 +2018,8 @@
       "absentWhy": {
         "present": "An investment summit rather than a scientific congress. No abstract or speaker call is published, and the site did not resolve on 28 Aug 2026.",
         "exhibit": "No exhibition or sponsorship offer is published, and neoped.eu does not resolve in DNS, so nothing about this event could be verified at source."
-      }
+      },
+      "decision": "maybe"
     },
     {
       "id": "pas-2027",
@@ -2387,7 +2392,8 @@
       "type": "conference",
       "absentWhy": {
         "present": "A policy and networking conference with an invited programme. No open call for papers or speakers is published."
-      }
+      },
+      "decision": "maybe"
     },
     {
       "id": "apsa-2027",
