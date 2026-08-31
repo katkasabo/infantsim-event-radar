@@ -35,6 +35,26 @@ To change the site, edit `events.json` and commit. The page fetches it with
 not hand-edit the data inside `index.html`; the page holds `const EMBEDDED = null;`
 and that marker must stay exactly as it is or `build-internal.py` will fail.
 
+### Meta, and the link-check line
+
+`meta` carries `updated`, `sourceVerified`, `windowFrom`, `windowTo`, and three
+fields that drive the link-check line under the masthead:
+
+| Field | Role |
+|---|---|
+| `linksChecked` | ISO date every URL in the file was last requested |
+| `linkStats` | `{urls, resolved, dead, deadHosts, botBlocked}` |
+| `linksNote` | The sentence shown to the reader |
+
+`botBlocked` hosts answer a browser but return 403 to `validate.py --links` and
+to plain fetches. They are live. Do not mark them dead, and do not record a
+price as "not published" because a fetch bounced: open them in the browser.
+As of 31 Aug 2026 that list is sages.org, aapexperience.org, elevatefestival.ca
+and eupsa.eu.
+
+The wording is deliberately "checked", not "valid". A link that answered this
+morning can be gone tonight, and the page should not imply otherwise.
+
 ### Event shape
 
 ```jsonc
@@ -254,8 +274,14 @@ goes in `notes.json`, not in the public data.
   in August of the preceding year, so it is overdue. Check weekly.
 - **MedTech Innovator** has moved its deadline earlier two years running:
   15 Jan 2025, then 1 Dec 2025. The 2027 window is unannounced.
-- **SIM Expo 2026** has two conflicting submission deadlines on record,
-  17 Apr and 13 Jul. Unresolved.
+- **SWPDC + AAP SOITT** was recorded as closed on 14 Aug 2026 when its Fall
+  2026 round was in fact open until 7 Sep 2026. The 14 Aug date belongs to the
+  five-consortium joint pitch at pedsinnovation.org, and that competition's
+  US-based and in-person-Boston conditions had been copied onto the SWPDC record
+  too. Two different competitions, one set of facts. Keep them apart.
+- **Georgia Tech** carried a phantom "2026 edition ran 7 Jul 2026". That was the
+  date of an APDI press release announcing prizes at the showcase, not the date
+  of the showcase. A press release date is not an event date.
 
 ## Writing conventions
 

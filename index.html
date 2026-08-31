@@ -50,6 +50,7 @@ a:hover{border-bottom-color:var(--teal)}
 }
 .brand p{margin:6px 0 0;color:#93AFB1;font-size:13.5px;max-width:52ch}
 .stamp{font-family:var(--mono);font-size:11.5px;color:#93AFB1;text-align:right;line-height:1.7}
+.linknote{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6;margin:14px 0 0;padding:9px 12px;border-left:2px solid var(--line);max-width:76ch}
 .stamp b{color:#CFE2E1;font-weight:500}
 
 /* closing strip: the top-of-page instrument */
@@ -461,9 +462,11 @@ tr.detail.hidden{display:none}
       <div class="stamp">
         Updated <b id="stampUpdated"></b><br>
         Sources last checked <b id="stampChecked"></b><br>
+        All links checked <b id="stampLinks"></b><br>
         <b id="stampCounts"></b>
       </div>
     </div>
+    <p class="linknote" id="linkNote"></p>
     <div class="closing">
       <div class="closing-h">Closing next</div>
       <div class="closing-rail" id="closingRail"></div>
@@ -1331,6 +1334,13 @@ function initRefresh(){
 function init(){
   document.getElementById("stampUpdated").textContent = fmt(DATA.meta.updated, true);
   document.getElementById("stampChecked").textContent = fmt(DATA.meta.sourceVerified, true);
+  const lc = document.getElementById("stampLinks");
+  if(lc) lc.textContent = DATA.meta.linksChecked ? fmt(DATA.meta.linksChecked, true) : "not recorded";
+  const ln = document.getElementById("linkNote");
+  if(ln && DATA.meta.linksNote){
+    const st = DATA.meta.linkStats;
+    ln.textContent = (st ? `${st.resolved} of ${st.urls} links resolved. ` : "") + DATA.meta.linksNote;
+  }
   const totalWays = DATA.events.reduce((n,e) => n + e.participate.length, 0);
   document.getElementById("stampCounts").textContent = `${DATA.events.length} events / ${totalWays} ways to take part`;
 
